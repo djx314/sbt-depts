@@ -8,3 +8,6 @@
 target/
 metals.sbt
 /developAlias.sbt
+/inner-project/.bsp/
+/inner-project/sbt.bat
+/inner-project/sbt-launch.jar
