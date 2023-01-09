@@ -1,50 +1,18 @@
 package djx.sbt.depts.abs
 
-import scala.language.dynamics
-import scala.util.Using
-import scala.io.Source
+import com.typesafe.config.ConfigFactory
 
-package impl {
-  object SbtPropertiesImpl {
-    val start = "SetV"
+import java.io.File
+import java.nio.file.Paths
 
-    val SetZero: SbtVA = SbtVA(Some(List.empty))
+trait a {
 
-    case class SbtVA(i1: Option[List[String]]) extends Dynamic {
+  private val c = ConfigFactory.parseFile(Paths.get("..", "project", "build.properties").toFile)
 
-      def selectDynamic(key: String): SbtVA = {
-        val v2 = for {
-          i1V <- i1
-          k   <- Some(key) if k.startsWith(start)
-        } yield i1V.appended(k.drop(start.length))
-        SbtVA(v2)
-      }
+  val version: String = c.getConfig("sbt").getString("version")
 
-      def properties: Option[SbtPropertiesData] = for (i1V <- i1) yield SbtPropertiesData(i1V)
-    }
-
-    def fromConfigFile(str: String): String = Using.resource(Source.fromString(str)) { s =>
-      val s1 = for (l1 <- s.getLines.to(List)) yield l1.trim
-      val s2 = s1.filterNot(_.isEmpty)
-      s2.head.replace(".", s".$start").replace("=", s".$start")
-    }
-  }
-}
-
-case class SbtPropertiesData(t: List[String])
-
-trait SbtPropertiesAbs {
-
-  object sbt {
-    val SetVversion: impl.SbtPropertiesImpl.SbtVA = impl.SbtPropertiesImpl.SetZero
-  }
-
-  val properties: Option[SbtPropertiesData] = sbt.SetVversion.SetV1.SetV8.SetV2.properties
-
-  println(impl.SbtPropertiesImpl.fromConfigFile("sbt.version=1.8.2")) // sbt.SetVversion.SetV1.SetV8.SetV2
-  println(sbt.SetVversion.SetV1.SetV8.SetV2)
-  println(properties)
+  println(version)
 
 }
 
-object bb extends App with SbtPropertiesAbs
+object bb extends App with a

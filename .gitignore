@@ -1,4 +1,5 @@
 /.idea/
+/inner-project/.idea/
 /sbt.bat
 /sbt-launch.jar
 /.metals/
