@@ -1,6 +1,4 @@
-scalaVersion := "2.13.10"
-
-crossScalaVersions := Seq("2.11.12", "2.12.17", "2.13.10", "3.2.1")
+scalaVersion := "2.13.10" 1.12", "2.12.17", "2.13.10", "3.2.1")
 
 Context.changeDeptVar             := "zio"
 libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
