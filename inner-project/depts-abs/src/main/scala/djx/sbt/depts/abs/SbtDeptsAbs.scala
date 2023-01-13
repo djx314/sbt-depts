@@ -9,9 +9,6 @@ trait TakeSbtProperties {
   protected def sbtPropertiesFile: File
   private val typesafePropertiesConfig: Config = ConfigFactory.parseFile(sbtPropertiesFile)
   val version: String                          = typesafePropertiesConfig.getConfig("sbt").getString("version")
-}
 
-object bb extends App with TakeSbtProperties {
-  override protected def sbtPropertiesFile: File = Paths.get("..", "project", "build.properties").toFile
-  println(version)
+  def code: String = s"sbt.version=$version"
 }
