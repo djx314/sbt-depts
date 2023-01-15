@@ -1,3 +1,3 @@
 organization := "net.scalax"
 name         := "sbt-depts-djx314"
-version      := "0.0.1-M8"
+version      := "0.0.1-M9"

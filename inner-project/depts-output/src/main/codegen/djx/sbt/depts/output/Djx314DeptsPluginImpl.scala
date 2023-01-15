@@ -11,9 +11,10 @@ trait Djx314DeptsPluginImpl extends _root_.sbt.AutoPlugin {
 
   object autoImportImpl {
     object libScalax {
-      val `zio`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio""")
-      val `circe`           = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
-      val `typesafe-config` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
+      val `zio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio""")
+      val `circe`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
+      val `typesafe-config`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
+      val `scala-collection-compat` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
     }
 
     object scalaV {
@@ -30,17 +31,19 @@ trait Djx314DeptsPluginImpl extends _root_.sbt.AutoPlugin {
   import autoImportImpl._
 
   override def buildSettings: Seq[Setting[_]] = Seq(
-    libScalax.`zio`                                  := libScalax.`zio`.?.value.to(List).flatten,
-    libScalax.`zio` += """dev.zio"""                %%% """zio"""           % """2.0.5""",
-    libScalax.`zio` += """dev.zio"""                %%% """zio-streams"""   % """2.0.5""",
-    libScalax.`zio` += """dev.zio"""                %%% """zio-test"""      % """2.0.5""",
-    libScalax.`zio` += """dev.zio"""                %%% """zio-test-sbt"""  % """2.0.5""",
-    libScalax.`circe`                                := libScalax.`circe`.?.value.to(List).flatten,
-    libScalax.`circe` += """io.circe"""             %%% """circe-core"""    % """0.14.3""",
-    libScalax.`circe` += """io.circe"""             %%% """circe-generic""" % """0.14.3""",
-    libScalax.`circe` += """io.circe"""             %%% """circe-parser"""  % """0.14.3""",
-    libScalax.`typesafe-config`                      := libScalax.`typesafe-config`.?.value.to(List).flatten,
-    libScalax.`typesafe-config` += """com.typesafe""" % """config"""        % """1.4.1"""
+    libScalax.`zio`                                                      := libScalax.`zio`.?.value.to(List).flatten,
+    libScalax.`zio` += """dev.zio"""                                    %%% """zio"""                     % """2.0.5""",
+    libScalax.`zio` += """dev.zio"""                                    %%% """zio-streams"""             % """2.0.5""",
+    libScalax.`zio` += """dev.zio"""                                    %%% """zio-test"""                % """2.0.5""",
+    libScalax.`zio` += """dev.zio"""                                    %%% """zio-test-sbt"""            % """2.0.5""",
+    libScalax.`circe`                                                    := libScalax.`circe`.?.value.to(List).flatten,
+    libScalax.`circe` += """io.circe"""                                 %%% """circe-core"""              % """0.14.3""",
+    libScalax.`circe` += """io.circe"""                                 %%% """circe-generic"""           % """0.14.3""",
+    libScalax.`circe` += """io.circe"""                                 %%% """circe-parser"""            % """0.14.3""",
+    libScalax.`typesafe-config`                                          := libScalax.`typesafe-config`.?.value.to(List).flatten,
+    libScalax.`typesafe-config` += """com.typesafe"""                     % """config"""                  % """1.4.1""",
+    libScalax.`scala-collection-compat`                                  := libScalax.`scala-collection-compat`.?.value.to(List).flatten,
+    libScalax.`scala-collection-compat` += """org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.8.1"""
   )
 
 }
