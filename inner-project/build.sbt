@@ -10,3 +10,5 @@ genAction := {
   (`depts-abs` / genActionImpl).inputTaskValue.evaluated
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
 }
+
+addCommandAlias("push1", "depts-output/publishLocal")

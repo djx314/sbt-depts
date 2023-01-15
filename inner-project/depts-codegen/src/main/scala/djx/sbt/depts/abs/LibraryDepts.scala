@@ -74,14 +74,14 @@ object AppHaveATest {
           |
           |  override def trigger: PluginTrigger = allRequirements
           |
-          |  object autoImport {
+          |  object autoImportImpl {
           |    object lib {
           |      $varStr
           |    }
           |    $crossScalaVersionsStr
           |  }
           |
-          |  import autoImport._
+          |  import autoImportImpl._
           |
           |  override def buildSettings: Seq[Setting[_]] = Seq(
           |    ${libString.mkString(",\n")}

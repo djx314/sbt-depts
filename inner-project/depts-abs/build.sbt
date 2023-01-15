@@ -1,12 +1,12 @@
 import Settings._
 
-scalaVersion := "2.13.10"
+scalaVersion := scalaV.v213
 
 scalafmtOnCompile := true
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 
-libraryDependencies += "com.typesafe" % "config" % "1.4.1"
+libraryDependencies ++= lib.`typesafe-config`.value
 
 val buildSbtFile = (rootFile / ".." / "build.sbt").getCanonicalFile
 val writFile1 =
