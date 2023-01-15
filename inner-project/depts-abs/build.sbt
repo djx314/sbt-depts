@@ -6,7 +6,7 @@ scalafmtOnCompile := true
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 
-libraryDependencies ++= lib.`typesafe-config`.value
+libraryDependencies ++= libScalax.`typesafe-config`.value
 
 val buildSbtFile = (rootFile / ".." / "build.sbt").getCanonicalFile
 val writFile1 =

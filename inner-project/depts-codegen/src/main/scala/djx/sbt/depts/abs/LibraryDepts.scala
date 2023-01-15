@@ -43,14 +43,14 @@ object AppHaveATest {
         current match {
           case LibraryDepts.ChangeDeptVarSettings(name) =>
             contextName = name
-            listLines = listLines.appended(s"lib.`$contextName` := lib.`$contextName`.?.value.to(List).flatten")
+            listLines = listLines.appended(s"libScalax.`$contextName` := libScalax.`$contextName`.?.value.to(List).flatten")
           case LibraryDepts.AddLibrarySettings(libInfo) =>
             def genLibStr(lib: LibraryDepts.LibraryInstance): String = lib match {
               case LibraryDepts.LinkAppend(tail, current, link) => s"${genLibStr(tail)} $link \"\"\"$current\"\"\""
               case LibraryDepts.LinkZero(name)                  => s"\"\"\"$name\"\"\""
             }
 
-            listLines = listLines.appended(s"lib.`$contextName` += ${genLibStr(libInfo)}")
+            listLines = listLines.appended(s"libScalax.`$contextName` += ${genLibStr(libInfo)}")
 
           case _ =>
         }
@@ -75,7 +75,7 @@ object AppHaveATest {
           |  override def trigger: PluginTrigger = allRequirements
           |
           |  object autoImportImpl {
-          |    object lib {
+          |    object libScalax {
           |      $varStr
           |    }
           |    $crossScalaVersionsStr

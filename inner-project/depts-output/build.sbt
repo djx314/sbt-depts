@@ -12,10 +12,6 @@ pluginCrossBuild / sbtVersion := {
   }
 }
 
-organization := "net.scalax"
-name         := "sbt-depts-djx314"
-version      := "0.0.1-M5"
-
 Compile / unmanagedSourceDirectories := {
   val v1          = (Compile / unmanagedSourceDirectories).value
   val codegenFile = sourceDirectory.value / "main" / "codegen"
