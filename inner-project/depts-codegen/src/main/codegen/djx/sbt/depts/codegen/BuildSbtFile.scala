@@ -25,11 +25,11 @@ libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
 
-VarContext.changeDeptVar            := "http4s-M"
-libraryDependencies += "org.http4s" %% "http4s-dsl"          % "1.0.0-M38"
-libraryDependencies += "org.http4s" %% "http4s-ember-server" % "1.0.0-M38"
-libraryDependencies += "org.http4s" %% "http4s-ember-client" % "1.0.0-M38"
-libraryDependencies += "org.http4s" %% "http4s-circe"        % "1.0.0-M38"
+VarContext.changeDeptVar             := "http4s-Release"
+libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.17"
+libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
+libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
+libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.17"
 
 
 }

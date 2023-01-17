@@ -21,7 +21,7 @@ trait BuildKeys {
     val `circe`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `typesafe-config`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
     val `scala-collection-compat` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
-    val `http4s-M`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-M""")
+    val `http4s-Release`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
   }
 }
 
@@ -44,11 +44,11 @@ trait Djx314DeptsImpl {
     libScalax.`typesafe-config` += """com.typesafe"""                     % """config"""                  % """1.4.1""",
     libScalax.`scala-collection-compat`                                  := libScalax.`scala-collection-compat`.?.value.to(List).flatten,
     libScalax.`scala-collection-compat` += """org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.8.1""",
-    libScalax.`http4s-M`                                                 := libScalax.`http4s-M`.?.value.to(List).flatten,
-    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-dsl"""              % """1.0.0-M38""",
-    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-ember-server"""     % """1.0.0-M38""",
-    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-ember-client"""     % """1.0.0-M38""",
-    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-circe"""            % """1.0.0-M38"""
+    libScalax.`http4s-Release`                                           := libScalax.`http4s-Release`.?.value.to(List).flatten,
+    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-dsl"""              % """0.23.17""",
+    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-ember-server"""     % """0.23.17""",
+    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-ember-client"""     % """0.23.17""",
+    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-circe"""            % """0.23.17"""
   )
 
 }
