@@ -11,4 +11,7 @@ genAction := {
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
 }
 
-addCommandAlias("push1", "depts-output/publishLocal")
+addCommandAlias("push1", "; reload; depts-output/publishLocal")
+
+ThisBuild / djxScalafmtFile := rootFile / ".djx314-scalafmt-common.conf"
+ThisBuild / djxBuildSbtFile := rootFile / "project" / "build.properties"

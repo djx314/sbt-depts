@@ -5,32 +5,32 @@ import _root_.sbt.Keys._
 import _root_.scala.collection.compat._
 import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
-trait Djx314DeptsPluginImpl extends _root_.sbt.AutoPlugin {
+trait BuildKeys {
 
-  override def trigger: PluginTrigger = allRequirements
+  object scalaV {
 
-  object autoImportImpl {
-    object libScalax {
-      val `zio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio""")
-      val `circe`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
-      val `typesafe-config`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
-      val `scala-collection-compat` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
-    }
-
-    object scalaV {
-
-      val `v211` = """2.11.12"""
-      val `v212` = """2.12.17"""
-      val `v213` = """2.13.10"""
-      val `v3`   = """3.2.1"""
-
-    }
+    val `v211` = """2.11.12"""
+    val `v212` = """2.12.17"""
+    val `v213` = """2.13.10"""
+    val `v3`   = """3.2.1"""
 
   }
 
-  import autoImportImpl._
+  object libScalax {
+    val `zio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio""")
+    val `circe`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
+    val `typesafe-config`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
+    val `scala-collection-compat` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
+    val `http4s-M`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-M""")
+  }
+}
 
-  override def buildSettings: Seq[Setting[_]] = Seq(
+trait Djx314DeptsImpl {
+
+  val buildKeys: BuildKeys
+  import buildKeys._
+
+  def settingsForDept: Seq[Setting[_]] = Seq(
     libScalax.`zio`                                                      := libScalax.`zio`.?.value.to(List).flatten,
     libScalax.`zio` += """dev.zio"""                                    %%% """zio"""                     % """2.0.5""",
     libScalax.`zio` += """dev.zio"""                                    %%% """zio-streams"""             % """2.0.5""",
@@ -43,7 +43,12 @@ trait Djx314DeptsPluginImpl extends _root_.sbt.AutoPlugin {
     libScalax.`typesafe-config`                                          := libScalax.`typesafe-config`.?.value.to(List).flatten,
     libScalax.`typesafe-config` += """com.typesafe"""                     % """config"""                  % """1.4.1""",
     libScalax.`scala-collection-compat`                                  := libScalax.`scala-collection-compat`.?.value.to(List).flatten,
-    libScalax.`scala-collection-compat` += """org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.8.1"""
+    libScalax.`scala-collection-compat` += """org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.8.1""",
+    libScalax.`http4s-M`                                                 := libScalax.`http4s-M`.?.value.to(List).flatten,
+    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-dsl"""              % """1.0.0-M38""",
+    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-ember-server"""     % """1.0.0-M38""",
+    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-ember-client"""     % """1.0.0-M38""",
+    libScalax.`http4s-M` += """org.http4s"""                             %% """http4s-circe"""            % """1.0.0-M38"""
   )
 
 }

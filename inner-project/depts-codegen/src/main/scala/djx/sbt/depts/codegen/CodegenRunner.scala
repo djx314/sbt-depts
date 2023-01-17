@@ -15,6 +15,11 @@ object CodegenRunner {
       val libConfigFile = Paths.get(str(2))
       AppHaveATest.codegenAction(libConfigFile)
     }
+    locally {
+      val scalafmtConfigFile = Paths.get(str(3))
+      val scalafmtOutputFile = Paths.get(str(4))
+      ScalafmtConfigUpdate.toScalaFile(scalafmtConfigFile, scalafmtOutputFile)
+    }
   }
 
 }

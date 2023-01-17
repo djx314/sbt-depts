@@ -70,20 +70,19 @@ object AppHaveATest {
           |import _root_.scala.collection.compat._
           |import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
           |
-          |trait Djx314DeptsPluginImpl extends _root_.sbt.AutoPlugin {
-          |
-          |  override def trigger: PluginTrigger = allRequirements
-          |
-          |  object autoImportImpl {
-          |    object libScalax {
-          |      $varStr
-          |    }
-          |    $crossScalaVersionsStr
+          |trait BuildKeys {
+          |  $crossScalaVersionsStr
+          |  object libScalax {
+          |    $varStr
           |  }
+          |}
           |
-          |  import autoImportImpl._
+          |trait Djx314DeptsImpl {
           |
-          |  override def buildSettings: Seq[Setting[_]] = Seq(
+          |  val buildKeys: BuildKeys
+          |  import buildKeys._
+          |
+          |  def settingsForDept: Seq[Setting[_]] = Seq(
           |    ${libString.mkString(",\n")}
           |  )
           |
