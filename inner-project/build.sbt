@@ -1,6 +1,6 @@
 import Settings._
 
-scalaVersion := "2.13.10"
+scalaVersion := scalaV.v213
 
 lazy val `depts-abs`     = project in rootFile / "depts-abs"
 lazy val `depts-codegen` = (project in rootFile / "depts-codegen").dependsOn(`depts-abs`)

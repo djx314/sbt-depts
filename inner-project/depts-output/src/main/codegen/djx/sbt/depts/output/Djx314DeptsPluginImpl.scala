@@ -22,6 +22,7 @@ trait BuildKeys {
     val `typesafe-config`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
     val `scala-collection-compat` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
     val `http4s-Release`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
+    val `zio-config`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
   }
 }
 
@@ -48,7 +49,14 @@ trait Djx314DeptsImpl {
     libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-dsl"""              % """0.23.17""",
     libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-ember-server"""     % """0.23.17""",
     libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-ember-client"""     % """0.23.17""",
-    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-circe"""            % """0.23.17"""
+    libScalax.`http4s-Release` += """org.http4s"""                      %%% """http4s-circe"""            % """0.23.17""",
+    libScalax.`zio-config`                                               := libScalax.`zio-config`.?.value.to(List).flatten,
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config"""              % """3.0.7""",
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-magnolia"""     % """3.0.7""",
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-refined"""      % """3.0.7""",
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-typesafe"""     % """3.0.7""",
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-yaml"""         % """3.0.7""",
+    libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-gen"""          % """3.0.7"""
   )
 
 }
