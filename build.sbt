@@ -35,3 +35,7 @@ libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
 
 VarContext.changeDeptVar          := "slf4j-simple"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+
+VarContext.changeDeptVar                           := "binding.scala"
+libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
+libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"

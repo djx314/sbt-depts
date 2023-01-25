@@ -23,13 +23,14 @@ object AppHaveATest {
     }
 
     val crossScalaVersionsStr: String = libInstance.collectFirst { case LibraryDepts.CrossScalaVersionsSettings(versionsSeq) =>
-      val sVersions = versionsSeq.zip(List("v211", "v212", "v213", "v3")).map(s => s"val `${s._2}` = \"\"\"${s._1}\"\"\"")
+      val versionString = List("v211", "v212", "v213", "v3")
+      val sVersions     = versionsSeq.zip(versionString).map(s => s"`${s._2}` = \"\"\"${s._1}\"\"\"")
+      val parmeters     = versionString.map(s => s"`$s`: String")
       s"""
-         |object scalaV {
-         |
-         |  ${sVersions.mkString("\n")}
-         |
-         |}
+         |case class scalaV(
+         |  ${parmeters.mkString(", ")}
+         |)
+         |object scalaV extends scalaV(${sVersions.mkString(", ")})
          |""".stripMargin
     }.get
 
@@ -46,8 +47,12 @@ object AppHaveATest {
             listLines = listLines.appended(s"libScalax.`$contextName` := libScalax.`$contextName`.?.value.to(List).flatten")
           case LibraryDepts.AddLibrarySettings(libInfo) =>
             def genLibStr(lib: LibraryDepts.LibraryInstance): String = lib match {
-              case LibraryDepts.LinkAppend(tail, current, link) => s"${genLibStr(tail)} $link \"\"\"$current\"\"\""
-              case LibraryDepts.LinkZero(name)                  => s"\"\"\"$name\"\"\""
+              case LibraryDepts.LinkAppend(tail, current) =>
+                current match {
+                  case LibraryDepts.LitText(s)    => s"${genLibStr(tail)} $s"
+                  case LibraryDepts.StringText(s) => s"${genLibStr(tail)} \"\"\"$s\"\"\""
+                }
+              case LibraryDepts.LinkZero(name) => s"\"\"\"$name\"\"\""
             }
 
             listLines = listLines.appended(s"libScalax.`$contextName` += ${genLibStr(libInfo)}")

@@ -15,7 +15,9 @@ package impl {
     val djxUpdateAll            = taskKey[Unit]("All update action for this plugin.")
   }
 }
+
 object Djx314DeptsPlugin extends AutoPlugin {
+  override def requires: Plugins      = org.portablescala.sbtplatformdeps.PlatformDepsPlugin
   override def trigger: PluginTrigger = allRequirements
 
   object autoImport extends impl.BuildKeysImpl
@@ -34,12 +36,12 @@ object Djx314DeptsPlugin extends AutoPlugin {
       djxUpdateScalafmtConfig.value
       djxUpdateSbtVersion.value
     }
-    def projectSettings: Seq[Setting[_]] = Seq.empty
+    // def projectSettings: Seq[Setting[_]] = Seq.empty
     override def settingsForDept: Seq[Setting[_]] =
       djxUpdateAllSetting +: updateScalafmtConfigSetting +: updateSbtVersionSetting +: super.settingsForDept
   }
 
   private val settingsValue                                    = new Settings(autoImport)
-  override def projectSettings: Seq[_root_.sbt.Def.Setting[_]] = settingsValue.projectSettings
-  override def buildSettings: Seq[_root_.sbt.Def.Setting[_]]   = settingsValue.settingsForDept
+  override def projectSettings: Seq[_root_.sbt.Def.Setting[_]] = settingsValue.settingsForDept
+  // override def buildSettings: Seq[_root_.sbt.Def.Setting[_]]   = settingsValue.settingsForDept
 }

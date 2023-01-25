@@ -7,14 +7,13 @@ import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 trait BuildKeys {
 
-  object scalaV {
-
-    val `v211` = """2.11.12"""
-    val `v212` = """2.12.17"""
-    val `v213` = """2.13.10"""
-    val `v3`   = """3.2.1"""
-
-  }
+  case class scalaV(
+    `v211`: String,
+    `v212`: String,
+    `v213`: String,
+    `v3`: String
+  )
+  object scalaV extends scalaV(`v211` = """2.11.12""", `v212` = """2.12.17""", `v213` = """2.13.10""", `v3` = """3.2.1""")
 
   object libScalax {
     val `zio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio""")
@@ -24,6 +23,7 @@ trait BuildKeys {
     val `http4s-Release`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
     val `zio-config`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
     val `slf4j-simple`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
+    val `binding.scala`           = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for binding.scala""")
   }
 }
 
@@ -59,7 +59,10 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-yaml"""         % """3.0.7""",
     libScalax.`zio-config` += """dev.zio"""                             %%% """zio-config-gen"""          % """3.0.7""",
     libScalax.`slf4j-simple`                                             := libScalax.`slf4j-simple`.?.value.to(List).flatten,
-    libScalax.`slf4j-simple` += """org.slf4j"""                           % """slf4j-simple"""            % """2.0.6"""
+    libScalax.`slf4j-simple` += """org.slf4j"""                           % """slf4j-simple"""            % """2.0.6""",
+    libScalax.`binding.scala`                                            := libScalax.`binding.scala`.?.value.to(List).flatten,
+    libScalax.`binding.scala` += """com.yang-bo"""                      %%% """html"""                    % """2.0.0+28-a2b9d520""",
+    libScalax.`binding.scala` += """com.thoughtworks.binding"""         %%% """binding"""                 % """12.1.0+110-53fd3428"""
   )
 
 }

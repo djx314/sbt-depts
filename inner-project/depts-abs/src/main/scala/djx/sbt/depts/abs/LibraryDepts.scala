@@ -21,9 +21,18 @@ package impl {
   }
 
   class StringLibAppend(prefix: LibraryDepts.LibraryInstance) {
-    def %%%(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(prefix = prefix, current = s, linkStr = "%%%")
-    def %%(s: String): LibraryDepts.LinkAppend  = LibraryDepts.LinkAppend(prefix = prefix, current = s, linkStr = "%%")
-    def %(s: String): LibraryDepts.LinkAppend   = LibraryDepts.LinkAppend(prefix = prefix, current = s, linkStr = "%")
+    def %%%(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
+      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.LitText("%%%")),
+      current = LibraryDepts.StringText(s)
+    )
+    def %%(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
+      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.LitText("%%")),
+      current = LibraryDepts.StringText(s)
+    )
+    def %(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
+      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.LitText("%")),
+      current = LibraryDepts.StringText(s)
+    )
   }
 
   class VarContextSetting(context: DeptSettingContext) {
@@ -57,6 +66,10 @@ object LibraryDepts {
   case class AddLibrarySettings(v: LibraryInstance)            extends LibraryDeptsSettings
 
   sealed trait LibraryInstance
-  case class LinkZero(zeroString: String)                                          extends LibraryInstance
-  case class LinkAppend(prefix: LibraryInstance, current: String, linkStr: String) extends LibraryInstance
+  case class LinkZero(zeroString: String)                           extends LibraryInstance
+  case class LinkAppend(prefix: LibraryInstance, current: TextType) extends LibraryInstance
+
+  sealed trait TextType
+  case class LitText(s: String)    extends TextType
+  case class StringText(s: String) extends TextType
 }

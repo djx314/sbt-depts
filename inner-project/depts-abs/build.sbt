@@ -1,6 +1,6 @@
 import Settings._
 
-scalaVersion := scalaV.v213
+scalaVersion := scalaV.v3
 
 scalafmtOnCompile := true
 
