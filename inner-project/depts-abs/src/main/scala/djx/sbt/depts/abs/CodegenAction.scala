@@ -3,17 +3,22 @@ package djx.sbt.depts.abs
 import java.io.PrintWriter
 import java.nio.file.{Files, Paths}
 import scala.util.Using
+import scala.io.Source
 
 object CodegenAction {
 
   def main(arr: Array[String]): Unit = {
-    val buildSbtPath = Paths.get(arr(0))
-    val stringReaded = Files.readString(buildSbtPath)
+    println(arr.to(List))
+    def genString(pathStr: String): String = Files.readString(Paths.get(pathStr))
+    val strCol                             = arr.take(4).map(genString)
 
-    val writePath = Paths.get(arr(1))
+    val writePath = Paths.get(arr(4))
     locally {
       Files.createDirectories(writePath.getParent)
     }
+
+    val strLines = Using.resource(Source.fromString(strCol.mkString("\n")))(l => l.getLines().to(List)).map(t => " " * 10 + t)
+
     Using.resource(new PrintWriter(writePath.toFile)) { printer =>
       val writeStr = s"""
          |package djx.sbt.depts
@@ -21,7 +26,7 @@ object CodegenAction {
          |
          |object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
          |
-         |  $stringReaded
+         |  ${strLines.mkString("\n\n")}
          |
          |}
          |""".stripMargin

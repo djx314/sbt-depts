@@ -36,9 +36,16 @@ object Djx314DeptsPlugin extends AutoPlugin {
       djxUpdateScalafmtConfig.value
       djxUpdateSbtVersion.value
     }
-    // def projectSettings: Seq[Setting[_]] = Seq.empty
+
+    val kindProjectorSetting = {
+      import autoImport._
+      libScalax.`kind-projector` := {
+        for (lib <- libScalax.`kind-projector`.value) yield compilerPlugin(lib)
+      }
+    }
+
     override def settingsForDept: Seq[Setting[_]] =
-      djxUpdateAllSetting +: updateScalafmtConfigSetting +: updateSbtVersionSetting +: super.settingsForDept
+      super.settingsForDept ++: kindProjectorSetting +: djxUpdateAllSetting +: updateScalafmtConfigSetting +: Seq(updateSbtVersionSetting)
   }
 
   private val settingsValue                                    = new Settings(autoImport)

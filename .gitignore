@@ -12,3 +12,4 @@ metals.sbt
 /inner-project/.bsp/
 /inner-project/sbt.bat
 /inner-project/sbt-launch.jar
+/inner-project/depts-output/developAlias.sbt
