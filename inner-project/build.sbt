@@ -32,11 +32,4 @@ compatVersion := {
 
 addCommandAlias("preparePackaging", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")
 
-ThisBuild / djxScalafmtFile   := rootFile / ".djx314-scalafmt-common.conf"
-ThisBuild / djxBuildSbtFile   := rootFile / "project" / "build.properties"
-ThisBuild / djxPluginsLigFile := rootFile / "project" / "project" / "sbt-depts-djx314-lib.sbt"
-
 Global / onChangedBuildSource := ReloadOnSourceChanges
-
-`depts-output` / name         := "sbt-depts-djx314"
-`depts-output-plugins` / name := "sbt-depts-djx314-plugins"

@@ -50,4 +50,3 @@ libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
-

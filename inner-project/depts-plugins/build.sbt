@@ -9,3 +9,5 @@ Compile / unmanagedSourceDirectories := {
   val codegenFile = sourceDirectory.value / "main" / "codegen"
   codegenFile +: v1
 }
+
+name := "sbt-depts-djx314-plugins"

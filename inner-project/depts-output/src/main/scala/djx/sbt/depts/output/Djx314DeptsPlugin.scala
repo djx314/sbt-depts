@@ -17,13 +17,17 @@ package impl {
   class BuildKeysImpl extends BuildKeys {
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
     val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
-    val djxBuildSbtFile         = settingKey[File]("Key of build.properties file.")
-    val djxUpdateSbtVersion     = taskKey[Unit]("update sbt version configuration file.")
+
+    val djxBuildSbtFile     = settingKey[File]("Key of build.properties file.")
+    val djxUpdateSbtVersion = taskKey[Unit]("update sbt version configuration file.")
+
     val djxPluginsLigFile       = settingKey[File]("Key of plugins's build.sbt file.")
     val djxUpdatePluginsVersion = taskKey[Unit]("update plugins's build.sbt file.")
-    val djxUpdateAll            = taskKey[Unit]("All update action for this plugin.")
 
-    object djx314Plugins extends djx.sbt.depts.plugins.PluginsCollection
+    val djxUpdate = taskKey[Unit]("All update action for this plugin.")
+
+    import djx.sbt.depts.plugins.{PluginsCollection => DjxPluginCol}
+    val djx314Plugins: DjxPluginCol = DjxPluginCol
   }
 }
 
@@ -36,18 +40,18 @@ object Djx314DeptsPlugin extends AutoPlugin {
   private class Settings(override val buildKeys: impl.BuildKeysImpl) extends Djx314DeptsImpl {
     import buildKeys._
     val updateScalafmtConfigSetting = djxUpdateScalafmtConfig := {
-      val fileValue: File = djxScalafmtFile.value
-      ScalafmtRewrite.writeToFile(fileValue.toPath)
+      val fileOpt: Option[File] = djxScalafmtFile.?.value
+      for (file <- fileOpt) yield ScalafmtRewrite.writeToFile(file.toPath)
     }
     val updateSbtVersionSetting = djxUpdateSbtVersion := {
-      val fileValue: File = djxBuildSbtFile.value
-      UpdateSbtVersion.update(fileValue.toPath)
+      val fileOpt: Option[File] = djxBuildSbtFile.?.value
+      for (file <- fileOpt) yield UpdateSbtVersion.update(file.toPath)
     }
     val djxUpdatePluginsVersionSetting = djxUpdatePluginsVersion := {
-      val fileValue: File = djxPluginsLigFile.value
-      UpdatePluginLibVersion.update(fileValue.toPath)
+      val fileOpt: Option[File] = djxPluginsLigFile.?.value
+      for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
     }
-    val djxUpdateAllSetting = djxUpdateAll := {
+    val djxUpdateAllSetting = djxUpdate := {
       djxUpdateScalafmtConfig.value
       djxUpdateSbtVersion.value
       djxUpdatePluginsVersion.value
