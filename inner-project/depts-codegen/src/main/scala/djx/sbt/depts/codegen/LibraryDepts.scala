@@ -27,7 +27,7 @@ trait AppHaveATest {
   case class LibSettings(libStr: String, scalaV: String, libVarName: String) {
     def genString: String =
       s"""
-         |libScalax.`$libVarName` ++= { if (scalaBinaryVersion.value == \"\"\"$scalaV\"\"\") Seq($libStr) else Seq.empty }
+         |libScalax.`$libVarName` ++= { if ($scalaV.value) Seq($libStr) else Seq.empty }
          |""".stripMargin
   }
   object LibSettings {
@@ -36,30 +36,36 @@ trait AppHaveATest {
     def genInitVar(name: String): String = s"""libScalax.`$name` := libScalax.`$name`.?.value.to(List).flatten"""
   }
 
-  var libInstance                                         = LibraryDeptsInstance.context.value
-  var contextVarName: String                              = null
-  var contextScalaVersion: String                         = null
-  var scalaVersionCollect: ScalaV => ScalaV               = identity _
-  var repeatList: List[LibraryDepts.LibraryDeptsSettings] = libInstance
-  var contextVarNames: List[String]                       = List.empty
-  var libSettings: List[LibSettings]                      = List.empty
+  var contextVarName: String                = null
+  var contextScalaVersion: String           = null
+  var scalaVersionCollect: ScalaV => ScalaV = identity _
+  var contextVarNames: List[String]         = List.empty
+  var libSettings: List[LibSettings]        = List.empty
+  var PluginScalaVersionBoolean: String     = null
 
   def extractGen(): Unit = {
-    while (!repeatList.isEmpty) {
-      val current: LibraryDepts.LibraryDeptsSettings = repeatList.head
+    for (current <- LibraryDeptsInstance.context.value) {
       current match {
         case LibraryDepts.ChangeDeptVarSettings(name) =>
           contextVarName = name
           contextVarNames = contextVarNames.appended(contextVarName)
         case LibraryDepts.AddLibrarySettings(libInfo) =>
           libSettings =
-            libSettings.appended(LibSettings(libStr = libInfo.genString, scalaV = contextScalaVersion, libVarName = contextVarName))
+            libSettings.appended(LibSettings(libStr = libInfo.genString, scalaV = PluginScalaVersionBoolean, libVarName = contextVarName))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
-            case ScalaV.V211 => scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v211 = Option(scalaV)))
-            case ScalaV.V212 => scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v212 = Option(scalaV)))
-            case ScalaV.V213 => scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v213 = Option(scalaV)))
-            case ScalaV.V3   => scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v3 = Option(scalaV)))
+            case ScalaV.V211 =>
+              scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v211 = Option(scalaV)))
+              PluginScalaVersionBoolean = "djxIsScala211"
+            case ScalaV.V212 =>
+              scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v212 = Option(scalaV)))
+              PluginScalaVersionBoolean = "djxIsScala212"
+            case ScalaV.V213 =>
+              scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v213 = Option(scalaV)))
+              PluginScalaVersionBoolean = "djxIsScala213"
+            case ScalaV.V3 =>
+              scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v3 = Option(scalaV)))
+              PluginScalaVersionBoolean = "djxIsScala3"
           }
         case LibraryDepts.ChangeScalaVerionSetting(scalaVersion) =>
           contextScalaVersion = scalaVersion
@@ -67,7 +73,6 @@ trait AppHaveATest {
         case null =>
       }
 
-      repeatList = repeatList.tail
     }
   }
 
@@ -98,7 +103,7 @@ trait AppHaveATest {
           |import _root_.scala.collection.compat._
           |import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
           |
-          |trait BuildKeys {
+          |trait BuildKeys extends impl.BuildKeysAbs {
           |  ${scalaV.genString}
           |  object libScalax {
           |    ${varDeineds.mkString("\n")}

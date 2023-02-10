@@ -1,16 +1,13 @@
 VarContext.setScalaVersion := "2.11"
 scalaVersion               := "2.11.12"
 
-VarContext.changeDeptVar           := "kind-projector"
+VarContext.changeDeptVar         := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.11.2"
 libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
 libraryDependencies += "io.circe" %%% "circe-parser"  % "0.11.2"
-
-
-
 
 VarContext.changeDeptVar          := "zio2"
 libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
@@ -44,3 +41,9 @@ libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 VarContext.changeDeptVar                           := "binding.scala"
 libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
 libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+
+VarContext.changeDeptVar                   := "commons-io"
+libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+VarContext.changeDeptVar                           := "macwire"
+libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"

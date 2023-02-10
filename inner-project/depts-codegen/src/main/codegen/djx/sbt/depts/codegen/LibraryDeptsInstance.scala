@@ -71,6 +71,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
+  VarContext.changeDeptVar := "commons-io"
+
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+  VarContext.changeDeptVar := "macwire"
+
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.17"
@@ -81,11 +89,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -138,6 +146,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+
+  VarContext.changeDeptVar := "commons-io"
+
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+  VarContext.changeDeptVar := "macwire"
+
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
+  VarContext.changeDeptVar := "sbt-librarymanagement"
+
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -149,11 +169,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -206,6 +226,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+
+  VarContext.changeDeptVar := "commons-io"
+
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+  VarContext.changeDeptVar := "macwire"
+
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
   VarContext.setScalaVersion := "3"
 
@@ -213,11 +241,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -270,5 +298,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+
+  VarContext.changeDeptVar := "commons-io"
+
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+  VarContext.changeDeptVar := "macwire"
+
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
 }

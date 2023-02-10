@@ -100,7 +100,6 @@ object LibraryDepts {
     case class LitText(s: String) extends TextType {
       override def genString: String = s"$s"
     }
-
     case class StringText(s: String) extends TextType {
       override def genString: String = s"\"\"\"$s\"\"\""
     }

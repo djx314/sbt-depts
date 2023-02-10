@@ -7,6 +7,13 @@ import sbt.Keys._
 import impl.{ScalafmtRewrite, UpdateSbtVersion}
 
 package impl {
+  class BuildKeysAbs {
+    val djxIsScala211 = settingKey[Boolean]("Is scala 2.11")
+    val djxIsScala212 = settingKey[Boolean]("Is scala 2.12")
+    val djxIsScala213 = settingKey[Boolean]("Is scala 2.13")
+    val djxIsScala3   = settingKey[Boolean]("Is scala 3")
+  }
+
   class BuildKeysImpl extends BuildKeys {
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
     val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
@@ -44,11 +51,19 @@ object Djx314DeptsPlugin extends AutoPlugin {
       }
     }
 
+    val scalaVersionSettings = List(
+      djxIsScala211 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 11L) },
+      djxIsScala212 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 12L) },
+      djxIsScala213 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 13L) },
+      djxIsScala3   := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(3L) }
+    )
+
     override def settingsForDept: Seq[Setting[_]] =
-      super.settingsForDept ++: kindProjectorSetting +: djxUpdateAllSetting +: updateScalafmtConfigSetting +: Seq(updateSbtVersionSetting)
+      scalaVersionSettings ++: super.settingsForDept ++: kindProjectorSetting +: djxUpdateAllSetting +: updateScalafmtConfigSetting +: Seq(
+        updateSbtVersionSetting
+      )
   }
 
   private val settingsValue                                    = new Settings(autoImport)
   override def projectSettings: Seq[_root_.sbt.Def.Setting[_]] = settingsValue.settingsForDept
-  // override def buildSettings: Seq[_root_.sbt.Def.Setting[_]]   = settingsValue.settingsForDept
 }

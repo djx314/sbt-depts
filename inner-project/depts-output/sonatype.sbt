@@ -1,3 +1,16 @@
+import Settings._
+
+enablePlugins(Sonatype)
+
+organizationName := "Scala Workers"
+
+organization := "net.scalax.djx314"
+
+version := {
+  val MVersion = versionFileString.value
+  s"0.0.1-M$MVersion"
+}
+
 organizationHomepage := Some(url("https://github.com/scala-workers"))
 
 scmInfo := Some(
@@ -31,9 +44,13 @@ homepage := Some(url("https://github.com/djx314/sbt-depts"))
 
 pomIncludeRepository := { _ => false }
 
-publishTo := sonatypePublishTo.value
-
 sonatypeCredentialHost := "s01.oss.sonatype.org"
+
+publishTo := {
+  val nexus = "https://s01.oss.sonatype.org/"
+  if (isSnapshot.value) Some("snapshots" at nexus + "content/repositories/snapshots")
+  else Some("releases" at nexus + "service/local/staging/deploy/maven2")
+}
 
 publishMavenStyle := true
 

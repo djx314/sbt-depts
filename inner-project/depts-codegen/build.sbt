@@ -12,6 +12,7 @@ val libVersionFile = outputFile / "src" / "main" / "codegen" / "djx" / "sbt" / "
 
 val `scalfmt/file`      = rootFile / ".." / ".scalafmt.conf"
 val scalafmtCodegenFile = outputFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "impl" / "ScalafmtRewrite.scala"
+val pluginsFile         = pluginFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "PluginsColImpl.scala"
 
 genActionImpl := (Compile / runMain).inputTaskValue
   .partialInput(" djx.sbt.depts.codegen.CodegenRunner")
@@ -20,6 +21,7 @@ genActionImpl := (Compile / runMain).inputTaskValue
   .partialInput(s" ${libVersionFile.getCanonicalFile.toString}")
   .partialInput(s" ${`scalfmt/file`.getCanonicalFile.toString}")
   .partialInput(s" ${scalafmtCodegenFile.getCanonicalFile.toString}")
+  .partialInput(s" ${pluginsFile.getCanonicalFile.toString}")
   .evaluated
 
 Compile / unmanagedSourceDirectories := {
