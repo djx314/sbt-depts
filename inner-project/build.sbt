@@ -30,10 +30,7 @@ compatVersion := {
   )
 }
 
-addCommandAlias("prepareNewVersion", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")
-
-addCommandAlias("push1", "; prepareNewVersion; depts-output/publishLocal; depts-output-plugins/publishLocal")
-addCommandAlias("push2", "; prepareNewVersion; depts-output/publishSigned; depts-output-plugins/publishSigned")
+addCommandAlias("preparePackaging", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")
 
 ThisBuild / djxScalafmtFile := rootFile / ".djx314-scalafmt-common.conf"
 ThisBuild / djxBuildSbtFile := rootFile / "project" / "build.properties"
