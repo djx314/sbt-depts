@@ -4,7 +4,7 @@ package output
 import sbt._
 import sbt.Keys._
 
-import impl.{ScalafmtRewrite, UpdateSbtVersion}
+import impl.{ScalafmtRewrite, UpdatePluginLibVersion, UpdateSbtVersion}
 
 package impl {
   class BuildKeysAbs {
@@ -19,7 +19,11 @@ package impl {
     val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
     val djxBuildSbtFile         = settingKey[File]("Key of build.properties file.")
     val djxUpdateSbtVersion     = taskKey[Unit]("update sbt version configuration file.")
+    val djxPluginsLigFile       = settingKey[File]("Key of plugins's build.sbt file.")
+    val djxUpdatePluginsVersion = taskKey[Unit]("update plugins's build.sbt file.")
     val djxUpdateAll            = taskKey[Unit]("All update action for this plugin.")
+
+    object djx314Plugins extends djx.sbt.depts.plugins.PluginsCollection
   }
 }
 
@@ -39,9 +43,14 @@ object Djx314DeptsPlugin extends AutoPlugin {
       val fileValue: File = djxBuildSbtFile.value
       UpdateSbtVersion.update(fileValue.toPath)
     }
+    val djxUpdatePluginsVersionSetting = djxUpdatePluginsVersion := {
+      val fileValue: File = djxPluginsLigFile.value
+      UpdatePluginLibVersion.update(fileValue.toPath)
+    }
     val djxUpdateAllSetting = djxUpdateAll := {
       djxUpdateScalafmtConfig.value
       djxUpdateSbtVersion.value
+      djxUpdatePluginsVersion.value
     }
 
     val kindProjectorSetting = {
@@ -59,8 +68,8 @@ object Djx314DeptsPlugin extends AutoPlugin {
     )
 
     override def settingsForDept: Seq[Setting[_]] =
-      scalaVersionSettings ++: super.settingsForDept ++: kindProjectorSetting +: djxUpdateAllSetting +: updateScalafmtConfigSetting +: Seq(
-        updateSbtVersionSetting
+      scalaVersionSettings ++: super.settingsForDept ++: kindProjectorSetting +: djxUpdatePluginsVersionSetting +: updateScalafmtConfigSetting +: updateSbtVersionSetting +: Seq(
+        djxUpdateAllSetting
       )
   }
 

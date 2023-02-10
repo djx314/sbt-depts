@@ -22,4 +22,6 @@ trait PluginsColImpl {
 
   val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.12.0"""
 
+  val `sbt-platform-deps`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-platform-deps""" % """1.0.1"""
+
 }

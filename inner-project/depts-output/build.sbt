@@ -1,6 +1,6 @@
 scalaVersion := scalaV.v212
 
-addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.1")
+addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 
 scalafmtOnCompile := true
 

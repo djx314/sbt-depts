@@ -1,406 +1,310 @@
-
 package djx.sbt.depts
 package codegen
 
 object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
-            VarContext.setScalaVersion := "2.11"
+  VarContext.setScalaVersion := "2.11"
 
-          scalaVersion               := "2.11.12"
+  scalaVersion := "2.11.12"
 
-          
+  VarContext.changeDeptVar := "kind-projector"
 
-          VarContext.changeDeptVar         := "kind-projector"
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+  VarContext.changeDeptVar := "circe"
 
-          
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
 
-          VarContext.changeDeptVar           := "circe"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
 
-          libraryDependencies += "io.circe" %%% "circe-core"    % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
 
-          libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+  VarContext.changeDeptVar := "zio2"
 
-          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.11.2"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
 
-          VarContext.changeDeptVar          := "zio2"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
 
-          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
 
-          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.5"
+  VarContext.changeDeptVar := "typesafe-config"
 
-          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.5"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  VarContext.changeDeptVar := "scala-collection-compat"
 
-          
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
 
-          VarContext.changeDeptVar             := "typesafe-config"
+  VarContext.changeDeptVar := "http4s-Release"
 
-          libraryDependencies += "com.typesafe" % "config" % "1.4.1"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.17"
 
-          
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
 
-          VarContext.changeDeptVar                         := "scala-collection-compat"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
-          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
 
-          
+  VarContext.changeDeptVar := "zio-config"
 
-          VarContext.changeDeptVar             := "http4s-Release"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-          libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.17"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
-          libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.17"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
 
-          VarContext.changeDeptVar          := "zio-config"
+  VarContext.changeDeptVar := "slf4j-simple"
 
-          libraryDependencies += "dev.zio" %%% "zio-config"          % "3.0.7"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  VarContext.changeDeptVar := "binding.scala"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-refined"  % "3.0.7"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
+  VarContext.changeDeptVar := "commons-io"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-          
+  VarContext.changeDeptVar := "macwire"
 
-          VarContext.changeDeptVar          := "slf4j-simple"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  VarContext.setScalaVersion := "2.12"
 
-          
+  scalaVersion := "2.12.17"
 
-          VarContext.changeDeptVar                           := "binding.scala"
+  VarContext.changeDeptVar := "kind-projector"
 
-          libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-          libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  VarContext.changeDeptVar := "circe"
 
-          
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-          VarContext.changeDeptVar                   := "commons-io"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
-          
+  VarContext.changeDeptVar := "zio2"
 
-          VarContext.changeDeptVar                           := "macwire"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
 
-          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
 
-          VarContext.setScalaVersion := "2.12"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
 
-          scalaVersion               := "2.12.17"
+  VarContext.changeDeptVar := "typesafe-config"
 
-          
+  libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-          VarContext.changeDeptVar         := "kind-projector"
+  VarContext.changeDeptVar := "scala-collection-compat"
 
-          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
 
-          
+  VarContext.changeDeptVar := "http4s-Release"
 
-          VarContext.changeDeptVar           := "circe"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.17"
 
-          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.3"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
 
-          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
-          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.3"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
 
-          
+  VarContext.changeDeptVar := "zio-config"
 
-          VarContext.changeDeptVar          := "zio2"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
 
-          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
 
-          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
-          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
 
-          VarContext.changeDeptVar             := "typesafe-config"
+  VarContext.changeDeptVar := "slf4j-simple"
 
-          libraryDependencies += "com.typesafe" % "config" % "1.4.1"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
-          
+  VarContext.changeDeptVar := "binding.scala"
 
-          VarContext.changeDeptVar                         := "scala-collection-compat"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
-          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
-          
+  VarContext.changeDeptVar := "commons-io"
 
-          VarContext.changeDeptVar             := "http4s-Release"
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-          libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.17"
+  VarContext.changeDeptVar := "macwire"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
+  VarContext.changeDeptVar := "sbt-librarymanagement"
 
-          libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.17"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
-          
+  VarContext.setScalaVersion := "2.13"
 
-          VarContext.changeDeptVar          := "zio-config"
+  scalaVersion := "2.13.10"
 
-          libraryDependencies += "dev.zio" %%% "zio-config"          % "3.0.7"
+  VarContext.changeDeptVar := "kind-projector"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-          libraryDependencies += "dev.zio" %%% "zio-config-refined"  % "3.0.7"
+  VarContext.changeDeptVar := "circe"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
-          
+  VarContext.changeDeptVar := "zio2"
 
-          VarContext.changeDeptVar          := "slf4j-simple"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
 
-          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
 
-          VarContext.changeDeptVar                           := "binding.scala"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
 
-          libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
+  VarContext.changeDeptVar := "typesafe-config"
 
-          libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-          
+  VarContext.changeDeptVar := "scala-collection-compat"
 
-          VarContext.changeDeptVar                   := "commons-io"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
 
-          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+  VarContext.changeDeptVar := "http4s-Release"
 
-          
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.17"
 
-          VarContext.changeDeptVar                           := "macwire"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
 
-          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
-          
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
 
-          VarContext.changeDeptVar               := "sbt-librarymanagement"
+  VarContext.changeDeptVar := "zio-config"
 
-          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
 
-          VarContext.setScalaVersion := "2.13"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
 
-          scalaVersion               := "2.13.10"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-          VarContext.changeDeptVar         := "kind-projector"
+  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
 
-          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+  VarContext.changeDeptVar := "slf4j-simple"
 
-          
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
-          VarContext.changeDeptVar           := "circe"
+  VarContext.changeDeptVar := "binding.scala"
 
-          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.3"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
-          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
-          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.3"
+  VarContext.changeDeptVar := "commons-io"
 
-          
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-          VarContext.changeDeptVar          := "zio2"
+  VarContext.changeDeptVar := "macwire"
 
-          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.5"
+  VarContext.setScalaVersion := "3"
 
-          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.5"
+  scalaVersion := "3.2.2"
 
-          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  VarContext.changeDeptVar := "circe"
 
-          
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.3"
 
-          VarContext.changeDeptVar             := "typesafe-config"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
 
-          libraryDependencies += "com.typesafe" % "config" % "1.4.1"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
-          
+  VarContext.changeDeptVar := "zio2"
 
-          VarContext.changeDeptVar                         := "scala-collection-compat"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
 
-          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
 
-          VarContext.changeDeptVar             := "http4s-Release"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
 
-          libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.17"
+  VarContext.changeDeptVar := "typesafe-config"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.1"
 
-          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
+  VarContext.changeDeptVar := "scala-collection-compat"
 
-          libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.17"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
 
-          
+  VarContext.changeDeptVar := "http4s-Release"
 
-          VarContext.changeDeptVar          := "zio-config"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.17"
 
-          libraryDependencies += "dev.zio" %%% "zio-config"          % "3.0.7"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-refined"  % "3.0.7"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+  VarContext.changeDeptVar := "zio-config"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-          libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
 
-          VarContext.changeDeptVar          := "slf4j-simple"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
-          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-          
+  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
 
-          VarContext.changeDeptVar                           := "binding.scala"
+  VarContext.changeDeptVar := "slf4j-simple"
 
-          libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
-          libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  VarContext.changeDeptVar := "binding.scala"
 
-          
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
 
-          VarContext.changeDeptVar                   := "commons-io"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
-          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+  VarContext.changeDeptVar := "commons-io"
 
-          
+  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-          VarContext.changeDeptVar                           := "macwire"
+  VarContext.changeDeptVar := "macwire"
 
-          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
-
-          
-
-          VarContext.setScalaVersion := "3"
-
-          scalaVersion               := "3.2.2"
-
-          
-
-          VarContext.changeDeptVar           := "circe"
-
-          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.3"
-
-          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
-
-          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.3"
-
-          
-
-          VarContext.changeDeptVar          := "zio2"
-
-          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.5"
-
-          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.5"
-
-          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.5"
-
-          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
-
-          
-
-          VarContext.changeDeptVar             := "typesafe-config"
-
-          libraryDependencies += "com.typesafe" % "config" % "1.4.1"
-
-          
-
-          VarContext.changeDeptVar                         := "scala-collection-compat"
-
-          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.8.1"
-
-          
-
-          VarContext.changeDeptVar             := "http4s-Release"
-
-          libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.17"
-
-          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.17"
-
-          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
-
-          libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.17"
-
-          
-
-          VarContext.changeDeptVar          := "zio-config"
-
-          libraryDependencies += "dev.zio" %%% "zio-config"          % "3.0.7"
-
-          libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
-
-          libraryDependencies += "dev.zio" %%% "zio-config-refined"  % "3.0.7"
-
-          libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
-
-          libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
-
-          libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
-
-          
-
-          VarContext.changeDeptVar          := "slf4j-simple"
-
-          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
-
-          
-
-          VarContext.changeDeptVar                           := "binding.scala"
-
-          libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
-
-          libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
-
-          
-
-          VarContext.changeDeptVar                   := "commons-io"
-
-          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
-
-          
-
-          VarContext.changeDeptVar                           := "macwire"
-
-          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
 }
-
