@@ -19,15 +19,49 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
 
+  VarContext.changeDeptVar := "scalatest"
+
+  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+
+  VarContext.changeDeptVar := "cats-effect"
+
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+
+  VarContext.changeDeptVar := "cats"
+
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+
+  VarContext.changeDeptVar := "h2"
+
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+
+  VarContext.changeDeptVar := "doobie"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+
+  VarContext.changeDeptVar := "doobie-h2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -46,6 +80,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
   libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
+
+  VarContext.changeDeptVar := "http4s-twirl"
+
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
   VarContext.changeDeptVar := "zio-config"
 
@@ -95,15 +133,49 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
+  VarContext.changeDeptVar := "scalatest"
+
+  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+
+  VarContext.changeDeptVar := "cats-effect"
+
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+
+  VarContext.changeDeptVar := "cats"
+
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+
+  VarContext.changeDeptVar := "h2"
+
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+
+  VarContext.changeDeptVar := "doobie"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+
+  VarContext.changeDeptVar := "doobie-h2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -122,6 +194,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
   libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
+
+  VarContext.changeDeptVar := "http4s-twirl"
+
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
   VarContext.changeDeptVar := "zio-config"
 
@@ -175,15 +251,49 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
+  VarContext.changeDeptVar := "scalatest"
+
+  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+
+  VarContext.changeDeptVar := "cats-effect"
+
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+
+  VarContext.changeDeptVar := "cats"
+
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+
+  VarContext.changeDeptVar := "h2"
+
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+
+  VarContext.changeDeptVar := "doobie"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+
+  VarContext.changeDeptVar := "doobie-h2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -202,6 +312,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
   libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
+
+  VarContext.changeDeptVar := "http4s-twirl"
+
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
   VarContext.changeDeptVar := "zio-config"
 
@@ -247,15 +361,49 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.3"
 
+  VarContext.changeDeptVar := "scalatest"
+
+  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+
+  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+
+  VarContext.changeDeptVar := "cats-effect"
+
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+
+  VarContext.changeDeptVar := "cats"
+
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+
+  VarContext.changeDeptVar := "h2"
+
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+
+  VarContext.changeDeptVar := "doobie"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+
+  VarContext.changeDeptVar := "doobie-h2"
+
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.5"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -274,6 +422,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.17"
 
   libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.17"
+
+  VarContext.changeDeptVar := "http4s-twirl"
+
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
   VarContext.changeDeptVar := "zio-config"
 

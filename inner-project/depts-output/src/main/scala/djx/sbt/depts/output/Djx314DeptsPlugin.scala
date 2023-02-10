@@ -3,11 +3,15 @@ package output
 
 import sbt._
 import sbt.Keys._
+import scala.collection.compat._
 
 import impl.{ScalafmtRewrite, UpdatePluginLibVersion, UpdateSbtVersion}
+import collection.mutable.ListBuffer
 
 package impl {
   class BuildKeysAbs {
+    val djxIsScalaJs  = settingKey[Option[Boolean]]("Is scala.js")
+    val djxIsScala2   = settingKey[Boolean]("Is scala 2")
     val djxIsScala211 = settingKey[Boolean]("Is scala 2.11")
     val djxIsScala212 = settingKey[Boolean]("Is scala 2.12")
     val djxIsScala213 = settingKey[Boolean]("Is scala 2.13")
@@ -32,49 +36,77 @@ package impl {
 }
 
 object Djx314DeptsPlugin extends AutoPlugin {
-  override def requires: Plugins      = org.portablescala.sbtplatformdeps.PlatformDepsPlugin
+  override def requires: Plugins =
+    org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin
   override def trigger: PluginTrigger = allRequirements
 
   object autoImport extends impl.BuildKeysImpl
 
   private class Settings(override val buildKeys: impl.BuildKeysImpl) extends Djx314DeptsImpl {
     import buildKeys._
-    val updateScalafmtConfigSetting = djxUpdateScalafmtConfig := {
-      val fileOpt: Option[File] = djxScalafmtFile.?.value
-      for (file <- fileOpt) yield ScalafmtRewrite.writeToFile(file.toPath)
-    }
-    val updateSbtVersionSetting = djxUpdateSbtVersion := {
-      val fileOpt: Option[File] = djxBuildSbtFile.?.value
-      for (file <- fileOpt) yield UpdateSbtVersion.update(file.toPath)
-    }
-    val djxUpdatePluginsVersionSetting = djxUpdatePluginsVersion := {
-      val fileOpt: Option[File] = djxPluginsLigFile.?.value
-      for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
-    }
-    val djxUpdateAllSetting = djxUpdate := {
-      djxUpdateScalafmtConfig.value
-      djxUpdateSbtVersion.value
-      djxUpdatePluginsVersion.value
+    object UpdateAction {
+      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(djxUpdateScalafmtConfig := {
+        val fileOpt: Option[File] = djxScalafmtFile.?.value
+        for (file <- fileOpt) yield ScalafmtRewrite.writeToFile(file.toPath)
+      })
+      settingsCol.+=(djxUpdateSbtVersion := {
+        val fileOpt: Option[File] = djxBuildSbtFile.?.value
+        for (file <- fileOpt) yield UpdateSbtVersion.update(file.toPath)
+      })
+      settingsCol.+=(djxUpdatePluginsVersion := {
+        val fileOpt: Option[File] = djxPluginsLigFile.?.value
+        for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
+      })
+      settingsCol.+=(djxUpdate := {
+        djxUpdateScalafmtConfig.value
+        djxUpdateSbtVersion.value
+        djxUpdatePluginsVersion.value
+      })
+
+      val collect = settingsCol.to(List)
     }
 
-    val kindProjectorSetting = {
-      import autoImport._
-      libScalax.`kind-projector` := {
-        for (lib <- libScalax.`kind-projector`.value) yield compilerPlugin(lib)
-      }
+    object scalaVersionSettings {
+      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(djxIsScala2 := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(2L) })
+
+      settingsCol.+=(djxIsScala211 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(11L) && djxIsScala2.value })
+
+      settingsCol.+=(djxIsScala212 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(12L) && djxIsScala2.value })
+
+      settingsCol.+=(djxIsScala213 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(13L) && djxIsScala2.value })
+
+      settingsCol.+=(djxIsScala3 := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(3L) })
+
+      settingsCol.+=({
+        import scalajscrossproject.ScalaJSCrossPlugin.autoImport.JSPlatform
+        import sbtcrossproject.CrossPlugin.autoImport._
+        djxIsScalaJs := { crossProjectPlatform.?.value.map(s => s == JSPlatform) }
+      })
+
+      val collect = settingsCol.to(List)
     }
 
-    val scalaVersionSettings = List(
-      djxIsScala211 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 11L) },
-      djxIsScala212 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 12L) },
-      djxIsScala213 := { CrossVersion.partialVersion(scalaVersion.value) == Some(2L, 13L) },
-      djxIsScala3   := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(3L) }
-    )
+    object fix {
+      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(libScalax.circe := {
+        if (djxIsScala211.value && djxIsScalaJs.value == Some(true))
+          Seq.empty
+        else
+          for (libCol <- libScalax.circe.?.value.to(List); lib <- libCol) yield lib
+      })
+
+      settingsCol.+=(libScalax.`kind-projector` := { for (lib <- libScalax.`kind-projector`.value) yield compilerPlugin(lib) })
+
+      val collect = settingsCol.to(List)
+    }
 
     override def settingsForDept: Seq[Setting[_]] =
-      scalaVersionSettings ++: super.settingsForDept ++: kindProjectorSetting +: djxUpdatePluginsVersionSetting +: updateScalafmtConfigSetting +: updateSbtVersionSetting +: Seq(
-        djxUpdateAllSetting
-      )
+      scalaVersionSettings.collect ++: super.settingsForDept ++: fix.collect ++: UpdateAction.collect
   }
 
   private val settingsValue                                    = new Settings(autoImport)

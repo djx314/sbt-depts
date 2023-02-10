@@ -27,6 +27,10 @@ package impl {
       prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%")),
       current = LibraryDepts.TextType.StringText(s)
     )
+    def %(s: LibraryDepts.TextType): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
+      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%")),
+      current = s
+    )
     def cross(s: LibraryDepts.CrossVersionSetting): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
       prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("cross")),
       current = s.textType
@@ -65,6 +69,7 @@ trait LibraryDepts {
   def addCompilerPlugin(v: LibraryDepts.LibraryInstance): Unit = context.push(LibraryDepts.AddLibrarySettings(v))
 
   val CrossVersion: LibraryDepts.CrossVersionSetting.type = LibraryDepts.CrossVersionSetting
+  val Test: LibraryDepts.TextType                         = LibraryDepts.TextType.LitText("Test")
 }
 
 object LibraryDepts {

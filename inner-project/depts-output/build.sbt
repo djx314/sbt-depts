@@ -1,6 +1,7 @@
 scalaVersion := scalaV.v212
 
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
+addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 
 scalafmtOnCompile := true
 
