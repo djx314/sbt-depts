@@ -65,7 +65,6 @@ VarContext.changeDeptVar          := "slf4j-simple"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
 VarContext.changeDeptVar                           := "binding.scala"
-libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.0+28-a2b9d520"
 libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
 VarContext.changeDeptVar                   := "commons-io"
@@ -73,3 +72,9 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
+VarContext.changeDeptVar                   := "commons-lang3"
+libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+VarContext.changeDeptVar                    := "simple-adt"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"

@@ -76,3 +76,9 @@ libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+VarContext.changeDeptVar                   := "commons-lang3"
+libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+VarContext.changeDeptVar                    := "simple-adt"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"

@@ -105,8 +105,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
-
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
 
   VarContext.changeDeptVar := "commons-io"
@@ -116,6 +114,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "macwire"
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
+  VarContext.changeDeptVar := "commons-lang3"
+
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+  VarContext.changeDeptVar := "simple-adt"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -235,6 +241,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
+  VarContext.changeDeptVar := "commons-lang3"
+
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+  VarContext.changeDeptVar := "simple-adt"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.10"
@@ -349,6 +363,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
+  VarContext.changeDeptVar := "commons-lang3"
+
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+  VarContext.changeDeptVar := "simple-adt"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.2.2"
@@ -458,5 +480,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "macwire"
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
+  VarContext.changeDeptVar := "commons-lang3"
+
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+  VarContext.changeDeptVar := "simple-adt"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
 
 }
