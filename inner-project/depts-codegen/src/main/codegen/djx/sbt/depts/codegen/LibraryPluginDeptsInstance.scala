@@ -5,7 +5,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
-  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.4.6")
+  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.0")
 
   VarContext.changePluginVar := "sbt-revolver"
 
