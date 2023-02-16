@@ -55,13 +55,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -175,13 +175,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -301,13 +301,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -419,13 +419,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.8"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
 
   VarContext.changeDeptVar := "typesafe-config"
 
