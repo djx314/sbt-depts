@@ -5,7 +5,7 @@ addSbtPlugin("io.spray"            % "sbt-revolver"             % "0.9.1")
 VarContext.changePluginVar        := "sbt-twirl"
 addSbtPlugin("com.typesafe.play"   % "sbt-twirl"                % "1.6.0-RC1")
 VarContext.changePluginVar        := "sbt-sonatype"
-addSbtPlugin("org.xerial.sbt"      % "sbt-sonatype"             % "3.9.2")
+addSbtPlugin("org.xerial.sbt"      % "sbt-sonatype"             % "3.9.17")
 VarContext.changePluginVar        := "sbt-pgp"
 addSbtPlugin("com.jsuereth"        % "sbt-pgp"                  % "2.0.1")
 VarContext.changePluginVar        := "sbt-scalajs-crossproject"
