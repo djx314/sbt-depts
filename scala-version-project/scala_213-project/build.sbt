@@ -78,4 +78,4 @@ VarContext.changeDeptVar                   := "commons-lang3"
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
 VarContext.changeDeptVar                    := "simple-adt"
-libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"

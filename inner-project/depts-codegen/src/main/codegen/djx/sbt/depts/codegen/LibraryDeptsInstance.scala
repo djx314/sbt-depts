@@ -121,7 +121,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -247,7 +247,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -369,7 +369,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
 
   VarContext.setScalaVersion := "3"
 
@@ -487,6 +487,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
 
 }
