@@ -5,9 +5,9 @@ VarContext.changeDeptVar         := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.3"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.3"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.3"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.4"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.4"
 
 VarContext.changeDeptVar               := "scalatest"
 libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
