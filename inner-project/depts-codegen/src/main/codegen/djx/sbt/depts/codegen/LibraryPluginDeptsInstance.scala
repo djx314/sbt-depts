@@ -22,7 +22,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
           VarContext.changePluginVar          := "sbt-pgp"
 
-          addSbtPlugin("com.jsuereth"          % "sbt-pgp"                  % "2.1.1")
+          addSbtPlugin("com.github.sbt"        % "sbt-pgp"                  % "2.2.1")
 
           VarContext.changePluginVar          := "sbt-scalajs-crossproject"
 

@@ -322,12 +322,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
           
 
-          VarContext.changeDeptVar               := "sbt-librarymanagement"
-
-          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
-
-          
-
           VarContext.changeDeptVar                   := "commons-lang3"
 
           libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"

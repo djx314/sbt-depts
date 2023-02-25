@@ -74,9 +74,6 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-VarContext.changeDeptVar               := "sbt-librarymanagement"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
-
 VarContext.changeDeptVar                   := "commons-lang3"
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 

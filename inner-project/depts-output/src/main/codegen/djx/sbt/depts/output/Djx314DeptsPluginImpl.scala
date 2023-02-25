@@ -31,7 +31,6 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `commons-io`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
     val `macwire`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
     val `cats`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats""")
-    val `sbt-librarymanagement`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement""")
   }
 }
 
@@ -62,7 +61,6 @@ trait Djx314DeptsImpl {
     libScalax.`commons-io`                 := libScalax.`commons-io`.?.value.to(List).flatten,
     libScalax.`macwire`                    := libScalax.`macwire`.?.value.to(List).flatten,
     libScalax.`cats`                       := libScalax.`cats`.?.value.to(List).flatten,
-    libScalax.`sbt-librarymanagement`      := libScalax.`sbt-librarymanagement`.?.value.to(List).flatten,
     libScalax.`kind-projector` ++= {
       if (djxIsScala211.value) Seq("""org.typelevel""" % """kind-projector""" % """0.13.2""" cross CrossVersion.full) else Seq.empty
     },
@@ -167,9 +165,6 @@ trait Djx314DeptsImpl {
     },
     libScalax.`commons-io` ++= { if (djxIsScala212.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala212.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
-    libScalax.`sbt-librarymanagement` ++= {
-      if (djxIsScala212.value) Seq("""org.scala-sbt""" %% """librarymanagement-core""" % """1.8.0""") else Seq.empty
-    },
     libScalax.`commons-lang3` ++= {
       if (djxIsScala212.value) Seq("""org.apache.commons""" % """commons-lang3""" % """3.12.0""") else Seq.empty
     },
