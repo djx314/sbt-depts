@@ -37,7 +37,22 @@ compatVersion := {
   }
 }
 
-addCommandAlias("preparePackaging", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")
+val allfmt = taskKey[Unit]("Format all projects.")
+allfmt := {
+  (Compile / scalafmtSbt).value
+  (`depts-abs` / Compile / scalafmtSbt).value
+  (`depts-codegen` / Compile / scalafmtSbt).value
+  (`depts-output-plugins` / Compile / scalafmtSbt).value
+  (`depts-output` / Compile / scalafmtSbt).value
+
+  (Compile / scalafmt).value
+  (`depts-abs` / Compile / scalafmt).value
+  (`depts-codegen` / Compile / scalafmt).value
+  (`depts-output-plugins` / Compile / scalafmt).value
+  (`depts-output` / Compile / scalafmt).value
+}
+
+addCommandAlias("preparePackaging", "; updateMVersion; genAction; compatVersion; allfmt;")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
