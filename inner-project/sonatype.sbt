@@ -43,6 +43,7 @@ ThisBuild / homepage := Some(url("https://github.com/djx314/sbt-depts"))
 ThisBuild / pomIncludeRepository := { _ => false }
 
 ThisBuild / sonatypeCredentialHost := "s01.oss.sonatype.org"
+ThisBuild / sonatypeRepository     := "https://s01.oss.sonatype.org/service/local"
 
 ThisBuild / publishTo := {
   val nexus = "https://s01.oss.sonatype.org/"
@@ -53,3 +54,5 @@ ThisBuild / publishTo := {
 ThisBuild / publishMavenStyle := true
 
 ThisBuild / versionScheme := Some("early-semver")
+
+credentials += Credentials("Sonatype Nexus Repository Manager", "s01.oss.sonatype.org", "djx314", "SShhxxx&314159")

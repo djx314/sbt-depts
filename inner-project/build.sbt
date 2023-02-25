@@ -40,3 +40,9 @@ compatVersion := {
 addCommandAlias("preparePackaging", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
+
+`depts-output` / name := "sbt-depts-djx314"
+
+`depts-output-plugins` / name := "sbt-depts-djx314-plugins"
+
+addCommandAlias("bb", "; preparePackaging; depts-output/publishSigned; depts-output-plugins/publishSigned")

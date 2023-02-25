@@ -3,6 +3,8 @@ scalaVersion := scalaV.v212
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 
+libraryDependencies ++= libScalax.`scala-collection-compat`.value
+
 scalafmtOnCompile := true
 
 enablePlugins(SbtPlugin)
@@ -18,5 +20,3 @@ Compile / unmanagedSourceDirectories := {
   val codegenFile = sourceDirectory.value / "main" / "codegen"
   codegenFile +: v1
 }
-
-name := "sbt-depts-djx314"
