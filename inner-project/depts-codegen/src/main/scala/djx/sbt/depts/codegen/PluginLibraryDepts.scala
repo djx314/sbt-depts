@@ -18,7 +18,7 @@ object PluginLibraryDepts {
         case PluginDepts.ChangeDeptVarSettings(varName) => currentContext = varName
         case PluginDepts.AddLibrarySettings(lib) =>
           val str = s"""val `$currentContext`: sbt.librarymanagement.ModuleID = ${lib.genString}"""
-          settingStrings = settingStrings.appended(str)
+          settingStrings = settingStrings ::: str :: List.empty[String]
       }
     }
 

@@ -6,14 +6,17 @@ import abs.LibraryDepts
 import java.io.PrintWriter
 import java.nio.file.{Files, Path}
 import scala.util.Using
+import scala.collection.compat._
 
 trait AppHaveATest {
 
   case class ScalaV(v211: Option[String], v212: Option[String], v213: Option[String], v3: Option[String]) {
     private def namesMap: List[(String, String)] =
-      productElementNames.zip(productIterator).to(List).map(s => (s._1, s._2.asInstanceOf[Option[String]].get))
+      List("v211", "v212", "v213", "v3").zip(productIterator.to(List)).to(List).map(s => (s._1, s._2.asInstanceOf[Option[String]].get))
+
+    val threeX = "\"" * 3
     def genString: String = s"""
-         |val scalaV: ScalaV = ScalaV(${namesMap.map(s => s"`${s._1}` = \"\"\"${s._2}\"\"\"").mkString(", ")})
+         |val scalaV: ScalaV = ScalaV(${namesMap.map(s => s"`${s._1}` = ${threeX}${s._2}${threeX}").mkString(", ")})
          |""".stripMargin
   }
   object ScalaV {
@@ -48,10 +51,11 @@ trait AppHaveATest {
       current match {
         case LibraryDepts.ChangeDeptVarSettings(name) =>
           contextVarName = name
-          contextVarNames = contextVarNames.appended(contextVarName)
+          contextVarNames = contextVarNames ::: contextVarName :: List.empty[String]
         case LibraryDepts.AddLibrarySettings(libInfo) =>
           libSettings =
-            libSettings.appended(LibSettings(libStr = libInfo.genString, scalaV = PluginScalaVersionBoolean, libVarName = contextVarName))
+            libSettings ::: LibSettings(libStr = libInfo.genString, scalaV = PluginScalaVersionBoolean, libVarName = contextVarName) :: List
+              .empty[LibSettings]
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
             case ScalaV.V211 =>
@@ -89,8 +93,8 @@ trait AppHaveATest {
 
     val deptNames: List[String] = contextVarNames.to(Set).to(List)
 
-    libString = libString.appendedAll(for (name <- deptNames) yield LibSettings.genInitVar(name))
-    libString = libString.appendedAll(for (libSetting <- libSettings) yield libSetting.genString)
+    libString = libString ::: (for (name <- deptNames) yield LibSettings.genInitVar(name))
+    libString = libString ::: (for (libSetting <- libSettings) yield libSetting.genString)
 
     val varDeineds = for (name <- deptNames) yield LibSettings.genDefinedVar(name)
 

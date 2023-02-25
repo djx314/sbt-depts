@@ -1,12 +1,13 @@
 import Settings._
 
-scalaVersion := scalaV.v3
+scalaVersion := scalaV.v212
 
 scalafmtOnCompile := true
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 
 libraryDependencies ++= libScalax.`typesafe-config`.value
+libraryDependencies ++= libScalax.`scala-collection-compat`.value
 
 val buildSbtFile1   = (rootFile / ".." / "scala-version-project" / "scala_211-project" / "build.sbt").getCanonicalFile
 val buildSbtFile2   = (rootFile / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
@@ -35,3 +36,5 @@ genActionImpl := {
     .partialInput(s""" ${writFile2.toString}""")
     .evaluated
 }
+
+libraryDependencies ++= Seq("org.scala-sbt" % "librarymanagement-core_2.12" % "1.8.0")

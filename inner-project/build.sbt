@@ -1,6 +1,4 @@
 import Settings._
-import java.nio.file.Files
-import java.nio.charset.StandardCharsets
 import scala.util.Using
 import java.io.PrintWriter
 import java.io.FileOutputStream

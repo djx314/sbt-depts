@@ -1,15 +1,18 @@
 package djx.sbt.depts.abs
 
 import java.io.PrintWriter
+import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
 import scala.util.Using
 import scala.io.Source
+import scala.collection.compat._
 
 object CodegenAction {
 
   def main(arr: Array[String]): Unit = {
-    def genString(pathStr: String): String = Files.readString(Paths.get(pathStr))
-    val strCol                             = arr.take(4).map(genString)
+    def genString(pathStr: String): String =
+      Using.resource(Source.fromFile(Paths.get(pathStr).toFile, StandardCharsets.UTF_8.name()))(u => u.getLines().mkString("\n"))
+    val strCol = arr.take(4).map(genString)
 
     val writePath = Paths.get(arr(4))
     locally {

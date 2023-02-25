@@ -2,12 +2,13 @@ package djx.sbt.depts.abs
 
 import java.io.File
 import java.nio.file.Paths
+import scala.collection.compat._
 
 package impl {
   class DeptSettingContext {
     private var settings: List[LibraryDepts.LibraryDeptsSettings] = List.empty
-    def push(item: LibraryDepts.LibraryDeptsSettings): Unit       = settings = settings.appended(item)
-    def value: List[LibraryDepts.LibraryDeptsSettings]            = settings
+    def push(item: LibraryDepts.LibraryDeptsSettings): Unit = settings = settings ::: item :: List.empty[LibraryDepts.LibraryDeptsSettings]
+    def value: List[LibraryDepts.LibraryDeptsSettings]      = settings
   }
 
   class ScalaVersionVarSetting(context: DeptSettingContext) {
@@ -103,10 +104,10 @@ object LibraryDepts {
   }
   object TextType {
     case class LitText(s: String) extends TextType {
-      override def genString: String = s"$s"
+      override def genString: String = s
     }
     case class StringText(s: String) extends TextType {
-      override def genString: String = s"\"\"\"$s\"\"\""
+      override def genString: String = "\"\"\"" + s + "\"\"\""
     }
   }
 }

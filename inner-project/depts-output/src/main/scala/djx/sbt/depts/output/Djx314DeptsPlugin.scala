@@ -49,6 +49,10 @@ object Djx314DeptsPlugin extends AutoPlugin {
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
 
+      settingsCol.+=(djxProjectRootPath := {
+        djxProjectRootPath.?.value.getOrElse(new File("."))
+      })
+
       settingsCol.+=(djxScalafmtFile := {
         new File(djxProjectRootPath.value, ".sbt-depts-scalafmt-common.conf")
       })

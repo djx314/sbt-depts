@@ -4,11 +4,13 @@ import java.io.PrintWriter
 import java.nio.file.{Files, Paths}
 import scala.util.Using
 import scala.io.Source
+import java.nio.charset.StandardCharsets
+import scala.collection.compat._
 
 object CodegenActionPlugin {
 
   def main(arr: Array[String]): Unit = {
-    val strCol = Files.readString(Paths.get(arr(0)))
+    val strCol = Using.resource(Source.fromFile(Paths.get(arr(0)).toFile, StandardCharsets.UTF_8.name()))(u => u.getLines().mkString("\n"))
 
     val writePath = Paths.get(arr(1))
     locally {

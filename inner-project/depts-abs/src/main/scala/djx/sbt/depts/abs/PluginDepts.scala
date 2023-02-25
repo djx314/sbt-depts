@@ -6,8 +6,8 @@ import java.nio.file.Paths
 package pluginImpl {
   class DeptSettingContext {
     private var settings: List[PluginDepts.LibraryDeptsSettings] = List.empty
-    def push(item: PluginDepts.LibraryDeptsSettings): Unit       = settings = settings.appended(item)
-    def value: List[PluginDepts.LibraryDeptsSettings]            = settings
+    def push(item: PluginDepts.LibraryDeptsSettings): Unit = settings = settings ::: item :: List.empty[PluginDepts.LibraryDeptsSettings]
+    def value: List[PluginDepts.LibraryDeptsSettings]      = settings
   }
 
   class StringLibAppend(prefix: PluginDepts.LibraryInstance) {
@@ -74,7 +74,7 @@ object PluginDepts {
       override def genString: String = s"$s"
     }
     case class StringText(s: String) extends TextType {
-      override def genString: String = s"\"\"\"$s\"\"\""
+      override def genString: String = "\"\"\"" + s ++ "\"\"\""
     }
   }
 }
