@@ -12,7 +12,7 @@ trait PluginsColImpl {
 
   val `sbt-sonatype`: sbt.librarymanagement.ModuleID = """org.xerial.sbt""" % """sbt-sonatype""" % """3.9.17"""
 
-  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.jsuereth""" % """sbt-pgp""" % """2.1.1"""
+  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.2.1"""
 
   val `sbt-scalajs-crossproject`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-scalajs-crossproject""" % """1.2.0"""
 
