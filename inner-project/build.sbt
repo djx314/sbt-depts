@@ -1,6 +1,9 @@
 import Settings._
 import java.nio.file.Files
 import java.nio.charset.StandardCharsets
+import scala.util.Using
+import java.io.PrintWriter
+import java.io.FileOutputStream
 
 scalaVersion := scalaV.v213
 
@@ -10,9 +13,14 @@ val `depts-output-plugins` = project in pluginFile
 val `depts-output`         = (project in outputFile).dependsOn(`depts-output-plugins`)
 
 updateMVersion := {
-  val v         = (`depts-output` / versionFileString).value + 1
-  val writeFile = rootFile / "MVersion-Count.sbt"
-  Files.writeString(writeFile.toPath, s"ThisBuild / Settings.versionFileString := ${v.toString}", StandardCharsets.UTF_8)
+  val v           = (`depts-output` / versionFileString).value + 1
+  val writeFile   = rootFile / "MVersion-Count.sbt"
+  val writeString = s"ThisBuild / Settings.versionFileString := ${v.toString}"
+  Using.resource(new FileOutputStream(writeFile)) { out =>
+    Using.resource(new PrintWriter(out)) { writer =>
+      writer.println(writeString)
+    }
+  }
 }
 
 genAction := {
@@ -21,13 +29,14 @@ genAction := {
 }
 
 compatVersion := {
-  val v         = (`depts-output` / version).value
-  val writeFile = pluginFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "DjxPluginCusVersion.scala"
-  Files.writeString(
-    writeFile.toPath,
-    s"""package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = \"\"\"$v\"\"\" }""",
-    StandardCharsets.UTF_8
-  )
+  val v           = (`depts-output` / version).value
+  val writeFile   = pluginFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "DjxPluginCusVersion.scala"
+  val writeString = s"""package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = \"\"\"$v\"\"\" }"""
+  Using.resource(new FileOutputStream(writeFile)) { out =>
+    Using.resource(new PrintWriter(out)) { writer =>
+      writer.println(writeString)
+    }
+  }
 }
 
 addCommandAlias("preparePackaging", "; scalafmtSbt; updateMVersion; genAction; compatVersion;")

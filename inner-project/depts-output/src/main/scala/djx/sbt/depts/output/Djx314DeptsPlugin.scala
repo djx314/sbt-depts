@@ -19,6 +19,8 @@ package impl {
   }
 
   class BuildKeysImpl extends BuildKeys {
+    val djxProjectRootPath = settingKey[File]("Key of project root.")
+
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
     val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
 
@@ -46,6 +48,16 @@ object Djx314DeptsPlugin extends AutoPlugin {
     import buildKeys._
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(djxScalafmtFile := {
+        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt-common.conf")
+      })
+      settingsCol.+=(djxBuildSbtFile := {
+        new File(new File(djxProjectRootPath.value, "project"), "build.properties")
+      })
+      settingsCol.+=(djxPluginsLigFile := {
+        new File(new File(new File(djxProjectRootPath.value, "project"), "project"), "sbt-depts-djx314-lib.sbt")
+      })
 
       settingsCol.+=(djxUpdateScalafmtConfig := {
         val fileOpt: Option[File] = djxScalafmtFile.?.value
