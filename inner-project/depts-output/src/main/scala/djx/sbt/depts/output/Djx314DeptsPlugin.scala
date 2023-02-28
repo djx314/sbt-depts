@@ -54,7 +54,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
       })
 
       settingsCol.+=(djxScalafmtFile := {
-        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt-common.conf")
+        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
       })
       settingsCol.+=(djxBuildSbtFile := {
         new File(new File(djxProjectRootPath.value, "project"), "build.properties")
