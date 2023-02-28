@@ -65,7 +65,8 @@ VarContext.changeDeptVar          := "slf4j-simple"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
 VarContext.changeDeptVar                           := "binding.scala"
-libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.2"
+libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
 
 VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
@@ -87,3 +88,9 @@ libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+
+VarContext.changeDeptVar               := "cats-effect-cps"
+libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+
+VarContext.changeDeptVar         := "zio-json"
+libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"

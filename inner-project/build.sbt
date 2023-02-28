@@ -3,21 +3,19 @@ import scala.util.Using
 import java.io.PrintWriter
 import java.io.FileOutputStream
 
-scalaVersion := scalaV.v213
+scalaVersion := scalaV.v212
 
-val `depts-abs`            = project in rootFile / "depts-abs"
-val `depts-codegen`        = (project in rootFile / "depts-codegen").dependsOn(`depts-abs`)
-val `depts-output-plugins` = project in pluginFile
-val `depts-output`         = (project in outputFile).dependsOn(`depts-output-plugins`)
+val `depts-abs`            = project in `root/file` / "depts-abs"
+val `depts-codegen`        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
+val `depts-output-plugins` = project in `plugin/file`
+val `depts-output`         = project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins`
 
 updateMVersion := {
   val v           = (`depts-output` / versionFileString).value + 1
-  val writeFile   = rootFile / "MVersion-Count.sbt"
+  val writeFile   = `root/file` / "MVersion-Count.sbt"
   val writeString = s"ThisBuild / Settings.versionFileString := ${v.toString}"
-  Using.resource(new FileOutputStream(writeFile)) { out =>
-    Using.resource(new PrintWriter(out)) { writer =>
-      writer.println(writeString)
-    }
+  Using.resource(new PrintWriter(writeFile)) { writer =>
+    writer.println(writeString)
   }
 }
 
@@ -28,12 +26,10 @@ genAction := {
 
 compatVersion := {
   val v           = (`depts-output` / version).value
-  val writeFile   = pluginFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "DjxPluginCusVersion.scala"
+  val writeFile   = `plugin/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "DjxPluginCusVersion.scala"
   val writeString = s"""package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = \"\"\"$v\"\"\" }"""
-  Using.resource(new FileOutputStream(writeFile)) { out =>
-    Using.resource(new PrintWriter(out)) { writer =>
-      writer.println(writeString)
-    }
+  Using.resource(new PrintWriter(writeFile)) { writer =>
+    writer.println(writeString)
   }
 }
 
@@ -60,4 +56,4 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 `depts-output-plugins` / name := "sbt-depts-djx314-plugins"
 
-addCommandAlias("bb", "; preparePackaging; depts-output/publishSigned; depts-output-plugins/publishSigned;")
+addCommandAlias("bb", "; preparePackaging; depts-output/publishSigned;")

@@ -8,7 +8,7 @@ trait PluginsColImpl {
 
   val `sbt-revolver`: sbt.librarymanagement.ModuleID = """io.spray""" % """sbt-revolver""" % """0.9.1"""
 
-  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """com.typesafe.play""" % """sbt-twirl""" % """1.6.0-RC1"""
+  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """com.typesafe.play""" % """sbt-twirl""" % """1.6.0-RC2"""
 
   val `sbt-sonatype`: sbt.librarymanagement.ModuleID = """org.xerial.sbt""" % """sbt-sonatype""" % """3.9.17"""
 
@@ -27,5 +27,11 @@ trait PluginsColImpl {
   val `flyway-sbt`: sbt.librarymanagement.ModuleID = """io.github.davidmweber""" % """flyway-sbt""" % """7.4.0"""
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.2.0"""
+
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M334"""
+
+  val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.typesafe.sbt""" % """sbt-js-engine""" % """1.2.3"""
+
+  val `sbt-scala-js-map`: sbt.librarymanagement.ModuleID = """com.thoughtworks.sbt-scala-js-map""" % """sbt-scala-js-map""" % """4.1.1"""
 
 }

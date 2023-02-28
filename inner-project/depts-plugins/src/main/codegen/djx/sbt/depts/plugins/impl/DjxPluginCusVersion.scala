@@ -1,1 +1,1 @@
-package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = """0.0.1-M335""" }
+package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = """0.0.1-M337""" }

@@ -51,4 +51,16 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.2.0")
 
+  VarContext.changePluginVar := "sbt-depts-djx314"
+
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M334")
+
+  VarContext.changePluginVar := "sbt-js-engine"
+
+  addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.2.3")
+
+  VarContext.changePluginVar := "sbt-scala-js-map"
+
+  addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")
+
 }

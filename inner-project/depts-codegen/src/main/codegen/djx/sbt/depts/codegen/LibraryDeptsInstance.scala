@@ -105,7 +105,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
+
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -119,6 +121,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
+  VarContext.changeDeptVar := "commons-lang3-bridge"
+
+  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+
   VarContext.changeDeptVar := "simple-adt"
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
@@ -126,6 +132,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+  VarContext.changeDeptVar := "javacv-platform"
+
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+
+  VarContext.changeDeptVar := "cats-effect-cps"
+
+  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+
+  VarContext.changeDeptVar := "zio-json"
+
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -229,9 +247,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
 
-  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -245,6 +263,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
+  VarContext.changeDeptVar := "commons-lang3-bridge"
+
+  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+
   VarContext.changeDeptVar := "simple-adt"
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
@@ -252,6 +274,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+  VarContext.changeDeptVar := "javacv-platform"
+
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+
+  VarContext.changeDeptVar := "cats-effect-cps"
+
+  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+
+  VarContext.changeDeptVar := "zio-json"
+
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -355,9 +389,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
+  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
 
-  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -371,6 +405,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
+  VarContext.changeDeptVar := "commons-lang3-bridge"
+
+  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+
   VarContext.changeDeptVar := "simple-adt"
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
@@ -378,6 +416,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+  VarContext.changeDeptVar := "javacv-platform"
+
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+
+  VarContext.changeDeptVar := "cats-effect-cps"
+
+  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+
+  VarContext.changeDeptVar := "zio-json"
+
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
 
   VarContext.setScalaVersion := "3"
 
@@ -477,9 +527,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.0+28-a2b9d520"
+  libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
-  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.1.0+110-53fd3428"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -493,6 +543,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
+  VarContext.changeDeptVar := "commons-lang3-bridge"
+
+  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+
   VarContext.changeDeptVar := "simple-adt"
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
@@ -500,5 +554,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+  VarContext.changeDeptVar := "javacv-platform"
+
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+
+  VarContext.changeDeptVar := "cats-effect-cps"
+
+  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+
+  VarContext.changeDeptVar := "zio-json"
+
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
 
 }

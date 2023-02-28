@@ -6,13 +6,13 @@ scalafmtOnCompile := true
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 
-val propsPath      = rootFile / ".." / "project" / "build.properties"
-val sbtVersionFile = outputFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "SbtVersionSetting.scala"
-val libVersionFile = outputFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "Djx314DeptsPluginImpl.scala"
+val propsPath      = `root/file` / ".." / "project" / "build.properties"
+val sbtVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "SbtVersionSetting.scala"
+val libVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "Djx314DeptsPluginImpl.scala"
 
-val `scalfmt/file`      = rootFile / ".." / ".scalafmt.conf"
-val scalafmtCodegenFile = outputFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "impl" / "ScalafmtRewrite.scala"
-val pluginsFile         = pluginFile / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "PluginsColImpl.scala"
+val `scalfmt/file`      = `root/file` / ".." / ".scalafmt.conf"
+val scalafmtCodegenFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "impl" / "ScalafmtRewrite.scala"
+val pluginsFile         = `plugin/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "PluginsColImpl.scala"
 
 genActionImpl := (Compile / runMain).inputTaskValue
   .partialInput(" djx.sbt.depts.codegen.CodegenRunner")
