@@ -84,3 +84,6 @@ libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+VarContext.changeDeptVar             := "javacv-platform"
+libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
