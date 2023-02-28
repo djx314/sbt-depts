@@ -22,3 +22,5 @@ VarContext.changePluginVar          := "flyway-sbt"
 addSbtPlugin("io.github.davidmweber" % "flyway-sbt"               % "7.4.0")
 VarContext.changePluginVar          := "sbt-web-scalajs"
 addSbtPlugin("com.vmunier"           % "sbt-web-scalajs"          % "1.2.0")
+VarContext.changePluginVar          := "sbt-depts-djx314"
+addSbtPlugin("net.scalax.djx314"     % "sbt-depts-djx314"         % "0.0.1-M334")
