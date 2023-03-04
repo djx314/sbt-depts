@@ -2,9 +2,9 @@ VarContext.setScalaVersion := "3"
 scalaVersion               := "3.2.2"
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.4"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.4"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.5"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.5"
 
 VarContext.changeDeptVar               := "scalatest"
 libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
@@ -78,13 +78,13 @@ VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
 VarContext.changeDeptVar                    := "simple-adt"
-libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
 VarContext.changeDeptVar             := "javacv-platform"
-libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"

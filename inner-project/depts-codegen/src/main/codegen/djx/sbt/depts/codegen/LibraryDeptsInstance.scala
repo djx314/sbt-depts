@@ -127,7 +127,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -135,7 +135,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -155,11 +155,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -269,7 +269,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -277,7 +277,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -297,11 +297,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -411,7 +411,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -419,7 +419,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -435,11 +435,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.4"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -549,7 +549,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M6"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -557,7 +557,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
