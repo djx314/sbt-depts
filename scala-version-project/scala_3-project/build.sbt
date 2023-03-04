@@ -2,9 +2,9 @@ VarContext.setScalaVersion := "3"
 scalaVersion               := "3.2.2"
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.4"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.4"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.4"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.5"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.5"
 
 VarContext.changeDeptVar               := "scalatest"
 libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
