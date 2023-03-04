@@ -88,9 +88,3 @@ libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.6"
-
-VarContext.changeDeptVar               := "cats-effect-cps"
-libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
-
-VarContext.changeDeptVar         := "zio-json"
-libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
