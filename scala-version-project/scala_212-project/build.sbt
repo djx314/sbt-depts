@@ -94,3 +94,6 @@ libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
 
 VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+
+VarContext.changeDeptVar              := "shapeless"
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"

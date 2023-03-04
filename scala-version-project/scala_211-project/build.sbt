@@ -88,3 +88,6 @@ libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+
+VarContext.changeDeptVar              := "shapeless"
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
