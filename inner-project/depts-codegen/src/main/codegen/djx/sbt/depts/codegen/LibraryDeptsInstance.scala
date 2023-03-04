@@ -137,13 +137,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
-  VarContext.changeDeptVar := "cats-effect-cps"
+  VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
-
-  VarContext.changeDeptVar := "zio-json"
-
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -281,11 +277,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+
+  VarContext.changeDeptVar := "shapeless"
+
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -423,11 +423,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+
+  VarContext.changeDeptVar := "shapeless"
+
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
   VarContext.setScalaVersion := "3"
 
@@ -561,10 +565,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+
+  VarContext.changeDeptVar := "shapeless"
+
+  libraryDependencies += "org.typelevel" %%% "shapeless-3" % "3.3.0"
 
 }
