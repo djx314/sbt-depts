@@ -57,3 +57,4 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 `depts-output-plugins` / name := "sbt-depts-djx314-plugins"
 
 addCommandAlias("bb", "; preparePackaging; depts-output/publishSigned;")
+addCommandAlias("bbLocal", "; preparePackaging; depts-output/publishLocal;")
