@@ -27,6 +27,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `zio2`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
     val `http4s-Release`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
     val `sbt-librarymanagement-core` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
+    val `shapeless3-test`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
     val `circe`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
     val `doobie-h2`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
@@ -62,6 +63,7 @@ trait Djx314DeptsImpl {
     libScalax.`zio2`                       := libScalax.`zio2`.?.value.to(List).flatten,
     libScalax.`http4s-Release`             := libScalax.`http4s-Release`.?.value.to(List).flatten,
     libScalax.`sbt-librarymanagement-core` := libScalax.`sbt-librarymanagement-core`.?.value.to(List).flatten,
+    libScalax.`shapeless3-test`            := libScalax.`shapeless3-test`.?.value.to(List).flatten,
     libScalax.`circe`                      := libScalax.`circe`.?.value.to(List).flatten,
     libScalax.`cats-effect-cps`            := libScalax.`cats-effect-cps`.?.value.to(List).flatten,
     libScalax.`doobie-h2`                  := libScalax.`doobie-h2`.?.value.to(List).flatten,
@@ -327,7 +329,16 @@ trait Djx314DeptsImpl {
       if (djxIsScala3.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.3.0""") else Seq.empty
     },
     libScalax.`zio-json` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-json""" % """0.3.0-RC8""") else Seq.empty },
-    libScalax.`shapeless` ++= { if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless-3""" % """3.3.0""") else Seq.empty }
+    libScalax.`shapeless` ++= { if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-data""" % """3.3.0""") else Seq.empty },
+    libScalax.`shapeless` ++= {
+      if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-deriving""" % """3.3.0""") else Seq.empty
+    },
+    libScalax.`shapeless` ++= {
+      if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-typeable""" % """3.3.0""") else Seq.empty
+    },
+    libScalax.`shapeless3-test` ++= {
+      if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-test""" % """3.3.0""") else Seq.empty
+    }
   )
 
 }
