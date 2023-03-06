@@ -329,7 +329,6 @@ trait Djx314DeptsImpl {
       if (djxIsScala3.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.3.0""") else Seq.empty
     },
     libScalax.`zio-json` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-json""" % """0.3.0-RC8""") else Seq.empty },
-    libScalax.`shapeless` ++= { if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-data""" % """3.3.0""") else Seq.empty },
     libScalax.`shapeless` ++= {
       if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-deriving""" % """3.3.0""") else Seq.empty
     },
