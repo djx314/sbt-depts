@@ -87,7 +87,7 @@ VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
-libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
 VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0"

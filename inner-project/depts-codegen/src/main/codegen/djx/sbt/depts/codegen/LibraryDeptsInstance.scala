@@ -277,7 +277,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
@@ -423,7 +423,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
@@ -565,7 +565,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
