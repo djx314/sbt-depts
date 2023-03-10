@@ -17,7 +17,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-sonatype"
 
-  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.9.17")
+  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.9.18")
 
   VarContext.changePluginVar := "sbt-pgp"
 
