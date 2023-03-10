@@ -55,13 +55,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -193,13 +193,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -277,11 +277,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.4.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -339,13 +339,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -423,11 +423,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.4.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -481,13 +481,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -565,11 +565,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.4.2"
 
   VarContext.changeDeptVar := "shapeless"
 

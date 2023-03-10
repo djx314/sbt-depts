@@ -33,10 +33,10 @@ VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"          % "2.0.9"
-libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.9"
-libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.9"
-libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.9"
+libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
 VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.2"
@@ -90,10 +90,10 @@ VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
-libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.3.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %%% "zio-json" % "0.3.0-RC8"
+libraryDependencies += "dev.zio" %%% "zio-json" % "0.4.2"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
