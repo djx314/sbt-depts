@@ -17,7 +17,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-sonatype"
 
-  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.9.17")
+  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.9.18")
 
   VarContext.changePluginVar := "sbt-pgp"
 
@@ -53,7 +53,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-depts-djx314"
 
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M339")
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M346")
 
   VarContext.changePluginVar := "sbt-js-engine"
 
