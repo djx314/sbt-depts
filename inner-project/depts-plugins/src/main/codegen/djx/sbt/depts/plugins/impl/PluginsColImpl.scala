@@ -28,7 +28,7 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.2.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M337"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M339"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.typesafe.sbt""" % """sbt-js-engine""" % """1.2.3"""
 

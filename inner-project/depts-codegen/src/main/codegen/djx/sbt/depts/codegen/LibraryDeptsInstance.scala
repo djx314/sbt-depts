@@ -105,9 +105,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
+  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "11.9.0"
 
-  libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
+  // VarContext.changeDeptVar              := "html.scala"
+
+  // libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -243,9 +245,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
-
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
+
+  VarContext.changeDeptVar := "html.scala"
+
+  libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -389,9 +393,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "2.0.2"
-
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
+
+  VarContext.changeDeptVar := "html.scala"
+
+  libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -531,9 +537,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "binding.scala"
 
-  libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
-
   libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
+
+  VarContext.changeDeptVar := "html.scala"
+
+  libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
   VarContext.changeDeptVar := "commons-io"
 

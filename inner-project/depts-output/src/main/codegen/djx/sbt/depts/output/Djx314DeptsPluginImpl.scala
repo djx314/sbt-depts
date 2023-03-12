@@ -28,6 +28,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `http4s-Release`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
     val `sbt-librarymanagement-core` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
     val `shapeless3-test`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
+    val `html.scala`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for html.scala""")
     val `circe`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
     val `doobie-h2`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
@@ -64,6 +65,7 @@ trait Djx314DeptsImpl {
     libScalax.`http4s-Release`             := libScalax.`http4s-Release`.?.value.to(List).flatten,
     libScalax.`sbt-librarymanagement-core` := libScalax.`sbt-librarymanagement-core`.?.value.to(List).flatten,
     libScalax.`shapeless3-test`            := libScalax.`shapeless3-test`.?.value.to(List).flatten,
+    libScalax.`html.scala`                 := libScalax.`html.scala`.?.value.to(List).flatten,
     libScalax.`circe`                      := libScalax.`circe`.?.value.to(List).flatten,
     libScalax.`cats-effect-cps`            := libScalax.`cats-effect-cps`.?.value.to(List).flatten,
     libScalax.`doobie-h2`                  := libScalax.`doobie-h2`.?.value.to(List).flatten,
@@ -90,10 +92,10 @@ trait Djx314DeptsImpl {
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie-h2` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """1.0.0-RC2""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.9""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.10""") else Seq.empty },
     libScalax.`typesafe-config` ++= { if (djxIsScala211.value) Seq("""com.typesafe""" % """config""" % """1.4.2""") else Seq.empty },
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala211.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
@@ -114,9 +116,8 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala211.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= { if (djxIsScala211.value) Seq("""com.yang-bo""" %%% """html""" % """2.0.2""") else Seq.empty },
     libScalax.`binding.scala` ++= {
-      if (djxIsScala211.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
+      if (djxIsScala211.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """11.9.0""") else Seq.empty
     },
     libScalax.`commons-io` ++= { if (djxIsScala211.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala211.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
@@ -153,10 +154,10 @@ trait Djx314DeptsImpl {
     libScalax.`doobie` ++= { if (djxIsScala212.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala212.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie-h2` ++= { if (djxIsScala212.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """1.0.0-RC2""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.9""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.10""") else Seq.empty },
     libScalax.`typesafe-config` ++= { if (djxIsScala212.value) Seq("""com.typesafe""" % """config""" % """1.4.2""") else Seq.empty },
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala212.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
@@ -177,10 +178,10 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala212.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= { if (djxIsScala212.value) Seq("""com.yang-bo""" %%% """html""" % """2.0.2""") else Seq.empty },
     libScalax.`binding.scala` ++= {
       if (djxIsScala212.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
     },
+    libScalax.`html.scala` ++= { if (djxIsScala212.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala212.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala212.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -199,9 +200,9 @@ trait Djx314DeptsImpl {
       if (djxIsScala212.value) Seq("""org.bytedeco""" % """javacv-platform""" % """1.5.8""") else Seq.empty
     },
     libScalax.`cats-effect-cps` ++= {
-      if (djxIsScala212.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.3.0""") else Seq.empty
+      if (djxIsScala212.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.4.0""") else Seq.empty
     },
-    libScalax.`zio-json` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-json""" % """0.3.0-RC8""") else Seq.empty },
+    libScalax.`zio-json` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-json""" % """0.4.2""") else Seq.empty },
     libScalax.`shapeless` ++= { if (djxIsScala212.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
     libScalax.`kind-projector` ++= {
       if (djxIsScala213.value) Seq("""org.typelevel""" % """kind-projector""" % """0.13.2""" cross CrossVersion.full) else Seq.empty
@@ -220,10 +221,10 @@ trait Djx314DeptsImpl {
     libScalax.`doobie` ++= { if (djxIsScala213.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala213.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie-h2` ++= { if (djxIsScala213.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """1.0.0-RC2""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.9""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.10""") else Seq.empty },
     libScalax.`typesafe-config` ++= { if (djxIsScala213.value) Seq("""com.typesafe""" % """config""" % """1.4.2""") else Seq.empty },
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala213.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
@@ -244,10 +245,10 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala213.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= { if (djxIsScala213.value) Seq("""com.yang-bo""" %%% """html""" % """2.0.2""") else Seq.empty },
     libScalax.`binding.scala` ++= {
       if (djxIsScala213.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
     },
+    libScalax.`html.scala` ++= { if (djxIsScala213.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala213.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala213.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -266,9 +267,9 @@ trait Djx314DeptsImpl {
       if (djxIsScala213.value) Seq("""org.bytedeco""" % """javacv-platform""" % """1.5.8""") else Seq.empty
     },
     libScalax.`cats-effect-cps` ++= {
-      if (djxIsScala213.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.3.0""") else Seq.empty
+      if (djxIsScala213.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.4.0""") else Seq.empty
     },
-    libScalax.`zio-json` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-json""" % """0.3.0-RC8""") else Seq.empty },
+    libScalax.`zio-json` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-json""" % """0.4.2""") else Seq.empty },
     libScalax.`shapeless` ++= { if (djxIsScala213.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
     libScalax.`circe` ++= { if (djxIsScala3.value) Seq("""io.circe""" %%% """circe-core""" % """0.14.5""") else Seq.empty },
     libScalax.`circe` ++= { if (djxIsScala3.value) Seq("""io.circe""" %%% """circe-generic""" % """0.14.5""") else Seq.empty },
@@ -284,10 +285,10 @@ trait Djx314DeptsImpl {
     libScalax.`doobie` ++= { if (djxIsScala3.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala3.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie-h2` ++= { if (djxIsScala3.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """1.0.0-RC2""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.9""") else Seq.empty },
-    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.9""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.10""") else Seq.empty },
+    libScalax.`zio2` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-test-sbt""" % """2.0.10""") else Seq.empty },
     libScalax.`typesafe-config` ++= { if (djxIsScala3.value) Seq("""com.typesafe""" % """config""" % """1.4.2""") else Seq.empty },
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala3.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
@@ -308,10 +309,10 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala3.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= { if (djxIsScala3.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`binding.scala` ++= {
       if (djxIsScala3.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
     },
+    libScalax.`html.scala` ++= { if (djxIsScala3.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala3.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala3.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -326,9 +327,9 @@ trait Djx314DeptsImpl {
     },
     libScalax.`javacv-platform` ++= { if (djxIsScala3.value) Seq("""org.bytedeco""" % """javacv-platform""" % """1.5.8""") else Seq.empty },
     libScalax.`cats-effect-cps` ++= {
-      if (djxIsScala3.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.3.0""") else Seq.empty
+      if (djxIsScala3.value) Seq("""org.typelevel""" %%% """cats-effect-cps""" % """0.4.0""") else Seq.empty
     },
-    libScalax.`zio-json` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-json""" % """0.3.0-RC8""") else Seq.empty },
+    libScalax.`zio-json` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-json""" % """0.4.2""") else Seq.empty },
     libScalax.`shapeless` ++= {
       if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-deriving""" % """3.3.0""") else Seq.empty
     },
