@@ -65,8 +65,10 @@ VarContext.changeDeptVar          := "slf4j-simple"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
 
 VarContext.changeDeptVar                           := "binding.scala"
-libraryDependencies += "com.yang-bo"              %%% "html"    % "2.0.2"
-libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "12.2.0"
+libraryDependencies += "com.thoughtworks.binding" %%% "binding" % "11.9.0"
+
+// VarContext.changeDeptVar              := "html.scala"
+// libraryDependencies += "com.yang-bo" %%% "html" % "3.0.2"
 
 VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
