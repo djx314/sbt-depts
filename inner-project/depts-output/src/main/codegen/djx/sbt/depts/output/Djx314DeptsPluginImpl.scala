@@ -179,9 +179,8 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala212.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
     libScalax.`binding.scala` ++= {
-      if (djxIsScala212.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
+      if (djxIsScala212.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """11.9.0""") else Seq.empty
     },
-    libScalax.`html.scala` ++= { if (djxIsScala212.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala212.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala212.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {

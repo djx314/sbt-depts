@@ -1,1 +1,1 @@
-ThisBuild / Settings.versionFileString := 347
+ThisBuild / Settings.versionFileString := 349
