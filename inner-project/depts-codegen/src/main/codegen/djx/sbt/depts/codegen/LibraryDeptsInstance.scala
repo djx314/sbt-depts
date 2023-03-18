@@ -161,7 +161,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
 
   VarContext.changeDeptVar := "cats"
 
@@ -301,7 +301,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
 
   VarContext.changeDeptVar := "cats"
 
@@ -437,7 +437,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
 
   VarContext.changeDeptVar := "cats"
 
