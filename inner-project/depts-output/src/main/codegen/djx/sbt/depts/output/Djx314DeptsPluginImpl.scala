@@ -28,12 +28,10 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `http4s-Release`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
     val `sbt-librarymanagement-core` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
     val `shapeless3-test`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
-    val `html.scala`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for html.scala""")
     val `circe`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
     val `doobie-h2`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
     val `javacv-platform`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
-    val `binding.scala`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for binding.scala""")
     val `commons-io`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
     val `shapeless`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
@@ -65,12 +63,10 @@ trait Djx314DeptsImpl {
     libScalax.`http4s-Release`             := libScalax.`http4s-Release`.?.value.to(List).flatten,
     libScalax.`sbt-librarymanagement-core` := libScalax.`sbt-librarymanagement-core`.?.value.to(List).flatten,
     libScalax.`shapeless3-test`            := libScalax.`shapeless3-test`.?.value.to(List).flatten,
-    libScalax.`html.scala`                 := libScalax.`html.scala`.?.value.to(List).flatten,
     libScalax.`circe`                      := libScalax.`circe`.?.value.to(List).flatten,
     libScalax.`cats-effect-cps`            := libScalax.`cats-effect-cps`.?.value.to(List).flatten,
     libScalax.`doobie-h2`                  := libScalax.`doobie-h2`.?.value.to(List).flatten,
     libScalax.`javacv-platform`            := libScalax.`javacv-platform`.?.value.to(List).flatten,
-    libScalax.`binding.scala`              := libScalax.`binding.scala`.?.value.to(List).flatten,
     libScalax.`commons-io`                 := libScalax.`commons-io`.?.value.to(List).flatten,
     libScalax.`shapeless`                  := libScalax.`shapeless`.?.value.to(List).flatten,
     libScalax.`macwire`                    := libScalax.`macwire`.?.value.to(List).flatten,
@@ -84,8 +80,8 @@ trait Djx314DeptsImpl {
     libScalax.`scalatest` ++= { if (djxIsScala211.value) Seq("""org.scalactic""" %% """scalactic""" % """3.2.15""") else Seq.empty },
     libScalax.`scalatest` ++= { if (djxIsScala211.value) Seq("""org.scalatest""" %% """scalatest""" % """3.2.15""") else Seq.empty },
     libScalax.`scalatest` ++= { if (djxIsScala211.value) Seq("""org.scalatest""" %% """scalatest-core""" % """3.2.15""") else Seq.empty },
-    libScalax.`cats-effect` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-effect""" % """3.4.2""") else Seq.empty },
-    libScalax.`cats` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-core""" % """2.9.0""") else Seq.empty },
+    libScalax.`cats-effect` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-effect""" % """2.0.0""") else Seq.empty },
+    libScalax.`cats` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-core""" % """2.0.0""") else Seq.empty },
     libScalax.`h2` ++= { if (djxIsScala211.value) Seq("""com.h2database""" % """h2""" % """2.1.214""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-core""" % """1.0.0-RC2""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-hikari""" % """1.0.0-RC2""") else Seq.empty },
@@ -116,9 +112,6 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala211.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= {
-      if (djxIsScala211.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """11.9.0""") else Seq.empty
-    },
     libScalax.`commons-io` ++= { if (djxIsScala211.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala211.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -178,9 +171,6 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala212.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= {
-      if (djxIsScala212.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """11.9.0""") else Seq.empty
-    },
     libScalax.`commons-io` ++= { if (djxIsScala212.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala212.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -244,10 +234,6 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala213.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= {
-      if (djxIsScala213.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
-    },
-    libScalax.`html.scala` ++= { if (djxIsScala213.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala213.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala213.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {
@@ -308,10 +294,6 @@ trait Djx314DeptsImpl {
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config-yaml""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config-gen""" % """3.0.7""") else Seq.empty },
     libScalax.`slf4j-simple` ++= { if (djxIsScala3.value) Seq("""org.slf4j""" % """slf4j-simple""" % """2.0.6""") else Seq.empty },
-    libScalax.`binding.scala` ++= {
-      if (djxIsScala3.value) Seq("""com.thoughtworks.binding""" %%% """binding""" % """12.2.0""") else Seq.empty
-    },
-    libScalax.`html.scala` ++= { if (djxIsScala3.value) Seq("""com.yang-bo""" %%% """html""" % """3.0.2""") else Seq.empty },
     libScalax.`commons-io` ++= { if (djxIsScala3.value) Seq("""org.apache.commons""" % """commons-io""" % """1.3.2""") else Seq.empty },
     libScalax.`macwire` ++= { if (djxIsScala3.value) Seq("""com.softwaremill.macwire""" %%% """macros""" % """2.5.8""") else Seq.empty },
     libScalax.`commons-lang3` ++= {

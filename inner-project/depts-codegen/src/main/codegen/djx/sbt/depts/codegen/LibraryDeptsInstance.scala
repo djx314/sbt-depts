@@ -29,11 +29,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.2"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
   VarContext.changeDeptVar := "cats"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
 
   VarContext.changeDeptVar := "h2"
 
