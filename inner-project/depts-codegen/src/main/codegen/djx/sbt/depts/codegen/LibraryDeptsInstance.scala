@@ -31,6 +31,8 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
+  libraryDependencies += "org.typelevel" %%% "cats-effect-kernel" % "2.0.0"
+
   VarContext.changeDeptVar := "cats"
 
   libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
