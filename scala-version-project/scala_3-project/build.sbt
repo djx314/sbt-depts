@@ -59,7 +59,7 @@ libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
 libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
 
 VarContext.changeDeptVar          := "slf4j-simple"
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
 VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
