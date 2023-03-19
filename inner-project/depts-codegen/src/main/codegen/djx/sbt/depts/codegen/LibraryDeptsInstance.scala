@@ -103,7 +103,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -235,7 +235,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -375,7 +375,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -511,7 +511,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.6"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
   VarContext.changeDeptVar := "commons-io"
 
