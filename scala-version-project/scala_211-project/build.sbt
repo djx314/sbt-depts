@@ -15,7 +15,7 @@ libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
 libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect"        % "2.0.0"
 libraryDependencies += "org.typelevel" %%% "cats-effect-kernel" % "2.0.0"
 
 VarContext.changeDeptVar                := "cats"
