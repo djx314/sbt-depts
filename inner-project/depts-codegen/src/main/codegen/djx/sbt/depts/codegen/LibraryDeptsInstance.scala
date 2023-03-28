@@ -43,17 +43,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "0.7.0"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "0.7.1"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "0.7.0"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "0.7.1"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "0.7.0"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "0.7.1"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.0"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.1"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.0"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.1"
 
   VarContext.changeDeptVar := "zio2"
 
