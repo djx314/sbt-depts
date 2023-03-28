@@ -86,11 +86,11 @@ trait Djx314DeptsImpl {
     },
     libScalax.`cats` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-core""" % """2.0.0""") else Seq.empty },
     libScalax.`h2` ++= { if (djxIsScala211.value) Seq("""com.h2database""" % """h2""" % """2.1.214""") else Seq.empty },
-    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-core""" % """0.7.0""") else Seq.empty },
-    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-hikari""" % """0.7.0""") else Seq.empty },
-    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """0.7.0""") else Seq.empty },
-    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """0.7.0""") else Seq.empty },
-    libScalax.`doobie-h2` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """0.7.0""") else Seq.empty },
+    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-core""" % """0.7.1""") else Seq.empty },
+    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-hikari""" % """0.7.1""") else Seq.empty },
+    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-postgres""" % """0.7.1""") else Seq.empty },
+    libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-scalatest""" % """0.7.1""") else Seq.empty },
+    libScalax.`doobie-h2` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-h2""" % """0.7.1""") else Seq.empty },
     libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio""" % """2.0.10""") else Seq.empty },
     libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-streams""" % """2.0.10""") else Seq.empty },
     libScalax.`zio2` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-test""" % """2.0.10""") else Seq.empty },
@@ -99,15 +99,15 @@ trait Djx314DeptsImpl {
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala211.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.20.21""") else Seq.empty },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.17""") else Seq.empty
+      if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.20.21""") else Seq.empty
     },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.17""") else Seq.empty
+      if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.20.21""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.17""") else Seq.empty },
-    libScalax.`http4s-twirl` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.20.21""") else Seq.empty },
+    libScalax.`http4s-twirl` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.20.21""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-magnolia""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-refined""" % """3.0.7""") else Seq.empty },
