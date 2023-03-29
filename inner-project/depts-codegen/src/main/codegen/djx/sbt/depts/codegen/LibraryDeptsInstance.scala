@@ -31,11 +31,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-kernel" % "2.0.0"
-
   VarContext.changeDeptVar := "cats"
 
   libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
+
+  libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0"
 
   VarContext.changeDeptVar := "h2"
 
@@ -136,6 +136,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "shapeless"
 
   libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+
+  VarContext.changeDeptVar := "fs2"
+
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.0.0"
+
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.0.0"
+
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.0.0"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -277,6 +285,16 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
+  VarContext.changeDeptVar := "fs2"
+
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.10"
@@ -416,6 +434,16 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "shapeless"
 
   libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+
+  VarContext.changeDeptVar := "fs2"
+
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
 
   VarContext.setScalaVersion := "3"
 
@@ -558,5 +586,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "shapeless3-test"
 
   libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.3.0"
+
+  VarContext.changeDeptVar := "fs2"
+
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
 
 }

@@ -94,3 +94,9 @@ libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.3.0"
 
 VarContext.changeDeptVar                := "shapeless3-test"
 libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.3.0"
+
+VarContext.changeDeptVar         := "fs2"
+libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.6.1"
+libraryDependencies += "co.fs2" %%% "fs2-io"               % "3.6.1"
+libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.6.1"
+libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.6.1"

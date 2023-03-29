@@ -93,3 +93,9 @@ libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+
+VarContext.changeDeptVar         := "fs2"
+libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.6.1"
+libraryDependencies += "co.fs2" %%% "fs2-io"               % "3.6.1"
+libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.6.1"
+libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.6.1"

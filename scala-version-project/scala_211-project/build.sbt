@@ -15,7 +15,7 @@ libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
 libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect"        % "2.0.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
 VarContext.changeDeptVar                := "cats"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
@@ -88,3 +88,8 @@ libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+
+VarContext.changeDeptVar         := "fs2"
+libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.0.0"
+libraryDependencies += "co.fs2" %%% "fs2-io"               % "2.0.0"
+libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "2.0.0"

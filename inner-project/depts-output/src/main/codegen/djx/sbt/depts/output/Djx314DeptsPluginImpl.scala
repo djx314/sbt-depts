@@ -12,6 +12,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
   object libScalax {
     val `typesafe-config`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
     val `scalatest`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
+    val `fs2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for fs2""")
     val `kind-projector`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
     val `simple-adt`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
     val `cats-effect`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
@@ -47,6 +48,7 @@ trait Djx314DeptsImpl {
   def settingsForDept: Seq[Setting[_]] = Seq(
     libScalax.`typesafe-config`            := libScalax.`typesafe-config`.?.value.to(List).flatten,
     libScalax.`scalatest`                  := libScalax.`scalatest`.?.value.to(List).flatten,
+    libScalax.`fs2`                        := libScalax.`fs2`.?.value.to(List).flatten,
     libScalax.`kind-projector`             := libScalax.`kind-projector`.?.value.to(List).flatten,
     libScalax.`simple-adt`                 := libScalax.`simple-adt`.?.value.to(List).flatten,
     libScalax.`cats-effect`                := libScalax.`cats-effect`.?.value.to(List).flatten,
@@ -81,10 +83,8 @@ trait Djx314DeptsImpl {
     libScalax.`scalatest` ++= { if (djxIsScala211.value) Seq("""org.scalatest""" %% """scalatest""" % """3.2.15""") else Seq.empty },
     libScalax.`scalatest` ++= { if (djxIsScala211.value) Seq("""org.scalatest""" %% """scalatest-core""" % """3.2.15""") else Seq.empty },
     libScalax.`cats-effect` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-effect""" % """2.0.0""") else Seq.empty },
-    libScalax.`cats-effect` ++= {
-      if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-effect-kernel""" % """2.0.0""") else Seq.empty
-    },
     libScalax.`cats` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-core""" % """2.0.0""") else Seq.empty },
+    libScalax.`cats` ++= { if (djxIsScala211.value) Seq("""org.typelevel""" %%% """cats-free""" % """2.0.0""") else Seq.empty },
     libScalax.`h2` ++= { if (djxIsScala211.value) Seq("""com.h2database""" % """h2""" % """2.1.214""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-core""" % """0.7.1""") else Seq.empty },
     libScalax.`doobie` ++= { if (djxIsScala211.value) Seq("""org.tpolecat""" %% """doobie-hikari""" % """0.7.1""") else Seq.empty },
@@ -133,6 +133,9 @@ trait Djx314DeptsImpl {
       if (djxIsScala211.value) Seq("""org.bytedeco""" % """javacv-platform""" % """1.5.8""") else Seq.empty
     },
     libScalax.`shapeless` ++= { if (djxIsScala211.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-core""" % """2.0.0""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-io""" % """2.0.0""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """2.0.0""") else Seq.empty },
     libScalax.`kind-projector` ++= {
       if (djxIsScala212.value) Seq("""org.typelevel""" % """kind-projector""" % """0.13.2""" cross CrossVersion.full) else Seq.empty
     },
@@ -196,6 +199,10 @@ trait Djx314DeptsImpl {
     },
     libScalax.`zio-json` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-json""" % """0.5.0""") else Seq.empty },
     libScalax.`shapeless` ++= { if (djxIsScala212.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala212.value) Seq("""co.fs2""" %%% """fs2-core""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala212.value) Seq("""co.fs2""" %%% """fs2-io""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala212.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala212.value) Seq("""co.fs2""" %%% """fs2-scodec""" % """3.6.1""") else Seq.empty },
     libScalax.`kind-projector` ++= {
       if (djxIsScala213.value) Seq("""org.typelevel""" % """kind-projector""" % """0.13.2""" cross CrossVersion.full) else Seq.empty
     },
@@ -259,6 +266,10 @@ trait Djx314DeptsImpl {
     },
     libScalax.`zio-json` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-json""" % """0.5.0""") else Seq.empty },
     libScalax.`shapeless` ++= { if (djxIsScala213.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala213.value) Seq("""co.fs2""" %%% """fs2-core""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala213.value) Seq("""co.fs2""" %%% """fs2-io""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala213.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala213.value) Seq("""co.fs2""" %%% """fs2-scodec""" % """3.6.1""") else Seq.empty },
     libScalax.`circe` ++= { if (djxIsScala3.value) Seq("""io.circe""" %%% """circe-core""" % """0.14.5""") else Seq.empty },
     libScalax.`circe` ++= { if (djxIsScala3.value) Seq("""io.circe""" %%% """circe-generic""" % """0.14.5""") else Seq.empty },
     libScalax.`circe` ++= { if (djxIsScala3.value) Seq("""io.circe""" %%% """circe-parser""" % """0.14.5""") else Seq.empty },
@@ -322,7 +333,11 @@ trait Djx314DeptsImpl {
     },
     libScalax.`shapeless3-test` ++= {
       if (djxIsScala3.value) Seq("""org.typelevel""" %%% """shapeless3-test""" % """3.3.0""") else Seq.empty
-    }
+    },
+    libScalax.`fs2` ++= { if (djxIsScala3.value) Seq("""co.fs2""" %%% """fs2-core""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala3.value) Seq("""co.fs2""" %%% """fs2-io""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala3.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """3.6.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala3.value) Seq("""co.fs2""" %%% """fs2-scodec""" % """3.6.1""") else Seq.empty }
   )
 
 }
