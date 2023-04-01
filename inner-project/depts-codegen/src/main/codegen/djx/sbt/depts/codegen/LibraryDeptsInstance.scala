@@ -139,11 +139,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.0.0"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.0.1"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.0.0"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.0.1"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.0.0"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.0.1"
 
   VarContext.setScalaVersion := "2.12"
 
