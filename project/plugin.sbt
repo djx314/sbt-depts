@@ -9,7 +9,7 @@ addSbtPlugin("org.xerial.sbt"                    % "sbt-sonatype"             % 
 VarContext.changePluginVar                      := "sbt-pgp"
 addSbtPlugin("com.github.sbt"                    % "sbt-pgp"                  % "2.2.1")
 VarContext.changePluginVar                      := "sbt-scalajs-crossproject"
-addSbtPlugin("org.portable-scala"                % "sbt-scalajs-crossproject" % "1.2.0")
+addSbtPlugin("org.portable-scala"                % "sbt-scalajs-crossproject" % "1.3.0")
 VarContext.changePluginVar                      := "sbt-git"
 addSbtPlugin("com.github.sbt"                    % "sbt-git"                  % "2.0.1")
 VarContext.changePluginVar                      := "sbt-ide-settings"
