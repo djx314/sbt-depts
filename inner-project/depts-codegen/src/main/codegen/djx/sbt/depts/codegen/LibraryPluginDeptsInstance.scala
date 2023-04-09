@@ -9,7 +9,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-revolver"
 
-  addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
+  addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
 
   VarContext.changePluginVar := "sbt-twirl"
 
