@@ -1,5 +1,5 @@
 import Settings._
-import djx.sbt.depts.plugins.impl.GlobalVersion
+import djx.sbt.depts.plugins.GlobalVersion
 
 scalaVersion := scalaV.v212
 

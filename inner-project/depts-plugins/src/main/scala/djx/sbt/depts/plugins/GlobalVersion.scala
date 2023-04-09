@@ -1,9 +1,7 @@
-package djx.sbt.depts.plugins.impl
-
-import djx.sbt.depts.plugins.VarSettings
+package djx.sbt.depts.plugins
 
 import java.io.PrintWriter
-import java.nio.file.{Files, Path}
+import java.nio.file.Path
 import scala.io.Source
 import scala.util.Using
 import scala.collection.compat._
@@ -19,7 +17,10 @@ case class VersionWrap(main: String, MIndex: Int) {
   private def path2(root: Path): Path = VarSettings.preVersionFilePath.foldLeft(root)((p, str) => p.resolve(str))
 
   def updateFromRoot(path: Path): VersionWrap =
-    VersionWrap(main = VarSettings.read(Files.readString(path2(path))), MIndex = VarSettings.read(Files.readString(path1(path))).toInt)
+    VersionWrap(
+      main = VarSettings.read(Source.fromFile(path2(path).toFile)),
+      MIndex = VarSettings.read(Source.fromFile(path1(path).toFile)).toInt
+    )
   def writeWithRoot(path: Path): Unit = Using.resource(new PrintWriter(path1(path).toFile))(
     _.println(MIndex.toString)
   )

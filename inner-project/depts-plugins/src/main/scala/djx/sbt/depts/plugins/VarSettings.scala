@@ -13,14 +13,15 @@ object VarSettings {
   val versionFilePath: List[String]    = preList ::: versionFileName :: List.empty
   val preVersionFilePath: List[String] = preList ::: preVersionFileName :: List.empty
 
-  private val sourcePath1       = versionFilePath.mkString("/")
-  private val arr1: Array[Byte] = Using.resource(getClass.getClassLoader.getResourceAsStream(sourcePath1))(_.readAllBytes())
+  private val sourcePath1 = versionFilePath.mkString("/")
+  private val arr1: String =
+    Using.resource(getClass.getClassLoader.getResourceAsStream(sourcePath1))(i => read(Source.fromInputStream(i)))
 
-  private val sourcePath2       = preVersionFilePath.mkString("/")
-  private val arr2: Array[Byte] = Using.resource(getClass.getClassLoader.getResourceAsStream(sourcePath2))(_.readAllBytes())
+  private val sourcePath2  = preVersionFilePath.mkString("/")
+  private val arr2: String = Using.resource(getClass.getClassLoader.getResourceAsStream(sourcePath2))(i => read(Source.fromInputStream(i)))
 
-  def read(str: String): String = Using.resource(Source.fromString(str))(_.getLines().to(List)).mkString.trim
+  def read(source: => Source): String = Using.resource(source)(_.getLines().to(List)).mkString.trim
 
-  val MVersionInt: Int          = read(new String(arr1, "utf-8")).toInt
-  val MainVersionString: String = read(new String(arr2, "utf-8"))
+  val MVersionInt: Int          = arr1.toInt
+  val MainVersionString: String = arr2
 }
