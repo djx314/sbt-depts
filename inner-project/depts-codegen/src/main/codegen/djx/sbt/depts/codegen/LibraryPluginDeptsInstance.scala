@@ -25,7 +25,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs-crossproject"
 
-  addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.2.0")
+  addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.0")
 
   VarContext.changePluginVar := "sbt-git"
 
