@@ -75,17 +75,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.21"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.23"
 
   libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.20.21"
 
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.20.21"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.21"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.21"
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.23"
 
   VarContext.changeDeptVar := "zio-config"
 
