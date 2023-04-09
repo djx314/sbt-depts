@@ -99,15 +99,15 @@ trait Djx314DeptsImpl {
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala211.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.20.21""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.20.23""") else Seq.empty },
     libScalax.`http4s-Release` ++= {
       if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.20.21""") else Seq.empty
     },
     libScalax.`http4s-Release` ++= {
       if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.20.21""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.20.21""") else Seq.empty },
-    libScalax.`http4s-twirl` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.20.21""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.20.23""") else Seq.empty },
+    libScalax.`http4s-twirl` ++= { if (djxIsScala211.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.20.23""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-magnolia""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala211.value) Seq("""dev.zio""" %%% """zio-config-refined""" % """3.0.7""") else Seq.empty },
@@ -133,9 +133,9 @@ trait Djx314DeptsImpl {
       if (djxIsScala211.value) Seq("""org.bytedeco""" % """javacv-platform""" % """1.5.8""") else Seq.empty
     },
     libScalax.`shapeless` ++= { if (djxIsScala211.value) Seq("""com.chuusai""" %%% """shapeless""" % """2.3.10""") else Seq.empty },
-    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-core""" % """2.0.0""") else Seq.empty },
-    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-io""" % """2.0.0""") else Seq.empty },
-    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """2.0.0""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-core""" % """2.0.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %%% """fs2-io""" % """2.0.1""") else Seq.empty },
+    libScalax.`fs2` ++= { if (djxIsScala211.value) Seq("""co.fs2""" %% """fs2-reactive-streams""" % """2.0.1""") else Seq.empty },
     libScalax.`kind-projector` ++= {
       if (djxIsScala212.value) Seq("""org.typelevel""" % """kind-projector""" % """0.13.2""" cross CrossVersion.full) else Seq.empty
     },
@@ -161,14 +161,14 @@ trait Djx314DeptsImpl {
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala212.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.17""") else Seq.empty
+      if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.18""") else Seq.empty
     },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.17""") else Seq.empty
+      if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.18""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala212.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-twirl` ++= { if (djxIsScala212.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.23.17""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala212.value) Seq("""dev.zio""" %%% """zio-config-magnolia""" % """3.0.7""") else Seq.empty },
@@ -228,14 +228,14 @@ trait Djx314DeptsImpl {
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala213.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.17""") else Seq.empty
+      if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.18""") else Seq.empty
     },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.17""") else Seq.empty
+      if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.18""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala213.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-twirl` ++= { if (djxIsScala213.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.23.17""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala213.value) Seq("""dev.zio""" %%% """zio-config-magnolia""" % """3.0.7""") else Seq.empty },
@@ -292,14 +292,14 @@ trait Djx314DeptsImpl {
     libScalax.`scala-collection-compat` ++= {
       if (djxIsScala3.value) Seq("""org.scala-lang.modules""" %%% """scala-collection-compat""" % """2.9.0""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-dsl""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.17""") else Seq.empty
+      if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-ember-server""" % """0.23.18""") else Seq.empty
     },
     libScalax.`http4s-Release` ++= {
-      if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.17""") else Seq.empty
+      if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-ember-client""" % """0.23.18""") else Seq.empty
     },
-    libScalax.`http4s-Release` ++= { if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.17""") else Seq.empty },
+    libScalax.`http4s-Release` ++= { if (djxIsScala3.value) Seq("""org.http4s""" %%% """http4s-circe""" % """0.23.18""") else Seq.empty },
     libScalax.`http4s-twirl` ++= { if (djxIsScala3.value) Seq("""org.http4s""" %% """http4s-twirl""" % """0.23.17""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config""" % """3.0.7""") else Seq.empty },
     libScalax.`zio-config` ++= { if (djxIsScala3.value) Seq("""dev.zio""" %%% """zio-config-magnolia""" % """3.0.7""") else Seq.empty },

@@ -37,4 +37,4 @@ genActionImpl := {
     .evaluated
 }
 
-libraryDependencies ++= Seq("org.scala-sbt" % "librarymanagement-core_2.12" % "1.8.0")
+libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value

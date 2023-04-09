@@ -27,6 +27,5 @@ genActionImpl := (Compile / runMain).inputTaskValue
 Compile / unmanagedSourceDirectories := {
   val v1          = (Compile / unmanagedSourceDirectories).value
   val codegenFile = sourceDirectory.value / "main" / "codegen"
-  println(codegenFile.getCanonicalFile)
   codegenFile +: v1
 }

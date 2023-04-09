@@ -4,11 +4,6 @@ ThisBuild / organizationName := "Scala Workers"
 
 ThisBuild / organization := "net.scalax.djx314"
 
-ThisBuild / version := {
-  val MVersion = versionFileString.value
-  s"0.0.1-M$MVersion"
-}
-
 ThisBuild / organizationHomepage := Some(url("https://github.com/scala-workers"))
 
 ThisBuild / scmInfo := Some(

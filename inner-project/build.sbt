@@ -1,7 +1,4 @@
 import Settings._
-import scala.util.Using
-import java.io.PrintWriter
-import java.io.FileOutputStream
 
 scalaVersion := scalaV.v212
 
@@ -11,26 +8,16 @@ val `depts-output-plugins` = project in `plugin/file`
 val `depts-output`         = project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins`
 
 updateMVersion := {
-  val v           = (`depts-output` / versionFileString).value + 1
-  val writeFile   = `root/file` / "MVersion-Count.sbt"
-  val writeString = s"ThisBuild / Settings.versionFileString := ${v.toString}"
-  Using.resource(new PrintWriter(writeFile)) { writer =>
-    writer.println(writeString)
-  }
+  val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
+  val sPath   = srcRoot.toPath
+  val newV    = djx.sbt.depts.plugins.impl.GlobalVersion.versionWrap.updateFromRoot(sPath)
+  val newV1   = newV.copy(MIndex = newV.MIndex + 1)
+  newV1.writeWithRoot(sPath)
 }
 
 genAction := {
   (`depts-abs` / genActionImpl).inputTaskValue.evaluated
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
-}
-
-compatVersion := {
-  val v           = (`depts-output` / version).value
-  val writeFile   = `plugin/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "DjxPluginCusVersion.scala"
-  val writeString = s"""package djx.sbt.depts.plugins.impl; object GlobalVersion { val version = \"\"\"$v\"\"\" }"""
-  Using.resource(new PrintWriter(writeFile)) { writer =>
-    writer.println(writeString)
-  }
 }
 
 val allfmt = taskKey[Unit]("Format all projects.")
@@ -48,7 +35,7 @@ allfmt := {
   (`depts-output` / Compile / scalafmt).value
 }
 
-addCommandAlias("preparePackaging", "; updateMVersion; genAction; compatVersion; allfmt;")
+addCommandAlias("preparePackaging", "; updateMVersion; genAction; allfmt;")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
@@ -56,5 +43,13 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 
 `depts-output-plugins` / name := "sbt-depts-djx314-plugins"
 
-addCommandAlias("bb", "; preparePackaging; depts-output/publishSigned;")
-addCommandAlias("bbLocal", "; preparePackaging; depts-output/publishLocal;")
+addCommandAlias("bb", "; preparePackaging; reload; depts-output/publishSigned;")
+addCommandAlias("bbLocal", "; preparePackaging; reload; depts-output/publishLocal;")
+
+ThisBuild / version := {
+  val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
+  val sPath   = srcRoot.toPath
+  val vModel  = djx.sbt.depts.plugins.impl.GlobalVersion.versionWrap.updateFromRoot(sPath)
+  vModel.versionStr
+  // "0.0.1-M396"
+}

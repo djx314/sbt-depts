@@ -10,5 +10,4 @@ object Settings {
 
   val versionFileString = settingKey[Int]("settingKey for version file.")
   val updateMVersion    = taskKey[Unit]("Update M Version.")
-  val compatVersion     = taskKey[Unit]("Update M Version.")
 }
