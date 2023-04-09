@@ -1,4 +1,5 @@
 import Settings._
+import djx.sbt.depts.plugins.impl.GlobalVersion
 
 scalaVersion := scalaV.v212
 
@@ -10,7 +11,7 @@ val `depts-output`         = project in `output/file` dependsOn `depts-output-pl
 updateMVersion := {
   val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
   val sPath   = srcRoot.toPath
-  val newV    = djx.sbt.depts.plugins.impl.GlobalVersion.versionWrap.updateFromRoot(sPath)
+  val newV    = GlobalVersion.versionWrap.updateFromRoot(sPath)
   val newV1   = newV.copy(MIndex = newV.MIndex + 1)
   newV1.writeWithRoot(sPath)
 }
@@ -49,7 +50,6 @@ addCommandAlias("bbLocal", "; preparePackaging; reload; depts-output/publishLoca
 ThisBuild / version := {
   val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
   val sPath   = srcRoot.toPath
-  val vModel  = djx.sbt.depts.plugins.impl.GlobalVersion.versionWrap.updateFromRoot(sPath)
+  val vModel  = GlobalVersion.versionWrap.updateFromRoot(sPath)
   vModel.versionStr
-  // "0.0.1-M396"
 }
