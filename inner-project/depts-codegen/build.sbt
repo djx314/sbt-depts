@@ -1,8 +1,8 @@
 import Settings._
+import djx.sbt.depts.plugins.djxPluginUtils.{settingKeyObj => oSettingKey, sourcePosition}
 
-scalaVersion := scalaV.v212
-
-scalafmtOnCompile := true
+oSettingKey.setConst(scalaVersion)(() => scalaV.v212)(sourcePosition.fromEnclosing)
+oSettingKey.setConst(scalafmtOnCompile)(() => true)(sourcePosition.fromEnclosing)
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 

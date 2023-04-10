@@ -45,21 +45,25 @@ VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
-libraryDependencies += "org.http4s" %%% "http4s-dsl"          % "0.23.18"
+libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"
+libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+
+VarContext.changeDeptVar             := "http4s-Release-ember-server"
 libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+
+VarContext.changeDeptVar             := "http4s-Release-ember-client"
 libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
-libraryDependencies += "org.http4s" %%% "http4s-circe"        % "0.23.18"
 
 VarContext.changeDeptVar            := "http4s-twirl"
 libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
 VarContext.changeDeptVar          := "zio-config"
-libraryDependencies += "dev.zio" %%% "zio-config"          % "3.0.7"
-libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
-libraryDependencies += "dev.zio" %%% "zio-config-refined"  % "3.0.7"
-libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
-libraryDependencies += "dev.zio" %%% "zio-config-yaml"     % "3.0.7"
-libraryDependencies += "dev.zio" %%% "zio-config-gen"      % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config"            % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config-magnolia"   % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config-refined"    % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "3.0.7"
+libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
 VarContext.changeDeptVar          := "slf4j-simple"
 libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
@@ -81,6 +85,9 @@ libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+VarContext.changeDeptVar              := "scala-sbt"
+libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.1"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"

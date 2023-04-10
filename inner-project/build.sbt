@@ -1,7 +1,8 @@
 import Settings._
 import djx.sbt.depts.plugins.GlobalVersion
+import djx.sbt.depts.plugins.djxPluginUtils.{settingKeyObj => oSettingKey, sourcePosition}
 
-scalaVersion := scalaV.v212
+oSettingKey.setConst(scalaVersion)(() => scalaV.v212)(sourcePosition.fromEnclosing)
 
 val `depts-abs`            = project in `root/file` / "depts-abs"
 val `depts-codegen`        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
@@ -38,11 +39,9 @@ allfmt := {
 
 addCommandAlias("preparePackaging", "; updateMVersion; genAction; allfmt;")
 
-Global / onChangedBuildSource := ReloadOnSourceChanges
-
-`depts-output` / name := "sbt-depts-djx314"
-
-`depts-output-plugins` / name := "sbt-depts-djx314-plugins"
+oSettingKey.setConst(Global / onChangedBuildSource)(() => ReloadOnSourceChanges)(sourcePosition.fromEnclosing)
+oSettingKey.setConst(`depts-output` / name)(() => "sbt-depts-djx314")(sourcePosition.fromEnclosing)
+oSettingKey.setConst(`depts-output-plugins` / name)(() => "sbt-depts-djx314-plugins")(sourcePosition.fromEnclosing)
 
 addCommandAlias("bb", "; preparePackaging; reload; depts-output/publishSigned;")
 addCommandAlias("bbLocal", "; preparePackaging; reload; depts-output/publishLocal;")

@@ -77,10 +77,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.23"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.20.21"
-
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.20.21"
-
   libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23"
 
   VarContext.changeDeptVar := "http4s-twirl"
@@ -91,15 +87,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
-
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
-
   libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
   libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -111,7 +103,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.3"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -127,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.2"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -217,11 +209,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
 
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+
+  VarContext.changeDeptVar := "http4s-Release-ember-server"
+
   libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+  VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -239,7 +235,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -268,6 +264,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
   libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+
+  VarContext.changeDeptVar := "scala-sbt"
+
+  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.1"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -367,11 +367,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
 
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+
+  VarContext.changeDeptVar := "http4s-Release-ember-server"
+
   libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+  VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -389,7 +393,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -513,29 +517,33 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
 
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+
+  VarContext.changeDeptVar := "http4s-Release-ember-server"
+
   libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+
+  VarContext.changeDeptVar := "http4s-Release-ember-client"
 
   libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
-
   VarContext.changeDeptVar := "http4s-twirl"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.24.0-M1"
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.0-RC10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0-RC10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0-RC10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.0-RC10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.0-RC10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-gen" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.0-RC10"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -563,7 +571,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha9"
 
   VarContext.changeDeptVar := "javacv-platform"
 
