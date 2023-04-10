@@ -1,10 +1,18 @@
 package djx.sbt.depts.plugins
 
-object djxPluginUtils {
+object pUtils extends pUtils
+
+trait pUtils {
 
   val sourcePosition: sbt.internal.util.SourcePosition.type = sbt.internal.util.SourcePosition
 
-  object settingKeyObj {
+  object task {
+    def appendItemToSeq[T](s: sbt.TaskKey[Seq[T]])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[sbt.Task[Seq[T]]] = {
+      s.append1(sbt.std.FullInstance.pure(value), lp)((sbt.Append.appendSeq[T, T]))
+    }
+  }
+
+  object setting {
     def setConst[T](sKey: sbt.SettingKey[T])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] = {
       val initInstance                        = sbt.std.InitializeInstance
       val initSettings: sbt.Def.Initialize[T] = initInstance.pure[T](value)

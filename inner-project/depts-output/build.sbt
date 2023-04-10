@@ -1,7 +1,7 @@
-import djx.sbt.depts.plugins.djxPluginUtils.{settingKeyObj => oSettingKey, sourcePosition}
+import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-oSettingKey.setConst(scalaVersion)(() => scalaV.v212)(sourcePosition.fromEnclosing)
-oSettingKey.setConst(scalafmtOnCompile)(() => true)(sourcePosition.fromEnclosing)
+setting.setConst(scalaVersion)(() => scalaV.v212)(sourcePosition.fromEnclosing)
+setting.setConst(scalafmtOnCompile)(() => true)(sourcePosition.fromEnclosing)
 
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
