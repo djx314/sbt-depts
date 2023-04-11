@@ -103,7 +103,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.3"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
 
   VarContext.changeDeptVar := "commons-lang3"
 
