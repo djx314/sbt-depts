@@ -8,7 +8,7 @@ trait pUtils {
 
   object task {
     def appendItemToSeq[T](s: sbt.TaskKey[Seq[T]])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[sbt.Task[Seq[T]]] = {
-      s.append1(sbt.std.FullInstance.pure(value), lp)((sbt.Append.appendSeq[T, T]))
+      s.append1(sbt.std.FullInstance.pure(value), lp)(implicitly)
     }
   }
 
