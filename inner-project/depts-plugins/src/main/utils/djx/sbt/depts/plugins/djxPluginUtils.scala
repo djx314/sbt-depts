@@ -18,6 +18,23 @@ trait pUtils {
       val initSettings: sbt.Def.Initialize[T] = initInstance.pure[T](value)
       sKey.set(initSettings, lp)
     }
+
+    def addScalaJsLibrary(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(value: () => (String, String, String))(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+      sbt.Keys.libraryDependencies.append1[sbt.ModuleID](
+        sbt.std.InitializeInstance.map[sbt.CrossVersion, sbt.librarymanagement.ModuleID](
+          org.portablescala.sbtplatformdeps.PlatformDepsGroupID.platformDepsCrossVersion,
+          (crossVersionInfo: sbt.CrossVersion) =>
+            org.portablescala.sbtplatformdeps.PlatformDepsGroupID
+              .withCross(
+                org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport.toPlatformDepsGroupID("aa"),
+                "bb",
+                crossVersionInfo
+              )
+              .%("cc")
+        ),
+        sourcePosition.fromEnclosing()
+      )(sbt.Append.appendSeq[sbt.ModuleID, sbt.ModuleID]): sbt.Def.Setting[Seq[sbt.librarymanagement.ModuleID]]
+    }
   }
 
   import scala.language.experimental.macros
