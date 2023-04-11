@@ -103,7 +103,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.3"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -131,11 +131,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.0.1"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.1.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.0.1"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.1.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.0.1"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.1.0"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -533,17 +533,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.0-RC14"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0-RC14"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0-RC14"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.0-RC14"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.0-RC14"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.0-RC10"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.0-RC14"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -571,7 +571,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha9"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha12"
 
   VarContext.changeDeptVar := "javacv-platform"
 

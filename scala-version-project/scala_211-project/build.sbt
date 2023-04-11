@@ -65,7 +65,7 @@ VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 VarContext.changeDeptVar                           := "macwire"
-libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.3"
+libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
 
 VarContext.changeDeptVar                   := "commons-lang3"
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
@@ -77,7 +77,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.2"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
@@ -86,6 +86,6 @@ VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
 VarContext.changeDeptVar         := "fs2"
-libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.0.1"
-libraryDependencies += "co.fs2" %%% "fs2-io"               % "2.0.1"
-libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "2.0.1"
+libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.1.0"
+libraryDependencies += "co.fs2" %%% "fs2-io"               % "2.1.0"
+libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "2.1.0"

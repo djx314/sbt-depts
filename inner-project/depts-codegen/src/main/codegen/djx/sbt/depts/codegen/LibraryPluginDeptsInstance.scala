@@ -37,7 +37,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.13.0")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.13.1")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
@@ -53,7 +53,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-depts-djx314"
 
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M365")
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M465")
 
   VarContext.changePluginVar := "sbt-js-engine"
 
