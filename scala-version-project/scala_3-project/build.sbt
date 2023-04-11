@@ -81,7 +81,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha9"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha12"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
