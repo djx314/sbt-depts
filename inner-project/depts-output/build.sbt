@@ -7,9 +7,9 @@ addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 
-SeeTree.see(libraryDependencies += "aa" %%% "bb" % "cc")
+// SeeTree.see(libraryDependencies += "aa" %%% "bb" % "cc")
 
-sbt.Keys.libraryDependencies.append1[sbt.ModuleID](
+/*sbt.Keys.libraryDependencies.append1[sbt.ModuleID](
   sbt.std.InitializeInstance.map[sbt.CrossVersion, sbt.librarymanagement.ModuleID](
     org.portablescala.sbtplatformdeps.PlatformDepsGroupID.platformDepsCrossVersion,
     (crossVersionInfo: sbt.CrossVersion) =>
@@ -22,9 +22,10 @@ sbt.Keys.libraryDependencies.append1[sbt.ModuleID](
         .%("cc")
   ),
   sourcePosition.fromEnclosing()
-)(sbt.Append.appendSeq[sbt.ModuleID, sbt.ModuleID]): sbt.Def.Setting[Seq[sbt.librarymanagement.ModuleID]]
+)(sbt.Append.appendSeq[sbt.ModuleID, sbt.ModuleID]): sbt.Def.Setting[Seq[sbt.librarymanagement.ModuleID]]*/
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
+libraryDependencies ++= libScalax.`cats`.value
 
 scalafmtOnCompile := true
 
@@ -39,5 +40,11 @@ pluginCrossBuild / sbtVersion := {
 Compile / unmanagedSourceDirectories := {
   val v1          = (Compile / unmanagedSourceDirectories).value
   val codegenFile = sourceDirectory.value / "main" / "codegen"
+  codegenFile +: v1
+}
+
+Compile / unmanagedSourceDirectories := {
+  val v1          = (Compile / unmanagedSourceDirectories).value
+  val codegenFile = sourceDirectory.value / "main" / "utils"
   codegenFile +: v1
 }
