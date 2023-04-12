@@ -7,7 +7,7 @@ object pUtils extends pUtils
 
 trait pUtils {
 
-  implicit val initializeInstanceMonad: StackSafeMonad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
+  val initializeInstanceMonad: StackSafeMonad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
     override def flatMap[A, B](fa: sbt.Def.Initialize[A])(f: A => sbt.Def.Initialize[B]): sbt.Def.Initialize[B] =
       sbt.std.InitializeInstance.flatten(sbt.std.InitializeInstance.map(fa, f))
     override def pure[A](x: A): sbt.Def.Initialize[A] = sbt.std.InitializeInstance.pure(() => x)
@@ -15,7 +15,7 @@ trait pUtils {
 
   val sourcePosition: sbt.internal.util.SourcePosition.type = sbt.internal.util.SourcePosition
 
-  object task {
+  class task(implicit m: Monad[sbt.Def.Initialize]) {
     def appendItemToSeq[T](s: sbt.TaskKey[Seq[T]])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[sbt.Task[Seq[T]]] =
       appendItemToSeqImpl(s)(sbt.std.FullInstance.pure(value))(lp)
 
@@ -24,11 +24,11 @@ trait pUtils {
     ): sbt.Def.Setting[sbt.Task[Seq[T]]] = s.append1(value, lp)
   }
 
-  object setting {
-    def setConst[T](sKey: sbt.SettingKey[T])(value: T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] = {
-      val input: sbt.Def.Initialize[T] = value.pure[sbt.Def.Initialize]
-      setKey(sKey)(input)(lp)
-    }
+  object task extends task()(initializeInstanceMonad)
+
+  class setting(implicit m: Monad[sbt.Def.Initialize]) {
+    def setConst[T](sKey: sbt.SettingKey[T])(value: T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] =
+      setKey(sKey)(value.pure[sbt.Def.Initialize])(lp)
 
     def setKey[T](sKey: sbt.SettingKey[T])(target: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[T] = sKey.set(target, lp)
     def addItemToSettingKey[T](sKey: sbt.SettingKey[Seq[T]])(key: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[T]] =
@@ -57,6 +57,8 @@ trait pUtils {
       addScalaJsLibraryImpl(sKey)(bindKey)(value)(lp)
     }
   }
+
+  object setting extends setting()(initializeInstanceMonad)
 
   import scala.language.experimental.macros
 
