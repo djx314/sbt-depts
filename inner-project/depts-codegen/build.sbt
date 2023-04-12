@@ -1,8 +1,8 @@
 import Settings._
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-setting.setConst(scalaVersion)(() => scalaV.v212)(sourcePosition.fromEnclosing)
-setting.setConst(scalafmtOnCompile)(() => true)(sourcePosition.fromEnclosing)
+setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
+setting.setConst(scalafmtOnCompile)(true)(sourcePosition.fromEnclosing)
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 

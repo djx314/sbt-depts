@@ -2,8 +2,6 @@ package djx.sbt.depts.plugins
 
 import cats._
 import cats.implicits._
-import cats.syntax._
-import sbt.librarymanagement.ModuleID
 
 object pUtils extends pUtils
 
@@ -18,47 +16,43 @@ trait pUtils {
   val sourcePosition: sbt.internal.util.SourcePosition.type = sbt.internal.util.SourcePosition
 
   object task {
-    def appendItemToSeq[T](s: sbt.TaskKey[Seq[T]])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[sbt.Task[Seq[T]]] = {
-      s.append1(sbt.std.FullInstance.pure(value), lp)
-    }
+    def appendItemToSeq[T](s: sbt.TaskKey[Seq[T]])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[sbt.Task[Seq[T]]] =
+      appendItemToSeqImpl(s)(sbt.std.FullInstance.pure(value))(lp)
+
+    def appendItemToSeqImpl[T](s: sbt.TaskKey[Seq[T]])(value: sbt.Def.Initialize[sbt.Task[T]])(
+      lp: sbt.SourcePosition
+    ): sbt.Def.Setting[sbt.Task[Seq[T]]] = s.append1(value, lp)
   }
 
   object setting {
-    def setConst[T](sKey: sbt.SettingKey[T])(value: () => T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] = {
-      val initInstance                        = sbt.std.InitializeInstance
-      val initSettings: sbt.Def.Initialize[T] = initInstance.pure[T](value)
-      sKey.set(initSettings, lp)
+    def setConst[T](sKey: sbt.SettingKey[T])(value: T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] = {
+      val input: sbt.Def.Initialize[T] = value.pure[sbt.Def.Initialize]
+      setKey(sKey)(input)(lp)
     }
 
-    def addScalaJsLibraryImpl(
-      sKey: sbt.SettingKey[Seq[sbt.ModuleID]]
-    )(
-      bindKey: sbt.SettingKey[sbt.CrossVersion]
-    )(value: () => (String, String, String))(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
-      val (moduleOrg, moduleName, version) = value()
+    def setKey[T](sKey: sbt.SettingKey[T])(target: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[T] = sKey.set(target, lp)
+    def addItemToSettingKey[T](sKey: sbt.SettingKey[Seq[T]])(key: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[T]] =
+      sKey.append1(key, lp)
+
+    def addScalaJsLibraryImpl(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
+      bindKey: sbt.Def.Initialize[sbt.CrossVersion]
+    )(value: (String, String, String))(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+      val (moduleOrg, moduleName, version) = value
 
       import org.portablescala.sbtplatformdeps.{PlatformDepsPlugin, PlatformDepsGroupID}
       import PlatformDepsPlugin.autoImport._
-      val newModuleOrg: PlatformDepsGroupID = moduleOrg
 
-      def newModuleName(v: sbt.CrossVersion): sbt.ModuleID = {
-        val modulePrefix = org.portablescala.sbtplatformdeps.PlatformDepsGroupID.withCross(newModuleOrg, moduleName, v)
+      def moduleIDCompat[F[_]: Monad](keySetting: F[sbt.CrossVersion]): F[sbt.ModuleID] = for (crossVersionInfo <- keySetting) yield {
+        val modulePrefix = PlatformDepsGroupID.withCross(moduleOrg, moduleName, crossVersionInfo)
         modulePrefix % version
       }
 
-      /*val aa = sbt.std.InitializeInstance.map[sbt.CrossVersion, sbt.librarymanagement.ModuleID](
-        bindKey,
-        (crossVersionInfo: sbt.CrossVersion) => newModuleName(crossVersionInfo)
-      )*/
-
-      val moduleIDCompat = Monad[sbt.Def.Initialize].map(bindKey)(crossVersionInfo => newModuleName(crossVersionInfo))
-
-      sKey.append1(moduleIDCompat, lp)
+      addItemToSettingKey(sKey)(moduleIDCompat(bindKey))(lp)
     }
 
     def addScalaJsLibrary(
       sKey: sbt.SettingKey[Seq[sbt.ModuleID]]
-    )(value: () => (String, String, String))(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+    )(value: (String, String, String))(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
       val bindKey = org.portablescala.sbtplatformdeps.PlatformDepsGroupID.platformDepsCrossVersion
       addScalaJsLibraryImpl(sKey)(bindKey)(value)(lp)
     }
