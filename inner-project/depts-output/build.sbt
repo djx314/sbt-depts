@@ -10,6 +10,12 @@ addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats`.value
 
+/*SeeTree.see(libraryDependencies += "a" %% "b" % "c")
+
+internal.this.DslEntry.fromSettingsDef((sbt.Keys.libraryDependencies.append1[sbt.librarymanagement.ModuleID]((InitializeInstance.pure[sbt.librarymanagement.ModuleID]((() => sbt.stringToOrganization("a").%%("b").%("c"))): s
+  bt.Def.Initialize[sbt.librarymanagement.ModuleID] @scala.annotation.nowarn(value = "cat=other-pure-statement")), LinePosition.apply("E:\\programming\\workspace\\sbt-depts\\inner-project\\depts-output\\build.sbt", 13))(sbt.this.Appen
+  d.appendSeq[sbt.librarymanagement.ModuleID, sbt.librarymanagement.ModuleID]): sbt.Def.Setting[Seq[sbt.librarymanagement.ModuleID]]))*/
+
 enablePlugins(SbtPlugin)
 
 pluginCrossBuild / sbtVersion := {
