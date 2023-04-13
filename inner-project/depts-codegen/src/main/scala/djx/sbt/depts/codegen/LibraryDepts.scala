@@ -30,7 +30,7 @@ trait AppHaveATest {
   case class LibSettings(libStr: String, scalaV: String, libVarName: String) {
     def genString: String =
       s"""
-         |libScalax.`$libVarName` ++= { if ($scalaV.value) Seq($libStr) else Seq.empty }
+         |libScalax.`$libVarName` ++= { $libStr }
          |""".stripMargin
   }
   object LibSettings {
@@ -46,6 +46,23 @@ trait AppHaveATest {
   var libSettings: List[LibSettings]        = List.empty
   var PluginScalaVersionBoolean: String     = null
 
+  def genString(libInfo: LibraryDepts.LibraryInstance, currentVar: String): String = {
+    val u = "\""
+    def fromString1 =
+      s"djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
+    def fromString2 =
+      s"djx.sbt.depts.plugins.pUtils.setting.javaLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
+    def fromString3 =
+      s"djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
+
+    if (libInfo.liftType == LibraryDepts.TextType.LiftToScala)
+      fromString1 + ".value"
+    else if (libInfo.liftType == LibraryDepts.TextType.LiftToScalaJs)
+      fromString3 + ".value"
+    else
+      fromString2 + ".value"
+  }
+
   def extractGen(): Unit = {
     for (current <- LibraryDeptsInstance.context.value) {
       current match {
@@ -53,9 +70,11 @@ trait AppHaveATest {
           contextVarName = name
           contextVarNames = contextVarNames ::: contextVarName :: List.empty[String]
         case LibraryDepts.AddLibrarySettings(libInfo) =>
-          libSettings =
-            libSettings ::: LibSettings(libStr = libInfo.genString, scalaV = PluginScalaVersionBoolean, libVarName = contextVarName) :: List
-              .empty[LibSettings]
+          libSettings = libSettings ::: LibSettings(
+            libStr = genString(libInfo, PluginScalaVersionBoolean),
+            scalaV = PluginScalaVersionBoolean,
+            libVarName = contextVarName
+          ) :: List.empty[LibSettings]
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
             case ScalaV.V211 =>

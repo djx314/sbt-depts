@@ -16,26 +16,11 @@ package impl {
   }
 
   class StringLibAppend(prefix: LibraryDepts.LibraryInstance) {
-    def %%%(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
-      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%%%")),
-      current = LibraryDepts.TextType.StringText(s)
-    )
-    def %%(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
-      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%%")),
-      current = LibraryDepts.TextType.StringText(s)
-    )
-    def %(s: String): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
-      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%")),
-      current = LibraryDepts.TextType.StringText(s)
-    )
-    def %(s: LibraryDepts.TextType): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
-      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("%")),
-      current = s
-    )
-    def cross(s: LibraryDepts.CrossVersionSetting): LibraryDepts.LinkAppend = LibraryDepts.LinkAppend(
-      prefix = LibraryDepts.LinkAppend(prefix = prefix, current = LibraryDepts.TextType.LitText("cross")),
-      current = s.textType
-    )
+    def %%%(s: String): LibraryDepts.LibraryInstance = prefix.appendString(s).appendLiftType(LibraryDepts.TextType.LiftToScalaJs)
+    def %%(s: String): LibraryDepts.LibraryInstance  = prefix.appendString(s).appendLiftType(LibraryDepts.TextType.LiftToScala)
+    def %(s: String): LibraryDepts.LibraryInstance   = prefix.appendString(s)
+    def %(s: LibraryDepts.ScopeType): LibraryDepts.LibraryInstance               = prefix.appendScope(s)
+    def cross(s: LibraryDepts.CrossVersionSetting): LibraryDepts.LibraryInstance = prefix.appendCrossVersionSetting(s)
   }
 
   class VarContextSetting(context: DeptSettingContext) {
@@ -59,27 +44,39 @@ package impl {
 }
 
 trait LibraryDepts {
-  implicit class StringLibMethods1(variable: String)
-      extends impl.StringLibAppend(LibraryDepts.LinkAppend(LibraryDepts.LinkZero, LibraryDepts.TextType.StringText(variable)))
+  implicit class StringLibMethods1(variable: String) extends impl.StringLibAppend(LibraryDepts.LibraryInstance.init.appendString(variable))
   implicit class StringLibMethods2(variable: LibraryDepts.LibraryInstance) extends impl.StringLibAppend(variable)
 
-  val context: impl.DeptSettingContext                         = new impl.DeptSettingContext
-  val scalaVersion: impl.ScalaVersionVarSetting                = new impl.ScalaVersionVarSetting(context)
-  val VarContext: impl.VarContextSetting                       = new impl.VarContextSetting(context)
-  val libraryDependencies: impl.LibraryDependenciesSetting     = new impl.LibraryDependenciesSetting(context)
-  def addCompilerPlugin(v: LibraryDepts.LibraryInstance): Unit = context.push(LibraryDepts.AddLibrarySettings(v))
+  val context: impl.DeptSettingContext                     = new impl.DeptSettingContext
+  val scalaVersion: impl.ScalaVersionVarSetting            = new impl.ScalaVersionVarSetting(context)
+  val VarContext: impl.VarContextSetting                   = new impl.VarContextSetting(context)
+  val libraryDependencies: impl.LibraryDependenciesSetting = new impl.LibraryDependenciesSetting(context)
+  def addCompilerPlugin(v: LibraryDepts.LibraryInstance): Unit =
+    context.push(LibraryDepts.AddLibrarySettings(v.appendScope(LibraryDepts.ScopeType.CompilePlugin)))
 
   val CrossVersion: LibraryDepts.CrossVersionSetting.type = LibraryDepts.CrossVersionSetting
-  val Test: LibraryDepts.TextType                         = LibraryDepts.TextType.LitText("Test")
+  val Test: LibraryDepts.ScopeType                        = LibraryDepts.ScopeType.Test
 }
 
 object LibraryDepts {
   sealed trait CrossVersionSetting {
-    def textType: TextType
+    def textType: String
   }
   object CrossVersionSetting {
     case object full extends CrossVersionSetting {
-      override def textType: TextType = TextType.LitText("CrossVersion.full")
+      override val textType: String = "CrossVersion.full"
+    }
+  }
+
+  sealed trait ScopeType {
+    def textType: String
+  }
+  object ScopeType {
+    case object Test extends ScopeType {
+      override val textType: String = "Test"
+    }
+    case object CompilePlugin extends ScopeType {
+      override val textType: String = "CompilePlugin"
     }
   }
 
@@ -89,25 +86,49 @@ object LibraryDepts {
   case class AddLibrarySettings(v: LibraryInstance) extends LibraryDeptsSettings
   case class ChangeScalaVerionSetting(v: String)    extends LibraryDeptsSettings
 
-  sealed trait LibraryInstance {
-    def genString: String
+  case class LibraryInstance(
+    name1: Option[String],
+    name2: Option[String],
+    name3: Option[String],
+    liftType: TextType,
+    crossVersionSetting: Option[CrossVersionSetting],
+    scope: Option[ScopeType]
+  ) {
+    def appendString(n: String): LibraryInstance = if (name1.isEmpty) copy(name1 = Option(n))
+    else if (name2.isEmpty) copy(name2 = Option(n))
+    else if (name3.isEmpty) copy(name3 = Option(n))
+    else this
+
+    def appendLiftType(n: TextType): LibraryInstance = copy(liftType = n)
+
+    def appendCrossVersionSetting(v: CrossVersionSetting): LibraryInstance = copy(crossVersionSetting = Option(v))
+
+    def appendScope(v: ScopeType): LibraryInstance = copy(scope = Option(v))
   }
-  case object LinkZero extends LibraryInstance {
-    override def genString: String = ""
-  }
-  case class LinkAppend(prefix: LibraryInstance, current: TextType) extends LibraryInstance {
-    override def genString: String = s"${prefix.genString} ${current.genString}"
+
+  object LibraryInstance {
+    val init: LibraryInstance = LibraryInstance(
+      name1 = Option.empty,
+      name2 = Option.empty,
+      name3 = Option.empty,
+      liftType = TextType.LiftToJava,
+      crossVersionSetting = Option.empty,
+      scope = Option.empty
+    )
   }
 
   sealed trait TextType {
     def genString: String
   }
   object TextType {
-    case class LitText(s: String) extends TextType {
-      override def genString: String = s
+    case object LiftToJava extends TextType {
+      override def genString: String = "\"\"\"" + LiftToJava.getClass.getName + "\"\"\""
     }
-    case class StringText(s: String) extends TextType {
-      override def genString: String = "\"\"\"" + s + "\"\"\""
+    case object LiftToScala extends TextType {
+      override def genString: String = "\"\"\"" + LiftToScala.getClass.getName + "\"\"\""
+    }
+    case object LiftToScalaJs extends TextType {
+      override def genString: String = "\"\"\"" + LiftToScalaJs.getClass.getName + "\"\"\""
     }
   }
 }

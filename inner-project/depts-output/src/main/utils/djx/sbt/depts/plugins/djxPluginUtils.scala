@@ -55,11 +55,18 @@ trait pUtils {
       addScalaJsLibraryImpl(sKey)(bindKey)(moduleOrg, moduleName, version)(lp)
     }
 
-    def simpleScalaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.ModuleID =
-      sbt.stringToOrganization(moduleName) %% moduleName % version
+    def simpleScalaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.ModuleID = {
+      import sbt._
+      val org: sbt.librarymanagement.DependencyBuilders.Organization = moduleOrg
+      org %% moduleName % version
+    }
 
-    def simpleJavaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.ModuleID =
-      sbt.stringToOrganization(moduleName) % moduleName % version
+    def simpleJavaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.ModuleID = {
+      import sbt._
+      val org: sbt.librarymanagement.DependencyBuilders.Organization = moduleOrg
+      org % moduleName % version
+
+    }
 
     def simpleScalaJsLibrary(moduleOrg: String, moduleName: String, version: String)(
       bindKey: sbt.Def.Initialize[sbt.CrossVersion]
@@ -75,15 +82,57 @@ trait pUtils {
       moduleIDCompat(bindKey)
     }
 
-    def scalaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] =
+    def scalaLibraryImpl(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] =
       simpleScalaLibrary(moduleOrg, moduleName, version).pure[sbt.Def.Initialize]
 
-    def javaLibrary(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] =
+    def javaLibraryImpl(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] =
       simpleJavaLibrary(moduleOrg, moduleName, version).pure[sbt.Def.Initialize]
 
-    def scalaJsLibrary(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] = {
+    def scalaJsLibraryImpl(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[sbt.ModuleID] = {
       val bindKey = org.portablescala.sbtplatformdeps.PlatformDepsGroupID.platformDepsCrossVersion
       simpleScalaJsLibrary(moduleOrg, moduleName, version)(bindKey)
+    }
+
+    def scalaLibrary(
+      need: sbt.Def.Initialize[Boolean]
+    )(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[Seq[sbt.ModuleID]] = {
+      val libInit: sbt.Def.Initialize[sbt.ModuleID] = scalaLibraryImpl(moduleOrg, moduleName, version)
+
+      for {
+        needInstance <- need
+        lib          <- libInit
+      } yield
+        if (needInstance)
+          Seq(lib)
+        else Seq.empty
+    }
+
+    def javaLibrary(
+      need: sbt.Def.Initialize[Boolean]
+    )(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[Seq[sbt.ModuleID]] = {
+      val libInit: sbt.Def.Initialize[sbt.ModuleID] = javaLibraryImpl(moduleOrg, moduleName, version)
+
+      for {
+        needInstance <- need
+        lib          <- libInit
+      } yield
+        if (needInstance)
+          Seq(lib)
+        else Seq.empty
+    }
+
+    def scalaJsLibrary(
+      need: sbt.Def.Initialize[Boolean]
+    )(moduleOrg: String, moduleName: String, version: String): sbt.Def.Initialize[Seq[sbt.ModuleID]] = {
+      val libInit: sbt.Def.Initialize[sbt.ModuleID] = scalaJsLibraryImpl(moduleOrg, moduleName, version)
+
+      for {
+        needInstance <- need
+        lib          <- libInit
+      } yield
+        if (needInstance)
+          Seq(lib)
+        else Seq.empty
     }
 
   }
