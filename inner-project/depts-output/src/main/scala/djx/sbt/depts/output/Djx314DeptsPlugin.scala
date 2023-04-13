@@ -9,13 +9,20 @@ import impl.{ScalafmtRewrite, UpdatePluginLibVersion, UpdateSbtVersion}
 import collection.mutable.ListBuffer
 
 package impl {
+
+  import djx.sbt.depts.abs.LibraryDepts
+  import djx.sbt.depts.codegen.AppHaveATest
+
   class BuildKeysAbs {
-    val djxIsScalaJs  = settingKey[Option[Boolean]]("Is scala.js")
-    val djxIsScala2   = settingKey[Boolean]("Is scala 2")
-    val djxIsScala211 = settingKey[Boolean]("Is scala 2.11")
-    val djxIsScala212 = settingKey[Boolean]("Is scala 2.12")
-    val djxIsScala213 = settingKey[Boolean]("Is scala 2.13")
-    val djxIsScala3   = settingKey[Boolean]("Is scala 3")
+    val djxIsScalaJs: sbt.SettingKey[Option[Boolean]]                                 = settingKey[Option[Boolean]]("Is scala.js")
+    val djxIsScala2: sbt.SettingKey[Boolean]                                          = settingKey[Boolean]("Is scala 2")
+    val djxIsScala211: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.11")
+    val djxIsScala212: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.12")
+    val djxIsScala213: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.13")
+    val djxIsScala3: sbt.SettingKey[Boolean]                                          = settingKey[Boolean]("Is scala 3")
+    val contextLibraryCollection: Map[(String, String), LibraryDepts.LibraryInstance] = AppHaveATest.libSettingsMap
+    val sourcePosition                                                                = djx.sbt.depts.plugins.pUtils.sourcePosition
+    val innerSetting: djx.sbt.depts.plugins.pUtils.setting                            = djx.sbt.depts.plugins.pUtils.setting
   }
 
   class BuildKeysImpl extends BuildKeys {
@@ -115,8 +122,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
         else
           for (libCol <- libScalax.circe.?.value.to(List); lib <- libCol) yield lib
       })
-
-      settingsCol.+=(libScalax.`kind-projector` := { for (lib <- libScalax.`kind-projector`.value) yield compilerPlugin(lib) })
 
       val collect = settingsCol.to(List)
     }

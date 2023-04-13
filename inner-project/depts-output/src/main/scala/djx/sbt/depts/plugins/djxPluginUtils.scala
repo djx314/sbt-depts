@@ -1,7 +1,8 @@
 package djx.sbt.depts.plugins
 
-import cats._
-import cats.implicits._
+import cats.*
+import cats.implicits.*
+import djx.sbt.depts.abs.LibraryDepts
 
 object pUtils extends pUtils
 
@@ -135,10 +136,47 @@ trait pUtils {
         else Seq.empty
     }
 
+    def fromLibInstanceImpl(lib: LibraryDepts.LibraryInstance): sbt.Def.Initialize[sbt.ModuleID] = {
+      val temp1: sbt.Def.Initialize[sbt.ModuleID] = lib.liftType match {
+        case LibraryDepts.TextType.LiftToJava    => javaLibraryImpl(lib.name1, lib.name2, lib.name3)
+        case LibraryDepts.TextType.LiftToScala   => scalaLibraryImpl(lib.name1, lib.name2, lib.name3)
+        case LibraryDepts.TextType.LiftToScalaJs => scalaJsLibraryImpl(lib.name1, lib.name2, lib.name3)
+      }
+
+      import sbt._
+      val temp2: sbt.Def.Initialize[sbt.ModuleID] = lib.crossVersionSetting match {
+        case Some(LibraryDepts.CrossVersionSetting.full) =>
+          Monad[sbt.Def.Initialize].map(temp1)(t => t cross CrossVersion.Full())
+        case None => temp1
+      }
+
+      val temp3: sbt.Def.Initialize[sbt.ModuleID] = lib.scope match {
+        case Some(LibraryDepts.ScopeType.Test)          => Monad[sbt.Def.Initialize].map(temp2)(t => t % Test)
+        case Some(LibraryDepts.ScopeType.CompilePlugin) => Monad[sbt.Def.Initialize].map(temp2)(t => compilerPlugin(t))
+        case None                                       => temp2
+      }
+
+      temp3
+    }
+
+    def fromLibInstance(confirm: sbt.Def.Initialize[Boolean])(lib: LibraryDepts.LibraryInstance): sbt.Def.Initialize[Seq[sbt.ModuleID]] =
+      for {
+        c        <- confirm
+        libModel <- fromLibInstanceImpl(lib)
+      } yield
+        if (c) Seq(libModel)
+        else Seq.empty
+
+    def addLibrarySetting(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
+      confirm: sbt.Def.Initialize[Boolean]
+    )(lib: LibraryDepts.LibraryInstance)(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+      val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstance(confirm)(lib)
+      sKey.appendN(aa, lp)
+    }
+
   }
 
   object setting extends setting()(initializeInstanceMonad)
-
   import scala.language.experimental.macros
 
   object SeeTree {

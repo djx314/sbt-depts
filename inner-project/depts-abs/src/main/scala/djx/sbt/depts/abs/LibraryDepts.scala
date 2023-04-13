@@ -87,16 +87,16 @@ object LibraryDepts {
   case class ChangeScalaVerionSetting(v: String)    extends LibraryDeptsSettings
 
   case class LibraryInstance(
-    name1: Option[String],
-    name2: Option[String],
-    name3: Option[String],
+    name1: String,
+    name2: String,
+    name3: String,
     liftType: TextType,
     crossVersionSetting: Option[CrossVersionSetting],
     scope: Option[ScopeType]
   ) {
-    def appendString(n: String): LibraryInstance = if (name1.isEmpty) copy(name1 = Option(n))
-    else if (name2.isEmpty) copy(name2 = Option(n))
-    else if (name3.isEmpty) copy(name3 = Option(n))
+    def appendString(n: String): LibraryInstance = if (name1.size == 0) copy(name1 = n)
+    else if (name2.size == 0) copy(name2 = n)
+    else if (name3.size == 0) copy(name3 = n)
     else this
 
     def appendLiftType(n: TextType): LibraryInstance = copy(liftType = n)
@@ -108,9 +108,9 @@ object LibraryDepts {
 
   object LibraryInstance {
     val init: LibraryInstance = LibraryInstance(
-      name1 = Option.empty,
-      name2 = Option.empty,
-      name3 = Option.empty,
+      name1 = "",
+      name2 = "",
+      name3 = "",
       liftType = TextType.LiftToJava,
       crossVersionSetting = Option.empty,
       scope = Option.empty

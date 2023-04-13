@@ -79,573 +79,558 @@ trait Djx314DeptsImpl {
     libScalax.`shapeless`                   := libScalax.`shapeless`.?.value.to(List).flatten,
     libScalax.`macwire`                     := libScalax.`macwire`.?.value.to(List).flatten,
     libScalax.`cats`                        := libScalax.`cats`.?.value.to(List).flatten,
-    libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .javaLibrary(djxIsScala211)("""org.typelevel""", """kind-projector""", """0.13.2""")
-        .value
-        .map(s => s cross CrossVersion.full)
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""io.circe""", """circe-core""", """0.11.2""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""io.circe""", """circe-generic""", """0.11.2""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""io.circe""", """circe-parser""", """0.11.2""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.scalactic""", """scalactic""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.scalatest""", """scalatest""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.scalatest""", """scalatest-core""", """3.2.15""").value
-    },
-    libScalax.`cats-effect` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""org.typelevel""", """cats-effect""", """2.0.0""").value
-    },
-    libScalax.`cats` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""org.typelevel""", """cats-core""", """2.0.0""").value
-    },
-    libScalax.`cats` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""org.typelevel""", """cats-free""", """2.0.0""").value
-    },
-    libScalax.`h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""com.h2database""", """h2""", """2.1.214""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.tpolecat""", """doobie-core""", """0.7.1""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.tpolecat""", """doobie-hikari""", """0.7.1""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.tpolecat""", """doobie-postgres""", """0.7.1""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.tpolecat""", """doobie-scalatest""", """0.7.1""").value
-    },
-    libScalax.`doobie-h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.tpolecat""", """doobie-h2""", """0.7.1""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-streams""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-test""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-test-sbt""", """2.0.10""").value
-    },
-    libScalax.`typesafe-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""com.typesafe""", """config""", """1.4.2""").value
-    },
-    libScalax.`scala-collection-compat` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .scalaJsLibrary(djxIsScala211)("""org.scala-lang.modules""", """scala-collection-compat""", """2.9.0""")
-        .value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""org.http4s""", """http4s-dsl""", """0.20.23""").value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""org.http4s""", """http4s-circe""", """0.20.23""").value
-    },
-    libScalax.`http4s-twirl` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.http4s""", """http4s-twirl""", """0.20.23""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-config""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-config-typesafe""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-config-yaml""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""dev.zio""", """zio-config-derivation""", """3.0.7""").value
-    },
-    libScalax.`slf4j-simple` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""org.slf4j""", """slf4j-simple""", """2.0.7""").value
-    },
-    libScalax.`commons-io` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""org.apache.commons""", """commons-io""", """1.3.2""").value
-    },
-    libScalax.`macwire` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""com.softwaremill.macwire""", """macros""", """2.3.7""").value
-    },
-    libScalax.`commons-lang3` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""org.apache.commons""", """commons-lang3""", """3.12.0""").value
-    },
-    libScalax.`commons-lang3-bridge` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""net.scalax""", """commons-lang3-bridge""", """0.1.0""").value
-    },
-    libScalax.`simple-adt` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""net.scalax.simple""", """simple-adt""", """0.0.1-M7""").value
-    },
-    libScalax.`sbt-librarymanagement-core` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""org.scala-sbt""", """librarymanagement-core""", """1.2.4""").value
-    },
-    libScalax.`javacv-platform` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""org.bytedeco""", """javacv-platform""", """1.5.8""").value
-    },
-    libScalax.`shapeless` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""com.chuusai""", """shapeless""", """2.3.10""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""co.fs2""", """fs2-core""", """2.1.0""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""co.fs2""", """fs2-io""", """2.1.0""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""co.fs2""", """fs2-reactive-streams""", """2.1.0""").value
-    },
-    libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .javaLibrary(djxIsScala212)("""org.typelevel""", """kind-projector""", """0.13.2""")
-        .value
-        .map(s => s cross CrossVersion.full)
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""io.circe""", """circe-core""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""io.circe""", """circe-generic""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""io.circe""", """circe-parser""", """0.14.5""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.scalactic""", """scalactic""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.scalatest""", """scalatest""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.scalatest""", """scalatest-core""", """3.2.15""").value
-    },
-    libScalax.`cats-effect` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.typelevel""", """cats-effect""", """3.4.8""").value
-    },
-    libScalax.`cats` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.typelevel""", """cats-core""", """2.9.0""").value
-    },
-    libScalax.`h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""com.h2database""", """h2""", """2.1.214""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.tpolecat""", """doobie-core""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.tpolecat""", """doobie-hikari""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.tpolecat""", """doobie-postgres""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.tpolecat""", """doobie-scalatest""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie-h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.tpolecat""", """doobie-h2""", """1.0.0-RC2""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-streams""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-test""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-test-sbt""", """2.0.10""").value
-    },
-    libScalax.`typesafe-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""com.typesafe""", """config""", """1.4.2""").value
-    },
-    libScalax.`scala-collection-compat` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .scalaJsLibrary(djxIsScala212)("""org.scala-lang.modules""", """scala-collection-compat""", """2.9.0""")
-        .value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.http4s""", """http4s-dsl""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.http4s""", """http4s-circe""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-server` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.http4s""", """http4s-ember-server""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-client` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.http4s""", """http4s-ember-client""", """0.23.18""").value
-    },
-    libScalax.`http4s-twirl` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.http4s""", """http4s-twirl""", """0.23.17""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config-magnolia""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config-refined""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config-typesafe""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config-yaml""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-config-derivation""", """3.0.7""").value
-    },
-    libScalax.`slf4j-simple` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.slf4j""", """slf4j-simple""", """2.0.7""").value
-    },
-    libScalax.`commons-io` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.apache.commons""", """commons-io""", """1.3.2""").value
-    },
-    libScalax.`macwire` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""com.softwaremill.macwire""", """macros""", """2.5.8""").value
-    },
-    libScalax.`commons-lang3` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.apache.commons""", """commons-lang3""", """3.12.0""").value
-    },
-    libScalax.`commons-lang3-bridge` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""net.scalax""", """commons-lang3-bridge""", """0.1.0""").value
-    },
-    libScalax.`simple-adt` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""net.scalax.simple""", """simple-adt""", """0.0.1-M7""").value
-    },
-    libScalax.`sbt-librarymanagement-core` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""org.scala-sbt""", """librarymanagement-core""", """1.8.0""").value
-    },
-    libScalax.`scala-sbt` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.scala-sbt""", """sbt""", """1.8.1""").value
-    },
-    libScalax.`javacv-platform` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.bytedeco""", """javacv-platform""", """1.5.8""").value
-    },
-    libScalax.`cats-effect-cps` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""org.typelevel""", """cats-effect-cps""", """0.4.0""").value
-    },
-    libScalax.`zio-json` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""dev.zio""", """zio-json""", """0.5.0""").value
-    },
-    libScalax.`shapeless` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""com.chuusai""", """shapeless""", """2.3.10""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""co.fs2""", """fs2-core""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""co.fs2""", """fs2-io""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala212)("""co.fs2""", """fs2-reactive-streams""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""co.fs2""", """fs2-scodec""", """3.6.1""").value
-    },
-    libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .javaLibrary(djxIsScala213)("""org.typelevel""", """kind-projector""", """0.13.2""")
-        .value
-        .map(s => s cross CrossVersion.full)
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""io.circe""", """circe-core""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""io.circe""", """circe-generic""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""io.circe""", """circe-parser""", """0.14.5""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.scalactic""", """scalactic""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.scalatest""", """scalatest""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.scalatest""", """scalatest-core""", """3.2.15""").value
-    },
-    libScalax.`cats-effect` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.typelevel""", """cats-effect""", """3.4.8""").value
-    },
-    libScalax.`cats` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.typelevel""", """cats-core""", """2.9.0""").value
-    },
-    libScalax.`h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""com.h2database""", """h2""", """2.1.214""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.tpolecat""", """doobie-core""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.tpolecat""", """doobie-hikari""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.tpolecat""", """doobie-postgres""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.tpolecat""", """doobie-scalatest""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie-h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.tpolecat""", """doobie-h2""", """1.0.0-RC2""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-streams""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-test""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-test-sbt""", """2.0.10""").value
-    },
-    libScalax.`typesafe-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""com.typesafe""", """config""", """1.4.2""").value
-    },
-    libScalax.`scala-collection-compat` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .scalaJsLibrary(djxIsScala213)("""org.scala-lang.modules""", """scala-collection-compat""", """2.9.0""")
-        .value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.http4s""", """http4s-dsl""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.http4s""", """http4s-circe""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-server` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.http4s""", """http4s-ember-server""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-client` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.http4s""", """http4s-ember-client""", """0.23.18""").value
-    },
-    libScalax.`http4s-twirl` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.http4s""", """http4s-twirl""", """0.23.17""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config-magnolia""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config-refined""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config-typesafe""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config-yaml""", """3.0.7""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-config-derivation""", """3.0.7""").value
-    },
-    libScalax.`slf4j-simple` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""org.slf4j""", """slf4j-simple""", """2.0.7""").value
-    },
-    libScalax.`commons-io` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""org.apache.commons""", """commons-io""", """1.3.2""").value
-    },
-    libScalax.`macwire` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""com.softwaremill.macwire""", """macros""", """2.5.8""").value
-    },
-    libScalax.`commons-lang3` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""org.apache.commons""", """commons-lang3""", """3.12.0""").value
-    },
-    libScalax.`commons-lang3-bridge` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""net.scalax""", """commons-lang3-bridge""", """0.1.0""").value
-    },
-    libScalax.`simple-adt` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""net.scalax.simple""", """simple-adt""", """0.0.1-M7""").value
-    },
-    libScalax.`sbt-librarymanagement-core` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""org.scala-sbt""", """librarymanagement-core""", """1.8.0""").value
-    },
-    libScalax.`javacv-platform` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""org.bytedeco""", """javacv-platform""", """1.5.8""").value
-    },
-    libScalax.`cats-effect-cps` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""org.typelevel""", """cats-effect-cps""", """0.4.0""").value
-    },
-    libScalax.`zio-json` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""dev.zio""", """zio-json""", """0.5.0""").value
-    },
-    libScalax.`shapeless` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""com.chuusai""", """shapeless""", """2.3.10""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""co.fs2""", """fs2-core""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""co.fs2""", """fs2-io""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala213)("""co.fs2""", """fs2-reactive-streams""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""co.fs2""", """fs2-scodec""", """3.6.1""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""io.circe""", """circe-core""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""io.circe""", """circe-generic""", """0.14.5""").value
-    },
-    libScalax.`circe` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""io.circe""", """circe-parser""", """0.14.5""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.scalactic""", """scalactic""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.scalatest""", """scalatest""", """3.2.15""").value
-    },
-    libScalax.`scalatest` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.scalatest""", """scalatest-core""", """3.2.15""").value
-    },
-    libScalax.`cats-effect` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """cats-effect""", """3.4.8""").value
-    },
-    libScalax.`cats` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """cats-core""", """2.9.0""").value
-    },
-    libScalax.`h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""com.h2database""", """h2""", """2.1.214""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.tpolecat""", """doobie-core""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.tpolecat""", """doobie-hikari""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.tpolecat""", """doobie-postgres""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.tpolecat""", """doobie-scalatest""", """1.0.0-RC2""").value
-    },
-    libScalax.`doobie-h2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.tpolecat""", """doobie-h2""", """1.0.0-RC2""").value
-    },
-    libScalax.`zio2` ++= { djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio""", """2.0.10""").value },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-streams""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-test""", """2.0.10""").value
-    },
-    libScalax.`zio2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-test-sbt""", """2.0.10""").value
-    },
-    libScalax.`typesafe-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""com.typesafe""", """config""", """1.4.2""").value
-    },
-    libScalax.`scala-collection-compat` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .scalaJsLibrary(djxIsScala3)("""org.scala-lang.modules""", """scala-collection-compat""", """2.9.0""")
-        .value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.http4s""", """http4s-dsl""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.http4s""", """http4s-circe""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-server` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.http4s""", """http4s-ember-server""", """0.23.18""").value
-    },
-    libScalax.`http4s-Release-ember-client` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.http4s""", """http4s-ember-client""", """0.23.18""").value
-    },
-    libScalax.`http4s-twirl` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""org.http4s""", """http4s-twirl""", """0.24.0-M1""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config""", """4.0.0-RC14""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config-magnolia""", """4.0.0-RC14""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config-refined""", """4.0.0-RC14""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config-typesafe""", """4.0.0-RC14""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config-yaml""", """4.0.0-RC14""").value
-    },
-    libScalax.`zio-config` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-config-derivation""", """4.0.0-RC14""").value
-    },
-    libScalax.`slf4j-simple` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""org.slf4j""", """slf4j-simple""", """2.0.7""").value
-    },
-    libScalax.`commons-io` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""org.apache.commons""", """commons-io""", """1.3.2""").value
-    },
-    libScalax.`macwire` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""com.softwaremill.macwire""", """macros""", """2.5.8""").value
-    },
-    libScalax.`commons-lang3` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""org.apache.commons""", """commons-lang3""", """3.12.0""").value
-    },
-    libScalax.`commons-lang3-bridge` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""net.scalax""", """commons-lang3-bridge""", """0.1.0""").value
-    },
-    libScalax.`simple-adt` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""net.scalax.simple""", """simple-adt""", """0.0.1-M7""").value
-    },
-    libScalax.`sbt-librarymanagement-core` ++= {
-      djx.sbt.depts.plugins.pUtils.setting
-        .scalaLibrary(djxIsScala3)("""org.scala-sbt""", """librarymanagement-core""", """2.0.0-alpha12""")
-        .value
-    },
-    libScalax.`javacv-platform` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala3)("""org.bytedeco""", """javacv-platform""", """1.5.8""").value
-    },
-    libScalax.`cats-effect-cps` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """cats-effect-cps""", """0.4.0""").value
-    },
-    libScalax.`zio-json` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""dev.zio""", """zio-json""", """0.5.0""").value
-    },
-    libScalax.`shapeless` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """shapeless3-deriving""", """3.3.0""").value
-    },
-    libScalax.`shapeless` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """shapeless3-typeable""", """3.3.0""").value
-    },
-    libScalax.`shapeless3-test` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""org.typelevel""", """shapeless3-test""", """3.3.0""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""co.fs2""", """fs2-core""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= { djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""co.fs2""", """fs2-io""", """3.6.1""").value },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala3)("""co.fs2""", """fs2-reactive-streams""", """3.6.1""").value
-    },
-    libScalax.`fs2` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala3)("""co.fs2""", """fs2-scodec""", """3.6.1""").value
-    }
+    innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala211)(contextLibraryCollection.apply(("kind-projector", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala211)(contextLibraryCollection.apply(("circe", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala211)(contextLibraryCollection.apply(("circe", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala211)(contextLibraryCollection.apply(("circe", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala211)(contextLibraryCollection.apply(("cats-effect", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala211)(contextLibraryCollection.apply(("cats", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala211)(contextLibraryCollection.apply(("cats", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala211)(contextLibraryCollection.apply(("h2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala211)(contextLibraryCollection.apply(("doobie", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala211)(contextLibraryCollection.apply(("doobie", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala211)(contextLibraryCollection.apply(("doobie", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala211)(contextLibraryCollection.apply(("doobie", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala211)(contextLibraryCollection.apply(("doobie-h2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala211)(contextLibraryCollection.apply(("typesafe-config", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala211)(
+      contextLibraryCollection.apply(("scala-collection-compat", "2.11"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-Release", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-Release", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-twirl", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala211)(contextLibraryCollection.apply(("zio-config", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala211)(contextLibraryCollection.apply(("zio-config", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala211)(contextLibraryCollection.apply(("zio-config", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala211)(contextLibraryCollection.apply(("zio-config", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala211)(contextLibraryCollection.apply(("slf4j-simple", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala211)(contextLibraryCollection.apply(("commons-io", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala211)(contextLibraryCollection.apply(("macwire", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala211)(contextLibraryCollection.apply(("commons-lang3", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala211)(
+      contextLibraryCollection.apply(("commons-lang3-bridge", "2.11"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala211)(contextLibraryCollection.apply(("simple-adt", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala211)(
+      contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.11"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala211)(contextLibraryCollection.apply(("javacv-platform", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala211)(contextLibraryCollection.apply(("shapeless", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala211)(contextLibraryCollection.apply(("fs2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala211)(contextLibraryCollection.apply(("fs2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala211)(contextLibraryCollection.apply(("fs2", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala212)(contextLibraryCollection.apply(("kind-projector", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala212)(contextLibraryCollection.apply(("cats-effect", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala212)(contextLibraryCollection.apply(("cats", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala212)(contextLibraryCollection.apply(("doobie", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala212)(contextLibraryCollection.apply(("doobie", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala212)(contextLibraryCollection.apply(("doobie", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala212)(contextLibraryCollection.apply(("doobie", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala212)(contextLibraryCollection.apply(("doobie-h2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala212)(
+      contextLibraryCollection.apply(("scala-collection-compat", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-Release", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-Release", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala212)(
+      contextLibraryCollection.apply(("http4s-Release-ember-server", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala212)(
+      contextLibraryCollection.apply(("http4s-Release-ember-client", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-twirl", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala212)(contextLibraryCollection.apply(("slf4j-simple", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala212)(contextLibraryCollection.apply(("commons-io", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala212)(contextLibraryCollection.apply(("macwire", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala212)(contextLibraryCollection.apply(("commons-lang3", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala212)(
+      contextLibraryCollection.apply(("commons-lang3-bridge", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala212)(contextLibraryCollection.apply(("simple-adt", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala212)(
+      contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`scala-sbt`)(djxIsScala212)(contextLibraryCollection.apply(("scala-sbt", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala212)(contextLibraryCollection.apply(("javacv-platform", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala212)(contextLibraryCollection.apply(("cats-effect-cps", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala212)(contextLibraryCollection.apply(("zio-json", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala212)(contextLibraryCollection.apply(("shapeless", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala213)(contextLibraryCollection.apply(("kind-projector", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala213)(contextLibraryCollection.apply(("circe", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala213)(contextLibraryCollection.apply(("circe", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala213)(contextLibraryCollection.apply(("circe", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala213)(contextLibraryCollection.apply(("cats", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala213)(contextLibraryCollection.apply(("h2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala213)(contextLibraryCollection.apply(("doobie", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala213)(contextLibraryCollection.apply(("doobie", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala213)(contextLibraryCollection.apply(("doobie", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala213)(contextLibraryCollection.apply(("doobie", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala213)(contextLibraryCollection.apply(("doobie-h2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala213)(contextLibraryCollection.apply(("typesafe-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala213)(
+      contextLibraryCollection.apply(("scala-collection-compat", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala213)(contextLibraryCollection.apply(("http4s-Release", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala213)(contextLibraryCollection.apply(("http4s-Release", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala213)(
+      contextLibraryCollection.apply(("http4s-Release-ember-server", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala213)(
+      contextLibraryCollection.apply(("http4s-Release-ember-client", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala213)(contextLibraryCollection.apply(("http4s-twirl", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala213)(contextLibraryCollection.apply(("slf4j-simple", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala213)(contextLibraryCollection.apply(("commons-io", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala213)(contextLibraryCollection.apply(("macwire", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala213)(contextLibraryCollection.apply(("commons-lang3", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala213)(
+      contextLibraryCollection.apply(("commons-lang3-bridge", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala213)(contextLibraryCollection.apply(("simple-adt", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala213)(
+      contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala213)(contextLibraryCollection.apply(("javacv-platform", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect-cps", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala213)(contextLibraryCollection.apply(("zio-json", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala213)(contextLibraryCollection.apply(("shapeless", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala3)(contextLibraryCollection.apply(("cats-effect", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala3)(contextLibraryCollection.apply(("cats", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala3)(contextLibraryCollection.apply(("h2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala3)(contextLibraryCollection.apply(("doobie-h2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala3)(contextLibraryCollection.apply(("zio2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala3)(contextLibraryCollection.apply(("zio2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala3)(contextLibraryCollection.apply(("zio2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala3)(contextLibraryCollection.apply(("zio2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala3)(contextLibraryCollection.apply(("typesafe-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala3)(
+      contextLibraryCollection.apply(("scala-collection-compat", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala3)(contextLibraryCollection.apply(("http4s-Release", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala3)(contextLibraryCollection.apply(("http4s-Release", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala3)(
+      contextLibraryCollection.apply(("http4s-Release-ember-server", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala3)(
+      contextLibraryCollection.apply(("http4s-Release-ember-client", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala3)(contextLibraryCollection.apply(("http4s-twirl", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala3)(contextLibraryCollection.apply(("zio-config", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-simple", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala3)(contextLibraryCollection.apply(("commons-io", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala3)(contextLibraryCollection.apply(("macwire", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala3)(contextLibraryCollection.apply(("commons-lang3", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala3)(
+      contextLibraryCollection.apply(("commons-lang3-bridge", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala3)(contextLibraryCollection.apply(("simple-adt", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala3)(
+      contextLibraryCollection.apply(("sbt-librarymanagement-core", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala3)(contextLibraryCollection.apply(("javacv-platform", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala3)(contextLibraryCollection.apply(("cats-effect-cps", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala3)(contextLibraryCollection.apply(("zio-json", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`shapeless3-test`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless3-test", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala3)(contextLibraryCollection.apply(("fs2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala3)(contextLibraryCollection.apply(("fs2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala3)(contextLibraryCollection.apply(("fs2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala3)(contextLibraryCollection.apply(("fs2", "3")))(
+      sourcePosition.fromEnclosing()
+    )
   )
 
 }

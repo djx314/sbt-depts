@@ -4,10 +4,11 @@ import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
 
-val `depts-abs`            = project in `root/file` / "depts-abs"
-val `depts-codegen`        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
-val `depts-output-plugins` = project in `plugin/file`
-val `depts-output`         = project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins`
+lazy val `depts-abs`: sbt.Project            = project in `root/file` / "depts-abs"
+lazy val `depts-codegen`: sbt.Project        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
+lazy val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
+lazy val `depts-output`: sbt.Project =
+  project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins` aggregate `depts-codegen` aggregate `depts-abs`
 
 updateMVersion := {
   val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
@@ -40,6 +41,8 @@ allfmt := {
 addCommandAlias("preparePackaging", "; updateMVersion; genAction; allfmt;")
 
 setting.setConst(Global / onChangedBuildSource)(ReloadOnSourceChanges)(sourcePosition.fromEnclosing)
+setting.setConst(`depts-abs` / name)("sbt-depts-abs")(sourcePosition.fromEnclosing)
+setting.setConst(`depts-codegen` / name)("sbt-depts-codegen")(sourcePosition.fromEnclosing)
 setting.setConst(`depts-output` / name)("sbt-depts-djx314")(sourcePosition.fromEnclosing)
 setting.setConst(`depts-output-plugins` / name)("sbt-depts-djx314-plugins")(sourcePosition.fromEnclosing)
 

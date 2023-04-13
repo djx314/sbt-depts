@@ -39,33 +39,19 @@ trait AppHaveATest {
     def genInitVar(name: String): String = s"""libScalax.`$name` := libScalax.`$name`.?.value.to(List).flatten"""
   }
 
-  var contextVarName: String                = null
-  var contextScalaVersion: String           = null
-  var scalaVersionCollect: ScalaV => ScalaV = identity _
-  var contextVarNames: List[String]         = List.empty
-  var libSettings: List[LibSettings]        = List.empty
-  var PluginScalaVersionBoolean: String     = null
+  var contextVarName: String                                              = null
+  var contextScalaVersion: String                                         = null
+  var scalaVersionCollect: ScalaV => ScalaV                               = identity _
+  var contextVarNames: List[String]                                       = List.empty
+  var libSettings: List[String]                                           = List.empty
+  var PluginScalaVersionBoolean: String                                   = null
+  var libSettingsMap: Map[(String, String), LibraryDepts.LibraryInstance] = Map.empty
 
-  def genString(libInfo: LibraryDepts.LibraryInstance, currentVar: String): String = {
-    val u = "\""
-    def fromString1 =
-      s"djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
-    def fromString2 =
-      s"djx.sbt.depts.plugins.pUtils.setting.javaLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
-    def fromString3 =
-      s"djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
-
-    val str1 =
-      if (libInfo.liftType == LibraryDepts.TextType.LiftToScala)
-        fromString1 + ".value"
-      else if (libInfo.liftType == LibraryDepts.TextType.LiftToScalaJs)
-        fromString3 + ".value"
-      else
-        fromString2 + ".value"
-
-    if (libInfo.crossVersionSetting == Some(LibraryDepts.CrossVersionSetting.full)) {
-      str1 + ".map(s => s cross CrossVersion.full)"
-    } else str1
+  def genString(key: String, currentVar: String, currentScalaVersion: String): String = {
+    val keyStr     = "\"" + key + "\""
+    val keyStr1    = "`" + key + "`"
+    val sv: String = "\"" + currentScalaVersion + "\""
+    s"innerSetting.addLibrarySetting(libScalax.$keyStr1)(${currentVar})(contextLibraryCollection.apply((${keyStr}, ${sv})))(sourcePosition.fromEnclosing())"
   }
 
   def extractGen(): Unit = {
@@ -75,11 +61,8 @@ trait AppHaveATest {
           contextVarName = name
           contextVarNames = contextVarNames ::: contextVarName :: List.empty[String]
         case LibraryDepts.AddLibrarySettings(libInfo) =>
-          libSettings = libSettings ::: LibSettings(
-            libStr = genString(libInfo, PluginScalaVersionBoolean),
-            scalaV = PluginScalaVersionBoolean,
-            libVarName = contextVarName
-          ) :: List.empty[LibSettings]
+          libSettings = libSettings ::: genString(contextVarName, PluginScalaVersionBoolean, contextScalaVersion) :: List.empty[String]
+          libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), libInfo))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
             case ScalaV.V211 =>
@@ -118,7 +101,7 @@ trait AppHaveATest {
     val deptNames: List[String] = contextVarNames.to(Set).to(List)
 
     libString = libString ::: (for (name <- deptNames) yield LibSettings.genInitVar(name))
-    libString = libString ::: (for (libSetting <- libSettings) yield libSetting.genString)
+    libString = libString ::: (for (libSetting <- libSettings) yield libSetting)
 
     val varDeineds = for (name <- deptNames) yield LibSettings.genDefinedVar(name)
 
@@ -154,3 +137,5 @@ trait AppHaveATest {
   }
 
 }
+
+object AppHaveATest extends AppHaveATest

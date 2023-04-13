@@ -1,4 +1,4 @@
-import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
+import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 
 setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
 setting.setConst(scalafmtOnCompile)(true)(sourcePosition.fromEnclosing)

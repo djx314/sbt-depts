@@ -15,8 +15,7 @@ object CodegenRunner {
     }
     locally {
       val libConfigFile = Paths.get(str(2))
-      object appHaveATest extends AppHaveATest
-      appHaveATest.codegenAction(libConfigFile)
+      AppHaveATest.codegenAction(libConfigFile)
     }
     locally {
       val scalafmtConfigFile = Paths.get(str(3))
