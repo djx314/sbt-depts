@@ -55,12 +55,17 @@ trait AppHaveATest {
     def fromString3 =
       s"djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(${currentVar})(${u * 3}${libInfo.name1.get}${u * 3}, ${u * 3}${libInfo.name2.get}${u * 3}, ${u * 3}${libInfo.name3.get}${u * 3})"
 
-    if (libInfo.liftType == LibraryDepts.TextType.LiftToScala)
-      fromString1 + ".value"
-    else if (libInfo.liftType == LibraryDepts.TextType.LiftToScalaJs)
-      fromString3 + ".value"
-    else
-      fromString2 + ".value"
+    val str1 =
+      if (libInfo.liftType == LibraryDepts.TextType.LiftToScala)
+        fromString1 + ".value"
+      else if (libInfo.liftType == LibraryDepts.TextType.LiftToScalaJs)
+        fromString3 + ".value"
+      else
+        fromString2 + ".value"
+
+    if (libInfo.crossVersionSetting == LibraryDepts.CrossVersionSetting.full) {
+      str1 + " cross CrossVersion.full"
+    } else str1
   }
 
   def extractGen(): Unit = {
