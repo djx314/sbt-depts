@@ -80,7 +80,10 @@ trait Djx314DeptsImpl {
     libScalax.`macwire`                     := libScalax.`macwire`.?.value.to(List).flatten,
     libScalax.`cats`                        := libScalax.`cats`.?.value.to(List).flatten,
     libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala211)("""org.typelevel""", """kind-projector""", """0.13.2""").value
+      djx.sbt.depts.plugins.pUtils.setting
+        .javaLibrary(djxIsScala211)("""org.typelevel""", """kind-projector""", """0.13.2""")
+        .value
+        .map(s => s cross CrossVersion.full)
     },
     libScalax.`circe` ++= {
       djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala211)("""io.circe""", """circe-core""", """0.11.2""").value
@@ -205,7 +208,10 @@ trait Djx314DeptsImpl {
       djx.sbt.depts.plugins.pUtils.setting.scalaLibrary(djxIsScala211)("""co.fs2""", """fs2-reactive-streams""", """2.1.0""").value
     },
     libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala212)("""org.typelevel""", """kind-projector""", """0.13.2""").value
+      djx.sbt.depts.plugins.pUtils.setting
+        .javaLibrary(djxIsScala212)("""org.typelevel""", """kind-projector""", """0.13.2""")
+        .value
+        .map(s => s cross CrossVersion.full)
     },
     libScalax.`circe` ++= {
       djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""io.circe""", """circe-core""", """0.14.5""").value
@@ -351,7 +357,10 @@ trait Djx314DeptsImpl {
       djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala212)("""co.fs2""", """fs2-scodec""", """3.6.1""").value
     },
     libScalax.`kind-projector` ++= {
-      djx.sbt.depts.plugins.pUtils.setting.javaLibrary(djxIsScala213)("""org.typelevel""", """kind-projector""", """0.13.2""").value
+      djx.sbt.depts.plugins.pUtils.setting
+        .javaLibrary(djxIsScala213)("""org.typelevel""", """kind-projector""", """0.13.2""")
+        .value
+        .map(s => s cross CrossVersion.full)
     },
     libScalax.`circe` ++= {
       djx.sbt.depts.plugins.pUtils.setting.scalaJsLibrary(djxIsScala213)("""io.circe""", """circe-core""", """0.14.5""").value

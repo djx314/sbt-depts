@@ -1,608 +1,828 @@
+
 package djx.sbt.depts
 package codegen
 
 object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
-  VarContext.setScalaVersion := "2.11"
+            VarContext.setScalaVersion := "2.11"
 
-  scalaVersion := "2.11.12"
+          scalaVersion               := "2.11.12"
 
-  VarContext.changeDeptVar := "kind-projector"
+          
 
-  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+          VarContext.changeDeptVar         := "kind-projector"
 
-  VarContext.changeDeptVar := "circe"
+          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
+          
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+          VarContext.changeDeptVar           := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
+          libraryDependencies += "io.circe" %%% "circe-core"    % "0.11.2"
 
-  VarContext.changeDeptVar := "scalatest"
+          libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
 
-  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.11.2"
 
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+          
 
-  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+          VarContext.changeDeptVar               := "scalatest"
 
-  VarContext.changeDeptVar := "cats-effect"
+          libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
+          libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
 
-  VarContext.changeDeptVar := "cats"
+          libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
+          
 
-  libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0"
+          VarContext.changeDeptVar                := "cats-effect"
 
-  VarContext.changeDeptVar := "h2"
+          libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+          
 
-  VarContext.changeDeptVar := "doobie"
+          VarContext.changeDeptVar                := "cats"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "0.7.1"
+          libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "0.7.1"
+          libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "0.7.1"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.1"
+          VarContext.changeDeptVar               := "h2"
 
-  VarContext.changeDeptVar := "doobie-h2"
+          libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.1"
+          
 
-  VarContext.changeDeptVar := "zio2"
+          VarContext.changeDeptVar              := "doobie"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+          libraryDependencies += "org.tpolecat" %% "doobie-core"      % "0.7.1"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+          libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "0.7.1"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+          libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "0.7.1"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+          libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.1"
 
-  VarContext.changeDeptVar := "typesafe-config"
+          
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+          VarContext.changeDeptVar              := "doobie-h2"
 
-  VarContext.changeDeptVar := "scala-collection-compat"
+          libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.1"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+          
 
-  VarContext.changeDeptVar := "http4s-Release"
+          VarContext.changeDeptVar          := "zio2"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.23"
+          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23"
+          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
 
-  VarContext.changeDeptVar := "http4s-twirl"
+          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.23"
+          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
-  VarContext.changeDeptVar := "zio-config"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
+          VarContext.changeDeptVar             := "typesafe-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+          libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
+          VarContext.changeDeptVar                         := "scala-collection-compat"
 
-  VarContext.changeDeptVar := "slf4j-simple"
+          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+          
 
-  VarContext.changeDeptVar := "commons-io"
+          VarContext.changeDeptVar             := "http4s-Release"
 
-  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+          libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.20.23"
 
-  VarContext.changeDeptVar := "macwire"
+          libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
+          
 
-  VarContext.changeDeptVar := "commons-lang3"
+          VarContext.changeDeptVar            := "http4s-twirl"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+          libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.23"
 
-  VarContext.changeDeptVar := "commons-lang3-bridge"
+          
 
-  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+          VarContext.changeDeptVar          := "zio-config"
 
-  VarContext.changeDeptVar := "simple-adt"
+          libraryDependencies += "dev.zio" %%% "zio-config"            % "3.0.7"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+          libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "3.0.7"
 
-  VarContext.changeDeptVar := "sbt-librarymanagement-core"
+          libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "3.0.7"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4"
+          libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
-  VarContext.changeDeptVar := "javacv-platform"
+          
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+          VarContext.changeDeptVar          := "slf4j-simple"
 
-  VarContext.changeDeptVar := "shapeless"
+          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+          
 
-  VarContext.changeDeptVar := "fs2"
+          VarContext.changeDeptVar                   := "commons-io"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "2.1.0"
+          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "2.1.0"
+          
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.1.0"
+          VarContext.changeDeptVar                           := "macwire"
 
-  VarContext.setScalaVersion := "2.12"
+          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
 
-  scalaVersion := "2.12.17"
+          
 
-  VarContext.changeDeptVar := "kind-projector"
+          VarContext.changeDeptVar                   := "commons-lang3"
 
-  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+          libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
-  VarContext.changeDeptVar := "circe"
+          
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+          VarContext.changeDeptVar            := "commons-lang3-bridge"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+          libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+          
 
-  VarContext.changeDeptVar := "scalatest"
+          VarContext.changeDeptVar                    := "simple-adt"
 
-  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+          libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+          
 
-  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+          VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 
-  VarContext.changeDeptVar := "cats-effect"
+          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
+          
 
-  VarContext.changeDeptVar := "cats"
+          VarContext.changeDeptVar             := "javacv-platform"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+          libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
-  VarContext.changeDeptVar := "h2"
+          
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+          VarContext.changeDeptVar              := "shapeless"
 
-  VarContext.changeDeptVar := "doobie"
+          libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+          VarContext.changeDeptVar         := "fs2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+          libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.1.0"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+          libraryDependencies += "co.fs2" %%% "fs2-io"               % "2.1.0"
 
-  VarContext.changeDeptVar := "doobie-h2"
+          libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "2.1.0"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+          VarContext.setScalaVersion := "2.12"
 
-  VarContext.changeDeptVar := "zio2"
+          scalaVersion               := "2.12.17"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+          VarContext.changeDeptVar         := "kind-projector"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+          
 
-  VarContext.changeDeptVar := "typesafe-config"
+          VarContext.changeDeptVar           := "circe"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.5"
 
-  VarContext.changeDeptVar := "scala-collection-compat"
+          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.5"
 
-  VarContext.changeDeptVar := "http4s-Release"
+          
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
+          VarContext.changeDeptVar               := "scalatest"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+          libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
 
-  VarContext.changeDeptVar := "http4s-Release-ember-server"
+          libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+          libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
 
-  VarContext.changeDeptVar := "http4s-Release-ember-client"
+          
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+          VarContext.changeDeptVar                := "cats-effect"
 
-  VarContext.changeDeptVar := "http4s-twirl"
+          libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
+          
 
-  VarContext.changeDeptVar := "zio-config"
+          VarContext.changeDeptVar                := "cats"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
+          libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
+          VarContext.changeDeptVar               := "h2"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+          libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
+          VarContext.changeDeptVar              := "doobie"
 
-  VarContext.changeDeptVar := "slf4j-simple"
+          libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC2"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+          libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC2"
 
-  VarContext.changeDeptVar := "commons-io"
+          libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC2"
 
-  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+          libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
 
-  VarContext.changeDeptVar := "macwire"
+          
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+          VarContext.changeDeptVar              := "doobie-h2"
 
-  VarContext.changeDeptVar := "commons-lang3"
+          libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+          
 
-  VarContext.changeDeptVar := "commons-lang3-bridge"
+          VarContext.changeDeptVar          := "zio2"
 
-  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
 
-  VarContext.changeDeptVar := "simple-adt"
+          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
 
-  VarContext.changeDeptVar := "sbt-librarymanagement-core"
+          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+          
 
-  VarContext.changeDeptVar := "scala-sbt"
+          VarContext.changeDeptVar             := "typesafe-config"
 
-  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.1"
+          libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
-  VarContext.changeDeptVar := "javacv-platform"
+          
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+          VarContext.changeDeptVar                         := "scala-collection-compat"
 
-  VarContext.changeDeptVar := "cats-effect-cps"
+          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+          
 
-  VarContext.changeDeptVar := "zio-json"
+          VarContext.changeDeptVar             := "http4s-Release"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
+          libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"
 
-  VarContext.changeDeptVar := "shapeless"
+          libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+          
 
-  VarContext.changeDeptVar := "fs2"
+          VarContext.changeDeptVar             := "http4s-Release-ember-server"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+          
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+          VarContext.changeDeptVar             := "http4s-Release-ember-client"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
+          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
 
-  VarContext.setScalaVersion := "2.13"
+          
 
-  scalaVersion := "2.13.10"
+          VarContext.changeDeptVar            := "http4s-twirl"
 
-  VarContext.changeDeptVar := "kind-projector"
+          libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
-  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
+          
 
-  VarContext.changeDeptVar := "circe"
+          VarContext.changeDeptVar          := "zio-config"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+          libraryDependencies += "dev.zio" %%% "zio-config"            % "3.0.7"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+          libraryDependencies += "dev.zio" %%% "zio-config-magnolia"   % "3.0.7"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+          libraryDependencies += "dev.zio" %%% "zio-config-refined"    % "3.0.7"
 
-  VarContext.changeDeptVar := "scalatest"
+          libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "3.0.7"
 
-  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+          libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "3.0.7"
 
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+          libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
-  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+          
 
-  VarContext.changeDeptVar := "cats-effect"
+          VarContext.changeDeptVar          := "slf4j-simple"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
+          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
-  VarContext.changeDeptVar := "cats"
+          
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+          VarContext.changeDeptVar                   := "commons-io"
 
-  VarContext.changeDeptVar := "h2"
+          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+          
 
-  VarContext.changeDeptVar := "doobie"
+          VarContext.changeDeptVar                           := "macwire"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+          VarContext.changeDeptVar                   := "commons-lang3"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+          libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
-  VarContext.changeDeptVar := "doobie-h2"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+          VarContext.changeDeptVar            := "commons-lang3-bridge"
 
-  VarContext.changeDeptVar := "zio2"
+          libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+          VarContext.changeDeptVar                    := "simple-adt"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+          libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+          
 
-  VarContext.changeDeptVar := "typesafe-config"
+          VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
-  VarContext.changeDeptVar := "scala-collection-compat"
+          
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+          VarContext.changeDeptVar              := "scala-sbt"
 
-  VarContext.changeDeptVar := "http4s-Release"
+          libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.1"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
+          
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+          VarContext.changeDeptVar             := "javacv-platform"
 
-  VarContext.changeDeptVar := "http4s-Release-ember-server"
+          libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+          
 
-  VarContext.changeDeptVar := "http4s-Release-ember-client"
+          VarContext.changeDeptVar                := "cats-effect-cps"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+          libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
-  VarContext.changeDeptVar := "http4s-twirl"
+          
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
+          VarContext.changeDeptVar          := "zio-json"
 
-  VarContext.changeDeptVar := "zio-config"
+          libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+          VarContext.changeDeptVar              := "shapeless"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
+          libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
+          VarContext.changeDeptVar         := "fs2"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
+          libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.6.1"
 
-  VarContext.changeDeptVar := "slf4j-simple"
+          libraryDependencies += "co.fs2" %%% "fs2-io"               % "3.6.1"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+          libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.6.1"
 
-  VarContext.changeDeptVar := "commons-io"
+          libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.6.1"
 
-  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+          VarContext.setScalaVersion := "2.13"
 
-  VarContext.changeDeptVar := "macwire"
+          scalaVersion               := "2.13.10"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+          
 
-  VarContext.changeDeptVar := "commons-lang3"
+          VarContext.changeDeptVar         := "kind-projector"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+          addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-  VarContext.changeDeptVar := "commons-lang3-bridge"
+          
 
-  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+          VarContext.changeDeptVar           := "circe"
 
-  VarContext.changeDeptVar := "simple-adt"
+          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.5"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
 
-  VarContext.changeDeptVar := "sbt-librarymanagement-core"
+          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.5"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
+          
 
-  VarContext.changeDeptVar := "javacv-platform"
+          VarContext.changeDeptVar               := "scalatest"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+          libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
 
-  VarContext.changeDeptVar := "cats-effect-cps"
+          libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+          libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
 
-  VarContext.changeDeptVar := "zio-json"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
+          VarContext.changeDeptVar                := "cats-effect"
 
-  VarContext.changeDeptVar := "shapeless"
+          libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+          
 
-  VarContext.changeDeptVar := "fs2"
+          VarContext.changeDeptVar                := "cats"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+          libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+          
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+          VarContext.changeDeptVar               := "h2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
+          libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
-  VarContext.setScalaVersion := "3"
+          
 
-  scalaVersion := "3.2.2"
+          VarContext.changeDeptVar              := "doobie"
 
-  VarContext.changeDeptVar := "circe"
+          libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC2"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+          libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC2"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+          libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC2"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+          libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
 
-  VarContext.changeDeptVar := "scalatest"
+          
 
-  libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.15"
+          VarContext.changeDeptVar              := "doobie-h2"
 
-  libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.15"
+          libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
 
-  libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+          
 
-  VarContext.changeDeptVar := "cats-effect"
+          VarContext.changeDeptVar          := "zio2"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
+          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
 
-  VarContext.changeDeptVar := "cats"
+          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
 
-  VarContext.changeDeptVar := "h2"
+          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+          
 
-  VarContext.changeDeptVar := "doobie"
+          VarContext.changeDeptVar             := "typesafe-config"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+          libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+          VarContext.changeDeptVar                         := "scala-collection-compat"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
 
-  VarContext.changeDeptVar := "doobie-h2"
+          
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+          VarContext.changeDeptVar             := "http4s-Release"
 
-  VarContext.changeDeptVar := "zio2"
+          libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+          libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+          VarContext.changeDeptVar             := "http4s-Release-ember-server"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
 
-  VarContext.changeDeptVar := "typesafe-config"
+          
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+          VarContext.changeDeptVar             := "http4s-Release-ember-client"
 
-  VarContext.changeDeptVar := "scala-collection-compat"
+          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+          
 
-  VarContext.changeDeptVar := "http4s-Release"
+          VarContext.changeDeptVar            := "http4s-twirl"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.18"
+          libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+          
 
-  VarContext.changeDeptVar := "http4s-Release-ember-server"
+          VarContext.changeDeptVar          := "zio-config"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+          libraryDependencies += "dev.zio" %%% "zio-config"            % "3.0.7"
 
-  VarContext.changeDeptVar := "http4s-Release-ember-client"
+          libraryDependencies += "dev.zio" %%% "zio-config-magnolia"   % "3.0.7"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+          libraryDependencies += "dev.zio" %%% "zio-config-refined"    % "3.0.7"
 
-  VarContext.changeDeptVar := "http4s-twirl"
+          libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "3.0.7"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.24.0-M1"
+          libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "3.0.7"
 
-  VarContext.changeDeptVar := "zio-config"
+          libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.0-RC14"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0-RC14"
+          VarContext.changeDeptVar          := "slf4j-simple"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0-RC14"
+          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.0-RC14"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.0-RC14"
+          VarContext.changeDeptVar                   := "commons-io"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.0-RC14"
+          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
-  VarContext.changeDeptVar := "slf4j-simple"
+          
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+          VarContext.changeDeptVar                           := "macwire"
 
-  VarContext.changeDeptVar := "commons-io"
+          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
 
-  libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+          
 
-  VarContext.changeDeptVar := "macwire"
+          VarContext.changeDeptVar                   := "commons-lang3"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+          libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
 
-  VarContext.changeDeptVar := "commons-lang3"
+          
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+          VarContext.changeDeptVar            := "commons-lang3-bridge"
 
-  VarContext.changeDeptVar := "commons-lang3-bridge"
+          libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
-  libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+          
 
-  VarContext.changeDeptVar := "simple-adt"
+          VarContext.changeDeptVar                    := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+          libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
 
-  VarContext.changeDeptVar := "sbt-librarymanagement-core"
+          
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha12"
+          VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 
-  VarContext.changeDeptVar := "javacv-platform"
+          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+          
 
-  VarContext.changeDeptVar := "cats-effect-cps"
+          VarContext.changeDeptVar             := "javacv-platform"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+          libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
 
-  VarContext.changeDeptVar := "zio-json"
+          
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
+          VarContext.changeDeptVar                := "cats-effect-cps"
 
-  VarContext.changeDeptVar := "shapeless"
+          libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.3.0"
+          
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.3.0"
+          VarContext.changeDeptVar          := "zio-json"
 
-  VarContext.changeDeptVar := "shapeless3-test"
+          libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.3.0"
+          
 
-  VarContext.changeDeptVar := "fs2"
+          VarContext.changeDeptVar              := "shapeless"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.6.1"
+          libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.6.1"
+          
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.6.1"
+          VarContext.changeDeptVar         := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.6.1"
+          libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.6.1"
+
+          libraryDependencies += "co.fs2" %%% "fs2-io"               % "3.6.1"
+
+          libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.6.1"
+
+          libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.6.1"
+
+          VarContext.setScalaVersion := "3"
+
+          scalaVersion               := "3.2.2"
+
+          
+
+          VarContext.changeDeptVar           := "circe"
+
+          libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.5"
+
+          libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+
+          libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.5"
+
+          
+
+          VarContext.changeDeptVar               := "scalatest"
+
+          libraryDependencies += "org.scalactic" %% "scalactic"      % "3.2.15"
+
+          libraryDependencies += "org.scalatest" %% "scalatest"      % "3.2.15"
+
+          libraryDependencies += "org.scalatest" %% "scalatest-core" % "3.2.15"
+
+          
+
+          VarContext.changeDeptVar                := "cats-effect"
+
+          libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
+
+          
+
+          VarContext.changeDeptVar                := "cats"
+
+          libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
+
+          
+
+          VarContext.changeDeptVar               := "h2"
+
+          libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+
+          
+
+          VarContext.changeDeptVar              := "doobie"
+
+          libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC2"
+
+          libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC2"
+
+          libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC2"
+
+          libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+
+          
+
+          VarContext.changeDeptVar              := "doobie-h2"
+
+          libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+
+          
+
+          VarContext.changeDeptVar          := "zio2"
+
+          libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
+
+          libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
+
+          libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
+
+          libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+
+          
+
+          VarContext.changeDeptVar             := "typesafe-config"
+
+          libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+
+          
+
+          VarContext.changeDeptVar                         := "scala-collection-compat"
+
+          libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+
+          
+
+          VarContext.changeDeptVar             := "http4s-Release"
+
+          libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"
+
+          libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+
+          
+
+          VarContext.changeDeptVar             := "http4s-Release-ember-server"
+
+          libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+
+          
+
+          VarContext.changeDeptVar             := "http4s-Release-ember-client"
+
+          libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+
+          
+
+          VarContext.changeDeptVar            := "http4s-twirl"
+
+          libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.24.0-M1"
+
+          
+
+          VarContext.changeDeptVar          := "zio-config"
+
+          libraryDependencies += "dev.zio" %%% "zio-config"            % "4.0.0-RC14"
+
+          libraryDependencies += "dev.zio" %%% "zio-config-magnolia"   % "4.0.0-RC14"
+
+          libraryDependencies += "dev.zio" %%% "zio-config-refined"    % "4.0.0-RC14"
+
+          libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "4.0.0-RC14"
+
+          libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "4.0.0-RC14"
+
+          libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.0-RC14"
+
+          
+
+          VarContext.changeDeptVar          := "slf4j-simple"
+
+          libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+
+          
+
+          VarContext.changeDeptVar                   := "commons-io"
+
+          libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
+
+          
+
+          VarContext.changeDeptVar                           := "macwire"
+
+          libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.5.8"
+
+          
+
+          VarContext.changeDeptVar                   := "commons-lang3"
+
+          libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+
+          
+
+          VarContext.changeDeptVar            := "commons-lang3-bridge"
+
+          libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+
+          
+
+          VarContext.changeDeptVar                    := "simple-adt"
+
+          libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+
+          
+
+          VarContext.changeDeptVar               := "sbt-librarymanagement-core"
+
+          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha12"
+
+          
+
+          VarContext.changeDeptVar             := "javacv-platform"
+
+          libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.8"
+
+          
+
+          VarContext.changeDeptVar                := "cats-effect-cps"
+
+          libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+
+          
+
+          VarContext.changeDeptVar          := "zio-json"
+
+          libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
+
+          
+
+          VarContext.changeDeptVar                := "shapeless"
+
+          libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.3.0"
+
+          libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.3.0"
+
+          
+
+          VarContext.changeDeptVar                := "shapeless3-test"
+
+          libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.3.0"
+
+          
+
+          VarContext.changeDeptVar         := "fs2"
+
+          libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.6.1"
+
+          libraryDependencies += "co.fs2" %%% "fs2-io"               % "3.6.1"
+
+          libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.6.1"
+
+          libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.6.1"
 
 }
+

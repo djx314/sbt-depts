@@ -63,8 +63,8 @@ trait AppHaveATest {
       else
         fromString2 + ".value"
 
-    if (libInfo.crossVersionSetting == LibraryDepts.CrossVersionSetting.full) {
-      str1 + " cross CrossVersion.full"
+    if (libInfo.crossVersionSetting == Some(LibraryDepts.CrossVersionSetting.full)) {
+      str1 + ".map(s => s cross CrossVersion.full)"
     } else str1
   }
 
