@@ -100,6 +100,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala211)(contextLibraryCollection.apply(("cats-effect", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -212,6 +215,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
@@ -367,6 +373,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -494,6 +503,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
