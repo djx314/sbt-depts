@@ -13,7 +13,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.15"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.15"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.8"
+libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.9"
 
 VarContext.changeDeptVar                := "cats"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
@@ -79,7 +79,7 @@ VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
 VarContext.changeDeptVar                    := "simple-adt"
-libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-M7"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-RC1"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha12"
