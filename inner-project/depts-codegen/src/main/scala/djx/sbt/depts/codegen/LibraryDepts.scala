@@ -36,7 +36,7 @@ trait AppHaveATest {
   object LibSettings {
     def genDefinedVar(name: String): String =
       s"""val `$name` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]](\"\"\"lib for $name\"\"\")"""
-    def genInitVar(name: String): String = s"""libScalax.`$name` := libScalax.`$name`.?.value.to(List).flatten"""
+    def genInitVar(name: String): String = s"""innerSetting.setDefault(libScalax.`$name`)(Seq.empty)(sourcePosition.fromEnclosing())"""
   }
 
   var contextVarName: String                                                    = null
@@ -64,7 +64,7 @@ trait AppHaveATest {
           libSettings = libSettings + genString(contextVarName, PluginScalaVersionBoolean, contextScalaVersion)
           val temp  = libSettingsMap.getOrElse((contextVarName, contextScalaVersion), List.empty)
           val temp2 = libInfo :: temp
-          libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), temp))
+          libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), temp2))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
             case ScalaV.V211 =>

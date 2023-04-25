@@ -1,7 +1,7 @@
 package djx.sbt.depts.plugins
 
-import cats.*
-import cats.implicits.*
+import cats._
+import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
 
 object pUtils extends pUtils
@@ -171,7 +171,8 @@ trait pUtils {
       confirm: sbt.Def.Initialize[Boolean]
     )(libs: List[LibraryDepts.LibraryInstance]): sbt.Def.Initialize[Seq[sbt.ModuleID]] = {
       val libsSeq       = for (lib <- libs) yield fromLibInstanceImpl(lib)
-      val libSeqSetting = sbt.Def.uniform(libsSeq)(identity)
+      val libSeqSetting = Traverse[List].sequence(libsSeq)
+
       for {
         c        <- confirm
         libModel <- libSeqSetting
@@ -187,6 +188,12 @@ trait pUtils {
     )(lib: List[LibraryDepts.LibraryInstance])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
       val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstanceSeq(confirm)(lib)
       sKey.appendN(aa, lp)
+    }
+
+    def setDefault[T](sKey: sbt.SettingKey[Seq[T]])(default: => Seq[T])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[T]] = {
+      val aa: sbt.Def.Initialize[Option[Seq[T]]] = sKey.?
+      val bb                                     = for (aaInner <- aa) yield aaInner.getOrElse(default)
+      setKey(sKey)(bb)(lp)
     }
 
   }
