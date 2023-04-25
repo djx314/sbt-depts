@@ -39,13 +39,13 @@ trait AppHaveATest {
     def genInitVar(name: String): String = s"""libScalax.`$name` := libScalax.`$name`.?.value.to(List).flatten"""
   }
 
-  var contextVarName: String                                              = null
-  var contextScalaVersion: String                                         = null
-  var scalaVersionCollect: ScalaV => ScalaV                               = identity _
-  var contextVarNames: List[String]                                       = List.empty
-  var libSettings: List[String]                                           = List.empty
-  var PluginScalaVersionBoolean: String                                   = null
-  var libSettingsMap: Map[(String, String), LibraryDepts.LibraryInstance] = Map.empty
+  var contextVarName: String                                                    = null
+  var contextScalaVersion: String                                               = null
+  var scalaVersionCollect: ScalaV => ScalaV                                     = identity _
+  var contextVarNames: List[String]                                             = List.empty
+  var libSettings: Set[String]                                                  = Set.empty
+  var PluginScalaVersionBoolean: String                                         = null
+  var libSettingsMap: Map[(String, String), List[LibraryDepts.LibraryInstance]] = Map.empty
 
   def genString(key: String, currentVar: String, currentScalaVersion: String): String = {
     val keyStr     = "\"" + key + "\""
@@ -61,8 +61,10 @@ trait AppHaveATest {
           contextVarName = name
           contextVarNames = contextVarNames ::: contextVarName :: List.empty[String]
         case LibraryDepts.AddLibrarySettings(libInfo) =>
-          libSettings = libSettings ::: genString(contextVarName, PluginScalaVersionBoolean, contextScalaVersion) :: List.empty[String]
-          libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), libInfo))
+          libSettings = libSettings + genString(contextVarName, PluginScalaVersionBoolean, contextScalaVersion)
+          val temp  = libSettingsMap.getOrElse((contextVarName, contextScalaVersion), List.empty)
+          val temp2 = libInfo :: temp
+          libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), temp))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
             case ScalaV.V211 =>
@@ -101,7 +103,7 @@ trait AppHaveATest {
     val deptNames: List[String] = contextVarNames.to(Set).to(List)
 
     libString = libString ::: (for (name <- deptNames) yield LibSettings.genInitVar(name))
-    libString = libString ::: (for (libSetting <- libSettings) yield libSetting)
+    libString = libString ::: (for (libSetting <- libSettings) yield libSetting).to(List)
 
     val varDeineds = for (name <- deptNames) yield LibSettings.genDefinedVar(name)
 

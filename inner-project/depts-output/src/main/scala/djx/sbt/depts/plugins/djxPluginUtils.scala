@@ -167,10 +167,25 @@ trait pUtils {
         if (c) Seq(libModel)
         else Seq.empty
 
+    def fromLibInstanceSeq(
+      confirm: sbt.Def.Initialize[Boolean]
+    )(libs: List[LibraryDepts.LibraryInstance]): sbt.Def.Initialize[Seq[sbt.ModuleID]] = {
+      val libsSeq       = for (lib <- libs) yield fromLibInstanceImpl(lib)
+      val libSeqSetting = sbt.Def.uniform(libsSeq)(identity)
+      for {
+        c        <- confirm
+        libModel <- libSeqSetting
+      } yield
+        if (c)
+          libModel
+        else
+          Seq.empty
+    }
+
     def addLibrarySetting(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
       confirm: sbt.Def.Initialize[Boolean]
-    )(lib: LibraryDepts.LibraryInstance)(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
-      val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstance(confirm)(lib)
+    )(lib: List[LibraryDepts.LibraryInstance])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+      val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstanceSeq(confirm)(lib)
       sKey.appendN(aa, lp)
     }
 

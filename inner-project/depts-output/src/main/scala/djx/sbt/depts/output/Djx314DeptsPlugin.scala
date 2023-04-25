@@ -14,15 +14,15 @@ package impl {
   import djx.sbt.depts.codegen.AppHaveATest
 
   class BuildKeysAbs {
-    val djxIsScalaJs: sbt.SettingKey[Option[Boolean]]                                 = settingKey[Option[Boolean]]("Is scala.js")
-    val djxIsScala2: sbt.SettingKey[Boolean]                                          = settingKey[Boolean]("Is scala 2")
-    val djxIsScala211: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.11")
-    val djxIsScala212: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.12")
-    val djxIsScala213: sbt.SettingKey[Boolean]                                        = settingKey[Boolean]("Is scala 2.13")
-    val djxIsScala3: sbt.SettingKey[Boolean]                                          = settingKey[Boolean]("Is scala 3")
-    val contextLibraryCollection: Map[(String, String), LibraryDepts.LibraryInstance] = AppHaveATest.libSettingsMap
-    val sourcePosition                                                                = djx.sbt.depts.plugins.pUtils.sourcePosition
-    val innerSetting: djx.sbt.depts.plugins.pUtils.setting                            = djx.sbt.depts.plugins.pUtils.setting
+    val djxIsScalaJs: sbt.SettingKey[Option[Boolean]]                                       = settingKey[Option[Boolean]]("Is scala.js")
+    val djxIsScala2: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 2")
+    val djxIsScala211: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.11")
+    val djxIsScala212: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.12")
+    val djxIsScala213: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.13")
+    val djxIsScala3: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 3")
+    val contextLibraryCollection: Map[(String, String), List[LibraryDepts.LibraryInstance]] = AppHaveATest.libSettingsMap
+    val sourcePosition                                                                      = djx.sbt.depts.plugins.pUtils.sourcePosition
+    val innerSetting: djx.sbt.depts.plugins.pUtils.setting                                  = djx.sbt.depts.plugins.pUtils.setting
   }
 
   class BuildKeysImpl extends BuildKeys {
