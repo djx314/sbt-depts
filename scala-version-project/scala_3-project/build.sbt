@@ -13,7 +13,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.15"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.15"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.9"
+libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.4.10"
 
 VarContext.changeDeptVar                := "cats"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
@@ -40,7 +40,7 @@ VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
-libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
 libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"

@@ -44,7 +44,7 @@ VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
-libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.9.0"
+libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
 libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.20.23"

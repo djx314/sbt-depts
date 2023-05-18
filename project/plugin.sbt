@@ -5,7 +5,7 @@ addSbtPlugin("io.spray"                          % "sbt-revolver"             % 
 VarContext.changePluginVar                      := "sbt-twirl"
 addSbtPlugin("com.typesafe.play"                 % "sbt-twirl"                % "1.6.0-RC2")
 VarContext.changePluginVar                      := "sbt-sonatype"
-addSbtPlugin("org.xerial.sbt"                    % "sbt-sonatype"             % "3.9.18")
+addSbtPlugin("org.xerial.sbt"                    % "sbt-sonatype"             % "3.9.20")
 VarContext.changePluginVar                      := "sbt-pgp"
 addSbtPlugin("com.github.sbt"                    % "sbt-pgp"                  % "2.2.1")
 VarContext.changePluginVar                      := "sbt-scalajs-crossproject"
@@ -23,7 +23,7 @@ addSbtPlugin("io.github.davidmweber"             % "flyway-sbt"               % 
 VarContext.changePluginVar                      := "sbt-web-scalajs"
 addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")
 VarContext.changePluginVar                      := "sbt-depts-djx314"
-addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M617")
+addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M643")
 VarContext.changePluginVar                      := "sbt-js-engine"
 addSbtPlugin("com.typesafe.sbt"                  % "sbt-js-engine"            % "1.2.3")
 VarContext.changePluginVar                      := "sbt-scala-js-map"
