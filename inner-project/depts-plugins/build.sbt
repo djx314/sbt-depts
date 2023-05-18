@@ -1,7 +1,7 @@
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 
-setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
-setting.setConst(scalafmtOnCompile)(true)(sourcePosition.fromEnclosing)
+setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
+setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
 
 libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value

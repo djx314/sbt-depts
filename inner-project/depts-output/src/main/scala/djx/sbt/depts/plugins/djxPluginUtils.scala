@@ -3,6 +3,7 @@ package djx.sbt.depts.plugins
 import cats._
 import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
+import net.scalax.simple.adt.{TypeAdt => Adt}
 
 object pUtils extends pUtils
 
@@ -28,12 +29,50 @@ trait pUtils {
   object task extends task()(initializeInstanceMonad)
 
   class setting(implicit m: Monad[sbt.Def.Initialize]) {
-    def setConst[T](sKey: sbt.SettingKey[T])(value: T)(lp: sbt.SourcePosition): sbt.Def.Setting[T] =
-      setKey(sKey)(value.pure[sbt.Def.Initialize])(lp)
+    class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
+      def value[U: Adt.Options2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
+        val applyM = Adt.Options2[T, sbt.Def.Initialize[T]](u)
+        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize], identity)
+        sKey.set(initT, lp)
+      }
 
-    def setKey[T](sKey: sbt.SettingKey[T])(target: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[T] = sKey.set(target, lp)
-    def addItemToSettingKey[T](sKey: sbt.SettingKey[Seq[T]])(key: sbt.Def.Initialize[T])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[T]] =
-      sKey.append1(key, lp)
+      def setIfNone[U: Adt.Options3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
+        val applyM = Adt.Options3[() => T, T, sbt.Def.Initialize[T]](default)
+        val defaultValue: sbt.Def.Initialize[() => T] =
+          applyM.fold(t => t.pure[sbt.Def.Initialize], t => (() => t).pure[sbt.Def.Initialize], t => for (d <- t) yield () => d)
+
+        val aa: sbt.Def.Initialize[Option[T]] = sKey.?
+
+        val bb = for {
+          aaInner <- aa
+          d       <- defaultValue
+        } yield aaInner.getOrElse(d())
+
+        setKey(sKey)(lp).value(bb)
+      }
+    }
+    class SetKeySeqContext[T](sKey: sbt.SettingKey[Seq[T]], lp: sbt.SourcePosition) {
+      def appendOneOrMore[U: Adt.Options4[*, T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]]](
+        u: U
+      ): sbt.Def.Setting[Seq[T]] = {
+        val applyM = Adt.Options4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
+
+        def setKeyImpl[X: Adt.Options2[*, sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]](x: X): sbt.Def.Setting[Seq[T]] = {
+          val applyMX = Adt.Options2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]](x)
+          applyMX.fold(x1 => sKey.append1(x1, lp), x2 => sKey.appendN(x2, lp))
+        }
+
+        applyM.fold(
+          t => setKeyImpl(t.pure[sbt.Def.Initialize]),
+          t => setKeyImpl(t),
+          t => setKeyImpl(t.pure[sbt.Def.Initialize]),
+          t => setKeyImpl(t)
+        )
+      }
+    }
+
+    def setKey[T](sKey: sbt.SettingKey[T])(lp: sbt.SourcePosition): SetKeyContext[T]            = new SetKeyContext(sKey, lp)
+    def setKeySeq[T](sKey: sbt.SettingKey[Seq[T]])(lp: sbt.SourcePosition): SetKeySeqContext[T] = new SetKeySeqContext(sKey, lp)
 
     def addScalaJsLibraryImpl(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
       bindKey: sbt.Def.Initialize[sbt.CrossVersion]
@@ -46,7 +85,7 @@ trait pUtils {
         modulePrefix % version
       }
 
-      addItemToSettingKey(sKey)(moduleIDCompat(bindKey))(lp)
+      setKeySeq(sKey)(lp).appendOneOrMore(moduleIDCompat(bindKey))
     }
 
     def addScalaJsLibrary(
@@ -188,12 +227,6 @@ trait pUtils {
     )(lib: List[LibraryDepts.LibraryInstance])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
       val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstanceSeq(confirm)(lib)
       sKey.appendN(aa, lp)
-    }
-
-    def setDefault[T](sKey: sbt.SettingKey[Seq[T]])(default: => Seq[T])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[T]] = {
-      val aa: sbt.Def.Initialize[Option[Seq[T]]] = sKey.?
-      val bb                                     = for (aaInner <- aa) yield aaInner.getOrElse(default)
-      setKey(sKey)(bb)(lp)
     }
 
   }

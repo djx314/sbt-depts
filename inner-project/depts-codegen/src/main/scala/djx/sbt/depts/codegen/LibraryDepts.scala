@@ -36,7 +36,8 @@ trait AppHaveATest {
   object LibSettings {
     def genDefinedVar(name: String): String =
       s"""val `$name` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]](\"\"\"lib for $name\"\"\")"""
-    def genInitVar(name: String): String = s"""innerSetting.setDefault(libScalax.`$name`)(Seq.empty)(sourcePosition.fromEnclosing())"""
+    def genInitVar(name: String): String =
+      s"""innerSetting.setKey(libScalax.`$name`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty)"""
   }
 
   var contextVarName: String                                                    = null

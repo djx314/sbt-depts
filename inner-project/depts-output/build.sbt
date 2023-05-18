@@ -1,7 +1,7 @@
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 
-setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
-setting.setConst(scalafmtOnCompile)(true)(sourcePosition.fromEnclosing)
+setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
+setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
 
 scalafmtOnCompile := true
 
@@ -11,6 +11,8 @@ addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats`.value
+libraryDependencies ++= libScalax.`simple-adt`.value
+libraryDependencies ++= libScalax.`kind-projector`.value
 
 enablePlugins(SbtPlugin)
 

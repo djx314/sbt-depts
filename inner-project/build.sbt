@@ -2,7 +2,7 @@ import Settings._
 import djx.sbt.depts.plugins.GlobalVersion
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-setting.setConst(scalaVersion)(scalaV.v212)(sourcePosition.fromEnclosing)
+setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
 
 lazy val `depts-abs`: sbt.Project            = project in `root/file` / "depts-abs"
 lazy val `depts-codegen`: sbt.Project        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
@@ -40,11 +40,11 @@ allfmt := {
 
 addCommandAlias("preparePackaging", "; updateMVersion; genAction; allfmt;")
 
-setting.setConst(Global / onChangedBuildSource)(ReloadOnSourceChanges)(sourcePosition.fromEnclosing)
-setting.setConst(`depts-abs` / name)("sbt-depts-abs")(sourcePosition.fromEnclosing)
-setting.setConst(`depts-codegen` / name)("sbt-depts-codegen")(sourcePosition.fromEnclosing)
-setting.setConst(`depts-output` / name)("sbt-depts-djx314")(sourcePosition.fromEnclosing)
-setting.setConst(`depts-output-plugins` / name)("sbt-depts-djx314-plugins")(sourcePosition.fromEnclosing)
+setting.setKey(Global / onChangedBuildSource)(sourcePosition.fromEnclosing).value(ReloadOnSourceChanges)
+setting.setKey(`depts-abs` / name)(sourcePosition.fromEnclosing).value("sbt-depts-abs")
+setting.setKey(`depts-codegen` / name)(sourcePosition.fromEnclosing).value("sbt-depts-codegen")
+setting.setKey(`depts-output` / name)(sourcePosition.fromEnclosing).value("sbt-depts-djx314")
+setting.setKey(`depts-output-plugins` / name)(sourcePosition.fromEnclosing).value("sbt-depts-djx314-plugins")
 
 addCommandAlias("bb", "; preparePackaging; reload; depts-output/publishSigned;")
 addCommandAlias("bbLocal", "; preparePackaging; reload; depts-output/publishLocal;")
