@@ -28,3 +28,5 @@ VarContext.changePluginVar                      := "sbt-js-engine"
 addSbtPlugin("com.typesafe.sbt"                  % "sbt-js-engine"            % "1.2.3")
 VarContext.changePluginVar                      := "sbt-scala-js-map"
 addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map"         % "4.1.1")
+VarContext.changePluginVar                      := "sbt-assembly"
+addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"             % "0.14.6")
