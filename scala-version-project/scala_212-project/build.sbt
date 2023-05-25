@@ -82,7 +82,7 @@ VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
 VarContext.changeDeptVar                    := "simple-adt"
-libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.1-RC1"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M1"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.8.0"

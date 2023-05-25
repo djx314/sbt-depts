@@ -63,4 +63,8 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")
 
+  VarContext.changePluginVar := "sbt-assembly"
+
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
+
 }
