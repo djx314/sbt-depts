@@ -57,17 +57,19 @@ trait pUtils {
       ): sbt.Def.Setting[Seq[T]] = {
         val applyM = Adt.Options4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
 
-        type Opt2 = Adt.Option2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
         val Opts2 = Adt.Options2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
-        val applyM1: Opt2 = applyM.fold(
-          t => Opts2(t.pure[sbt.Def.Initialize]),
-          t => Opts2(t),
-          t => Opts2(t.pure[sbt.Def.Initialize]),
-          t => Opts2(t)
-        )
+        val applyM1 = applyM match {
+          case Adt.Option1(t) => Opts2(t.pure[sbt.Def.Initialize])
+          case Adt.Option2(t) => Opts2(t)
+          case Adt.Option3(t) => Opts2(t.pure[sbt.Def.Initialize])
+          case Adt.Option4(t) => Opts2(t)
+        }
 
-        applyM1.fold(x1 => sKey.append1(x1, lp), x2 => sKey.appendN(x2, lp))
+        applyM1.fold(
+          x1 => sKey.append1(x1, lp),
+          x2 => sKey.appendN(x2, lp)
+        )
       }
     }
 
