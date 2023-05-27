@@ -21,7 +21,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.15"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15"
 
@@ -157,7 +157,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.15"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15"
 
@@ -317,7 +317,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.15"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15"
 
@@ -469,7 +469,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.15"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.15"
 
