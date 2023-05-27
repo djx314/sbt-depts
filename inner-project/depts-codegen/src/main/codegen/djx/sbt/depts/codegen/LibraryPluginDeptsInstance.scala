@@ -65,6 +65,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-assembly"
 
-  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.6")
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.10")
 
 }
