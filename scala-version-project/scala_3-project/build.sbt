@@ -43,14 +43,14 @@ VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
-libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.18"
-libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.18"
+libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.19"
+libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.19"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-server"
-libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.18"
+libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.19"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-client"
-libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.18"
+libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.19"
 
 VarContext.changeDeptVar            := "http4s-twirl"
 libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.24.0-M1"
