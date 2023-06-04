@@ -41,7 +41,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
-  addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.1")
+  addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")
 
   VarContext.changePluginVar := "flyway-sbt"
 
