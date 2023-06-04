@@ -17,7 +17,7 @@ addSbtPlugin("org.jetbrains.scala"               % "sbt-ide-settings"         % 
 VarContext.changePluginVar                      := "sbt-scalajs"
 addSbtPlugin("org.scala-js"                      % "sbt-scalajs"              % "1.13.1")
 VarContext.changePluginVar                      := "sbt-platform-deps"
-addSbtPlugin("org.portable-scala"                % "sbt-platform-deps"        % "1.0.1")
+addSbtPlugin("org.portable-scala"                % "sbt-platform-deps"        % "1.0.2")
 VarContext.changePluginVar                      := "flyway-sbt"
 addSbtPlugin("io.github.davidmweber"             % "flyway-sbt"               % "7.4.0")
 VarContext.changePluginVar                      := "sbt-web-scalajs"
