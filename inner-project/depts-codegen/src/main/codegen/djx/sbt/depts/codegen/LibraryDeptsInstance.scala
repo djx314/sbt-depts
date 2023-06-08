@@ -301,7 +301,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.setScalaVersion := "2.13"
 
-  scalaVersion := "2.13.10"
+  scalaVersion := "2.13.11"
 
   VarContext.changeDeptVar := "kind-projector"
 
