@@ -299,6 +299,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.7.0"
 
+  VarContext.changeDeptVar := "distage"
+
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M23"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.11"
@@ -454,6 +458,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.7.0"
 
   libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.7.0"
+
+  VarContext.changeDeptVar := "distage"
+
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M23"
 
   VarContext.setScalaVersion := "3"
 
@@ -612,5 +620,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.7.0"
 
   libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.7.0"
+
+  VarContext.changeDeptVar := "distage"
+
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M23"
 
 }

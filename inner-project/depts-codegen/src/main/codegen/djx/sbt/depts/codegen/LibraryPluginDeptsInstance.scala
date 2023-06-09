@@ -67,4 +67,16 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.1.1")
 
+  VarContext.changePluginVar := "sbt-scoverage"
+
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.8")
+
+  VarContext.changePluginVar := "sbt-github-actions"
+
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.15.0")
+
+  VarContext.changePluginVar := "sbt-jacoco"
+
+  addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.4.0")
+
 }
