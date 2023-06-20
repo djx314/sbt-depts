@@ -107,4 +107,4 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.7.0"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.7.0"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M23"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
