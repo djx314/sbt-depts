@@ -73,7 +73,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
@@ -167,7 +167,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
 
   VarContext.changeDeptVar := "cats"
 
@@ -179,17 +179,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -207,21 +207,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.22"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -267,7 +267,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.1"
 
   VarContext.changeDeptVar := "scala-sbt"
 
@@ -331,7 +331,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
 
   VarContext.changeDeptVar := "cats"
 
@@ -343,17 +343,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -371,21 +371,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.22"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -431,7 +431,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.1"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -487,7 +487,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
 
   VarContext.changeDeptVar := "cats"
 
@@ -499,17 +499,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -527,21 +527,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.22"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.19"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.22"
 
   VarContext.changeDeptVar := "http4s-twirl"
 

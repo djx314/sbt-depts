@@ -13,7 +13,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.16"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.16"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
 
 VarContext.changeDeptVar                := "cats"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.9.0"
@@ -22,13 +22,13 @@ VarContext.changeDeptVar               := "h2"
 libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
 VarContext.changeDeptVar              := "doobie"
-libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC2"
-libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC2"
-libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC2"
-libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC2"
+libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
 
 VarContext.changeDeptVar              := "doobie-h2"
-libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC2"
+libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
 VarContext.changeDeptVar          := "zio2"
 libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
@@ -40,17 +40,17 @@ VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
-libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.10.0"
+libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
-libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.19"
-libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.19"
+libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.22"
+libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.22"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-server"
-libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.19"
+libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.22"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-client"
-libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.19"
+libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.22"
 
 VarContext.changeDeptVar            := "http4s-twirl"
 libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.24.0-M1"
@@ -107,4 +107,4 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.7.0"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.7.0"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M23"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
