@@ -41,7 +41,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -175,7 +175,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -339,7 +339,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -495,7 +495,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
 
   VarContext.changeDeptVar := "doobie"
 
