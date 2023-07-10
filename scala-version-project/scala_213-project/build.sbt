@@ -107,3 +107,10 @@ libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.7.0"
 
 VarContext.changeDeptVar                := "distage"
 libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
+
+VarContext.changeDeptVar                    := "slick"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0-M4"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M4"
+
+VarContext.changeDeptVar                    := "slick-codegen"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M4"
