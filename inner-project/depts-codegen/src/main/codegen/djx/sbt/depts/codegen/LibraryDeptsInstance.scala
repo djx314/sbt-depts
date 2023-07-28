@@ -109,7 +109,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.13.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -255,7 +255,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.13.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -419,7 +419,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.13.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -575,7 +575,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.12.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.13.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
