@@ -175,7 +175,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -283,7 +283,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -301,7 +301,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M25"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
+
+  VarContext.changeDeptVar := "play-circe"
+
+  libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -339,7 +343,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -443,7 +447,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -461,7 +465,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M25"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
+
+  VarContext.changeDeptVar := "play-circe"
+
+  libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
 
   VarContext.setScalaVersion := "3"
 
@@ -495,7 +503,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
+  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -599,7 +607,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.5.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -623,6 +631,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M25"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
 
 }

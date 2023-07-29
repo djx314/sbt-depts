@@ -28,6 +28,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `zio-config`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
     val `slf4j-simple`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
     val `zio-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
+    val `play-circe`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
     val `h2`                          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for h2""")
     val `zio2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
     val `http4s-Release`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
@@ -68,6 +69,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`zio-config`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slf4j-simple`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-json`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`play-circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -112,6 +114,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-Release", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`play-circe`)(djxIsScala212)(contextLibraryCollection.apply(("play-circe", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala211)(contextLibraryCollection.apply(("commons-lang3", "2.11")))(
@@ -232,6 +237,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-Release", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`play-circe`)(djxIsScala213)(contextLibraryCollection.apply(("play-circe", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala212)(contextLibraryCollection.apply(("cats-effect-cps", "2.12")))(

@@ -1,5 +1,5 @@
 package djx.sbt.depts.output
 
 object SbtVersionSetting {
-  val sbtVersion: String = """1.9.1"""
+  val sbtVersion: String = """1.9.3"""
 }
