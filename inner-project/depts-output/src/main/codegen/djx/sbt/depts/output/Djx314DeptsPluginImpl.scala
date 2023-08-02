@@ -20,6 +20,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `kind-projector`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
     val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
     val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
+    val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
     val `scala-collection-compat`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
     val `commons-lang3-bridge`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3-bridge""")
     val `http4s-twirl`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-twirl""")
@@ -61,6 +62,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`kind-projector`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`simple-adt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`slick`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-collection-compat`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-lang3-bridge`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-twirl`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -140,6 +142,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala213)(contextLibraryCollection.apply(("slick", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala212)(contextLibraryCollection.apply(("cats", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -167,6 +172,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala3)(
       contextLibraryCollection.apply(("scala-collection-compat", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala211)(contextLibraryCollection.apply(("slick", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala213)(contextLibraryCollection.apply(("kind-projector", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -326,6 +334,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala212)(contextLibraryCollection.apply(("slick", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-simple", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -390,6 +401,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala3)(contextLibraryCollection.apply(("javacv-platform", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala3)(contextLibraryCollection.apply(("slick", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(

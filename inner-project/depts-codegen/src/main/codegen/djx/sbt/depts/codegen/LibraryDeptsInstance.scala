@@ -139,6 +139,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "2.1.0"
 
+  VarContext.changeDeptVar := "slick"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.18"
@@ -307,6 +315,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
 
+  VarContext.changeDeptVar := "slick"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M1"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.11"
@@ -471,6 +487,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
 
+  VarContext.changeDeptVar := "slick"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M1"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.3.0"
@@ -632,5 +656,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "distage"
 
   libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
+
+  VarContext.changeDeptVar := "slick"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M1"
 
 }
