@@ -113,3 +113,8 @@ libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M24"
 
 VarContext.changeDeptVar              := "play-circe"
 libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
+
+VarContext.changeDeptVar                    := "slick"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0-M1"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.0-M1"

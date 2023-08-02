@@ -90,3 +90,8 @@ VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.1.0"
 libraryDependencies += "co.fs2" %%% "fs2-io"               % "2.1.0"
 libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "2.1.0"
+
+VarContext.changeDeptVar                    := "slick"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.3.3"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.3.3"
