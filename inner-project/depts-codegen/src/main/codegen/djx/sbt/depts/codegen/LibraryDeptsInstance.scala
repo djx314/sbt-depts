@@ -317,11 +317,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M4"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M4"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M4"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -489,11 +489,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.0-M4"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M4"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.0-M4"
 
   VarContext.setScalaVersion := "3"
 
