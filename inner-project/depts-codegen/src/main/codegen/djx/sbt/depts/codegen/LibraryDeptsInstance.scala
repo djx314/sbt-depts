@@ -141,11 +141,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.2"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.2"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.2"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3"
 
   VarContext.setScalaVersion := "2.12"
 
