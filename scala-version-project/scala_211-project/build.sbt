@@ -96,5 +96,5 @@ libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.3.3"
 libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.3.3"
 
-VarContext.changeDeptVar                    := "logback-classic"
+VarContext.changeDeptVar               := "logback-classic"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.9"
