@@ -55,3 +55,5 @@ ThisBuild / version := {
   val vModel  = GlobalVersion.versionWrap.updateFromRoot(sPath)
   vModel.versionStr
 }
+
+Global / onChangedBuildSource := ReloadOnSourceChanges

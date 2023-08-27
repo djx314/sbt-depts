@@ -6,8 +6,6 @@ setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 
-val propsPath      = `root/file` / ".." / "project" / "build.properties"
-val sbtVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "SbtVersionSetting.scala"
 val libVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "Djx314DeptsPluginImpl.scala"
 
 val `scalfmt/file`      = `root/file` / ".." / ".scalafmt.conf"
@@ -16,8 +14,6 @@ val pluginsFile         = `plugin/file` / "src" / "main" / "codegen" / "djx" / "
 
 genActionImpl := (Compile / runMain).inputTaskValue
   .partialInput(" djx.sbt.depts.codegen.CodegenRunner")
-  .partialInput(s" ${propsPath.getCanonicalFile.toString}")
-  .partialInput(s" ${sbtVersionFile.getCanonicalFile.toString}")
   .partialInput(s" ${libVersionFile.getCanonicalFile.toString}")
   .partialInput(s" ${`scalfmt/file`.getCanonicalFile.toString}")
   .partialInput(s" ${scalafmtCodegenFile.getCanonicalFile.toString}")

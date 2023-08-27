@@ -7,7 +7,7 @@ import java.io.{File, PrintWriter}
 import java.nio.file.{Files, Path}
 import scala.util.Using
 
-class SbtVersionSetting(override protected val sbtPropertiesFile: File) extends TakeSbtProperties {
+/*class SbtVersionSetting(override protected val sbtPropertiesFile: File) extends TakeSbtProperties {
 
   def codegenAction(path: Path): Unit = {
     Files.createDirectories(path.getParent)
@@ -22,4 +22,4 @@ class SbtVersionSetting(override protected val sbtPropertiesFile: File) extends 
     }
   }
 
-}
+}*/
