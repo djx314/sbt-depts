@@ -101,3 +101,9 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.12"
 
 VarContext.changeDeptVar                  := "javet"
 libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+
+VarContext.changeDeptVar              := "jintellitype"
+libraryDependencies += "com.melloware" % "jintellitype" % "1.3.9"
+
+VarContext.changeDeptVar                 := "jnativehook"
+libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.1.0"
