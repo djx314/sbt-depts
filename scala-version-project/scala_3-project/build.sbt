@@ -121,7 +121,7 @@ VarContext.changeDeptVar                  := "javet"
 libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
 
 VarContext.changeDeptVar              := "jintellitype"
-libraryDependencies += "com.melloware" % "jintellitype" % "1.3.9"
+libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
 
 VarContext.changeDeptVar                 := "jnativehook"
 libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.1.0"
