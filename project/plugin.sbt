@@ -1,5 +1,5 @@
 VarContext.changePluginVar                      := "sbt-scalafmt"
-addSbtPlugin("org.scalameta"                     % "sbt-scalafmt"             % "2.5.0")
+addSbtPlugin("org.scalameta"                     % "sbt-scalafmt"             % "2.5.2")
 VarContext.changePluginVar                      := "sbt-revolver"
 addSbtPlugin("io.spray"                          % "sbt-revolver"             % "0.10.0")
 VarContext.changePluginVar                      := "sbt-twirl"
