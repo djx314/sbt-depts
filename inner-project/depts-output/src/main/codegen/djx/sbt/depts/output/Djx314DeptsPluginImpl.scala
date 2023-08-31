@@ -21,6 +21,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
     val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
     val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
+    val `jintellitype`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
     val `scala-collection-compat`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
     val `commons-lang3-bridge`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3-bridge""")
     val `http4s-twirl`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-twirl""")
@@ -45,6 +46,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `shapeless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
     val `cats`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats""")
+    val `jnativehook`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
   }
 }
 
@@ -65,6 +67,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`simple-adt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slick`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`jintellitype`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-collection-compat`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-lang3-bridge`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-twirl`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -89,6 +92,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`jnativehook`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala211)(contextLibraryCollection.apply(("shapeless", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -128,15 +132,24 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala211)(contextLibraryCollection.apply(("commons-lang3", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala212)(contextLibraryCollection.apply(("jintellitype", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala212)(contextLibraryCollection.apply(("simple-adt", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala212)(contextLibraryCollection.apply(("doobie-h2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala3)(contextLibraryCollection.apply(("jintellitype", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala3)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala3)(contextLibraryCollection.apply(("jnativehook", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala213)(contextLibraryCollection.apply(("shapeless", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -183,6 +196,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala213)(contextLibraryCollection.apply(("kind-projector", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala213)(contextLibraryCollection.apply(("jnativehook", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala212)(
@@ -245,10 +261,16 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala3)(
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala213)(contextLibraryCollection.apply(("jintellitype", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala211)(contextLibraryCollection.apply(("slf4j-simple", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala3)(contextLibraryCollection.apply(("zio2", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala211)(contextLibraryCollection.apply(("jnativehook", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-twirl", "2.12")))(
@@ -276,6 +298,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala211)(contextLibraryCollection.apply(("simple-adt", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala212)(contextLibraryCollection.apply(("jnativehook", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javet`)(djxIsScala3)(contextLibraryCollection.apply(("javet", "3")))(
@@ -339,6 +364,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala211)(contextLibraryCollection.apply(("commons-io", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala211)(contextLibraryCollection.apply(("jintellitype", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(

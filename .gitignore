@@ -5,9 +5,9 @@
 /.metals/
 /.vscode/
 /.bsp/
-.bloop/
-target/
-metals.sbt
+**/.bloop/
+**/target/
+**/metals.sbt
 /inner-project/.bsp/
 /inner-project/sbt.bat
 /inner-project/sbt-launch.jar

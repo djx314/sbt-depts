@@ -155,6 +155,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
 
+  VarContext.changeDeptVar := "jintellitype"
+
+  libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
+
+  VarContext.changeDeptVar := "jnativehook"
+
+  libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.18"
@@ -339,6 +347,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
 
+  VarContext.changeDeptVar := "jintellitype"
+
+  libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
+
+  VarContext.changeDeptVar := "jnativehook"
+
+  libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.11"
@@ -519,6 +535,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
 
+  VarContext.changeDeptVar := "jintellitype"
+
+  libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
+
+  VarContext.changeDeptVar := "jnativehook"
+
+  libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.3.0"
@@ -696,5 +720,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "javet"
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+
+  VarContext.changeDeptVar := "jintellitype"
+
+  libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
+
+  VarContext.changeDeptVar := "jnativehook"
+
+  libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
 
 }

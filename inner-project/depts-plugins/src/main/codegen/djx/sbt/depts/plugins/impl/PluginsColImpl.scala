@@ -4,7 +4,7 @@ import sbt.librarymanagement.syntax._
 
 trait PluginsColImpl {
 
-  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.0"""
+  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.2"""
 
   val `sbt-revolver`: sbt.librarymanagement.ModuleID = """io.spray""" % """sbt-revolver""" % """0.10.0"""
 
@@ -28,7 +28,7 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.2.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M730"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M746"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.typesafe.sbt""" % """sbt-js-engine""" % """1.2.3"""
 
