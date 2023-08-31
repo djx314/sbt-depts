@@ -11,8 +11,6 @@
 /inner-project/.bsp/
 /inner-project/sbt.bat
 /inner-project/sbt-launch.jar
-/inner-project/depts-output/sonatype.sbt
-/inner-project/depts-plugins/sonatype.sbt
 /inner-project/sonatype.sbt
 /inner-project/.metals/
 /inner-project/.vscode/
