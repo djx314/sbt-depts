@@ -165,11 +165,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.6"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -349,11 +349,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.6"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -525,11 +525,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.6"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.5"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.6"
 
   VarContext.changeDeptVar := "scalatest"
 
