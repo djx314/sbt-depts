@@ -126,4 +126,4 @@ VarContext.changeDeptVar              := "jintellitype"
 libraryDependencies += "com.melloware" % "jintellitype" % "1.3.9"
 
 VarContext.changeDeptVar                 := "jnativehook"
-libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.1.0"
+libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
