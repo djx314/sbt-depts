@@ -127,3 +127,11 @@ libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
 
 VarContext.changeDeptVar                 := "jnativehook"
 libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
+
+VarContext.changeDeptVar                  := "pekko-all"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"          % "1.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-http"                  % "1.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
+libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.0"
