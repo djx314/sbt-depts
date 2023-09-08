@@ -31,7 +31,9 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `slf4j-simple`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
     val `javet`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet""")
     val `zio-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
+    val `better-monadic-for`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for better-monadic-for""")
     val `play-circe`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
+    val `pekko-all`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-all""")
     val `h2`                          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for h2""")
     val `zio2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
     val `logback-classic`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for logback-classic""")
@@ -77,7 +79,9 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`slf4j-simple`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-json`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`better-monadic-for`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`play-circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`pekko-all`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`logback-classic`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -180,6 +184,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`better-monadic-for`)(djxIsScala211)(
+      contextLibraryCollection.apply(("better-monadic-for", "2.11"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala212)(contextLibraryCollection.apply(("doobie", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -213,6 +220,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala211)(contextLibraryCollection.apply(("doobie-h2", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`better-monadic-for`)(djxIsScala212)(
+      contextLibraryCollection.apply(("better-monadic-for", "2.12"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala3)(contextLibraryCollection.apply(("cats-effect-cps", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -220,6 +230,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("http4s-Release-ember-server", "3"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala213)(contextLibraryCollection.apply(("commons-io", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala211)(contextLibraryCollection.apply(("pekko-all", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala3)(contextLibraryCollection.apply(("http4s-twirl", "3")))(
@@ -237,6 +250,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala211)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "2.11"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala212)(contextLibraryCollection.apply(("pekko-all", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala211)(contextLibraryCollection.apply(("doobie", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -274,6 +290,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-twirl", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala213)(contextLibraryCollection.apply(("pekko-all", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-Release", "2.11")))(
@@ -393,6 +412,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala211)(contextLibraryCollection.apply(("scalatest", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala3)(contextLibraryCollection.apply(("pekko-all", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -494,7 +516,10 @@ trait Djx314DeptsImpl {
     ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect-cps", "2.13")))(
       sourcePosition.fromEnclosing()
-    )
+    ),
+    innerSetting.addLibrarySetting(libScalax.`better-monadic-for`)(djxIsScala213)(
+      contextLibraryCollection.apply(("better-monadic-for", "2.13"))
+    )(sourcePosition.fromEnclosing())
   )
 
 }

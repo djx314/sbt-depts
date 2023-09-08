@@ -42,4 +42,8 @@ trait PluginsColImpl {
 
   val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.4.0"""
 
+  val `sbt-jmh`: sbt.librarymanagement.ModuleID = """pl.project13.scala""" % """sbt-jmh""" % """0.3.7"""
+
+  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.typesafe.sbt""" % """sbt-native-packager""" % """1.7.4"""
+
 }

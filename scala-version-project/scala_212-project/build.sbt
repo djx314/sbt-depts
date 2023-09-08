@@ -4,7 +4,7 @@ scalaVersion               := "2.12.18"
 VarContext.changeDeptVar         := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-VarContext.changePluginVar                      := "better-monadic-for"
+VarContext.changeDeptVar                      := "better-monadic-for"
 addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
 
 VarContext.changeDeptVar           := "circe"

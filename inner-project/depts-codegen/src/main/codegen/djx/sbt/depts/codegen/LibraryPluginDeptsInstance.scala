@@ -79,4 +79,12 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.4.0")
 
+  VarContext.changePluginVar := "sbt-jmh"
+
+  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.3.7")
+
+  VarContext.changePluginVar := "sbt-native-packager"
+
+  addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.4")
+
 }
