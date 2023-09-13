@@ -141,3 +141,12 @@ libraryDependencies += "org.apache.pekko" %% "pekko-http"                  % "1.
 libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.0.0"
 libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
 libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.0"
+
+VarContext.changeDeptVar                  := "zio-interop-reactivestreams"
+libraryDependencies+= "dev.zio" %% "zio-interop-reactivestreams" % "1.3.12"
+
+VarContext.changeDeptVar                  := "zio-logging"
+libraryDependencies+="dev.zio" %% "zio-logging" % "0.5.14"
+
+VarContext.changeDeptVar                  := "zhttp"
+libraryDependencies+="io.d11" %% "zhttp" % "1.0.0.0-RC29"
