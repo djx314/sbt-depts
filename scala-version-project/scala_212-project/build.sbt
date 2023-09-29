@@ -4,8 +4,8 @@ scalaVersion               := "2.12.18"
 VarContext.changeDeptVar         := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
 
-VarContext.changeDeptVar                      := "better-monadic-for"
-addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+VarContext.changeDeptVar       := "better-monadic-for"
+addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.0")
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.6"
@@ -142,11 +142,11 @@ libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.
 libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
 libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.0"
 
-VarContext.changeDeptVar                  := "zio-interop-reactivestreams"
-libraryDependencies+= "dev.zio" %% "zio-interop-reactivestreams" % "1.3.12"
+VarContext.changeDeptVar         := "zio-interop-reactivestreams"
+libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "1.3.12"
 
-VarContext.changeDeptVar                  := "zio-logging"
-libraryDependencies+="dev.zio" %% "zio-logging" % "0.5.14"
+VarContext.changeDeptVar         := "zio-logging"
+libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.14"
 
-VarContext.changeDeptVar                  := "zhttp"
-libraryDependencies+="io.d11" %% "zhttp" % "1.0.0.0-RC29"
+VarContext.changeDeptVar        := "zhttp"
+libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
