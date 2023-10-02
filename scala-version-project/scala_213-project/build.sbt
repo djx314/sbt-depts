@@ -143,7 +143,7 @@ VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "1.3.12"
 
 VarContext.changeDeptVar         := "zio-logging"
-libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.14"
+libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 
 VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
