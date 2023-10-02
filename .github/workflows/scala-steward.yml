@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '2023-10-03 04:05:00'
 
 name: Launch Scala Steward
 
