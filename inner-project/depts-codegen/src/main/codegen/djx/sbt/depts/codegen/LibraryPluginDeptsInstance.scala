@@ -57,7 +57,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-js-engine"
 
-  addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.2.3")
+  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.3.1")
 
   VarContext.changePluginVar := "sbt-scala-js-map"
 
