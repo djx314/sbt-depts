@@ -23,7 +23,7 @@ addSbtPlugin("io.github.davidmweber"             % "flyway-sbt"               % 
 VarContext.changePluginVar                      := "sbt-web-scalajs"
 addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")
 VarContext.changePluginVar                      := "sbt-depts-djx314"
-addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M746")
+addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M755")
 VarContext.changePluginVar                      := "sbt-js-engine"
 addSbtPlugin("com.github.sbt"                    % "sbt-js-engine"            % "1.3.1")
 VarContext.changePluginVar                      := "sbt-scala-js-map"
