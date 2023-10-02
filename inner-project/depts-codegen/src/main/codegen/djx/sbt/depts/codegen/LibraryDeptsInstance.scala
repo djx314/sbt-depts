@@ -13,7 +13,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -191,7 +191,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -401,7 +401,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
