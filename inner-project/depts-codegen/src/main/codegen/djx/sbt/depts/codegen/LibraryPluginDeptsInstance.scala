@@ -13,7 +13,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("com.typesafe.play" % "sbt-twirl" % "1.6.0-RC4")
+  addSbtPlugin("com.typesafe.play" % "sbt-twirl" % "1.6.1")
 
   VarContext.changePluginVar := "sbt-sonatype"
 
@@ -37,7 +37,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.13.2")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.14.0")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
@@ -53,11 +53,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-depts-djx314"
 
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M746")
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M755")
 
   VarContext.changePluginVar := "sbt-js-engine"
 
-  addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.2.3")
+  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.3.1")
 
   VarContext.changePluginVar := "sbt-scala-js-map"
 
@@ -65,15 +65,15 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-assembly"
 
-  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.1.1")
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.1.3")
 
   VarContext.changePluginVar := "sbt-scoverage"
 
-  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.8")
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.9")
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.15.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.17.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
@@ -81,10 +81,10 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-jmh"
 
-  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.3.7")
+  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.6")
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.4")
+  addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.7.6")
 
 }

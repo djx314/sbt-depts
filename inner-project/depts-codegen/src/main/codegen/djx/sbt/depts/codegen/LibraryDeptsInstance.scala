@@ -13,7 +13,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -27,11 +27,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -45,7 +45,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.2.220"
+  libraryDependencies += "com.h2database" % "h2" % "2.2.224"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -101,7 +101,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -121,7 +121,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -157,7 +157,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -191,7 +191,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -205,15 +205,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
   VarContext.changeDeptVar := "cats"
 
@@ -289,7 +289,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -309,15 +309,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
 
   VarContext.changeDeptVar := "scala-sbt"
 
-  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.1"
+  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -329,7 +329,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.1"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -337,17 +337,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.1"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.2"
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M27"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -367,7 +367,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -401,7 +401,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.0")
+  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -415,15 +415,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
   VarContext.changeDeptVar := "cats"
 
@@ -499,7 +499,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -519,11 +519,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -535,7 +535,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.1"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -543,17 +543,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.1"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.2"
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M27"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -573,7 +573,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -599,7 +599,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.setScalaVersion := "3"
 
-  scalaVersion := "3.3.0"
+  scalaVersion := "3.3.1"
 
   VarContext.changeDeptVar := "circe"
 
@@ -613,15 +613,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.16"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.16"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.1"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
   VarContext.changeDeptVar := "cats"
 
@@ -697,7 +697,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.7"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -717,7 +717,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M4"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -733,7 +733,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.1"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -747,17 +747,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.1"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.9.2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.1"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.9.2"
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0-M27"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.1.0"
 
   VarContext.changeDeptVar := "slick"
 
@@ -773,7 +773,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "2.2.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
