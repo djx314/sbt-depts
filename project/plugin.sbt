@@ -25,7 +25,7 @@ addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % 
 VarContext.changePluginVar                      := "sbt-depts-djx314"
 addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M746")
 VarContext.changePluginVar                      := "sbt-js-engine"
-addSbtPlugin("com.typesafe.sbt"                  % "sbt-js-engine"            % "1.2.3")
+addSbtPlugin("com.github.sbt"                    % "sbt-js-engine"            % "1.3.1")
 VarContext.changePluginVar                      := "sbt-scala-js-map"
 addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map"         % "4.1.1")
 VarContext.changePluginVar                      := "sbt-assembly"
