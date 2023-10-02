@@ -81,7 +81,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-jmh"
 
-  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.3.7")
+  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.6")
 
   VarContext.changePluginVar := "sbt-native-packager"
 

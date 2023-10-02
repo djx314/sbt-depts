@@ -37,7 +37,7 @@ addSbtPlugin("com.github.sbt"                    % "sbt-github-actions"       % 
 VarContext.changePluginVar                      := "sbt-jacoco"
 addSbtPlugin("com.github.sbt"                    % "sbt-jacoco"               % "3.4.0")
 VarContext.changePluginVar                      := "sbt-jmh"
-addSbtPlugin("pl.project13.scala"                % "sbt-jmh"                  % "0.3.7")
+addSbtPlugin("pl.project13.scala"                % "sbt-jmh"                  % "0.4.6")
 VarContext.changePluginVar                      := "sbt-native-packager"
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager"    % "1.7.4" exclude ("org.scala-lang.modules", "scala-xml_2.12"))
 VarContext.changePluginVar     := "sbt-dependency-updates"
