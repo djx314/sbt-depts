@@ -140,7 +140,7 @@ libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.
 libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.0"
 
 VarContext.changeDeptVar         := "zio-interop-reactivestreams"
-libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "1.3.12"
+libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
 libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.14"
