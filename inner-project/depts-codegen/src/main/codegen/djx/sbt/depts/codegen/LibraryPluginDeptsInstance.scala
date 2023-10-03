@@ -47,10 +47,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")
 
-  VarContext.changePluginVar := "sbt-web-scalajs"
-
-  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.2.0")
-
   VarContext.changePluginVar := "sbt-depts-djx314"
 
   addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M755")
@@ -86,5 +82,17 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
   VarContext.changePluginVar := "sbt-native-packager"
 
   addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.16")
+
+  VarContext.changePluginVar := "sbt-dependency-updates"
+
+  addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.7")
+
+  VarContext.changePluginVar := "sbt-less"
+
+  addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.1.2")
+
+  /*VarContext.changePluginVar                      := "sbt-web-scalajs"
+
+          addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")*/
 
 }

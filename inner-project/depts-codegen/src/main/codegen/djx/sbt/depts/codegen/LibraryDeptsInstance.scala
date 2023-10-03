@@ -13,7 +13,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -167,19 +167,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
 
-  VarContext.changeDeptVar := "pekko-all"
+  VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.0"
+  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.0"
+  VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.0"
-
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0"
-
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
-
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.0"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -191,7 +185,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -391,6 +385,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.0"
 
+  VarContext.changeDeptVar := "zio-interop-reactivestreams"
+
+  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
+
+  VarContext.changeDeptVar := "zio-logging"
+
+  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
+
+  VarContext.changeDeptVar := "zhttp"
+
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.11"
@@ -401,7 +407,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "better-monadic-for"
 
-  addCompilerPlugin("com.olegpy" %%% "better-monadic-for" % "0.3.1")
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
   VarContext.changeDeptVar := "circe"
 
@@ -596,6 +602,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.0"
+
+  VarContext.changeDeptVar := "zio-interop-reactivestreams"
+
+  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
+
+  VarContext.changeDeptVar := "zio-logging"
+
+  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
+
+  VarContext.changeDeptVar := "zhttp"
+
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
   VarContext.setScalaVersion := "3"
 
@@ -796,5 +814,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.0"
+
+  VarContext.changeDeptVar := "zio-interop-reactivestreams"
+
+  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
+
+  VarContext.changeDeptVar := "zio-logging"
+
+  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
+
+  VarContext.changeDeptVar := "zhttp"
+
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
 }

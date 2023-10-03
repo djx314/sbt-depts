@@ -30,14 +30,14 @@ trait pUtils {
 
   class setting(implicit m: Monad[sbt.Def.Initialize]) {
     class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
-      def value[U: Adt.Options2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.Options2[T, sbt.Def.Initialize[T]](u)
+      def value[U: Adt.CoProducts2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
+        val applyM = Adt.CoProducts2[T, sbt.Def.Initialize[T]](u)
         val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize], identity)
         sKey.set(initT, lp)
       }
 
-      def setIfNone[U: Adt.Options3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.Options3[() => T, T, sbt.Def.Initialize[T]](default)
+      def setIfNone[U: Adt.CoProducts3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
+        val applyM = Adt.CoProducts3[() => T, T, sbt.Def.Initialize[T]](default)
         val defaultValue: sbt.Def.Initialize[() => T] =
           applyM.fold(t => t.pure[sbt.Def.Initialize], t => (() => t).pure[sbt.Def.Initialize], t => for (d <- t) yield () => d)
 
@@ -52,20 +52,20 @@ trait pUtils {
       }
     }
     class SetKeySeqContext[T](sKey: sbt.SettingKey[Seq[T]], lp: sbt.SourcePosition) {
-      def appendOneOrMore[U: Adt.Options4[*, T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]]](
+      def appendOneOrMore[U: Adt.CoProducts4[*, T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]]](
         u: U
       ): sbt.Def.Setting[Seq[T]] = {
-        val applyM = Adt.Options4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
+        val applyM = Adt.CoProducts4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
 
-        type Opt2 = Adt.Option2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
-        val Opts2 = Adt.Options2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
+        type Opt2 = Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
+        val Opts2 = Adt.CoProducts2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
         val applyM1: Opt2 = applyM match {
-          case Adt.Option1(t) => Opts2(t.pure[sbt.Def.Initialize])
-          case Adt.Option2(t) => Opts2(t)
-          case Adt.Option3(t) => Opts2(t.pure[sbt.Def.Initialize])
-          case Adt.Option4(t) => Opts2(t)
-          case Adt.Option5(t) => t.matchErrorAndNothing
+          case Adt.CoProduct1(t) => Opts2(t.pure[sbt.Def.Initialize])
+          case Adt.CoProduct2(t) => Opts2(t)
+          case Adt.CoProduct3(t) => Opts2(t.pure[sbt.Def.Initialize])
+          case Adt.CoProduct4(t) => Opts2(t)
+          case Adt.CoProduct5(t) => t.matchErrorAndThrowException
         }
 
         applyM1.fold(
