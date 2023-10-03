@@ -2,7 +2,7 @@ on:
   schedule:
     - cron: '8 * * * *'
 
-name: Launch Scala Steward A
+name: Launch Scala Steward
 
 jobs:
   scala-steward:
