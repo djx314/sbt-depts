@@ -1,5 +1,5 @@
 VarContext.setScalaVersion := "2.13"
-scalaVersion               := "2.13.11"
+scalaVersion               := "2.13.12"
 
 VarContext.changeDeptVar         := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.2" cross CrossVersion.full)
@@ -13,7 +13,7 @@ libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.6"
 libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.6"
 
 VarContext.changeDeptVar                := "scalatest"
-libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.16"
+libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.17"
 libraryDependencies += "org.scalatest" %%% "scalatest"          % "3.2.17"
 libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.17"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
