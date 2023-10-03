@@ -10,4 +10,3 @@ val scala3   = project in `version-project/file` / "scala_3-project"
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
-JsEngineKeys.engineType := JsEngineKeys.EngineType.Node

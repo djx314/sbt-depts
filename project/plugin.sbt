@@ -20,8 +20,8 @@ VarContext.changePluginVar                      := "sbt-platform-deps"
 addSbtPlugin("org.portable-scala"                % "sbt-platform-deps"        % "1.0.2")
 VarContext.changePluginVar                      := "flyway-sbt"
 addSbtPlugin("io.github.davidmweber"             % "flyway-sbt"               % "7.4.0")
-VarContext.changePluginVar                      := "sbt-web-scalajs"
-addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")
+/*VarContext.changePluginVar                      := "sbt-web-scalajs"
+addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")*/
 VarContext.changePluginVar                      := "sbt-depts-djx314"
 addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M755")
 VarContext.changePluginVar                      := "sbt-js-engine"
@@ -42,3 +42,5 @@ VarContext.changePluginVar                      := "sbt-native-packager"
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager"    % "1.7.6" exclude ("org.scala-lang.modules", "scala-xml_2.12"))
 VarContext.changePluginVar     := "sbt-dependency-updates"
 addSbtPlugin("org.jmotor.sbt"   % "sbt-dependency-updates" % "1.2.7")
+VarContext.changePluginVar     := "sbt-less"
+addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.1.2")
