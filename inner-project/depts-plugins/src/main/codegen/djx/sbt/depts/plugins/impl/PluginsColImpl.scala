@@ -26,7 +26,7 @@ trait PluginsColImpl {
 
   val `flyway-sbt`: sbt.librarymanagement.ModuleID = """io.github.davidmweber""" % """flyway-sbt""" % """7.4.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M757"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M761"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.3.1"""
 
@@ -47,5 +47,9 @@ trait PluginsColImpl {
   val `sbt-dependency-updates`: sbt.librarymanagement.ModuleID = """org.jmotor.sbt""" % """sbt-dependency-updates""" % """1.2.7"""
 
   val `sbt-less`: sbt.librarymanagement.ModuleID = """com.typesafe.sbt""" % """sbt-less""" % """1.1.2"""
+
+  val `sbt-web`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-web""" % """1.5.1"""
+
+  val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.2.0"""
 
 }

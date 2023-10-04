@@ -91,8 +91,12 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.1.2")
 
-  /*VarContext.changePluginVar                      := "sbt-web-scalajs"
+  VarContext.changePluginVar := "sbt-web"
 
-          addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")*/
+  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.1")
+
+  VarContext.changePluginVar := "sbt-web-scalajs"
+
+  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.2.0")
 
 }
