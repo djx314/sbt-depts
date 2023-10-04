@@ -42,5 +42,7 @@ VarContext.changePluginVar                      := "sbt-dependency-updates"
 addSbtPlugin("org.jmotor.sbt"                    % "sbt-dependency-updates"   % "1.2.7")
 VarContext.changePluginVar                      := "sbt-less"
 addSbtPlugin("com.typesafe.sbt"                  % "sbt-less"                 % "1.1.2")
-/*VarContext.changePluginVar                      := "sbt-web-scalajs"
-addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")*/
+VarContext.changePluginVar                      := "sbt-web"
+addSbtPlugin("com.github.sbt"                    % "sbt-web"                  % "1.5.0-M1")
+VarContext.changePluginVar                      := "sbt-web-scalajs"
+addSbtPlugin("com.vmunier"                       % "sbt-web-scalajs"          % "1.2.0")
