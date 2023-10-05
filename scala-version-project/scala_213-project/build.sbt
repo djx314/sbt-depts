@@ -149,10 +149,10 @@ VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
 VarContext.changeDeptVar      := "mysql-connector-java"
-libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.16"
+libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.33"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
-libraryDependencies += "org.postgresql" % "postgresql" % "42.2.2"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.2.27"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0"
