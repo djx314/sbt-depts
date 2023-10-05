@@ -118,7 +118,7 @@ VarContext.changeDeptVar         := "zio-logging"
 libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 
 VarContext.changeDeptVar      := "mysql-connector-java"
-libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.16"
+libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.33"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.2.2"
