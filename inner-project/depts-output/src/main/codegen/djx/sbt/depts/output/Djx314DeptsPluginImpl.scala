@@ -13,6 +13,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `typesafe-config`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
     val `http4s-Release-ember-server` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release-ember-server""")
     val `http4s-Release-ember-client` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release-ember-client""")
+    val `postgresql-jdbc`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for postgresql-jdbc""")
     val `scalatest`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
     val `scala-sbt`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-sbt""")
     val `zio-logging`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
@@ -35,6 +36,8 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `better-monadic-for`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for better-monadic-for""")
     val `play-circe`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
     val `pekko-all`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-all""")
+    val `scala-java8-compat`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-java8-compat""")
+    val `mysql-connector-java`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for mysql-connector-java""")
     val `zhttp`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zhttp""")
     val `h2`                          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for h2""")
     val `zio2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
@@ -64,6 +67,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`typesafe-config`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release-ember-server`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release-ember-client`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`postgresql-jdbc`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scalatest`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-sbt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -86,6 +90,8 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`better-monadic-for`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`play-circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`pekko-all`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`scala-java8-compat`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`mysql-connector-java`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zhttp`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -118,7 +124,13 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala213)(contextLibraryCollection.apply(("postgresql-jdbc", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala212)(contextLibraryCollection.apply(("postgresql-jdbc", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala211)(contextLibraryCollection.apply(("javacv-platform", "2.11")))(
@@ -138,6 +150,9 @@ trait Djx314DeptsImpl {
     ),
     innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala212)(
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala212)(
+      contextLibraryCollection.apply(("mysql-connector-java", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala213)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "2.13"))
@@ -196,6 +211,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala213)(contextLibraryCollection.apply(("http4s-twirl", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala211)(
+      contextLibraryCollection.apply(("scala-java8-compat", "2.11"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala212)(contextLibraryCollection.apply(("scalatest", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -214,6 +232,12 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala3)(
       contextLibraryCollection.apply(("scala-collection-compat", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala213)(
+      contextLibraryCollection.apply(("scala-java8-compat", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala3)(contextLibraryCollection.apply(("postgresql-jdbc", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala211)(contextLibraryCollection.apply(("slick", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -241,6 +265,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala3)(contextLibraryCollection.apply(("cats-effect-cps", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala3)(
+      contextLibraryCollection.apply(("mysql-connector-java", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala3)(
       contextLibraryCollection.apply(("http4s-Release-ember-server", "3"))
     )(sourcePosition.fromEnclosing()),
@@ -328,6 +355,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala212)(
+      contextLibraryCollection.apply(("scala-java8-compat", "2.12"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala212)(contextLibraryCollection.apply(("javacv-platform", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -373,6 +403,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala3)(contextLibraryCollection.apply(("doobie-h2", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala3)(
+      contextLibraryCollection.apply(("scala-java8-compat", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -421,6 +454,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala212)(contextLibraryCollection.apply(("slick", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala213)(
+      contextLibraryCollection.apply(("mysql-connector-java", "2.13"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zhttp`)(djxIsScala213)(contextLibraryCollection.apply(("zhttp", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -529,6 +565,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala213)(contextLibraryCollection.apply(("distage", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala211)(
+      contextLibraryCollection.apply(("mysql-connector-java", "2.11"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala211)(
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.11"))
     )(sourcePosition.fromEnclosing()),
@@ -547,6 +586,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala213)(
       contextLibraryCollection.apply(("http4s-Release-ember-server", "2.13"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala211)(contextLibraryCollection.apply(("postgresql-jdbc", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala212)(contextLibraryCollection.apply(("slf4j-simple", "2.12")))(
       sourcePosition.fromEnclosing()
     ),

@@ -175,6 +175,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 
+  VarContext.changeDeptVar := "mysql-connector-java"
+
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
+
+  VarContext.changeDeptVar := "postgresql-jdbc"
+
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+
+  VarContext.changeDeptVar := "scala-java8-compat"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.18"
@@ -397,6 +409,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
+  VarContext.changeDeptVar := "mysql-connector-java"
+
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
+
+  VarContext.changeDeptVar := "postgresql-jdbc"
+
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+
+  VarContext.changeDeptVar := "scala-java8-compat"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.12"
@@ -615,6 +639,18 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
+  VarContext.changeDeptVar := "mysql-connector-java"
+
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
+
+  VarContext.changeDeptVar := "postgresql-jdbc"
+
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+
+  VarContext.changeDeptVar := "scala-java8-compat"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.3.1"
@@ -826,5 +862,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "zhttp"
 
   libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+
+  VarContext.changeDeptVar := "mysql-connector-java"
+
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
+
+  VarContext.changeDeptVar := "postgresql-jdbc"
+
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+
+  VarContext.changeDeptVar := "scala-java8-compat"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
 }
