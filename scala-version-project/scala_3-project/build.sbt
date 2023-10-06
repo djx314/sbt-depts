@@ -152,3 +152,5 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
+VarContext.changeDeptVar                        := "scala-parser-combinators"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
