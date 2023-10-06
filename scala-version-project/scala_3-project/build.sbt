@@ -147,7 +147,7 @@ VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
-libraryDependencies += "org.postgresql" % "postgresql" % "42.2.27"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.0"
