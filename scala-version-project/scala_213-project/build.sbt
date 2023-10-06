@@ -155,4 +155,4 @@ VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.2.27"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
-libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
