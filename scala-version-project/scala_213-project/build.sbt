@@ -148,8 +148,8 @@ libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 
-VarContext.changeDeptVar      := "mysql-connector-java"
-libraryDependencies += "mysql" % "mysql-connector-java" % "8.0.33"
+VarContext.changeDeptVar          := "mysql-connector-java"
+libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.2.27"
