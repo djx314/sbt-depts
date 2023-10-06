@@ -15,7 +15,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 VarContext.changeDeptVar                := "cats-effect"
 libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
-VarContext.changeDeptVar                := "cats"
+VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.10.0"
 
 VarContext.changeDeptVar               := "h2"
@@ -151,3 +151,4 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
+

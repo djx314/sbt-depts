@@ -21,7 +21,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
 VarContext.changeDeptVar                := "cats-effect"
 libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
 
-VarContext.changeDeptVar                := "cats"
+VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
 libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0"
 
@@ -125,3 +125,12 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
+VarContext.changeDeptVar                        := "akka-stream-alpakka-elasticsearch"
+libraryDependencies += "com.lightbend.akka"         %% "akka-stream-alpakka-elasticsearch" % "1.1.2"
+
+VarContext.changeDeptVar                        := "akka-stream-alpakka-slick"
+libraryDependencies += "com.lightbend.akka"         %% "akka-stream-alpakka-slick"         % "1.1.2"
+
+VarContext.changeDeptVar                        := "akka-stream-alpakka-s3"
+libraryDependencies += "com.lightbend.akka"         %% "akka-stream-alpakka-s3"            % "1.1.2"
