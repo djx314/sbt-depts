@@ -160,15 +160,6 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
 
-VarContext.changeDeptVar := "akka-stream-alpakka-elasticsearch"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-elasticsearch" % "1.1.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
-
-VarContext.changeDeptVar := "akka-stream-alpakka-slick"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "1.1.2" exclude ("com.typesafe.slick", "slick_2.12") exclude ("com.typesafe.slick", "slick-hikaricp_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
-
-VarContext.changeDeptVar := "akka-stream-alpakka-s3"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-s3" % "1.1.2" exclude ("org.scala-lang.modules", "scala-xml_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
-
 VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
 
