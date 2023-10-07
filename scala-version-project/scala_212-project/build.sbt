@@ -28,22 +28,22 @@ VarContext.changeDeptVar               := "h2"
 libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
 VarContext.changeDeptVar              := "doobie"
-libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC4"
-libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC4"
-libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC4"
-libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-core"     % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "org.tpolecat" %% "doobie-hikari"   % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
 VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
-libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
-libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
-libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
 VarContext.changeDeptVar             := "typesafe-config"
-libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+libraryDependencies += "com.typesafe" % "config" % "1.4.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
@@ -87,11 +87,11 @@ libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M6"
 
-VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
+VarContext.changeDeptVar := "sbt-librarymanagement-core"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
 VarContext.changeDeptVar              := "scala-sbt"
-libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3"
+libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.9"
@@ -135,12 +135,12 @@ VarContext.changeDeptVar                 := "jnativehook"
 libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
 
 VarContext.changeDeptVar                  := "pekko-all"
-libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.0.1"
-libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"          % "1.0.1"
-libraryDependencies += "org.apache.pekko" %% "pekko-http"                  % "1.0.0"
-libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.0.0"
-libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1"
-libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.1"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"     % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
+libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"    % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
+libraryDependencies += "org.apache.pekko" %% "pekko-http"            % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
+libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
+libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
+libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
 VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
@@ -160,17 +160,17 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
 
-VarContext.changeDeptVar                    := "akka-stream-alpakka-elasticsearch"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-elasticsearch" % "1.1.2"
+VarContext.changeDeptVar := "akka-stream-alpakka-elasticsearch"
+libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-elasticsearch" % "1.1.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-VarContext.changeDeptVar                    := "akka-stream-alpakka-slick"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "1.1.2"
+VarContext.changeDeptVar := "akka-stream-alpakka-slick"
+libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-slick" % "1.1.2" exclude ("com.typesafe.slick", "slick_2.12") exclude ("com.typesafe.slick", "slick-hikaricp_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-VarContext.changeDeptVar                    := "akka-stream-alpakka-s3"
-libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-s3" % "1.1.2"
+VarContext.changeDeptVar := "akka-stream-alpakka-s3"
+libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-s3" % "1.1.2" exclude ("org.scala-lang.modules", "scala-xml_2.12") exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
 
-VarContext.changeDeptVar                        := "slf4j-nop"
-libraryDependencies += "org.slf4j"      % "slf4j-nop"           % "1.7.26"
+VarContext.changeDeptVar          := "slf4j-nop"
+libraryDependencies += "org.slf4j" % "slf4j-nop" % "1.7.26"

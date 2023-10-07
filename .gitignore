@@ -14,3 +14,4 @@
 /inner-project/sonatype.sbt
 /inner-project/.metals/
 /inner-project/.vscode/
+/project/sdap.sbt
