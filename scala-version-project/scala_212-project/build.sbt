@@ -171,3 +171,6 @@ libraryDependencies += "com.lightbend.akka" %% "akka-stream-alpakka-s3" % "1.1.2
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+VarContext.changeDeptVar                        := "slf4j-nop"
+libraryDependencies += "org.slf4j"      % "slf4j-nop"           % "1.7.26"
