@@ -111,7 +111,7 @@ libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
 VarContext.changeDeptVar                 := "jnativehook"
 libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
 
-VarContext.changeDeptVar := "zio-interop-reactivestreams"
+VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
@@ -123,7 +123,7 @@ libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
 VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
-VarContext.changeDeptVar := "scala-java8-compat"
+VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
@@ -133,7 +133,7 @@ VarContext.changeDeptVar          := "slf4j-nop"
 libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
 
 VarContext.changeDeptVar                            := "scala-logging"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
 VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
