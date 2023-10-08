@@ -167,4 +167,4 @@ VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 
 VarContext.changeDeptVar                := "jmh-generator-annprocess"
-libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
+libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
