@@ -28,22 +28,22 @@ VarContext.changeDeptVar               := "h2"
 libraryDependencies += "com.h2database" % "h2" % "2.1.214"
 
 VarContext.changeDeptVar              := "doobie"
-libraryDependencies += "org.tpolecat" %% "doobie-core"     % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "org.tpolecat" %% "doobie-hikari"   % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-postgres"  % "1.0.0-RC4"
+libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
 
 VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC4"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
-libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "dev.zio" %%% "zio"          % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
+libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
 VarContext.changeDeptVar             := "typesafe-config"
-libraryDependencies += "com.typesafe" % "config" % "1.4.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
@@ -87,8 +87,8 @@ libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M6"
 
-VarContext.changeDeptVar := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
+VarContext.changeDeptVar               := "sbt-librarymanagement-core"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
 
 VarContext.changeDeptVar              := "scala-sbt"
 libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
