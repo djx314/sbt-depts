@@ -21,6 +21,7 @@ package impl {
     def %(s: String): LibraryDepts.LibraryInstance   = prefix.appendString(s)
     def %(s: LibraryDepts.ScopeType): LibraryDepts.LibraryInstance               = prefix.appendScope(s)
     def cross(s: LibraryDepts.CrossVersionSetting): LibraryDepts.LibraryInstance = prefix.appendCrossVersionSetting(s)
+    def exclude(org: String, name: String): LibraryDepts.LibraryInstance         = prefix
   }
 
   class VarContextSetting(context: DeptSettingContext) {

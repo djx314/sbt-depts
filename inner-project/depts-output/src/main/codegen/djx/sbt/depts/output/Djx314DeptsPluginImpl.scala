@@ -17,10 +17,12 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `scalatest`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
     val `scala-sbt`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-sbt""")
     val `zio-logging`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
+    val `slf4j-nop`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-nop""")
     val `distage`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for distage""")
     val `fs2`                         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for fs2""")
     val `kind-projector`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
     val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
+    val `jmh-generator-annprocess`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jmh-generator-annprocess""")
     val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
     val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
     val `jintellitype`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
@@ -43,6 +45,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `zio2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
     val `logback-classic`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for logback-classic""")
     val `http4s-Release`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
+    val `scala-logging`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-logging""")
     val `sbt-librarymanagement-core`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
     val `shapeless3-test`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
     val `circe`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
@@ -52,9 +55,10 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `commons-io`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
     val `shapeless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
-    val `cats`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats""")
     val `zio-interop-reactivestreams` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-interop-reactivestreams""")
     val `jnativehook`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
+    val `cats-core`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
+    val `scala-parser-combinators`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
   }
 }
 
@@ -71,10 +75,12 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`scalatest`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-sbt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`slf4j-nop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`distage`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`fs2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`kind-projector`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`simple-adt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`jmh-generator-annprocess`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slick`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jintellitype`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -97,6 +103,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`zio2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`logback-classic`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`scala-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`sbt-librarymanagement-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless3-test`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -106,10 +113,14 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`commons-io`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
-    innerSetting.setKey(libScalax.`cats`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-interop-reactivestreams`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jnativehook`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`cats-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`scala-parser-combinators`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.addLibrarySetting(libScalax.`zio-logging`)(djxIsScala211)(contextLibraryCollection.apply(("zio-logging", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-nop", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala211)(contextLibraryCollection.apply(("shapeless", "2.11")))(
@@ -119,6 +130,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala213)(contextLibraryCollection.apply(("doobie", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala212)(contextLibraryCollection.apply(("slf4j-nop", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
@@ -142,6 +156,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala213)(contextLibraryCollection.apply(("zio-json", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-logging`)(djxIsScala213)(contextLibraryCollection.apply(("scala-logging", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala213)(contextLibraryCollection.apply(("doobie-h2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -156,6 +173,9 @@ trait Djx314DeptsImpl {
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala213)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`jmh-generator-annprocess`)(djxIsScala213)(
+      contextLibraryCollection.apply(("jmh-generator-annprocess", "2.13"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-Release", "2.12")))(
       sourcePosition.fromEnclosing()
@@ -193,15 +213,21 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`shapeless3-test`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless3-test", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala3)(contextLibraryCollection.apply(("cats-core", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala3)(
+      contextLibraryCollection.apply(("scala-parser-combinators", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala211)(contextLibraryCollection.apply(("zio2", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala213)(contextLibraryCollection.apply(("slick", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
-    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala212)(contextLibraryCollection.apply(("cats", "2.12")))(
-      sourcePosition.fromEnclosing()
-    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala211)(
+      contextLibraryCollection.apply(("scala-parser-combinators", "2.11"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -244,6 +270,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala213)(contextLibraryCollection.apply(("kind-projector", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala212)(
+      contextLibraryCollection.apply(("scala-parser-combinators", "2.12"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala213)(contextLibraryCollection.apply(("jnativehook", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -340,6 +369,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala213)(contextLibraryCollection.apply(("pekko-all", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala212)(contextLibraryCollection.apply(("cats-core", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-Release", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -371,9 +403,6 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javet`)(djxIsScala3)(contextLibraryCollection.apply(("javet", "3")))(
-      sourcePosition.fromEnclosing()
-    ),
-    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala3)(contextLibraryCollection.apply(("cats", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless", "3")))(
@@ -421,10 +450,10 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala211)(contextLibraryCollection.apply(("fs2", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
-    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
+    innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala211)(contextLibraryCollection.apply(("cats-core", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
-    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala213)(contextLibraryCollection.apply(("cats", "2.13")))(
+    innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala211)(contextLibraryCollection.apply(("typesafe-config", "2.11")))(
@@ -454,6 +483,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala212)(contextLibraryCollection.apply(("slick", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala213)(contextLibraryCollection.apply(("slf4j-nop", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala213)(
       contextLibraryCollection.apply(("mysql-connector-java", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -481,9 +513,15 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-logging`)(djxIsScala212)(contextLibraryCollection.apply(("scala-logging", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala213)(contextLibraryCollection.apply(("h2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jmh-generator-annprocess`)(djxIsScala211)(
+      contextLibraryCollection.apply(("jmh-generator-annprocess", "2.11"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala3)(contextLibraryCollection.apply(("macwire", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -526,6 +564,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala213)(contextLibraryCollection.apply(("simple-adt", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala211)(contextLibraryCollection.apply(("slf4j-nop", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala211)(contextLibraryCollection.apply(("macwire", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -535,13 +576,22 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala3)(contextLibraryCollection.apply(("javacv-platform", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jmh-generator-annprocess`)(djxIsScala212)(
+      contextLibraryCollection.apply(("jmh-generator-annprocess", "2.12"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`slick`)(djxIsScala3)(contextLibraryCollection.apply(("slick", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-logging`)(djxIsScala212)(contextLibraryCollection.apply(("zio-logging", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jmh-generator-annprocess`)(djxIsScala3)(
+      contextLibraryCollection.apply(("jmh-generator-annprocess", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-logging`)(djxIsScala211)(contextLibraryCollection.apply(("scala-logging", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-logging`)(djxIsScala213)(contextLibraryCollection.apply(("zio-logging", "2.13")))(
@@ -557,9 +607,6 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala213)(contextLibraryCollection.apply(("javacv-platform", "2.13")))(
-      sourcePosition.fromEnclosing()
-    ),
-    innerSetting.addLibrarySetting(libScalax.`cats`)(djxIsScala211)(contextLibraryCollection.apply(("cats", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala213)(contextLibraryCollection.apply(("distage", "2.13")))(
@@ -589,9 +636,18 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala211)(contextLibraryCollection.apply(("postgresql-jdbc", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala213)(contextLibraryCollection.apply(("cats-core", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala212)(contextLibraryCollection.apply(("slf4j-simple", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scala-logging`)(djxIsScala3)(contextLibraryCollection.apply(("scala-logging", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala213)(
+      contextLibraryCollection.apply(("scala-parser-combinators", "2.13"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect-cps", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
