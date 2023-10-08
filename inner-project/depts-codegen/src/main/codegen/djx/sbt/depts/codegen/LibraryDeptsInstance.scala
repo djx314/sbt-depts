@@ -17,31 +17,31 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.11.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.11.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.11.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.17" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.17" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0"
+  libraryDependencies += "org.typelevel" %%% "cats-effect" % "2.0.0" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  VarContext.changeDeptVar := "cats"
+  VarContext.changeDeptVar := "cats-core"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0"
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.0.0" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0"
+  libraryDependencies += "org.typelevel" %%% "cats-free" % "2.0.0" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "h2"
 
@@ -49,55 +49,55 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "0.7.1"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "0.7.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "0.7.1"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "0.7.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "0.7.1"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "0.7.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.1"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "0.7.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.1"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "0.7.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.23"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.20.23" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.20.23" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "http4s-twirl"
 
-  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.23"
+  libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.20.23" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "3.0.7" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "3.0.7" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -109,7 +109,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.3.7" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -125,7 +125,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -133,7 +133,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "fs2"
 
@@ -145,11 +145,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.3.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.3.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.3.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "logback-classic"
 
@@ -169,11 +169,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
-  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
+  libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
@@ -185,7 +185,23 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+  libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
+
+  VarContext.changeDeptVar := "scala-parser-combinators"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+  VarContext.changeDeptVar := "slf4j-nop"
+
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+
+  VarContext.changeDeptVar := "scala-logging"
+
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+
+  VarContext.changeDeptVar := "jmh-generator-annprocess"
+
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -221,7 +237,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
-  VarContext.changeDeptVar := "cats"
+  VarContext.changeDeptVar := "cats-core"
 
   libraryDependencies += "org.typelevel" %%% "cats-core" % "2.10.0"
 
@@ -231,13 +247,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC4"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC4"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
   VarContext.changeDeptVar := "doobie-h2"
 
@@ -245,17 +261,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -319,11 +335,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
   VarContext.changeDeptVar := "scala-sbt"
 
-  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3"
+  libraryDependencies += "org.scala-sbt" % "sbt" % "1.8.3" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.12")
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -385,17 +401,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -420,6 +436,22 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scala-java8-compat"
 
   libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
+  VarContext.changeDeptVar := "scala-parser-combinators"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+  VarContext.changeDeptVar := "slf4j-nop"
+
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+
+  VarContext.changeDeptVar := "scala-logging"
+
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+
+  VarContext.changeDeptVar := "jmh-generator-annprocess"
+
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -455,7 +487,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
-  VarContext.changeDeptVar := "cats"
+  VarContext.changeDeptVar := "cats-core"
 
   libraryDependencies += "org.typelevel" %%% "cats-core" % "2.10.0"
 
@@ -615,17 +647,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.0" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -650,6 +682,22 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scala-java8-compat"
 
   libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+
+  VarContext.changeDeptVar := "scala-parser-combinators"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+  VarContext.changeDeptVar := "slf4j-nop"
+
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+
+  VarContext.changeDeptVar := "scala-logging"
+
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+
+  VarContext.changeDeptVar := "jmh-generator-annprocess"
+
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
 
   VarContext.setScalaVersion := "3"
 
@@ -677,7 +725,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.2"
 
-  VarContext.changeDeptVar := "cats"
+  VarContext.changeDeptVar := "cats-core"
 
   libraryDependencies += "org.typelevel" %%% "cats-core" % "2.10.0"
 
@@ -874,5 +922,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scala-java8-compat"
 
   libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
+
+  VarContext.changeDeptVar := "scala-parser-combinators"
+
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+
+  VarContext.changeDeptVar := "slf4j-nop"
+
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+
+  VarContext.changeDeptVar := "scala-logging"
+
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
+
+  VarContext.changeDeptVar := "jmh-generator-annprocess"
+
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
 
 }

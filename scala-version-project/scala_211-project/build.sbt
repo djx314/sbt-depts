@@ -87,7 +87,7 @@ VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.9"
 
 VarContext.changeDeptVar              := "shapeless"
-libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.1.0"
@@ -112,10 +112,10 @@ VarContext.changeDeptVar                 := "jnativehook"
 libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
 
 VarContext.changeDeptVar := "zio-interop-reactivestreams"
-libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
+libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
-libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
+libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
 
 VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
@@ -124,7 +124,7 @@ VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 VarContext.changeDeptVar := "scala-java8-compat"
-libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
+libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
