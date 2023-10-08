@@ -165,3 +165,9 @@ libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % 
 
 VarContext.changeDeptVar          := "slf4j-nop"
 libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+
+VarContext.changeDeptVar                            := "scala-logging"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+
+VarContext.changeDeptVar                := "jmh-generator-annprocess"
+libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
