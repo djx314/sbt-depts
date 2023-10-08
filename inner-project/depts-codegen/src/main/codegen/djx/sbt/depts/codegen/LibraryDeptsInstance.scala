@@ -197,11 +197,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-logging"
 
-  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
-  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -447,11 +447,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-logging"
 
-  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
-  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -693,11 +693,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-logging"
 
-  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
-  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
   VarContext.setScalaVersion := "3"
 
@@ -937,6 +937,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
-  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.23"
+  libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
 }
