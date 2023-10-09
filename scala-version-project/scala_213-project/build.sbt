@@ -140,7 +140,7 @@ libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.
 libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.1"
 
 VarContext.changeDeptVar                  := "pekko-actor"
-libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.1"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.1" exclude ("org.scala-lang.modules", "scala-java8-compat_2.12")
 
 VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
