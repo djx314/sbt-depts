@@ -10,7 +10,7 @@ addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
-libraryDependencies ++= libScalax.`cats`.value
+libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`simple-adt`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
 
