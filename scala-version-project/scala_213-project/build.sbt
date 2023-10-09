@@ -139,6 +139,9 @@ libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.
 libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.1"
 libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.0.1"
 
+VarContext.changeDeptVar                  := "pekko-actor"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.1"
+
 VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
@@ -168,3 +171,9 @@ libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
 VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
+
+VarContext.changeDeptVar         := "zio-nio"
+libraryDependencies += "dev.zio" %% "zio-nio" % "1.0.0-RC9"
+
+VarContext.changeDeptVar             := "scallop"
+libraryDependencies += "org.rogach" %%% "scallop" % "3.4.0"
