@@ -17,6 +17,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `scalatest`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
     val `scala-sbt`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-sbt""")
     val `zio-logging`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
+    val `scallop`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scallop""")
     val `slf4j-nop`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-nop""")
     val `distage`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for distage""")
     val `fs2`                         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for fs2""")
@@ -32,6 +33,8 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `commons-lang3`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3""")
     val `doobie`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie""")
     val `zio-config`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
+    val `pekko-actor`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-actor""")
+    val `zio-nio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-nio""")
     val `slf4j-simple`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
     val `javet`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet""")
     val `zio-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
@@ -75,6 +78,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`scalatest`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-sbt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`scallop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slf4j-nop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`distage`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`fs2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -90,6 +94,8 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`commons-lang3`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`doobie`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-config`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`pekko-actor`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`zio-nio`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slf4j-simple`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-json`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -201,6 +207,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala3)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala212)(contextLibraryCollection.apply(("zio-nio", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala3)(contextLibraryCollection.apply(("jnativehook", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -250,6 +259,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala212)(contextLibraryCollection.apply(("zio-json", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`pekko-actor`)(djxIsScala213)(contextLibraryCollection.apply(("pekko-actor", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala211)(contextLibraryCollection.apply(("cats-effect", "2.11")))(
@@ -339,10 +351,16 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala213)(
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.13"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`pekko-actor`)(djxIsScala212)(contextLibraryCollection.apply(("pekko-actor", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala212)(
       contextLibraryCollection.apply(("http4s-Release-ember-client", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scala-sbt`)(djxIsScala212)(contextLibraryCollection.apply(("scala-sbt", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala211)(contextLibraryCollection.apply(("zio-nio", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
@@ -364,6 +382,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-twirl", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scallop`)(djxIsScala211)(contextLibraryCollection.apply(("scallop", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`pekko-all`)(djxIsScala213)(contextLibraryCollection.apply(("pekko-all", "2.13")))(
@@ -408,6 +429,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`scallop`)(djxIsScala212)(contextLibraryCollection.apply(("scallop", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -444,6 +468,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala211)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.11"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`pekko-actor`)(djxIsScala3)(contextLibraryCollection.apply(("pekko-actor", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala212)(contextLibraryCollection.apply(("kind-projector", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -451,6 +478,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala211)(contextLibraryCollection.apply(("cats-core", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala213)(contextLibraryCollection.apply(("zio-nio", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
@@ -490,6 +520,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("mysql-connector-java", "2.13"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zhttp`)(djxIsScala213)(contextLibraryCollection.apply(("zhttp", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`scallop`)(djxIsScala213)(contextLibraryCollection.apply(("scallop", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-simple", "3")))(
