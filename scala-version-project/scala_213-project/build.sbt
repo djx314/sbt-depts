@@ -173,7 +173,7 @@ VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
 VarContext.changeDeptVar         := "zio-nio"
-libraryDependencies += "dev.zio" %% "zio-nio" % "1.0.0-RC9"
+libraryDependencies += "dev.zio" %% "zio-nio" % "1.0.0-RC12"
 
 VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "3.5.1"
