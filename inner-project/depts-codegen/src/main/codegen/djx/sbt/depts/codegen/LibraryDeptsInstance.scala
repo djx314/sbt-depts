@@ -209,7 +209,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "3.5.1"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.0.0"
 
   VarContext.setScalaVersion := "2.12"
 
@@ -471,7 +471,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "3.5.1"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.0.0"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -729,7 +729,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "3.5.1"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.0.0"
 
   VarContext.setScalaVersion := "3"
 
