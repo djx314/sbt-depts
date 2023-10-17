@@ -44,7 +44,7 @@ libraryDependencies += "dev.zio" %%% "zio-test"     % "2.0.10"
 libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.10"
 
 VarContext.changeDeptVar             := "typesafe-config"
-libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.11.0"
