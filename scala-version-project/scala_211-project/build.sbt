@@ -80,9 +80,6 @@ libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M6"
 
-VarContext.changeDeptVar := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.2.4" exclude ("org.scala-lang.modules", "scala-parser-combinators_2.11")
-
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.9"
 
@@ -115,7 +112,7 @@ VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
-libraryDependencies += "dev.zio" %% "zio-logging" % "0.5.16"
+libraryDependencies += "dev.zio" %% "zio-logging" % "2.1.10"
 
 VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
@@ -124,10 +121,10 @@ VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
-libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "0.9.1"
+libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.0.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.2.0"
 
 VarContext.changeDeptVar          := "slf4j-nop"
 libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
@@ -139,7 +136,7 @@ VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
 VarContext.changeDeptVar         := "zio-nio"
-libraryDependencies += "dev.zio" %% "zio-nio" % "1.0.0-RC12"
+libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.1"
 
 VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "5.0.0"
