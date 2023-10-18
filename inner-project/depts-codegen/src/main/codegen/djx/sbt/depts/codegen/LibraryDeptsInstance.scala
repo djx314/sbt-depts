@@ -73,7 +73,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -279,7 +279,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -541,7 +541,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -791,7 +791,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.2"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
