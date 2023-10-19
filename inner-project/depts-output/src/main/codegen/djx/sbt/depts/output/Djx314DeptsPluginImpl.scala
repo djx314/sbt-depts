@@ -15,7 +15,6 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `http4s-Release-ember-client` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release-ember-client""")
     val `postgresql-jdbc`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for postgresql-jdbc""")
     val `scalatest`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
-    val `scala-sbt`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-sbt""")
     val `zio-logging`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
     val `scallop`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scallop""")
     val `slf4j-nop`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-nop""")
@@ -76,7 +75,6 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`http4s-Release-ember-client`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`postgresql-jdbc`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scalatest`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
-    innerSetting.setKey(libScalax.`scala-sbt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scallop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slf4j-nop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -357,9 +355,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala212)(
       contextLibraryCollection.apply(("http4s-Release-ember-client", "2.12"))
     )(sourcePosition.fromEnclosing()),
-    innerSetting.addLibrarySetting(libScalax.`scala-sbt`)(djxIsScala212)(contextLibraryCollection.apply(("scala-sbt", "2.12")))(
-      sourcePosition.fromEnclosing()
-    ),
     innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala211)(contextLibraryCollection.apply(("zio-nio", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
@@ -459,6 +454,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala3)(
       contextLibraryCollection.apply(("scala-java8-compat", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala3)(contextLibraryCollection.apply(("zio-nio", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala212)(contextLibraryCollection.apply(("circe", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -648,9 +646,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala211)(
       contextLibraryCollection.apply(("mysql-connector-java", "2.11"))
     )(sourcePosition.fromEnclosing()),
-    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala211)(
-      contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.11"))
-    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala211)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "2.11"))
     )(sourcePosition.fromEnclosing()),
@@ -681,6 +676,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala213)(
       contextLibraryCollection.apply(("scala-parser-combinators", "2.13"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`scallop`)(djxIsScala3)(contextLibraryCollection.apply(("scallop", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect-cps", "2.13")))(
       sourcePosition.fromEnclosing()
     ),

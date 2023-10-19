@@ -5,7 +5,6 @@ setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
 
 libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
-libraryDependencies ++= libScalax.`scala-sbt`.value
 
 Compile / unmanagedSourceDirectories := {
   val v1          = (Compile / unmanagedSourceDirectories).value
