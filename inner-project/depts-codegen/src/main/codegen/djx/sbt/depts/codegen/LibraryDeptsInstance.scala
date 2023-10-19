@@ -427,7 +427,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zhttp"
 
-  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+  libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
@@ -685,7 +685,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zhttp"
 
-  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+  libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
@@ -937,7 +937,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zhttp"
 
-  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+  libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
@@ -961,7 +961,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-logging"
 
-  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
+  libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
