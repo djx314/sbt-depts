@@ -144,7 +144,7 @@ VarContext.changeDeptVar         := "zio-logging"
 libraryDependencies += "dev.zio" %% "zio-logging" % "2.1.14"
 
 VarContext.changeDeptVar        := "zhttp"
-libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
+libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
 VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
@@ -162,7 +162,7 @@ VarContext.changeDeptVar          := "slf4j-nop"
 libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
 
 VarContext.changeDeptVar                            := "scala-logging"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
 
 VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
