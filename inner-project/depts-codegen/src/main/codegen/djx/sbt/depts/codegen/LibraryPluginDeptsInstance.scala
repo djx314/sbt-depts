@@ -13,7 +13,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("com.typesafe.play" % "sbt-twirl" % "1.6.2")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.1")
 
   VarContext.changePluginVar := "sbt-sonatype"
 

@@ -3,7 +3,7 @@ addSbtPlugin("org.scalameta"                     % "sbt-scalafmt"             % 
 VarContext.changePluginVar                      := "sbt-revolver"
 addSbtPlugin("io.spray"                          % "sbt-revolver"             % "0.10.0")
 VarContext.changePluginVar                      := "sbt-twirl"
-addSbtPlugin("com.typesafe.play"                 % "sbt-twirl"                % "1.6.2")
+addSbtPlugin("org.playframework.twirl"           % "sbt-twirl"                % "2.0.1")
 VarContext.changePluginVar                      := "sbt-sonatype"
 addSbtPlugin("org.xerial.sbt"                    % "sbt-sonatype"             % "3.9.21")
 VarContext.changePluginVar                      := "sbt-pgp"
