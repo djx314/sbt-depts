@@ -152,7 +152,7 @@ VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
 VarContext.changeDeptVar          := "mysql-connector-java"
-libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.1.0"
+libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.2.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
