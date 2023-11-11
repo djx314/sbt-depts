@@ -2,7 +2,7 @@ import Settings._
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
-setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
+setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(false)
 
 Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
 

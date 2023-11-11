@@ -23,7 +23,7 @@ genAction := {
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
 }
 
-val allfmt = taskKey[Unit]("Format all projects.")
+/*val allfmt = taskKey[Unit]("Format all projects.")
 allfmt := {
   (Compile / scalafmtSbt).value
   (`depts-abs` / Compile / scalafmtSbt).value
@@ -36,9 +36,9 @@ allfmt := {
   (`depts-codegen` / Compile / scalafmt).value
   (`depts-output-plugins` / Compile / scalafmt).value
   (`depts-output` / Compile / scalafmt).value
-}
+}*/
 
-addCommandAlias("preparePackaging", "; updateMVersion; genAction; allfmt;")
+addCommandAlias("preparePackaging", "; updateMVersion; genAction;")
 
 setting.setKey(Global / onChangedBuildSource)(sourcePosition.fromEnclosing).value(ReloadOnSourceChanges)
 setting.setKey(`depts-abs` / name)(sourcePosition.fromEnclosing).value("sbt-depts-abs")
