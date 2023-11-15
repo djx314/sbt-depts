@@ -97,7 +97,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-web-scalajs"
 
-  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.2.0")
+  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.3.0")
 
   VarContext.changePluginVar := "sbt-playframework"
 
