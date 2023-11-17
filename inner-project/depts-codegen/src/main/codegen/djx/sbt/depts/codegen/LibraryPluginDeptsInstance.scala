@@ -13,11 +13,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.1")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.2")
 
   VarContext.changePluginVar := "sbt-sonatype"
 
-  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.9.21")
+  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.10.0")
 
   VarContext.changePluginVar := "sbt-pgp"
 
