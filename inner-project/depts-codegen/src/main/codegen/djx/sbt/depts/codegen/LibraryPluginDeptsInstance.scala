@@ -49,7 +49,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-depts-djx314"
 
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M801")
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.1-M805")
 
   VarContext.changePluginVar := "sbt-js-engine"
 
