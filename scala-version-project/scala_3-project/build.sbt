@@ -110,9 +110,9 @@ VarContext.changeDeptVar                := "distage"
 libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.0"
 
 VarContext.changeDeptVar                    := "slick"
-libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0-M4"
-libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M4"
-libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.0-M4"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0-M5"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-M5"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.0-M5"
 
 VarContext.changeDeptVar               := "logback-classic"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.4.11"
