@@ -177,7 +177,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.0"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
@@ -435,7 +435,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.0"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
@@ -693,7 +693,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.0"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
@@ -945,7 +945,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.0"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
