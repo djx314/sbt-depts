@@ -31,13 +31,13 @@ trait pUtils {
   class setting(implicit m: Monad[sbt.Def.Initialize]) {
     class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
       def value[U: Adt.CoProducts2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.CoProducts2[T, sbt.Def.Initialize[T]](u)
+        val applyM = Adt.CoProduct2[T, sbt.Def.Initialize[T]](u)
         val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize], identity)
         sKey.set(initT, lp)
       }
 
       def setIfNone[U: Adt.CoProducts3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.CoProducts3[() => T, T, sbt.Def.Initialize[T]](default)
+        val applyM = Adt.CoProduct3[() => T, T, sbt.Def.Initialize[T]](default)
         val defaultValue: sbt.Def.Initialize[() => T] =
           applyM.fold(t => t.pure[sbt.Def.Initialize], t => (() => t).pure[sbt.Def.Initialize], t => for (d <- t) yield () => d)
 
@@ -55,16 +55,17 @@ trait pUtils {
       def appendOneOrMore[U: Adt.CoProducts4[*, T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]]](
         u: U
       ): sbt.Def.Setting[Seq[T]] = {
-        val applyM = Adt.CoProducts4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
+        val applyM = Adt.CoProduct4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
 
         type Opt2 = Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
-        val Opts2 = Adt.CoProducts2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
+        val Opt2Apply: Adt.CoProduct2Apply[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]] =
+          Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
         val applyM1: Opt2 = applyM match {
-          case Adt.CoProduct1(t) => Opts2(t.pure[sbt.Def.Initialize])
-          case Adt.CoProduct2(t) => Opts2(t)
-          case Adt.CoProduct3(t) => Opts2(t.pure[sbt.Def.Initialize])
-          case Adt.CoProduct4(t) => Opts2(t)
+          case Adt.CoProduct1(t) => Opt2Apply(t.pure[sbt.Def.Initialize])
+          case Adt.CoProduct2(t) => Opt2Apply(t)
+          case Adt.CoProduct3(t) => Opt2Apply(t.pure[sbt.Def.Initialize])
+          case Adt.CoProduct4(t) => Opt2Apply(t)
           case Adt.CoProduct5(t) => t.matchErrorAndThrowException
         }
 
