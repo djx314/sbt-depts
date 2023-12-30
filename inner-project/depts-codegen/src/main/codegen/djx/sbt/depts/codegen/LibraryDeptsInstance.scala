@@ -303,9 +303,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0"
 
   libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
@@ -561,9 +561,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-config" % "3.0.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.0"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "3.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.0"
 
   libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "3.0.7"
 
