@@ -101,7 +101,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.10"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -189,7 +189,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.10"
 
   VarContext.changeDeptVar := "scala-logging"
 
@@ -315,7 +315,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.10"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -447,7 +447,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.10"
 
   VarContext.changeDeptVar := "scala-logging"
 
@@ -573,7 +573,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.10"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -705,7 +705,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.10"
 
   VarContext.changeDeptVar := "scala-logging"
 
@@ -823,7 +823,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.10"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -957,7 +957,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.9"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.10"
 
   VarContext.changeDeptVar := "scala-logging"
 
