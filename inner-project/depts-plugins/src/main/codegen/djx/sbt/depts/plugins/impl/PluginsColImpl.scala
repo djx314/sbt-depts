@@ -20,13 +20,13 @@ trait PluginsColImpl {
 
   val `sbt-ide-settings`: sbt.librarymanagement.ModuleID = """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.2"""
 
-  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.14.0"""
+  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.15.0"""
 
   val `sbt-platform-deps`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-platform-deps""" % """1.0.2"""
 
   val `flyway-sbt`: sbt.librarymanagement.ModuleID = """io.github.davidmweber""" % """flyway-sbt""" % """7.4.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M811"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M818"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.3.5"""
 
@@ -36,7 +36,7 @@ trait PluginsColImpl {
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.0.9"""
 
-  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.20.0"""
+  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.22.0"""
 
   val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.4.0"""
 
@@ -52,6 +52,6 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.3.0"""
 
-  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.0"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.1"""
 
 }
