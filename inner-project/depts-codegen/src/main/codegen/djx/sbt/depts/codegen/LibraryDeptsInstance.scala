@@ -863,13 +863,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.3.0"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.0"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.3.0"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.4.0"
 
   VarContext.changeDeptVar := "shapeless3-test"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.3.0"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.4.0"
 
   VarContext.changeDeptVar := "fs2"
 
