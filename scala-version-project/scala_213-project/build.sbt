@@ -112,7 +112,7 @@ VarContext.changeDeptVar                := "distage"
 libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.3"
 
 VarContext.changeDeptVar              := "play-circe"
-libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
+libraryDependencies += "com.dripower" %% "play-circe" % "3014.1"
 
 VarContext.changeDeptVar                    := "slick"
 libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0-M5"
