@@ -369,7 +369,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.3"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.5"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -627,7 +627,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.3"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.5"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -883,7 +883,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.3"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.5"
 
   VarContext.changeDeptVar := "slick"
 
