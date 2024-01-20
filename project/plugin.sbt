@@ -39,7 +39,7 @@ addSbtPlugin("pl.project13.scala"                % "sbt-jmh"                  % 
 VarContext.changePluginVar                      := "sbt-native-packager"
 addSbtPlugin("com.github.sbt"                    % "sbt-native-packager"      % "1.9.16")
 VarContext.changePluginVar                      := "sbt-dependency-updates"
-addSbtPlugin("org.jmotor.sbt"                    % "sbt-dependency-updates"   % "1.2.7")
+addSbtPlugin("org.jmotor.sbt"                    % "sbt-dependency-updates"   % "1.2.8")
 VarContext.changePluginVar                      := "sbt-less"
 addSbtPlugin("com.typesafe.sbt"                  % "sbt-less"                 % "1.1.2")
 VarContext.changePluginVar                      := "sbt-web"

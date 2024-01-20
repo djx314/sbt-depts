@@ -85,7 +85,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
-  addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.7")
+  addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.8")
 
   VarContext.changePluginVar := "sbt-less"
 
