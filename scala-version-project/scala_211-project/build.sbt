@@ -81,7 +81,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M9"
 
 VarContext.changeDeptVar             := "javacv-platform"
-libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.9"
+libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
