@@ -91,7 +91,7 @@ VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.9.3"
 
 VarContext.changeDeptVar             := "javacv-platform"
-libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.9"
+libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
