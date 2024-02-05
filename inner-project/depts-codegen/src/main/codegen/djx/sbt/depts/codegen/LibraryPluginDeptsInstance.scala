@@ -89,7 +89,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-less"
 
-  addSbtPlugin("com.github.sbt" % "sbt-less" % "1.5.0")
+  addSbtPlugin("com.github.sbt" % "sbt-less" % "2.0.1")
 
   VarContext.changePluginVar := "sbt-web"
 
