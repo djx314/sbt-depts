@@ -14,9 +14,9 @@ libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.6"
 
 VarContext.changeDeptVar                := "scalatest"
 libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.17"
-libraryDependencies += "org.scalatest" %%% "scalatest"          % "3.2.17"
-libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.17"
-libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.17"
+libraryDependencies += "org.scalatest" %%% "scalatest"          % "3.2.18"
+libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.18"
+libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
 
 VarContext.changeDeptVar                := "cats-effect"
 libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.3"
