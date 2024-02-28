@@ -120,7 +120,7 @@ libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0-RC1"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.0-RC1"
 
 VarContext.changeDeptVar               := "logback-classic"
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.0"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.1"
 
 VarContext.changeDeptVar                  := "javet"
 libraryDependencies += "com.caoccao.javet" % "javet" % "3.0.4"
