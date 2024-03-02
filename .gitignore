@@ -1,0 +1,17 @@
+/.idea/
+/inner-project/.idea/
+/sbt.bat
+/sbt-launch.jar
+/.metals/
+/.vscode/
+/.bsp/
+**/.bloop/
+**/target/
+**/metals.sbt
+/inner-project/.bsp/
+/inner-project/sbt.bat
+/inner-project/sbt-launch.jar
+/inner-project/sonatype.sbt
+/inner-project/.metals/
+/inner-project/.vscode/
+/project/sdap.sbt
