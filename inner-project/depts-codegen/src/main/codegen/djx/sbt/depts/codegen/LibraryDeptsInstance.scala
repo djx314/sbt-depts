@@ -25,7 +25,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
 
@@ -229,7 +229,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
 
@@ -487,7 +487,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
 
@@ -631,7 +631,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "play-circe"
 
-  libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
+  libraryDependencies += "com.dripower" %% "play-circe" % "3014.1"
 
   VarContext.changeDeptVar := "slick"
 
@@ -737,7 +737,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.17"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
   libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
 
