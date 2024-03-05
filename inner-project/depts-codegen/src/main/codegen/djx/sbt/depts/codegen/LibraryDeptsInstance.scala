@@ -283,17 +283,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.26"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -541,17 +541,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.26"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -791,17 +791,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.26"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.25"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.26"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
