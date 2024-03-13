@@ -33,7 +33,7 @@ addSbtPlugin("org.scoverage"                     % "sbt-scoverage"            % 
 VarContext.changePluginVar                      := "sbt-github-actions"
 addSbtPlugin("com.github.sbt"                    % "sbt-github-actions"       % "0.23.0")
 VarContext.changePluginVar                      := "sbt-jacoco"
-addSbtPlugin("com.github.sbt"                    % "sbt-jacoco"               % "3.4.0")
+addSbtPlugin("com.github.sbt"                    % "sbt-jacoco"               % "3.5.0")
 VarContext.changePluginVar                      := "sbt-jmh"
 addSbtPlugin("pl.project13.scala"                % "sbt-jmh"                  % "0.4.7")
 VarContext.changePluginVar                      := "sbt-native-packager"

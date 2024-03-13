@@ -73,7 +73,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-jacoco"
 
-  addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.4.0")
+  addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.5.0")
 
   VarContext.changePluginVar := "sbt-jmh"
 
