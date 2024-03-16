@@ -139,4 +139,4 @@ VarContext.changeDeptVar         := "zio-nio"
 libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.1"
 
 VarContext.changeDeptVar             := "scallop"
-libraryDependencies += "org.rogach" %%% "scallop" % "5.0.1"
+libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
