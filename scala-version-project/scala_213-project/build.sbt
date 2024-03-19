@@ -109,7 +109,7 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.9.4"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.9.4"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.6"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.7"
 
 VarContext.changeDeptVar              := "play-circe"
 libraryDependencies += "com.dripower" %% "play-circe" % "3014.1"
