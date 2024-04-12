@@ -81,7 +81,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.9.16")
+  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.10.0")
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
