@@ -115,9 +115,9 @@ VarContext.changeDeptVar              := "play-circe"
 libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
 
 VarContext.changeDeptVar                    := "slick"
-libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.0"
-libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.0"
-libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.0"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.1"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.1"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.1"
 
 VarContext.changeDeptVar               := "logback-classic"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.5"
