@@ -443,7 +443,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-parser-combinators"
 
-  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
   VarContext.changeDeptVar := "slf4j-nop"
 
@@ -701,7 +701,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-parser-combinators"
 
-  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
   VarContext.changeDeptVar := "slf4j-nop"
 
@@ -953,7 +953,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-parser-combinators"
 
-  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.3.0"
+  libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
   VarContext.changeDeptVar := "slf4j-nop"
 
