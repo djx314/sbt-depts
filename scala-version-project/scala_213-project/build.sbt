@@ -8,9 +8,9 @@ VarContext.changeDeptVar       := "better-monadic-for"
 addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.6"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.6"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.6"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.7"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.7"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.7"
 
 VarContext.changeDeptVar                := "scalatest"
 libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.18"
