@@ -84,7 +84,7 @@ VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
 
 VarContext.changeDeptVar              := "shapeless"
-libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.10"
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.11"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "2.1.0"
