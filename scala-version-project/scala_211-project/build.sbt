@@ -80,6 +80,7 @@ libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M10"
 
+
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
 

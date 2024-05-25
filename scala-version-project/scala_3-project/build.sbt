@@ -81,8 +81,8 @@ libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M10"
 
-VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha14"
+/*VarContext.changeDeptVar               := "sbt-librarymanagement-core"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha14"*/
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
@@ -174,4 +174,4 @@ VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
 
 VarContext.changeDeptVar             := "spire"
-libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0-M3"
+libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
