@@ -207,6 +207,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
 
+  VarContext.changeDeptVar := "spire"
+
+  libraryDependencies += "org.typelevel" %%% "spire" % "0.16.2"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.19"
@@ -464,6 +468,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scallop"
 
   libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+
+  VarContext.changeDeptVar := "spire"
+
+  libraryDependencies += "org.typelevel" %%% "spire" % "0.17.0"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -723,6 +731,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
 
+  VarContext.changeDeptVar := "spire"
+
+  libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.4.2"
@@ -845,9 +857,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M10"
 
-  VarContext.changeDeptVar := "sbt-librarymanagement-core"
+  /*VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha14"
+          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha14"*/
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -974,5 +986,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scallop"
 
   libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+
+  VarContext.changeDeptVar := "spire"
+
+  libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
 
 }

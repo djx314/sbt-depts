@@ -58,6 +58,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `shapeless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
     val `zio-interop-reactivestreams` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-interop-reactivestreams""")
+    val `spire`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for spire""")
     val `jnativehook`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
     val `cats-core`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
     val `scala-parser-combinators`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
@@ -118,6 +119,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-interop-reactivestreams`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`spire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jnativehook`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-parser-combinators`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -164,6 +166,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala213)(contextLibraryCollection.apply(("doobie-h2", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`spire`)(djxIsScala213)(contextLibraryCollection.apply(("spire", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala213)(contextLibraryCollection.apply(("circe", "2.13")))(
@@ -346,6 +351,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala3)(contextLibraryCollection.apply(("simple-adt", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`spire`)(djxIsScala212)(contextLibraryCollection.apply(("spire", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala213)(
       contextLibraryCollection.apply(("sbt-librarymanagement-core", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -361,9 +369,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
-    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala3)(
-      contextLibraryCollection.apply(("sbt-librarymanagement-core", "3"))
-    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala213)(contextLibraryCollection.apply(("jintellitype", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -463,6 +468,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala3)(contextLibraryCollection.apply(("commons-lang3", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`spire`)(djxIsScala3)(contextLibraryCollection.apply(("spire", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala211)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.11"))
     )(sourcePosition.fromEnclosing()),
@@ -491,6 +499,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("commons-lang3-bridge", "2.13"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala212)(contextLibraryCollection.apply(("distage", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`spire`)(djxIsScala211)(contextLibraryCollection.apply(("spire", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala211)(contextLibraryCollection.apply(("commons-io", "2.11")))(
