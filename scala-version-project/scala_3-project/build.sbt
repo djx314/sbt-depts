@@ -174,4 +174,4 @@ VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
 
 VarContext.changeDeptVar             := "spire"
-libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0-M1"
+libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0-M3"
