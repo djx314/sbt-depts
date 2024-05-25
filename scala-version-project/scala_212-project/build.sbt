@@ -178,5 +178,11 @@ libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.2"
 VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
 
-VarContext.changeDeptVar             := "spire"
+VarContext.changeDeptVar                := "spire"
 libraryDependencies += "org.typelevel" %%% "spire" % "0.17.0"
+
+VarContext.changeDeptVar                   := "commons-math3"
+libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
+
+VarContext.changeDeptVar               := "breeze"
+libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
