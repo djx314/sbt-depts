@@ -172,3 +172,6 @@ libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.2"
 
 VarContext.changeDeptVar             := "scallop"
 libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+
+VarContext.changeDeptVar             := "spire"
+libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0-M1"
