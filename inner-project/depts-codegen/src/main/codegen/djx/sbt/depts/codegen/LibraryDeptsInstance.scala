@@ -211,6 +211,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "spire" % "0.16.2"
 
+  VarContext.changeDeptVar := "commons-math3"
+
+  libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
+
+  VarContext.changeDeptVar := "breeze"
+
+  libraryDependencies += "org.scalanlp" %%% "breeze" % "1.0"
+
   VarContext.setScalaVersion := "2.12"
 
   scalaVersion := "2.12.19"
@@ -472,6 +480,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "spire"
 
   libraryDependencies += "org.typelevel" %%% "spire" % "0.17.0"
+
+  VarContext.changeDeptVar := "commons-math3"
+
+  libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
+
+  VarContext.changeDeptVar := "breeze"
+
+  libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -735,6 +751,14 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
 
+  VarContext.changeDeptVar := "commons-math3"
+
+  libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
+
+  VarContext.changeDeptVar := "breeze"
+
+  libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.4.2"
@@ -990,5 +1014,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "spire"
 
   libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
+
+  VarContext.changeDeptVar := "commons-math3"
+
+  libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
+
+  VarContext.changeDeptVar := "breeze"
+
+  libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
 
 }

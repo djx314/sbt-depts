@@ -23,6 +23,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `kind-projector`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
     val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
     val `jmh-generator-annprocess`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jmh-generator-annprocess""")
+    val `commons-math3`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-math3""")
     val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
     val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
     val `jintellitype`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
@@ -49,6 +50,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `http4s-Release`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
     val `scala-logging`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-logging""")
     val `sbt-librarymanagement-core`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
+    val `breeze`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for breeze""")
     val `shapeless3-test`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
     val `circe`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
@@ -84,6 +86,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`kind-projector`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`simple-adt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jmh-generator-annprocess`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`commons-math3`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slick`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jintellitype`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -110,6 +113,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`http4s-Release`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`sbt-librarymanagement-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`breeze`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless3-test`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect-cps`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -139,6 +143,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala212)(contextLibraryCollection.apply(("slf4j-nop", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`breeze`)(djxIsScala3)(contextLibraryCollection.apply(("breeze", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala213)(contextLibraryCollection.apply(("scalatest", "2.13")))(
@@ -369,6 +376,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`breeze`)(djxIsScala211)(contextLibraryCollection.apply(("breeze", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala213)(contextLibraryCollection.apply(("jintellitype", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -436,6 +446,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`shapeless`)(djxIsScala212)(contextLibraryCollection.apply(("shapeless", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`breeze`)(djxIsScala212)(contextLibraryCollection.apply(("breeze", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala212)(contextLibraryCollection.apply(("macwire", "2.12")))(
@@ -514,6 +527,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`breeze`)(djxIsScala213)(contextLibraryCollection.apply(("breeze", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala213)(contextLibraryCollection.apply(("zio2", "2.13")))(
@@ -615,6 +631,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-twirl`)(djxIsScala211)(contextLibraryCollection.apply(("http4s-twirl", "2.11")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala213)(contextLibraryCollection.apply(("commons-math3", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala3)(contextLibraryCollection.apply(("javacv-platform", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -651,6 +670,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`javacv-platform`)(djxIsScala213)(contextLibraryCollection.apply(("javacv-platform", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala212)(contextLibraryCollection.apply(("commons-math3", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala213)(contextLibraryCollection.apply(("distage", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -660,6 +682,12 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala211)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "2.11"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala211)(contextLibraryCollection.apply(("commons-math3", "2.11")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala3)(contextLibraryCollection.apply(("commons-math3", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala212)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.12"))
     )(sourcePosition.fromEnclosing()),
