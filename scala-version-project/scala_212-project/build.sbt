@@ -37,9 +37,9 @@ VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC5"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"         % "2.1.1"
-libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.1"
-libraryDependencies += "dev.zio" %%% "zio-test"    % "2.1.1"
+libraryDependencies += "dev.zio" %%% "zio"          % "2.1.1"
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.1"
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.1"
 libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.1"
 
 VarContext.changeDeptVar             := "typesafe-config"
@@ -100,7 +100,7 @@ VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.6.2"
 
 VarContext.changeDeptVar              := "shapeless"
-libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.11"
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.10.2"
