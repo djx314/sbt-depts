@@ -21,7 +21,7 @@ addSbtPlugin("org.portable-scala"                % "sbt-platform-deps"        % 
 VarContext.changePluginVar                      := "flyway-sbt"
 addSbtPlugin("io.github.davidmweber"             % "flyway-sbt"               % "7.4.0")
 VarContext.changePluginVar                      := "sbt-depts-djx314"
-addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M848")
+addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M851")
 VarContext.changePluginVar                      := "sbt-js-engine"
 addSbtPlugin("com.github.sbt"                    % "sbt-js-engine"            % "1.3.6")
 VarContext.changePluginVar                      := "sbt-scala-js-map"
