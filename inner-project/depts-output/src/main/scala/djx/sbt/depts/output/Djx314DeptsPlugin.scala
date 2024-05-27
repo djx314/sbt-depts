@@ -16,7 +16,6 @@ package impl {
   class BuildKeysAbs {
     val djxIsScalaJs: sbt.SettingKey[Option[Boolean]]                                       = settingKey[Option[Boolean]]("Is scala.js")
     val djxIsScala2: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 2")
-    val djxIsScala211: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.11")
     val djxIsScala212: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.12")
     val djxIsScala213: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.13")
     val djxIsScala3: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 3")
@@ -96,8 +95,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
 
       settingsCol.+=(djxIsScala2 := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(2L) })
 
-      settingsCol.+=(djxIsScala211 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(11L) && djxIsScala2.value })
-
       settingsCol.+=(djxIsScala212 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(12L) && djxIsScala2.value })
 
       settingsCol.+=(djxIsScala213 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(13L) && djxIsScala2.value })
@@ -115,13 +112,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
 
     object fix {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
-
-      settingsCol.+=(libScalax.circe := {
-        if (djxIsScala211.value && djxIsScalaJs.value == Some(true))
-          Seq.empty
-        else
-          for (libCol <- libScalax.circe.?.value.to(List); lib <- libCol) yield lib
-      })
 
       val collect = settingsCol.to(List)
     }

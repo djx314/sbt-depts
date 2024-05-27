@@ -10,17 +10,18 @@ import scala.collection.compat._
 
 trait AppHaveATest {
 
-  case class ScalaV(v211: Option[String], v212: Option[String], v213: Option[String], v3: Option[String]) {
+  case class ScalaV(v212: Option[String], v213: Option[String], v3: Option[String]) {
     private def namesMap: List[(String, String)] =
-      List("v211", "v212", "v213", "v3").zip(productIterator.to(List)).to(List).map(s => (s._1, s._2.asInstanceOf[Option[String]].get))
+      List("v212", "v213", "v3").zip(productIterator.to(List)).to(List).map(s => (s._1, s._2.asInstanceOf[Option[String]].get))
 
     val threeX = "\"" * 3
     def genString: String = s"""
          |val scalaV: ScalaV = ScalaV(${namesMap.map(s => s"`${s._1}` = ${threeX}${s._2}${threeX}").mkString(", ")})
          |""".stripMargin
   }
+
   object ScalaV {
-    def init: ScalaV = ScalaV(v211 = Option.empty, v212 = Option.empty, v213 = Option.empty, v3 = Option.empty)
+    def init: ScalaV = ScalaV(v212 = Option.empty, v213 = Option.empty, v3 = Option.empty)
     val V212: String = "2.12"
     val V213: String = "2.13"
     val V3: String   = "3"
@@ -67,7 +68,9 @@ trait AppHaveATest {
           libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), temp2))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
-                        case ScalaV.V212 =>
+            case "2.11" =>
+
+            case ScalaV.V212 =>
               scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v212 = Option(scalaV)))
               PluginScalaVersionBoolean = "djxIsScala212"
             case ScalaV.V213 =>

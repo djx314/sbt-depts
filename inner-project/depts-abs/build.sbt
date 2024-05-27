@@ -9,7 +9,6 @@ Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).val
 libraryDependencies ++= libScalax.`typesafe-config`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 
-val buildSbtFile1: File   = (`root/file` / ".." / "scala-version-project" / "scala_211-project" / "build.sbt").getCanonicalFile
 val buildSbtFile2: File   = (`root/file` / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
 val buildSbtFile3: File   = (`root/file` / ".." / "scala-version-project" / "scala_213-project" / "build.sbt").getCanonicalFile
 val buildSbtFile4: File   = (`root/file` / ".." / "scala-version-project" / "scala_3-project" / "build.sbt").getCanonicalFile
@@ -27,7 +26,6 @@ val writFile3: File =
 genActionImpl := {
   (Compile / runMain).inputTaskValue
     .partialInput(" djx.sbt.depts.abs.CodegenAction")
-    .partialInput(s""" ${buildSbtFile1.toString}""")
     .partialInput(s""" ${buildSbtFile2.toString}""")
     .partialInput(s""" ${buildSbtFile3.toString}""")
     .partialInput(s""" ${buildSbtFile4.toString}""")

@@ -12,9 +12,9 @@ object CodegenAction {
   def main(arr: Array[String]): Unit = {
     def genString(pathStr: String): String =
       Using.resource(Source.fromFile(Paths.get(pathStr).toFile, StandardCharsets.UTF_8.name()))(u => u.getLines().mkString("\n"))
-    val strCol = arr.take(4).map(genString)
+    val strCol = arr.take(3).map(genString)
 
-    val writePath = Paths.get(arr(4))
+    val writePath = Paths.get(arr(3))
     locally {
       Files.createDirectories(writePath.getParent)
     }
