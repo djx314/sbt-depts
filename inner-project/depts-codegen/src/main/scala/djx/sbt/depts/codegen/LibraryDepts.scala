@@ -21,7 +21,6 @@ trait AppHaveATest {
   }
   object ScalaV {
     def init: ScalaV = ScalaV(v211 = Option.empty, v212 = Option.empty, v213 = Option.empty, v3 = Option.empty)
-    val V211: String = "2.11"
     val V212: String = "2.12"
     val V213: String = "2.13"
     val V3: String   = "3"
@@ -68,10 +67,7 @@ trait AppHaveATest {
           libSettingsMap = libSettingsMap + (((contextVarName, contextScalaVersion), temp2))
         case LibraryDepts.ScalaVersionSingleSettings(scalaV) =>
           contextScalaVersion match {
-            case ScalaV.V211 =>
-              scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v211 = Option(scalaV)))
-              PluginScalaVersionBoolean = "djxIsScala211"
-            case ScalaV.V212 =>
+                        case ScalaV.V212 =>
               scalaVersionCollect = scalaVersionCollect.andThen(_.copy(v212 = Option(scalaV)))
               PluginScalaVersionBoolean = "djxIsScala212"
             case ScalaV.V213 =>
