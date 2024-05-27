@@ -151,7 +151,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.11"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
 
   VarContext.changeDeptVar := "fs2"
 
@@ -421,7 +421,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.11"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
 
   VarContext.changeDeptVar := "fs2"
 
