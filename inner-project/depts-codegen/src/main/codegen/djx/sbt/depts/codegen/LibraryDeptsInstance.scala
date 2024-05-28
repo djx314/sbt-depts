@@ -219,7 +219,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.2.4"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -489,7 +489,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.2.4"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -753,7 +753,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.2.4"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
 
   VarContext.changeDeptVar := "zhttp"
 
