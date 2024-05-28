@@ -22,7 +22,7 @@ VarContext.changeDeptVar                := "cats-effect"
 libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.4"
 
 VarContext.changeDeptVar                := "cats-core"
-libraryDependencies += "org.typelevel" %%% "cats-core" % "2.11.0"
+libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
 
 VarContext.changeDeptVar               := "h2"
 libraryDependencies += "com.h2database" % "h2" % "2.1.214"

@@ -39,7 +39,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-core"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.11.0"
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
 
   VarContext.changeDeptVar := "h2"
 
@@ -309,7 +309,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-core"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.11.0"
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
 
   VarContext.changeDeptVar := "h2"
 
@@ -571,7 +571,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "cats-core"
 
-  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.11.0"
+  libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
 
   VarContext.changeDeptVar := "h2"
 
