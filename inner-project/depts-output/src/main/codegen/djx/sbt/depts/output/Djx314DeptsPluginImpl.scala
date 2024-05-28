@@ -54,6 +54,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `shapeless3-test`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
     val `circe`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
+    val `slickless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slickless""")
     val `doobie-h2`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
     val `javacv-platform`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
     val `commons-io`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
@@ -117,6 +118,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`shapeless3-test`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect-cps`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`slickless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`doobie-h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javacv-platform`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-io`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -268,6 +270,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`jnativehook`)(djxIsScala213)(contextLibraryCollection.apply(("jnativehook", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`slickless`)(djxIsScala212)(contextLibraryCollection.apply(("slickless", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala212)(
       contextLibraryCollection.apply(("http4s-Release-ember-server", "2.12"))
     )(sourcePosition.fromEnclosing()),
@@ -334,6 +339,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-librarymanagement-core`)(djxIsScala3)(
+      contextLibraryCollection.apply(("sbt-librarymanagement-core", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala213)(contextLibraryCollection.apply(("jintellitype", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -437,6 +445,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("commons-lang3-bridge", "2.13"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala212)(contextLibraryCollection.apply(("distage", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slickless`)(djxIsScala3)(contextLibraryCollection.apply(("slickless", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala212)(contextLibraryCollection.apply(("zio-config", "2.12")))(
@@ -560,6 +571,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala3)(contextLibraryCollection.apply(("commons-math3", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`slickless`)(djxIsScala213)(contextLibraryCollection.apply(("slickless", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala212)(

@@ -67,7 +67,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.1"
 
-  // libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.0.18"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.1"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -272,6 +272,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "breeze"
 
   libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
+
+  VarContext.changeDeptVar := "slickless"
+
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -543,6 +547,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
 
+  VarContext.changeDeptVar := "slickless"
+
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.4.2"
@@ -665,9 +673,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M15"
 
-  /*VarContext.changeDeptVar               := "sbt-librarymanagement-core"
+  VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-          libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha14"*/
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha9"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -806,5 +814,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "breeze"
 
   libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
+
+  VarContext.changeDeptVar := "slickless"
+
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
 
 }
