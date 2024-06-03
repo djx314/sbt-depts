@@ -675,7 +675,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha9"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha15"
 
   VarContext.changeDeptVar := "javacv-platform"
 
