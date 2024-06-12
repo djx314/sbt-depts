@@ -107,7 +107,7 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.10.2"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.10.2"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.8"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.9"
 
 VarContext.changeDeptVar                    := "slick"
 libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.5.1"
