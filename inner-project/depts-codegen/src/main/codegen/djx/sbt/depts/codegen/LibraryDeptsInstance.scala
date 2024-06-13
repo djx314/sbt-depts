@@ -185,7 +185,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -459,7 +459,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -727,7 +727,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.3"
 
   VarContext.changeDeptVar := "jintellitype"
 
