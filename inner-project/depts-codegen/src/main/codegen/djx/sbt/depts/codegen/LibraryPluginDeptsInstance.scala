@@ -93,7 +93,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-web"
 
-  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.6")
+  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.7")
 
   VarContext.changePluginVar := "sbt-web-scalajs"
 
