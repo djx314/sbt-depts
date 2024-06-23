@@ -27,11 +27,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -301,11 +301,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -567,11 +567,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
