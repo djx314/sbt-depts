@@ -25,7 +25,7 @@ VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
 
 VarContext.changeDeptVar               := "h2"
-libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+libraryDependencies += "com.h2database" % "h2" % "2.3.230"
 
 VarContext.changeDeptVar              := "doobie"
 libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC5"
