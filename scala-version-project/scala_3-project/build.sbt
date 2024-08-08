@@ -64,7 +64,7 @@ libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "4.0.2"
 libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.2"
 
 VarContext.changeDeptVar          := "slf4j-simple"
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.13"
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.15"
 
 VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
@@ -159,7 +159,7 @@ VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
 VarContext.changeDeptVar          := "slf4j-nop"
-libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.13"
+libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.15"
 
 VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
