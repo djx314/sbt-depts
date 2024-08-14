@@ -553,7 +553,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.setScalaVersion := "3"
 
-  scalaVersion := "3.4.2"
+  scalaVersion := "3.4.3"
 
   VarContext.changeDeptVar := "circe"
 
