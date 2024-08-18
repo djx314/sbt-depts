@@ -7,7 +7,7 @@ import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 trait BuildKeys extends impl.BuildKeysAbs {
 
-  val scalaV: ScalaV = ScalaV(`v212` = """2.12.19""", `v213` = """2.13.14""", `v3` = """3.4.2""")
+  val scalaV: ScalaV = ScalaV(`v212` = """2.12.19""", `v213` = """2.13.14""", `v3` = """3.4.3""")
 
   object libScalax {
     val `typesafe-config`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
