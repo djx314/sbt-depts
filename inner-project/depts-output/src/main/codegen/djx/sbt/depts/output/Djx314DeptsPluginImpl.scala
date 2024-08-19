@@ -38,6 +38,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `slf4j-simple`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
     val `javet`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet""")
     val `zio-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
+    val `simple-adt-bridge-support`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt-bridge-support""")
     val `better-monadic-for`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for better-monadic-for""")
     val `play-circe`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
     val `pekko-all`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-all""")
@@ -102,6 +103,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`slf4j-simple`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-json`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`simple-adt-bridge-support`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`better-monadic-for`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`play-circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`pekko-all`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -222,6 +224,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`shapeless3-test`)(djxIsScala3)(contextLibraryCollection.apply(("shapeless3-test", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt-bridge-support`)(djxIsScala213)(
+      contextLibraryCollection.apply(("simple-adt-bridge-support", "2.13"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala3)(contextLibraryCollection.apply(("cats-core", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -357,6 +362,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`cats-core`)(djxIsScala212)(contextLibraryCollection.apply(("cats-core", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt-bridge-support`)(djxIsScala3)(
+      contextLibraryCollection.apply(("simple-adt-bridge-support", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`play-circe`)(djxIsScala213)(contextLibraryCollection.apply(("play-circe", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -441,6 +449,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`simple-adt-bridge-support`)(djxIsScala212)(
+      contextLibraryCollection.apply(("simple-adt-bridge-support", "2.12"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala213)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "2.13"))
     )(sourcePosition.fromEnclosing()),

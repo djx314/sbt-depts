@@ -277,6 +277,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
 
+  VarContext.changeDeptVar := "simple-adt-bridge-support"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v11"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.14"
@@ -551,6 +555,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
 
+  VarContext.changeDeptVar := "simple-adt-bridge-support"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v11"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.4.3"
@@ -818,5 +826,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "slickless"
 
   libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+
+  VarContext.changeDeptVar := "simple-adt-bridge-support"
+
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v11"
 
 }
