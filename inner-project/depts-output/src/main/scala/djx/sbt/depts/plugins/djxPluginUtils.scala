@@ -32,14 +32,14 @@ trait pUtils {
     class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
       def value[U: Adt.CoProducts2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
         val applyM = Adt.CoProduct2[T, sbt.Def.Initialize[T]](u)
-        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize], identity)
+        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize])(identity)
         sKey.set(initT, lp)
       }
 
       def setIfNone[U: Adt.CoProducts3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
         val applyM = Adt.CoProduct3[() => T, T, sbt.Def.Initialize[T]](default)
         val defaultValue: sbt.Def.Initialize[() => T] =
-          applyM.fold(t => t.pure[sbt.Def.Initialize], t => (() => t).pure[sbt.Def.Initialize], t => for (d <- t) yield () => d)
+          applyM.fold(t => t.pure[sbt.Def.Initialize])(t => (() => t).pure[sbt.Def.Initialize])(t => for (d <- t) yield () => d)
 
         val aa: sbt.Def.Initialize[Option[T]] = sKey.?
 
@@ -69,10 +69,7 @@ trait pUtils {
           case Adt.CoProduct5(t) => t.matchErrorAndThrowException
         }
 
-        applyM1.fold(
-          x1 => sKey.append1(x1, lp),
-          x2 => sKey.appendN(x2, lp)
-        )
+        applyM1.fold(x1 => sKey.append1(x1, lp))(x2 => sKey.appendN(x2, lp))
       }
     }
 
