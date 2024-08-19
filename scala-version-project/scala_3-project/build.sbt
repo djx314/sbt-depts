@@ -184,3 +184,6 @@ libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
 
 VarContext.changeDeptVar                      := "slickless"
 libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+
+VarContext.changeDeptVar                    := "simple-adt-bridge-support"
+libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v11"
