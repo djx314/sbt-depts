@@ -13,11 +13,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.5")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.7")
 
   VarContext.changePluginVar := "sbt-sonatype"
 
-  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.10.0")
+  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.11.2")
 
   VarContext.changePluginVar := "sbt-pgp"
 
@@ -53,7 +53,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-js-engine"
 
-  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.3.6")
+  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.3.9")
 
   VarContext.changePluginVar := "sbt-scala-js-map"
 
@@ -65,11 +65,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scoverage"
 
-  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.0.12")
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.1.0")
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.23.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.24.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
@@ -81,7 +81,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.10.0")
+  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.10.4")
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
@@ -93,7 +93,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-web"
 
-  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.5")
+  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.8")
 
   VarContext.changePluginVar := "sbt-web-scalajs"
 
@@ -101,6 +101,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.3")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.5")
 
 }

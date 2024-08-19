@@ -17,21 +17,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.9"
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -43,7 +43,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.3.232"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -61,13 +61,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -111,7 +111,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.16"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -123,7 +123,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.14.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.16.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -135,7 +135,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.1"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -147,7 +147,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -165,7 +165,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.8"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -181,11 +181,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.6"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.7"
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -197,21 +197,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -227,7 +227,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.4.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
@@ -243,7 +243,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.16"
 
   VarContext.changeDeptVar := "scala-logging"
 
@@ -291,21 +291,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.9"
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -317,7 +317,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.3.232"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -335,13 +335,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -385,7 +385,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.16"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -397,7 +397,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.14.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.16.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -409,7 +409,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.1"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -421,7 +421,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -439,7 +439,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.8"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -455,11 +455,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.6"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.7"
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -471,21 +471,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -501,7 +501,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.4.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
@@ -517,7 +517,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.16"
 
   VarContext.changeDeptVar := "scala-logging"
 
@@ -553,25 +553,25 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.setScalaVersion := "3"
 
-  scalaVersion := "3.4.2"
+  scalaVersion := "3.4.3"
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.9"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.7"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.9"
 
   VarContext.changeDeptVar := "scalatest"
 
-  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.18"
+  libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-core" % "3.2.19"
 
-  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.18"
+  libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
   VarContext.changeDeptVar := "cats-effect"
 
@@ -583,7 +583,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.1.214"
+  libraryDependencies += "com.h2database" % "h2" % "2.3.232"
 
   VarContext.changeDeptVar := "doobie"
 
@@ -601,13 +601,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.2"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -651,7 +651,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.16"
 
   VarContext.changeDeptVar := "commons-io"
 
@@ -663,7 +663,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.14.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.16.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -675,7 +675,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha15"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha16"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -687,7 +687,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.2"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -711,7 +711,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.8"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
 
   VarContext.changeDeptVar := "slick"
 
@@ -723,11 +723,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.6"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.7"
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.2"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -739,21 +739,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.0.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.0.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.0.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.0.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -769,7 +769,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "8.4.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
@@ -785,7 +785,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.13"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.16"
 
   VarContext.changeDeptVar := "scala-logging"
 
