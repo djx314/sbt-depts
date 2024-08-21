@@ -94,11 +94,11 @@ VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.2"
 
 VarContext.changeDeptVar                := "shapeless"
-libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.1"
-libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.4.1"
+libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.3"
+libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.4.3"
 
 VarContext.changeDeptVar                := "shapeless3-test"
-libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.4.1"
+libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.4.3"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.10.2"
