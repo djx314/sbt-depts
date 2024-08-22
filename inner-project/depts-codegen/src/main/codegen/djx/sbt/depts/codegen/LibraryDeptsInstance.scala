@@ -131,7 +131,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M20"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -185,7 +185,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.5"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -409,7 +409,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M20"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -463,7 +463,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.5"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -679,7 +679,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M20"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -735,7 +735,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.4"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.5"
 
   VarContext.changeDeptVar := "jintellitype"
 
