@@ -26,7 +26,7 @@ trait PluginsColImpl {
 
   val `flyway-sbt`: sbt.librarymanagement.ModuleID = """io.github.davidmweber""" % """flyway-sbt""" % """7.4.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M878"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M890"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.3.9"""
 
