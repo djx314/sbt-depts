@@ -155,13 +155,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.10.2"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.11.0"
 
   VarContext.changeDeptVar := "distage"
 
@@ -433,13 +433,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.10.2"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.11.0"
 
   VarContext.changeDeptVar := "distage"
 
@@ -709,13 +709,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-core" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-io" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.10.2"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.11.0"
 
-  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.10.2"
+  libraryDependencies += "co.fs2" %%% "fs2-scodec" % "3.11.0"
 
   VarContext.changeDeptVar := "distage"
 
