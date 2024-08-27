@@ -1,5 +1,5 @@
 VarContext.setScalaVersion := "3"
-scalaVersion               := "3.4.3"
+scalaVersion               := "3.5.0"
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.9"
@@ -31,10 +31,10 @@ VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC5"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"          % "2.1.7"
-libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.7"
-libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.7"
-libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
+libraryDependencies += "dev.zio" %%% "zio"          % "2.1.8"
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.8"
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.8"
+libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.8"
 
 VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.3"
@@ -141,7 +141,7 @@ VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
-libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
+libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.1"
 
 VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
@@ -150,7 +150,7 @@ VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
-libraryDependencies += "org.postgresql" % "postgresql" % "42.7.3"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.7.4"
 
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"

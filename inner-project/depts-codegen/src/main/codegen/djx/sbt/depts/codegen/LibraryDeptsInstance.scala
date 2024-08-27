@@ -61,13 +61,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -219,7 +219,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.1"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -231,7 +231,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.3"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.4"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
@@ -339,13 +339,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -497,7 +497,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.1"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -509,7 +509,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.3"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.4"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
@@ -561,7 +561,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.setScalaVersion := "3"
 
-  scalaVersion := "3.4.3"
+  scalaVersion := "3.5.0"
 
   VarContext.changeDeptVar := "circe"
 
@@ -609,13 +609,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.7"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.8"
 
   VarContext.changeDeptVar := "typesafe-config"
 
@@ -769,7 +769,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.0"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.3.1"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -781,7 +781,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.3"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.4"
 
   VarContext.changeDeptVar := "scala-java8-compat"
 
