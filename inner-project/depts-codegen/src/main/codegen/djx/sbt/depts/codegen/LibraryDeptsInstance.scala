@@ -281,6 +281,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
+  VarContext.changeDeptVar := "sbt-launch"
+
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.14"
@@ -559,6 +563,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
+  VarContext.changeDeptVar := "sbt-launch"
+
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.5.0"
@@ -830,5 +838,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "simple-adt-bridge-support"
 
   libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
+
+  VarContext.changeDeptVar := "sbt-launch"
+
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
 
 }

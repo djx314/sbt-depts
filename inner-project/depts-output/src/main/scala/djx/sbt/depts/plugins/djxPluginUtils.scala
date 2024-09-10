@@ -61,13 +61,11 @@ trait pUtils {
         val Opt2Apply: Adt.CoProduct2Apply[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]] =
           Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
-        val applyM1: Opt2 = applyM match {
-          case Adt.CoProduct1(t) => Opt2Apply.option1(t.pure[sbt.Def.Initialize])
-          case Adt.CoProduct2(t) => Opt2Apply.option1(t)
-          case Adt.CoProduct3(t) => Opt2Apply.option2(t.pure[sbt.Def.Initialize])
-          case Adt.CoProduct4(t) => Opt2Apply.option2(t)
-          case Adt.CoProduct5(t) => t.matchErrorAndThrowException
-        }
+        val applyM1: Opt2 = applyM.fold
+          .apply(t => Opt2Apply.option1(t.pure[sbt.Def.Initialize]))
+          .apply(t => Opt2Apply.option1(t))
+          .apply(t => Opt2Apply.option2(t.pure[sbt.Def.Initialize]))
+          .apply(t => Opt2Apply.option2(t))
 
         applyM1.fold(x1 => sKey.append1(x1, lp))(x2 => sKey.appendN(x2, lp))
       }

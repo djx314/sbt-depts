@@ -24,6 +24,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
     val `jmh-generator-annprocess`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jmh-generator-annprocess""")
     val `commons-math3`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-math3""")
+    val `sbt-launch`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-launch""")
     val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
     val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
     val `jintellitype`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
@@ -89,6 +90,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`simple-adt`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jmh-generator-annprocess`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-math3`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`sbt-launch`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slick`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jintellitype`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -170,6 +172,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala213)(contextLibraryCollection.apply(("doobie-h2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-launch`)(djxIsScala213)(contextLibraryCollection.apply(("sbt-launch", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`spire`)(djxIsScala213)(contextLibraryCollection.apply(("spire", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -198,6 +203,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala212)(contextLibraryCollection.apply(("simple-adt", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-launch`)(djxIsScala212)(contextLibraryCollection.apply(("sbt-launch", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`doobie-h2`)(djxIsScala212)(contextLibraryCollection.apply(("doobie-h2", "2.12")))(
@@ -300,6 +308,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("http4s-Release-ember-server", "3"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`commons-io`)(djxIsScala213)(contextLibraryCollection.apply(("commons-io", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-launch`)(djxIsScala3)(contextLibraryCollection.apply(("sbt-launch", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-logging`)(djxIsScala3)(contextLibraryCollection.apply(("zio-logging", "3")))(
