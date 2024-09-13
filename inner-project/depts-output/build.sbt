@@ -1,7 +1,9 @@
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 
-setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
-setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
+// setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
+// setting.setKey(scalafmtOnCompile)(sourcePosition.fromEnclosing).value(true)
+scalaVersion      := scalaV.v212
+scalafmtOnCompile := true
 
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
@@ -11,6 +13,7 @@ libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`simple-adt`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
+// libraryDependencies ++= libScalax.`sbt-launch`.value
 
 enablePlugins(SbtPlugin)
 

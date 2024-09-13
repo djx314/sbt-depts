@@ -34,7 +34,7 @@ trait PluginsColImpl {
 
   val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.2.0"""
 
-  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.1.1"""
+  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.2.0"""
 
   val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.24.0"""
 
