@@ -283,7 +283,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -565,7 +565,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
   VarContext.setScalaVersion := "3"
 
@@ -841,6 +841,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
 }
