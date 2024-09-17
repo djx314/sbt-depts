@@ -194,4 +194,4 @@ VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
