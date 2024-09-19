@@ -123,7 +123,7 @@ VarContext.changeDeptVar               := "logback-classic"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.8"
 
 VarContext.changeDeptVar                  := "javet"
-libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.7"
+libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.8"
 
 VarContext.changeDeptVar              := "jintellitype"
 libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
