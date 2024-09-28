@@ -37,7 +37,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.16.0")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.17.0")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
