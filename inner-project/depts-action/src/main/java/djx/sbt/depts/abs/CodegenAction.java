@@ -1,8 +1,5 @@
 package djx.sbt.depts.abs;
 
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import scala.io.Source;
 import java.nio.file.Paths;
 import java.nio.file.Path;
 import java.nio.file.Files;
