@@ -15,7 +15,7 @@ addSbtPlugin("com.github.sbt"                    % "sbt-git"                  % 
 VarContext.changePluginVar                                 := "sbt-ide-settings"
 addSbtPlugin("org.jetbrains.scala"               % "sbt-ide-settings"         % "1.1.2")
 VarContext.changePluginVar                                 := "sbt-scalajs"
-addSbtPlugin("org.scala-js"                      % "sbt-scalajs"              % "1.16.0")
+addSbtPlugin("org.scala-js"                      % "sbt-scalajs"              % "1.17.0")
 VarContext.changePluginVar                                 := "sbt-platform-deps"
 addSbtPlugin("org.portable-scala"                % "sbt-platform-deps"        % "1.0.2")
 VarContext.changePluginVar                                 := "flyway-sbt"
@@ -29,7 +29,7 @@ addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map"         % 
 VarContext.changePluginVar                                 := "sbt-assembly"
 addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"             % "2.2.0")
 VarContext.changePluginVar                                 := "sbt-scoverage"
-addSbtPlugin("org.scoverage"                     % "sbt-scoverage"            % "2.2.0")
+addSbtPlugin("org.scoverage"                     % "sbt-scoverage"            % "2.2.1")
 VarContext.changePluginVar                                 := "sbt-github-actions"
 addSbtPlugin("com.github.sbt"                    % "sbt-github-actions"       % "0.24.0")
 VarContext.changePluginVar                                 := "sbt-jacoco"

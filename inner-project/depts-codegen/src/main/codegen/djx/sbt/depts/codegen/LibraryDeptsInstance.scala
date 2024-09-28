@@ -47,17 +47,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.1"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -165,7 +165,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -185,7 +185,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.8"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -197,21 +197,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.1"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.1"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -283,11 +283,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
   VarContext.setScalaVersion := "2.13"
 
-  scalaVersion := "2.13.14"
+  scalaVersion := "2.13.15"
 
   VarContext.changeDeptVar := "kind-projector"
 
@@ -329,17 +329,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -401,7 +401,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.1"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -447,7 +447,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -467,7 +467,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.8"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -479,21 +479,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.1"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.1"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -565,7 +565,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
   VarContext.setScalaVersion := "3"
 
@@ -603,17 +603,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC6"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC5"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC6"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -675,7 +675,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.1"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -727,7 +727,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.12"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
 
   VarContext.changeDeptVar := "slick"
 
@@ -743,7 +743,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.8"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -755,21 +755,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.1"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.1"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -841,6 +841,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.2"
 
 }
