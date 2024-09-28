@@ -20,7 +20,7 @@ trait PluginsColImpl {
 
   val `sbt-ide-settings`: sbt.librarymanagement.ModuleID = """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.2"""
 
-  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.16.0"""
+  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.17.0"""
 
   val `sbt-platform-deps`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-platform-deps""" % """1.0.2"""
 
@@ -34,11 +34,11 @@ trait PluginsColImpl {
 
   val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.2.0"""
 
-  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.2.0"""
+  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.2.1"""
 
   val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.24.0"""
 
-  val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.5.1"""
+  val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.5.0"""
 
   val `sbt-jmh`: sbt.librarymanagement.ModuleID = """pl.project13.scala""" % """sbt-jmh""" % """0.4.7"""
 

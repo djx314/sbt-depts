@@ -17,13 +17,14 @@ public class CodegenAction {
     Path jarPath = Paths.get(jarFileURL.toURI());
     String sbtDirName = "sbt-depts-resource-temp";
     String sbtLaunchDirName = "sbt-launch";
-    Path outPutPath1 = Paths.get("./").resolve(sbtDirName).resolve(sbtLaunchDirName);
+    Path outPutDir1 = Paths.get(".").resolve(sbtDirName).resolve(sbtLaunchDirName);
     Instant instant = Instant.now();
     long millions = instant.toEpochMilli();
-    Path outPutPath2 = outPutPath1.resolve(String.valueOf(millions));
-    Path outPutPath3 = outPutPath2.resolve(jarPath.getFileName().toString());
-    Files.copy(jarPath, outPutPath3);
-    System.out.println(outPutPath3);
+    Path outPutDir2 = outPutDir1.resolve(String.valueOf(millions));
+    Path outPutPath1 = outPutDir2.resolve(jarPath.getFileName().toString());
+    Files.createDirectories(outPutDir2);
+    Files.copy(jarPath, outPutPath1);
+    System.out.println(outPutPath1);
   }
 
 }

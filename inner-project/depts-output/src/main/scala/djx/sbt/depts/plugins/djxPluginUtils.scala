@@ -8,8 +8,6 @@ import net.scalax.simple.adt.{TypeAdt => Adt}
 object pUtils extends pUtils
 
 trait pUtils {
-  val jarPath: java.nio.file.Path = Paths.get(jarFileURL.toURI());
-  Path outPutPath = java.nio.file.Paths.get("./").resolve(jarPath.getFileName().toString());
 
   val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
     override def flatMap[A, B](fa: sbt.Def.Initialize[A])(f: A => sbt.Def.Initialize[B]): sbt.Def.Initialize[B] =
