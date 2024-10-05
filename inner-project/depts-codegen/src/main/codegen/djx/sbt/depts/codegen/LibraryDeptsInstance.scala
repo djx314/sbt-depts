@@ -201,9 +201,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
@@ -483,9 +483,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
@@ -759,9 +759,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
