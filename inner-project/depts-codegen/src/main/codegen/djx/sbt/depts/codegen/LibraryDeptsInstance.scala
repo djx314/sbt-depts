@@ -173,11 +173,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.2"
 
   VarContext.changeDeptVar := "logback-classic"
 
@@ -201,9 +201,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
@@ -455,11 +455,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.2"
 
   VarContext.changeDeptVar := "logback-classic"
 
@@ -483,9 +483,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 
@@ -731,11 +731,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.2"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.1"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.5.2"
 
   VarContext.changeDeptVar := "logback-classic"
 
@@ -759,9 +759,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.1"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.0.1"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.1"
 

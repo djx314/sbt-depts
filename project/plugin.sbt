@@ -7,7 +7,7 @@ addSbtPlugin("org.playframework.twirl"           % "sbt-twirl"                % 
 VarContext.changePluginVar                                 := "sbt-sonatype"
 addSbtPlugin("org.xerial.sbt"                    % "sbt-sonatype"             % "3.11.3")
 VarContext.changePluginVar                                 := "sbt-pgp"
-addSbtPlugin("com.github.sbt"                    % "sbt-pgp"                  % "2.2.1")
+addSbtPlugin("com.github.sbt"                    % "sbt-pgp"                  % "2.3.0")
 VarContext.changePluginVar                                 := "sbt-scalajs-crossproject"
 addSbtPlugin("org.portable-scala"                % "sbt-scalajs-crossproject" % "1.3.2")
 VarContext.changePluginVar                                 := "sbt-git"
@@ -27,7 +27,7 @@ addSbtPlugin("com.github.sbt"                    % "sbt-js-engine"            % 
 VarContext.changePluginVar                                 := "sbt-scala-js-map"
 addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map"         % "4.1.1")
 VarContext.changePluginVar                                 := "sbt-assembly"
-addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"             % "2.2.0")
+addSbtPlugin("com.eed3si9n"                      % "sbt-assembly"             % "2.3.0")
 VarContext.changePluginVar                                 := "sbt-scoverage"
 addSbtPlugin("org.scoverage"                     % "sbt-scoverage"            % "2.2.1")
 VarContext.changePluginVar                                 := "sbt-github-actions"
