@@ -12,7 +12,7 @@ trait PluginsColImpl {
 
   val `sbt-sonatype`: sbt.librarymanagement.ModuleID = """org.xerial.sbt""" % """sbt-sonatype""" % """3.11.3"""
 
-  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.2.1"""
+  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.0"""
 
   val `sbt-scalajs-crossproject`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-scalajs-crossproject""" % """1.3.2"""
 
@@ -32,7 +32,7 @@ trait PluginsColImpl {
 
   val `sbt-scala-js-map`: sbt.librarymanagement.ModuleID = """com.thoughtworks.sbt-scala-js-map""" % """sbt-scala-js-map""" % """4.1.1"""
 
-  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.2.0"""
+  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.3.0"""
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.2.1"""
 
