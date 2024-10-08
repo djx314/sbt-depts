@@ -8,10 +8,9 @@ import java.time.Instant;
 
 public class CodegenAction {
 
-  public static void main(String[] arr) throws java.io.IOException, java.net.URISyntaxException {
+  public static void main(String[] arr) throws java.io.IOException {
     Class<xsbt.boot.Launch> launchClass = xsbt.boot.Launch.class;
-    URL jarFileURL = launchClass.getProtectionDomain().getCodeSource().getLocation();
-    Path jarPath = Paths.get(jarFileURL.toURI());
+    Path jarPath = CodegenActionImpl.<xsbt.boot.Launch>findJarPath(launchClass);
     String sbtDirName = "sbt-depts-resource-temp";
     String sbtLaunchDirName = "sbt-launch";
     Path outPutDir1 = Paths.get(".").resolve(sbtDirName).resolve(sbtLaunchDirName);

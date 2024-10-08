@@ -4,7 +4,8 @@ import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
 
-lazy val `depts-action`: sbt.Project         = project in `root/file` / "depts-action"
+lazy val `depts-action-impl`: sbt.Project    = project in `root/file` / "depts-action-impl"
+lazy val `depts-action`: sbt.Project         = project in (`root/file` / "depts-action") dependsOn `depts-action-impl`
 lazy val `depts-abs`: sbt.Project            = project in `root/file` / "depts-abs"
 lazy val `depts-codegen`: sbt.Project        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
 lazy val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
