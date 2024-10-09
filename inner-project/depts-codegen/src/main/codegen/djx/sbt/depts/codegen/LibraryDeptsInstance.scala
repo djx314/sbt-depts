@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -401,7 +401,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -675,7 +675,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.2"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
 
   VarContext.changeDeptVar := "commons-lang3"
 
