@@ -25,6 +25,9 @@ package impl {
   }
 
   class BuildKeysImpl extends BuildKeys {
+    val SbtLaunchDJXDeptsConfig = config("sbt-launch-djx314-depts-config")
+    val sbtDJXDeptsSbtLaunchJar = taskKey[File]("The released version of the sbt-launcher we use to bundle this application.")
+
     val djxProjectRootPath = settingKey[File]("Key of project root.")
 
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
@@ -44,9 +47,10 @@ package impl {
 }
 
 object Djx314DeptsPlugin extends AutoPlugin {
-  override def requires: Plugins =
-    org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin
-  override def trigger: PluginTrigger = allRequirements
+  override def requires =
+    org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin && sbt.plugins.IvyPlugin
+  override def trigger: PluginTrigger                    = allRequirements
+  override def projectConfigurations: Seq[Configuration] = super.projectConfigurations ++ Seq(autoImport.SbtLaunchDJXDeptsConfig)
 
   object autoImport extends impl.BuildKeysImpl
 
@@ -54,6 +58,18 @@ object Djx314DeptsPlugin extends AutoPlugin {
     import buildKeys._
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(libraryDependencies ++= libScalax.`sbt-launch`.value.map(_ % SbtLaunchDJXDeptsConfig.name))
+
+      settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
+        Classpaths.managedJars(SbtLaunchDJXDeptsConfig, Set("jar"), update.value).headOption match {
+          case Some(jar) => jar.data
+          case None =>
+            sys.error(
+              s"Could not resolve sbt launcher!, dependencies := ${libraryDependencies.value}"
+            )
+        }
+      })
 
       settingsCol.+=(djxProjectRootPath := {
         djxProjectRootPath.?.value.getOrElse(new File("."))
@@ -120,6 +136,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
       scalaVersionSettings.collect ++: super.settingsForDept ++: fix.collect ++: UpdateAction.collect
   }
 
-  private val settingsValue                                    = new Settings(autoImport)
+  private def settingsValue                                    = new Settings(autoImport)
   override def projectSettings: Seq[_root_.sbt.Def.Setting[_]] = settingsValue.settingsForDept
 }

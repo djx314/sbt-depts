@@ -2,17 +2,12 @@ import Settings._
 import djx.sbt.depts.plugins.GlobalVersion
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-setting.setKey(scalaVersion)(sourcePosition.fromEnclosing).value(scalaV.v212)
+scalaVersion := scalaV.v212
 
-enablePlugins(SbtLauncherDeptsPlugin)
-
-lazy val `depts-action`: sbt.Project = project in (`root/file` / "depts-action") enablePlugins SbtLauncherDeptsPlugin
-lazy val `depts-abs`: sbt.Project =
-  project in (`root/file` / "depts-abs") enablePlugins SbtLauncherDeptsPlugin dependsOn (`depts-action` % SbtLaunchDeptsConfig.name)
-lazy val `depts-codegen`: sbt.Project =
-  project in (`root/file` / "depts-codegen") enablePlugins SbtLauncherDeptsPlugin dependsOn `depts-abs`
-lazy val `depts-output-plugins`: sbt.Project = project in `plugin/file` enablePlugins SbtLauncherDeptsPlugin dependsOn `depts-codegen`
-lazy val `depts-output`: sbt.Project =
+val `depts-abs`: sbt.Project            = project in (`root/file` / "depts-abs")
+val `depts-codegen`: sbt.Project        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
+val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
+val `depts-output`: sbt.Project =
   project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins` aggregate `depts-codegen` aggregate `depts-abs`
 
 updateMVersion := {
