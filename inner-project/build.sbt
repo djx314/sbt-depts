@@ -4,6 +4,8 @@ import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 scalaVersion := scalaV.v212
 
+val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
+
 val `depts-abs`: sbt.Project            = project in (`root/file` / "depts-abs")
 val `depts-codegen`: sbt.Project        = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
 val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`

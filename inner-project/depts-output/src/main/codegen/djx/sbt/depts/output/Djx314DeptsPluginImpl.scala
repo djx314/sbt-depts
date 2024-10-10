@@ -67,6 +67,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `jnativehook`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
     val `cats-core`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
     val `scala-parser-combinators`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
+    val `coursier`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for coursier""")
   }
 }
 
@@ -133,6 +134,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`jnativehook`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-parser-combinators`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`coursier`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-nop", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -436,6 +438,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala3)(
       contextLibraryCollection.apply(("scala-java8-compat", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`coursier`)(djxIsScala213)(contextLibraryCollection.apply(("coursier", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala3)(contextLibraryCollection.apply(("zio-nio", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -502,6 +507,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`slf4j-simple`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-simple", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`coursier`)(djxIsScala212)(contextLibraryCollection.apply(("coursier", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala3)(contextLibraryCollection.apply(("distage", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -538,6 +546,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala213)(
       contextLibraryCollection.apply(("http4s-Release-ember-client", "2.13"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`coursier`)(djxIsScala3)(contextLibraryCollection.apply(("coursier", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala213)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.13"))
     )(sourcePosition.fromEnclosing()),
