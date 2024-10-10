@@ -29,7 +29,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-git"
 
-  addSbtPlugin("com.github.sbt" % "sbt-git" % "2.0.1")
+  addSbtPlugin("com.github.sbt" % "sbt-git" % "2.1.0")
 
   VarContext.changePluginVar := "sbt-ide-settings"
 

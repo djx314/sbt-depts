@@ -11,7 +11,7 @@ addSbtPlugin("com.github.sbt"                    % "sbt-pgp"                  % 
 VarContext.changePluginVar                                 := "sbt-scalajs-crossproject"
 addSbtPlugin("org.portable-scala"                % "sbt-scalajs-crossproject" % "1.3.2")
 VarContext.changePluginVar                                 := "sbt-git"
-addSbtPlugin("com.github.sbt"                    % "sbt-git"                  % "2.0.1")
+addSbtPlugin("com.github.sbt"                    % "sbt-git"                  % "2.1.0")
 VarContext.changePluginVar                                 := "sbt-ide-settings"
 addSbtPlugin("org.jetbrains.scala"               % "sbt-ide-settings"         % "1.1.2")
 VarContext.changePluginVar                                 := "sbt-scalajs"
