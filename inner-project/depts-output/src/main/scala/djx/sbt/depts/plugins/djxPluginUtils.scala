@@ -4,10 +4,23 @@ import cats._
 import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
+import java.io.File
 
 object pUtils extends pUtils
 
 trait pUtils {
+
+  def sbtLaunchJarFile: File = {
+    import coursier._
+
+    val name1 = "org.scala-sbt"
+    val name2 = "sbt-launch"
+    val name3 = "1.10.2"
+
+    val dept             = Dependency(Module(organization = Organization(name1), name = ModuleName(name2)), version = name3)
+    val files: Seq[File] = Fetch().addDependencies(dept).run()
+    files.head
+  }
 
   val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
     override def flatMap[A, B](fa: sbt.Def.Initialize[A])(f: A => sbt.Def.Initialize[B]): sbt.Def.Initialize[B] =

@@ -11,6 +11,7 @@ libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`simple-adt`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
+libraryDependencies ++= libScalax.`coursier`.value
 
 enablePlugins(SbtPlugin)
 

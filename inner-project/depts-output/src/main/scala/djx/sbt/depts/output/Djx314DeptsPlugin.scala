@@ -25,7 +25,6 @@ package impl {
   }
 
   class BuildKeysImpl extends BuildKeys {
-    val SbtLaunchDJXDeptsConfig = config("sbt-launch-djx314-depts-config")
     val sbtDJXDeptsSbtLaunchJar = taskKey[File]("The released version of the sbt-launcher we use to bundle this application.")
 
     val djxProjectRootPath = settingKey[File]("Key of project root.")
@@ -50,7 +49,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
   override def requires =
     org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin && sbt.plugins.IvyPlugin
   override def trigger: PluginTrigger                    = allRequirements
-  override def projectConfigurations: Seq[Configuration] = super.projectConfigurations ++ Seq(autoImport.SbtLaunchDJXDeptsConfig)
+  override def projectConfigurations: Seq[Configuration] = super.projectConfigurations
 
   object autoImport extends impl.BuildKeysImpl
 
@@ -59,16 +58,8 @@ object Djx314DeptsPlugin extends AutoPlugin {
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
 
-      settingsCol.+=(libraryDependencies ++= libScalax.`sbt-launch`.value.map(_ % SbtLaunchDJXDeptsConfig.name))
-
       settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
-        Classpaths.managedJars(SbtLaunchDJXDeptsConfig, Set("jar"), update.value).headOption match {
-          case Some(jar) => jar.data
-          case None =>
-            sys.error(
-              s"Could not resolve sbt launcher!, dependencies := ${libraryDependencies.value}"
-            )
-        }
+        djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
       })
 
       settingsCol.+=(djxProjectRootPath := {
@@ -136,6 +127,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
       scalaVersionSettings.collect ++: super.settingsForDept ++: fix.collect ++: UpdateAction.collect
   }
 
-  private def settingsValue                                    = new Settings(autoImport)
+  private val settingsValue                                    = new Settings(autoImport)
   override def projectSettings: Seq[_root_.sbt.Def.Setting[_]] = settingsValue.settingsForDept
 }
