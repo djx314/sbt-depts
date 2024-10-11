@@ -5,10 +5,33 @@ import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
+import djx.sbt.depts.abs.{DeptsModule, JavaDept, ScalaDept, ScalaJSDept}
 
 object pUtils extends pUtils
 
 trait pUtils {
+
+  def addDepts(
+    libDepts: sbt.SettingKey[Seq[sbt.ModuleID]],
+    depts: List[DeptsModule]
+  ): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
+    import sbt._
+    import sbt.Keys._
+    import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
+
+    libDepts := {
+      val toLib: List[sbt.ModuleID] = for (dept <- depts) yield {
+        dept.platform.fold
+          .apply { (_: JavaDept) => dept.org % dept.name % dept.version }
+          .apply { (_: ScalaDept) => dept.org %% dept.name % dept.version }
+          .apply { (_: ScalaJSDept) => dept.org %%% dept.name % dept.version }
+      }
+
+      val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
+      val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)
+      toLib ++: confirmSeq
+    }
+  }
 
   def sbtLaunchJarFile: File = {
     import coursier._
@@ -17,9 +40,9 @@ trait pUtils {
     val name2 = "sbt-launch"
     val name3 = "1.10.2"
 
-    val dept             = Dependency(Module(organization = Organization(name1), name = ModuleName(name2)), version = name3)
-    val files: Seq[File] = Fetch().addDependencies(dept).run()
-    files.head
+    val dept: Dependency         = Dependency(Module(organization = Organization(name1), name = ModuleName(name2)), version = name3)
+    val Seq(headFile): Seq[File] = Fetch().addDependencies(dept).run()
+    headFile
   }
 
   val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {

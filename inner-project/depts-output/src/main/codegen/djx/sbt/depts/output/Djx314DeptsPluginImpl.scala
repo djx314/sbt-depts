@@ -546,9 +546,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala213)(
       contextLibraryCollection.apply(("http4s-Release-ember-client", "2.13"))
     )(sourcePosition.fromEnclosing()),
-    innerSetting.addLibrarySetting(libScalax.`coursier`)(djxIsScala3)(contextLibraryCollection.apply(("coursier", "3")))(
-      sourcePosition.fromEnclosing()
-    ),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala213)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.13"))
     )(sourcePosition.fromEnclosing()),

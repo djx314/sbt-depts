@@ -8,6 +8,7 @@ Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).val
 
 libraryDependencies ++= libScalax.`typesafe-config`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
+libraryDependencies ++= libScalax.`simple-adt`.value
 
 val buildSbtFile2: File   = (`root/file` / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
 val buildSbtFile3: File   = (`root/file` / ".." / "scala-version-project" / "scala_213-project" / "build.sbt").getCanonicalFile
