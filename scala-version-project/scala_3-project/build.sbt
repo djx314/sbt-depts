@@ -70,7 +70,7 @@ VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 VarContext.changeDeptVar                           := "macwire"
-libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
+libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.4"
 
 VarContext.changeDeptVar                   := "commons-lang3"
 libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
@@ -115,7 +115,7 @@ libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.5.2"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.5.2"
 
 VarContext.changeDeptVar               := "logback-classic"
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.9"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.10"
 
 VarContext.changeDeptVar                  := "javet"
 libraryDependencies += "com.caoccao.javet" % "javet" % "3.1.8"

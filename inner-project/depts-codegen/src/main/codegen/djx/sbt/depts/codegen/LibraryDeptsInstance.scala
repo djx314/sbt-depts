@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.4"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -181,7 +181,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.9"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.10"
 
   VarContext.changeDeptVar := "javet"
 
@@ -409,7 +409,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.4"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -471,7 +471,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.9"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.10"
 
   VarContext.changeDeptVar := "javet"
 
@@ -691,7 +691,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "macwire"
 
-  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.3"
+  libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.4"
 
   VarContext.changeDeptVar := "commons-lang3"
 
@@ -755,7 +755,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.9"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.10"
 
   VarContext.changeDeptVar := "javet"
 
