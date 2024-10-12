@@ -5,7 +5,7 @@ import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
-import djx.sbt.depts.abs.{DeptsModule, JavaDept, ScalaDept, ScalaJSDept}
+import djx.sbt.depts.abs.{CompilerPlugin, DeptsModule, JavaDept, Library => DeptsScalaLibrary, ScalaDept, ScalaJSDept}
 
 object pUtils extends pUtils
 
@@ -21,10 +21,15 @@ trait pUtils {
 
     libDepts := {
       val toLib: List[sbt.ModuleID] = for (dept <- depts) yield {
-        dept.platform.fold
+        val libItem: sbt.ModuleID = dept.platform.fold
           .apply { (_: JavaDept) => dept.org % dept.name % dept.version }
           .apply { (_: ScalaDept) => dept.org %% dept.name % dept.version }
           .apply { (_: ScalaJSDept) => dept.org %%% dept.name % dept.version }
+
+        val libIfCompilePlugin: sbt.ModuleID =
+          dept.info.fold((_: CompilerPlugin) => compilerPlugin(libItem))((_: DeptsScalaLibrary) => libItem)
+
+        libIfCompilePlugin
       }
 
       val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
