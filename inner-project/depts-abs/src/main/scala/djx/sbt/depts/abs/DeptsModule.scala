@@ -7,16 +7,18 @@ trait ScalaDept
 trait ScalaJSDept
 
 object DeptType {
+  self =>
+
   type Type = Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept]
   val Setter: Adt.CoProduct3Apply[JavaDept, ScalaDept, ScalaJSDept] = Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept]
 
-  val JavaDept: Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept] = Setter(new JavaDept {
+  val JavaDept: self.Type = Setter(new JavaDept {
     //
   })
-  val ScalaDept: Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept] = Setter(new ScalaDept {
+  val ScalaDept: self.Type = Setter(new ScalaDept {
     //
   })
-  val ScalaJSDept: Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept] = Setter(new ScalaJSDept {
+  val ScalaJSDept: self.Type = Setter(new ScalaJSDept {
     //
   })
 }
@@ -25,13 +27,15 @@ trait CompilerPlugin
 trait Library
 
 object DeptInfo {
+  self =>
+
   type Type = Adt.CoProduct2[CompilerPlugin, Library]
   val Setter: Adt.CoProduct2Apply[CompilerPlugin, Library] = Adt.CoProduct2[CompilerPlugin, Library]
 
-  val CompilerPlugin: Adt.CoProduct2[CompilerPlugin, Library] = Setter(new CompilerPlugin {
+  val CompilerPlugin: self.Type = Setter(new CompilerPlugin {
     //
   })
-  val Library: Adt.CoProduct2[CompilerPlugin, Library] = Setter(new Library {
+  val Library: self.Type = Setter(new Library {
     //
   })
 }
