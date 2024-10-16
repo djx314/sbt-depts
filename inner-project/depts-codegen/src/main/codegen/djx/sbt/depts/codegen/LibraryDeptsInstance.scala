@@ -227,7 +227,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.1.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
@@ -517,7 +517,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.1.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
@@ -801,7 +801,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.0.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.1.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
