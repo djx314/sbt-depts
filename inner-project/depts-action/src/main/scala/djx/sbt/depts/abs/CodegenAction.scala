@@ -5,7 +5,7 @@ import coursier._
 object BC {
 
   def main(arr: Array[String]): Unit = {
-    val files = Fetch().addDependencies(dep"org.scala-sbt:sbt-launch:1.10.3").run()
+    val files = Fetch().addDependencies(dep"org.scala-sbt:sbt-launch:1.10.4").run()
 
     println(files)
   }
