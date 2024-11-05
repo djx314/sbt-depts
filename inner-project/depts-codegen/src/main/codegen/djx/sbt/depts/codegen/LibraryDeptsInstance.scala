@@ -287,11 +287,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "coursier"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.15"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.15"
 
-  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.15"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -577,11 +577,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "coursier"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.15"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.15"
 
-  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.14"
+  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.15"
 
   VarContext.setScalaVersion := "3"
 
@@ -861,10 +861,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   /*VarContext.changeDeptVar                 := "coursier"
 
-          libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.14"
+          libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.15"
 
-          libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.14"
+          libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.15"
 
-          libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.14"*/
+          libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.15"*/
 
 }
