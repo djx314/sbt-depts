@@ -2,8 +2,6 @@ import Settings._
 
 ThisBuild / organizationName := "Scala Workers"
 
-ThisBuild / organization := "net.scalax.djx314"
-
 ThisBuild / organizationHomepage := Some(url("https://github.com/scala-workers"))
 
 ThisBuild / scmInfo := Some(

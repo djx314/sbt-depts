@@ -1,11 +1,6 @@
 import Settings._
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-scalaVersion      := scalaV.v212
-scalafmtOnCompile := true
-
-Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
-
 val libVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "Djx314DeptsPluginImpl.scala"
 
 val `scalfmt/file`      = `root/file` / ".." / ".scalafmt.conf"

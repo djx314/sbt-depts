@@ -1,14 +1,10 @@
 import Settings._
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
-scalaVersion      := scalaV.v212
-scalafmtOnCompile := true
-
-Compile / compile := ((Compile / compile) dependsOn (Compile / scalafmtSbt)).value
-
 libraryDependencies ++= libScalax.`typesafe-config`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`simple-adt`.value
+libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
 
 val buildSbtFile2: File   = (`root/file` / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
 val buildSbtFile3: File   = (`root/file` / ".." / "scala-version-project" / "scala_213-project" / "build.sbt").getCanonicalFile
@@ -45,5 +41,3 @@ genActionImpl := {
     .partialInput(s""" ${writFile3.toString}""")
     .evaluated
 }
-
-libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value

@@ -1,8 +1,5 @@
 import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 
-scalaVersion      := scalaV.v212
-scalafmtOnCompile := true
-
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
