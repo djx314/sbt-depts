@@ -139,7 +139,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.11"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -429,7 +429,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.11"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -711,7 +711,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.10"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.11"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
