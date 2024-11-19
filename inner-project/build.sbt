@@ -16,6 +16,7 @@ val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
 `depts-action` / scalaVersion      := scalaV.v212
 `depts-action` / moduleName        := (`depts-action` / name).value
 `depts-action` / scalafmtOnCompile := true
+`depts-action` / publishTo         := (`depts-action` / sonatypePublishToBundle).value
 
 val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / organization      := deptOrganization
@@ -23,6 +24,7 @@ val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / scalaVersion      := scalaV.v212
 `depts-abs` / moduleName        := (`depts-abs` / name).value
 `depts-abs` / scalafmtOnCompile := true
+`depts-abs` / publishTo         := (`depts-abs` / sonatypePublishToBundle).value
 
 val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
 `depts-codegen` / organization      := deptOrganization
@@ -30,6 +32,7 @@ val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") de
 `depts-codegen` / scalaVersion      := scalaV.v212
 `depts-codegen` / moduleName        := (`depts-codegen` / name).value
 `depts-codegen` / scalafmtOnCompile := true
+`depts-codegen` / publishTo         := (`depts-codegen` / sonatypePublishToBundle).value
 
 val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
 `depts-output-plugins` / organization      := deptOrganization
@@ -37,6 +40,7 @@ val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `de
 `depts-output-plugins` / scalaVersion      := scalaV.v212
 `depts-output-plugins` / moduleName        := (`depts-output-plugins` / name).value
 `depts-output-plugins` / scalafmtOnCompile := true
+`depts-output-plugins` / publishTo         := (`depts-output-plugins` / sonatypePublishToBundle).value
 
 val `depts-output`: sbt.Project =
   project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins` aggregate `depts-codegen` aggregate `depts-abs`
@@ -45,6 +49,7 @@ val `depts-output`: sbt.Project =
 `depts-output` / scalaVersion      := scalaV.v212
 `depts-output` / moduleName        := (`depts-output` / name).value
 `depts-output` / scalafmtOnCompile := true
+`depts-output` / publishTo         := (`depts-output` / sonatypePublishToBundle).value
 
 updateMVersion := {
   val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
@@ -58,21 +63,6 @@ genAction := {
   (`depts-abs` / genActionImpl).inputTaskValue.evaluated
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
 }
-
-/*val allfmt = taskKey[Unit]("Format all projects.")
-allfmt := {
-  (Compile / scalafmtSbt).value
-  (`depts-abs` / Compile / scalafmtSbt).value
-  (`depts-codegen` / Compile / scalafmtSbt).value
-  (`depts-output-plugins` / Compile / scalafmtSbt).value
-  (`depts-output` / Compile / scalafmtSbt).value
-
-  (Compile / scalafmt).value
-  (`depts-abs` / Compile / scalafmt).value
-  (`depts-codegen` / Compile / scalafmt).value
-  (`depts-output-plugins` / Compile / scalafmt).value
-  (`depts-output` / Compile / scalafmt).value
-}*/
 
 addCommandAlias("preparePackaging", "; updateMVersion; genAction;")
 

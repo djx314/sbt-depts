@@ -10,6 +10,7 @@ libraryDependencies ++= libScalax.`kind-projector`.value
 libraryDependencies ++= libScalax.`coursier`.value
 
 enablePlugins(SbtPlugin)
+sbtPluginPublishLegacyMavenStyle := false
 
 pluginCrossBuild / sbtVersion := {
   scalaBinaryVersion.value match {
