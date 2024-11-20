@@ -13,7 +13,7 @@ libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.19"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.19"
 
 VarContext.changeDeptVar                := "cats-effect"
-libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.5"
+libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.5.6"
 
 VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.12.0"
