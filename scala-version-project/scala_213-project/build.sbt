@@ -200,3 +200,6 @@ VarContext.changeDeptVar                 := "coursier"
 libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.19"
 libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.19"
 libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.19"
+
+VarContext.changeDeptVar          := "jsoup"
+libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
