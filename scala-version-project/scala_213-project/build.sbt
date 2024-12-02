@@ -88,7 +88,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.2"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.3"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.11"
@@ -109,7 +109,7 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.11.0"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.11.0"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.16"
 
 VarContext.changeDeptVar              := "play-circe"
 libraryDependencies += "com.dripower" %% "play-circe" % "3014.1"
@@ -194,7 +194,7 @@ VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.5"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.6"
 
 VarContext.changeDeptVar                 := "coursier"
 libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.19"
@@ -202,4 +202,4 @@ libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.19"
 libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.19"
 
 VarContext.changeDeptVar          := "jsoup"
-libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"

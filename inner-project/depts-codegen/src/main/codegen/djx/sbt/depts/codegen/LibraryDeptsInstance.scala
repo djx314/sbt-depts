@@ -135,7 +135,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.3"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -165,7 +165,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.16"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -283,7 +283,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.5"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.6"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -429,7 +429,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.3"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -459,7 +459,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.16"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -577,7 +577,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.5"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.6"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -751,7 +751,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.15"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.16"
 
   VarContext.changeDeptVar := "slick"
 
@@ -865,7 +865,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.5"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.6"
 
   /*VarContext.changeDeptVar                 := "coursier"
 
