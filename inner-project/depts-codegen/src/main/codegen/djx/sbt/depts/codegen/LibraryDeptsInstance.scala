@@ -293,6 +293,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.19"
 
+  VarContext.changeDeptVar := "jsoup"
+
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.15"
@@ -583,6 +587,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.19"
 
+  VarContext.changeDeptVar := "jsoup"
+
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+
   VarContext.setScalaVersion := "3"
 
   scalaVersion := "3.5.0"
@@ -866,5 +874,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
           libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.19"
 
           libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.19"*/
+
+  VarContext.changeDeptVar := "jsoup"
+
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
 
 }

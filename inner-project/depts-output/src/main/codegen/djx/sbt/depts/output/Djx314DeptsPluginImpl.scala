@@ -68,6 +68,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `cats-core`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
     val `scala-parser-combinators`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
     val `coursier`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for coursier""")
+    val `jsoup`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jsoup""")
   }
 }
 
@@ -135,6 +136,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`cats-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-parser-combinators`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`coursier`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`jsoup`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.addLibrarySetting(libScalax.`slf4j-nop`)(djxIsScala3)(contextLibraryCollection.apply(("slf4j-nop", "3")))(
       sourcePosition.fromEnclosing()
     ),
@@ -262,6 +264,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`zio-json`)(djxIsScala212)(contextLibraryCollection.apply(("zio-json", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jsoup`)(djxIsScala3)(contextLibraryCollection.apply(("jsoup", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`pekko-actor`)(djxIsScala213)(contextLibraryCollection.apply(("pekko-actor", "2.13")))(
@@ -462,6 +467,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio-nio`)(djxIsScala213)(contextLibraryCollection.apply(("zio-nio", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`jsoup`)(djxIsScala212)(contextLibraryCollection.apply(("jsoup", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`typesafe-config`)(djxIsScala212)(contextLibraryCollection.apply(("typesafe-config", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -598,6 +606,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`distage`)(djxIsScala213)(contextLibraryCollection.apply(("distage", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`jsoup`)(djxIsScala213)(contextLibraryCollection.apply(("jsoup", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala3)(contextLibraryCollection.apply(("commons-math3", "3")))(
