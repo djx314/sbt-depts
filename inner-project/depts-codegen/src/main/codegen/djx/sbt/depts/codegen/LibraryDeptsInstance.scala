@@ -23,6 +23,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
 
+  VarContext.changeDeptVar := "circe-extras"
+
+  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.2"
+
   VarContext.changeDeptVar := "scalatest"
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.19"
@@ -187,6 +191,46 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
 
+  VarContext.changeDeptVar := "javet-node-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+
   VarContext.changeDeptVar := "jintellitype"
 
   libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
@@ -295,7 +339,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
 
   VarContext.setScalaVersion := "2.13"
 
@@ -316,6 +360,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.10"
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
+
+  VarContext.changeDeptVar := "circe-extras"
+
+  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.2"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -481,6 +529,46 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
 
+  VarContext.changeDeptVar := "javet-node-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+
   VarContext.changeDeptVar := "jintellitype"
 
   libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
@@ -589,7 +677,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
 
   VarContext.setScalaVersion := "3"
 
@@ -602,6 +690,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.10"
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
+
+  VarContext.changeDeptVar := "circe-extras"
+
+  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.2"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -769,6 +861,46 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
 
+  VarContext.changeDeptVar := "javet-node-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-node-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-linux-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-arm64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-macos-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+
+  VarContext.changeDeptVar := "javet-v8-windows-x86_64"
+
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+
   VarContext.changeDeptVar := "jintellitype"
 
   libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
@@ -877,6 +1009,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.1"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
 
 }
