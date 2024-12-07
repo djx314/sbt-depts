@@ -303,7 +303,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.2.0"
 
   VarContext.changeDeptVar := "spire"
 
@@ -641,7 +641,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.2.0"
 
   VarContext.changeDeptVar := "spire"
 
@@ -973,7 +973,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scallop"
 
-  libraryDependencies += "org.rogach" %%% "scallop" % "5.1.0"
+  libraryDependencies += "org.rogach" %%% "scallop" % "5.2.0"
 
   VarContext.changeDeptVar := "spire"
 
