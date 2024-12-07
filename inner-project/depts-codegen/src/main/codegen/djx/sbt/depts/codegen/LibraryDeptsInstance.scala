@@ -189,47 +189,47 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -527,47 +527,47 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "jintellitype"
 
@@ -859,47 +859,47 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.0"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.1"
 
   VarContext.changeDeptVar := "jintellitype"
 
