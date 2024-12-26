@@ -331,11 +331,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "coursier"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.22"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.22"
 
-  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.22"
 
   VarContext.changeDeptVar := "jsoup"
 
@@ -669,11 +669,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "coursier"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier-core" % "2.1.22"
 
-  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.22"
 
-  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.21"
+  libraryDependencies += "io.get-coursier" %% "coursier" % "2.1.22"
 
   VarContext.changeDeptVar := "jsoup"
 
@@ -1001,11 +1001,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   /*VarContext.changeDeptVar                 := "coursier"
 
-          libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.21"
+          libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.22"
 
-          libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.21"
+          libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.22"
 
-          libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.21"*/
+          libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.22"*/
 
   VarContext.changeDeptVar := "jsoup"
 
