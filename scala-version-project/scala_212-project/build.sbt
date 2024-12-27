@@ -220,9 +220,9 @@ VarContext.changeDeptVar              := "sbt-launch"
 libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.7"
 
 VarContext.changeDeptVar                 := "coursier"
-libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.22"
-libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.22"
-libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.22"
+libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.23"
+libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.23"
+libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.23"
 
 VarContext.changeDeptVar          := "jsoup"
 libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
