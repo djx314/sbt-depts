@@ -101,17 +101,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -439,17 +439,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -769,17 +769,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.2"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
