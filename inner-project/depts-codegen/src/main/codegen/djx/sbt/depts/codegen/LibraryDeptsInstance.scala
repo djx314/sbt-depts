@@ -241,21 +241,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -579,21 +579,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
@@ -911,21 +911,21 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "pekko-all"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.1.3"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.1.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.1.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.3"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-slf4j" % "1.1.3"
 
   VarContext.changeDeptVar := "pekko-actor"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.2"
+  libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.3"
 
   VarContext.changeDeptVar := "zio-interop-reactivestreams"
 
