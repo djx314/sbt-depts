@@ -65,7 +65,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scoverage"
 
-  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.2.2")
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.3.0")
 
   VarContext.changePluginVar := "sbt-github-actions"
 
