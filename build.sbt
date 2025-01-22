@@ -1,4 +1,4 @@
-scalaVersion := "2.13.15"
+scalaVersion := "2.13.16"
 
 val `root/file`            = file(".").getCanonicalFile
 val `version-project/file` = `root/file` / "scala-version-project"
