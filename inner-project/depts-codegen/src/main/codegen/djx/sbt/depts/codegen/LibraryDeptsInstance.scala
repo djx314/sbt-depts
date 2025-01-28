@@ -79,7 +79,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.12.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
@@ -417,7 +417,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.12.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
@@ -747,7 +747,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.12.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
 
   VarContext.changeDeptVar := "http4s-Release"
 
