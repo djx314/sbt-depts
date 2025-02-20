@@ -100,7 +100,7 @@ VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.21"
+libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.25"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
