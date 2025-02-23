@@ -4,7 +4,9 @@ import sbt.librarymanagement.syntax._
 
 trait PluginsColImpl {
 
-  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.2"""
+  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M1075"""
+
+  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.4"""
 
   val `sbt-revolver`: sbt.librarymanagement.ModuleID = """io.spray""" % """sbt-revolver""" % """0.10.0"""
 
@@ -12,7 +14,7 @@ trait PluginsColImpl {
 
   val `sbt-sonatype`: sbt.librarymanagement.ModuleID = """org.xerial.sbt""" % """sbt-sonatype""" % """3.12.2"""
 
-  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.0"""
+  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.1"""
 
   val `sbt-scalajs-crossproject`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-scalajs-crossproject""" % """1.3.2"""
 
@@ -20,21 +22,19 @@ trait PluginsColImpl {
 
   val `sbt-ide-settings`: sbt.librarymanagement.ModuleID = """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.2"""
 
-  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.17.0"""
+  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.18.2"""
 
   val `sbt-platform-deps`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-platform-deps""" % """1.0.2"""
 
   val `flyway-sbt`: sbt.librarymanagement.ModuleID = """io.github.davidmweber""" % """flyway-sbt""" % """7.4.0"""
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.1-M1075"""
-
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.3.9"""
 
   val `sbt-scala-js-map`: sbt.librarymanagement.ModuleID = """com.thoughtworks.sbt-scala-js-map""" % """sbt-scala-js-map""" % """4.1.1"""
 
-  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.3.0"""
+  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.3.1"""
 
-  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.2.2"""
+  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.3.1"""
 
   val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.24.0"""
 
@@ -42,7 +42,7 @@ trait PluginsColImpl {
 
   val `sbt-jmh`: sbt.librarymanagement.ModuleID = """pl.project13.scala""" % """sbt-jmh""" % """0.4.7"""
 
-  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-native-packager""" % """1.10.4"""
+  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-native-packager""" % """1.11.1"""
 
   val `sbt-dependency-updates`: sbt.librarymanagement.ModuleID = """org.jmotor.sbt""" % """sbt-dependency-updates""" % """1.2.9"""
 

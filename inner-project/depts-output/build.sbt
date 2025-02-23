@@ -3,11 +3,13 @@ import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
 addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
 addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
+addSbtPlugin(djx314Plugins.`sbt-sonatype`)
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
 libraryDependencies ++= libScalax.`coursier`.value
+// libraryDependencies ++= libScalax.`commons-compress`.value
 
 enablePlugins(SbtPlugin)
 sbtPluginPublishLegacyMavenStyle := false

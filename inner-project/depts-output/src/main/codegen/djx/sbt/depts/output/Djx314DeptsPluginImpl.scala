@@ -10,6 +10,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
   val scalaV: ScalaV = ScalaV(`v212` = """2.12.20""", `v213` = """2.13.16""", `v3` = """3.5.0""")
 
   object libScalax {
+    val `javet-node-android`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-android""")
     val `javet-node-linux-arm64`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-linux-arm64""")
     val `typesafe-config`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for typesafe-config""")
     val `http4s-Release-ember-server` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release-ember-server""")
@@ -17,69 +18,86 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `postgresql-jdbc`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for postgresql-jdbc""")
     val `scalatest`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scalatest""")
     val `javet-node-macos-arm64`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-macos-arm64""")
-    val `zio-logging`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
-    val `scallop`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scallop""")
-    val `javet-node-linux-x86_64`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-linux-x86_64""")
-    val `slf4j-nop`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-nop""")
-    val `distage`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for distage""")
-    val `fs2`                         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for fs2""")
-    val `kind-projector`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
-    val `simple-adt`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
-    val `jmh-generator-annprocess`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jmh-generator-annprocess""")
-    val `commons-math3`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-math3""")
-    val `sbt-launch`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-launch""")
-    val `cats-effect`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
-    val `javet-v8-windows-x86_64`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-windows-x86_64""")
-    val `slick`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
-    val `jintellitype`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
-    val `scala-collection-compat`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
-    val `commons-lang3-bridge`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3-bridge""")
-    val `http4s-twirl`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-twirl""")
-    val `commons-lang3`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3""")
-    val `doobie`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie""")
-    val `zio-config`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
-    val `pekko-actor`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-actor""")
-    val `zio-nio`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-nio""")
-    val `slf4j-simple`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
-    val `javet`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet""")
-    val `zio-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
-    val `simple-adt-bridge-support`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt-bridge-support""")
-    val `better-monadic-for`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for better-monadic-for""")
-    val `circe-extras`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe-extras""")
-    val `play-circe`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
-    val `pekko-all`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-all""")
-    val `scala-java8-compat`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-java8-compat""")
-    val `mysql-connector-java`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for mysql-connector-java""")
-    val `zhttp`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zhttp""")
-    val `h2`                          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for h2""")
-    val `javet-node-macos-x86_64`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-macos-x86_64""")
-    val `zio2`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
-    val `logback-classic`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for logback-classic""")
-    val `http4s-Release`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
-    val `javet-v8-macos-arm64`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-arm64""")
-    val `scala-logging`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-logging""")
-    val `sbt-librarymanagement-core`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
-    val `breeze`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for breeze""")
-    val `shapeless3-test`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
-    val `javet-v8-linux-x86_64`       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-x86_64""")
-    val `circe`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
-    val `cats-effect-cps`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
-    val `slickless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slickless""")
-    val `doobie-h2`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
-    val `javacv-platform`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
-    val `javet-v8-linux-arm64`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-arm64""")
-    val `commons-io`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
-    val `shapeless`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
-    val `macwire`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
-    val `javet-v8-macos-x86_64`       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-x86_64""")
-    val `javet-node-windows-x86_64`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-windows-x86_64""")
-    val `zio-interop-reactivestreams` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-interop-reactivestreams""")
-    val `spire`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for spire""")
-    val `jnativehook`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
-    val `cats-core`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
-    val `scala-parser-combinators`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
-    val `coursier`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for coursier""")
-    val `jsoup`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jsoup""")
+    val `javet-node-windows-x86_64-i18n` =
+      settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-windows-x86_64-i18n""")
+    val `javet-node-linux-x86_64-i18n` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-linux-x86_64-i18n""")
+    val `zio-logging`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-logging""")
+    val `scallop`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scallop""")
+    val `javet-node-linux-x86_64`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-linux-x86_64""")
+    val `slf4j-nop`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-nop""")
+    val `distage`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for distage""")
+    val `fs2`                          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for fs2""")
+    val `kind-projector`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for kind-projector""")
+    val `simple-adt`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt""")
+    val `jmh-generator-annprocess`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jmh-generator-annprocess""")
+    val `commons-math3`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-math3""")
+    val `sbt-launch`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-launch""")
+    val `cats-effect`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect""")
+    val `javet-v8-windows-x86_64`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-windows-x86_64""")
+    val `slick`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slick""")
+    val `jintellitype`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jintellitype""")
+    val `scala-collection-compat`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-collection-compat""")
+    val `commons-lang3-bridge`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3-bridge""")
+    val `javet-v8-linux-arm64-i18n`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-arm64-i18n""")
+    val `http4s-twirl`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-twirl""")
+    val `scala-reflect`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-reflect""")
+    val `commons-lang3`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-lang3""")
+    val `doobie`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie""")
+    val `zio-config`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-config""")
+    val `pekko-actor`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-actor""")
+    val `zio-nio`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-nio""")
+    val `slf4j-simple`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slf4j-simple""")
+    val `javet`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet""")
+    val `zio-json`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-json""")
+    val `simple-adt-bridge-support`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for simple-adt-bridge-support""")
+    val `better-monadic-for`           = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for better-monadic-for""")
+    val `circe-extras`                 = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe-extras""")
+    val `play-circe`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-circe""")
+    val `pekko-all`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for pekko-all""")
+    val `scala-java8-compat`           = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-java8-compat""")
+    val `mysql-connector-java`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for mysql-connector-java""")
+    val `javet-v8-android`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-android""")
+    val `zhttp`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zhttp""")
+    val `javet-v8-windows-x86_64-i18n` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-windows-x86_64-i18n""")
+    val `h2`                           = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for h2""")
+    val `javet-node-macos-x86_64`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-macos-x86_64""")
+    val `zio2`                         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio2""")
+    val `logback-classic`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for logback-classic""")
+    val `javet-node-android-i18n`      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-android-i18n""")
+    val `http4s-Release`               = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for http4s-Release""")
+    val `javet-v8-macos-arm64-i18n`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-arm64-i18n""")
+    val `commons-compress`             = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-compress""")
+    val `javet-v8-macos-arm64`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-arm64""")
+    val `javet-v8-linux-x86_64-i18n`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-x86_64-i18n""")
+    val `scala-logging`                = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-logging""")
+    val `sbt-librarymanagement-core`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-librarymanagement-core""")
+    val `breeze`                       = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for breeze""")
+    val `shapeless3-test`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless3-test""")
+    val `javet-v8-linux-x86_64`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-x86_64""")
+    val `circe`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
+    val `cats-effect-cps`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
+    val `slickless`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slickless""")
+    val `doobie-h2`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
+    val `javet-v8-macos-x86_64-i18n`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-x86_64-i18n""")
+    val `javacv-platform`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
+    val `javet-v8-linux-arm64`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-arm64""")
+    val `commons-io`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
+    val `shapeless`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
+    val `macwire`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
+    val `play-json`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for play-json""")
+    val `javet-v8-macos-x86_64`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-x86_64""")
+    val `javet-node-windows-x86_64`    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-windows-x86_64""")
+    val `javet-node-macos-x86_64-i18n` = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-macos-x86_64-i18n""")
+    val `zio-interop-reactivestreams`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for zio-interop-reactivestreams""")
+    val `javet-node-linux-arm64-i18n`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-linux-arm64-i18n""")
+    val `spire`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for spire""")
+    val `jnativehook`                  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jnativehook""")
+    val `javet-v8-android-i18n`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-android-i18n""")
+    val `javet-node-macos-arm64-i18n`  = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-macos-arm64-i18n""")
+    val `cats-core`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-core""")
+    val `scala-parser-combinators`     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for scala-parser-combinators""")
+    val `coursier`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for coursier""")
+    val `jsoup`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for jsoup""")
   }
 }
 
@@ -89,6 +107,7 @@ trait Djx314DeptsImpl {
   import buildKeys._
 
   def settingsForDept: Seq[Setting[_]] = Seq(
+    innerSetting.setKey(libScalax.`javet-node-android`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-node-linux-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`typesafe-config`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release-ember-server`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -96,6 +115,8 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`postgresql-jdbc`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scalatest`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-node-macos-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-windows-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-linux-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scallop`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-node-linux-x86_64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -113,7 +134,9 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`jintellitype`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-collection-compat`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-lang3-bridge`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-linux-arm64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-twirl`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`scala-reflect`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-lang3`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`doobie`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-config`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -129,13 +152,19 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`pekko-all`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-java8-compat`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`mysql-connector-java`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-android`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zhttp`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-windows-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-node-macos-x86_64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`logback-classic`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-android-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`http4s-Release`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-macos-arm64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`commons-compress`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-macos-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-linux-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-logging`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`sbt-librarymanagement-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`breeze`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -145,16 +174,22 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`cats-effect-cps`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slickless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`doobie-h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-macos-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javacv-platform`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-linux-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-io`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`play-json`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-macos-x86_64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-node-windows-x86_64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-macos-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`zio-interop-reactivestreams`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-linux-arm64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`spire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`jnativehook`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-v8-android-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`javet-node-macos-arm64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-core`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`scala-parser-combinators`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`coursier`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -184,6 +219,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`postgresql-jdbc`)(djxIsScala213)(contextLibraryCollection.apply(("postgresql-jdbc", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`commons-compress`)(djxIsScala3)(contextLibraryCollection.apply(("commons-compress", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala213)(contextLibraryCollection.apply(("fs2", "2.13")))(
@@ -231,6 +269,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala212)(
       contextLibraryCollection.apply(("mysql-connector-java", "2.12"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`play-json`)(djxIsScala212)(contextLibraryCollection.apply(("play-json", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala213)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -264,6 +305,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`jintellitype`)(djxIsScala3)(contextLibraryCollection.apply(("jintellitype", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-linux-arm64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-linux-arm64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala3)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "3"))
     )(sourcePosition.fromEnclosing()),
@@ -299,6 +343,12 @@ trait Djx314DeptsImpl {
     ),
     innerSetting.addLibrarySetting(libScalax.`javet-node-windows-x86_64`)(djxIsScala213)(
       contextLibraryCollection.apply(("javet-node-windows-x86_64", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`scala-reflect`)(djxIsScala213)(contextLibraryCollection.apply(("scala-reflect", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-macos-arm64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-macos-arm64-i18n", "3"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`circe`)(djxIsScala3)(contextLibraryCollection.apply(("circe", "3")))(
       sourcePosition.fromEnclosing()
@@ -339,6 +389,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`kind-projector`)(djxIsScala213)(contextLibraryCollection.apply(("kind-projector", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-macos-arm64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-macos-arm64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scala-parser-combinators`)(djxIsScala212)(
       contextLibraryCollection.apply(("scala-parser-combinators", "2.12"))
     )(sourcePosition.fromEnclosing()),
@@ -396,6 +449,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`zio-config`)(djxIsScala213)(contextLibraryCollection.apply(("zio-config", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-macos-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-macos-x86_64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet`)(djxIsScala213)(contextLibraryCollection.apply(("javet", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -426,9 +482,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-client`)(djxIsScala212)(
       contextLibraryCollection.apply(("http4s-Release-ember-client", "2.12"))
     )(sourcePosition.fromEnclosing()),
-    innerSetting.addLibrarySetting(libScalax.`circe-extras`)(djxIsScala3)(contextLibraryCollection.apply(("circe-extras", "3")))(
-      sourcePosition.fromEnclosing()
-    ),
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala212)(contextLibraryCollection.apply(("h2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -462,12 +515,18 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-arm64`)(djxIsScala3)(
       contextLibraryCollection.apply(("javet-node-macos-arm64", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-android-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-android-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio2`)(djxIsScala212)(contextLibraryCollection.apply(("zio2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javet-v8-macos-arm64`)(djxIsScala3)(
       contextLibraryCollection.apply(("javet-v8-macos-arm64", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`scala-reflect`)(djxIsScala212)(contextLibraryCollection.apply(("scala-reflect", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`scala-java8-compat`)(djxIsScala212)(
       contextLibraryCollection.apply(("scala-java8-compat", "2.12"))
     )(sourcePosition.fromEnclosing()),
@@ -498,6 +557,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scallop`)(djxIsScala212)(contextLibraryCollection.apply(("scallop", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-android-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-android-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala212)(contextLibraryCollection.apply(("fs2", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -522,6 +584,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`macwire`)(djxIsScala213)(contextLibraryCollection.apply(("macwire", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-linux-arm64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-linux-arm64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio-interop-reactivestreams`)(djxIsScala3)(
       contextLibraryCollection.apply(("zio-interop-reactivestreams", "3"))
     )(sourcePosition.fromEnclosing()),
@@ -570,6 +635,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`simple-adt-bridge-support`)(djxIsScala212)(
       contextLibraryCollection.apply(("simple-adt-bridge-support", "2.12"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-linux-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-linux-x86_64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`commons-lang3-bridge`)(djxIsScala213)(
       contextLibraryCollection.apply(("commons-lang3-bridge", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -584,6 +652,9 @@ trait Djx314DeptsImpl {
     ),
     innerSetting.addLibrarySetting(libScalax.`javet-node-linux-arm64`)(djxIsScala213)(
       contextLibraryCollection.apply(("javet-node-linux-arm64", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`commons-compress`)(djxIsScala212)(
+      contextLibraryCollection.apply(("commons-compress", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`cats-effect`)(djxIsScala213)(contextLibraryCollection.apply(("cats-effect", "2.13")))(
       sourcePosition.fromEnclosing()
@@ -633,6 +704,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`scalatest`)(djxIsScala3)(contextLibraryCollection.apply(("scalatest", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-android`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-android", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scala-logging`)(djxIsScala212)(contextLibraryCollection.apply(("scala-logging", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
@@ -657,6 +731,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala3)(contextLibraryCollection.apply(("h2", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-windows-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-windows-x86_64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-v8-linux-x86_64`)(djxIsScala213)(
       contextLibraryCollection.apply(("javet-v8-linux-x86_64", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -675,15 +752,27 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`commons-lang3`)(djxIsScala213)(contextLibraryCollection.apply(("commons-lang3", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`play-json`)(djxIsScala3)(contextLibraryCollection.apply(("play-json", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`fs2`)(djxIsScala3)(contextLibraryCollection.apply(("fs2", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-linux-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-linux-x86_64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javet-node-macos-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-node-macos-x86_64-i18n", "3"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala213)(contextLibraryCollection.apply(("simple-adt", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`javet-v8-windows-x86_64`)(djxIsScala3)(
       contextLibraryCollection.apply(("javet-v8-windows-x86_64", "3"))
     )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`play-json`)(djxIsScala213)(contextLibraryCollection.apply(("play-json", "2.13")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`commons-math3`)(djxIsScala213)(contextLibraryCollection.apply(("commons-math3", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -708,6 +797,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`doobie`)(djxIsScala3)(contextLibraryCollection.apply(("doobie", "3")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`commons-compress`)(djxIsScala213)(
+      contextLibraryCollection.apply(("commons-compress", "2.13"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`zio-logging`)(djxIsScala213)(contextLibraryCollection.apply(("zio-logging", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
@@ -746,6 +838,12 @@ trait Djx314DeptsImpl {
     ),
     innerSetting.addLibrarySetting(libScalax.`http4s-Release-ember-server`)(djxIsScala213)(
       contextLibraryCollection.apply(("http4s-Release-ember-server", "2.13"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-android`)(djxIsScala3)(contextLibraryCollection.apply(("javet-v8-android", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`javet-v8-windows-x86_64-i18n`)(djxIsScala3)(
+      contextLibraryCollection.apply(("javet-v8-windows-x86_64-i18n", "3"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-v8-macos-x86_64`)(djxIsScala3)(
       contextLibraryCollection.apply(("javet-v8-macos-x86_64", "3"))

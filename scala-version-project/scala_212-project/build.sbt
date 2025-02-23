@@ -226,3 +226,12 @@ libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.24"
 
 VarContext.changeDeptVar          := "jsoup"
 libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+
+VarContext.changeDeptVar                   := "commons-compress"
+libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
+
+VarContext.changeDeptVar                   := "play-json"
+libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
+
+VarContext.changeDeptVar               := "scala-reflect"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"

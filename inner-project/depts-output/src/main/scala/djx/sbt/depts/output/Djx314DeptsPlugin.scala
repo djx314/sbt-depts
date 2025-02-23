@@ -1,11 +1,14 @@
 package djx.sbt.depts
 package output
 
-import sbt._
-import sbt.Keys._
-import scala.collection.compat._
+import sbt.*
+import sbt.Keys.*
 
+import scala.collection.compat.*
 import impl.{ScalafmtRewrite, UpdatePluginLibVersion, UpdateSbtVersion}
+import org.apache.commons.compress.archivers.zip.ZipIoUtil
+import org.apache.commons.io.FileUtils
+
 import collection.mutable.ListBuffer
 
 package impl {
@@ -40,12 +43,19 @@ package impl {
 
     val djxUpdate = taskKey[Unit]("All update action for this plugin.")
 
+    val snoatypeZipPackage = taskKey[File]("Zip sonatype files.")
+
     import djx.sbt.depts.plugins.{PluginsCollection => DjxPluginCol}
     val djx314Plugins: DjxPluginCol = DjxPluginCol
   }
 }
 
 object Djx314DeptsPlugin extends AutoPlugin {
+  import xerial.sbt.Sonatype.autoImport.sonatypeBundleDirectory
+  import scala.reflect.io.Directory
+  import scala.util.Try
+  import java.nio.file.{Files, Paths}
+
   override def requires =
     org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin && sbt.plugins.IvyPlugin
   override def trigger: PluginTrigger                    = allRequirements
@@ -57,6 +67,19 @@ object Djx314DeptsPlugin extends AutoPlugin {
     import buildKeys._
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(snoatypeZipPackage := {
+        val fileDir: File   = sonatypeBundleDirectory.value
+        val finalBundlePath = Paths.get(fileDir.toPath.toUri).resolve(s"${fileDir.getPath}-bundle")
+        val bundleDirectory = Directory(finalBundlePath.toFile)
+
+        Try {
+          bundleDirectory.deleteRecursively()
+          val bundleZipDirectory = Files.createDirectory(finalBundlePath)
+          DjxZipUtil.zipDirectory(fileDir, bundleZipDirectory)
+          finalBundlePath.toFile
+        }.get
+      })
 
       settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
         djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
