@@ -91,7 +91,7 @@ VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.32"
+libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.35"
 
 VarContext.changeDeptVar                := "shapeless"
 libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.3"
@@ -253,6 +253,5 @@ libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
 VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 
-VarContext.changeDeptVar                   := "vavi-util-archive"
+VarContext.changeDeptVar                    := "vavi-util-archive"
 libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
-
