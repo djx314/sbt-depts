@@ -64,7 +64,7 @@ libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "4.0.3"
 libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
 
 VarContext.changeDeptVar          := "slf4j-simple"
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.16"
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.17"
 
 VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
@@ -207,7 +207,7 @@ VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
 VarContext.changeDeptVar          := "slf4j-nop"
-libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.16"
+libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.17"
 
 VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
@@ -253,6 +253,5 @@ libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
 VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 
-VarContext.changeDeptVar                   := "vavi-util-archive"
+VarContext.changeDeptVar                    := "vavi-util-archive"
 libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
-
