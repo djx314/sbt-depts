@@ -51,17 +51,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -405,17 +405,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -747,17 +747,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC8"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC7"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC8"
 
   VarContext.changeDeptVar := "zio2"
 
