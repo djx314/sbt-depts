@@ -81,6 +81,7 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `javet-v8-macos-x86_64-i18n`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-x86_64-i18n""")
     val `javacv-platform`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
     val `javet-v8-linux-arm64`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-arm64""")
+    val `vavi-util-archive`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for vavi-util-archive""")
     val `commons-io`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
     val `shapeless`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
@@ -177,6 +178,7 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`javet-v8-macos-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javacv-platform`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-linux-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`vavi-util-archive`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-io`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -294,6 +296,9 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala212)(contextLibraryCollection.apply(("simple-adt", "2.12")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala3)(contextLibraryCollection.apply(("vavi-util-archive", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`sbt-launch`)(djxIsScala212)(contextLibraryCollection.apply(("sbt-launch", "2.12")))(
@@ -713,6 +718,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala213)(contextLibraryCollection.apply(("h2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala213)(
+      contextLibraryCollection.apply(("vavi-util-archive", "2.13"))
+    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-x86_64`)(djxIsScala213)(
       contextLibraryCollection.apply(("javet-node-macos-x86_64", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -742,6 +750,9 @@ trait Djx314DeptsImpl {
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-arm64`)(djxIsScala212)(
       contextLibraryCollection.apply(("javet-node-macos-arm64", "2.12"))
+    )(sourcePosition.fromEnclosing()),
+    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala212)(
+      contextLibraryCollection.apply(("vavi-util-archive", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala213)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.13"))

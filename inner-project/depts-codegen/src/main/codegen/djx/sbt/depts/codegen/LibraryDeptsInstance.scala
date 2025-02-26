@@ -353,6 +353,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
 
+  VarContext.changeDeptVar := "vavi-util-archive"
+
+  libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
+
   VarContext.setScalaVersion := "2.13"
 
   scalaVersion := "2.13.16"
@@ -702,6 +706,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "scala-reflect"
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
+
+  VarContext.changeDeptVar := "vavi-util-archive"
+
+  libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
 
   VarContext.setScalaVersion := "3"
 
@@ -1094,5 +1102,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "play-json"
 
   libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
+
+  VarContext.changeDeptVar := "vavi-util-archive"
+
+  libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
 
 }
