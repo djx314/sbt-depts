@@ -40,10 +40,10 @@ VarContext.changeDeptVar              := "doobie-h2"
 libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC7"
 
 VarContext.changeDeptVar          := "zio2"
-libraryDependencies += "dev.zio" %%% "zio"          % "2.1.15"
-libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.15"
-libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.15"
-libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.15"
+libraryDependencies += "dev.zio" %%% "zio"          % "2.1.16"
+libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.16"
+libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.16"
+libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.16"
 
 VarContext.changeDeptVar             := "typesafe-config"
 libraryDependencies += "com.typesafe" % "config" % "1.4.3"
@@ -236,6 +236,5 @@ libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
 
-VarContext.changeDeptVar                   := "vavi-util-archive"
+VarContext.changeDeptVar                    := "vavi-util-archive"
 libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
-
