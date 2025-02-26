@@ -185,7 +185,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.16"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
 
   VarContext.changeDeptVar := "javet"
 
@@ -539,7 +539,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.16"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
 
   VarContext.changeDeptVar := "javet"
 
@@ -883,7 +883,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.16"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
 
   VarContext.changeDeptVar := "javet"
 
