@@ -245,7 +245,7 @@ libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.24"
 libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.24"*/
 
 VarContext.changeDeptVar          := "jsoup"
-libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
 VarContext.changeDeptVar                   := "commons-compress"
 libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
