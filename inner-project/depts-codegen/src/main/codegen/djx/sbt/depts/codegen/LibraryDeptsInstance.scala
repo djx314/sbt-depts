@@ -339,7 +339,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 
@@ -693,7 +693,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 
@@ -1093,7 +1093,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 
