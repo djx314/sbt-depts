@@ -103,7 +103,7 @@ VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.36"
 
 VarContext.changeDeptVar              := "shapeless"
-libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
+libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.13"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.11.0"
