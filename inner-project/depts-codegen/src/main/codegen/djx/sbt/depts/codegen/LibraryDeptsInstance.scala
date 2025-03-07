@@ -139,7 +139,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.3"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.4"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -151,11 +151,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.36"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.13"
 
   VarContext.changeDeptVar := "fs2"
 
@@ -327,7 +327,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.7"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -339,7 +339,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 
@@ -493,7 +493,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.3"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.4"
 
   VarContext.changeDeptVar := "javacv-platform"
 
@@ -505,11 +505,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.36"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.12"
+  libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.13"
 
   VarContext.changeDeptVar := "fs2"
 
@@ -681,7 +681,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.7"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -693,7 +693,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 
@@ -847,17 +847,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.36"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
 
   VarContext.changeDeptVar := "shapeless"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.3"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.5.0"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.4.3"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.5.0"
 
   VarContext.changeDeptVar := "shapeless3-test"
 
-  libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.4.3"
+  libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.5.0"
 
   VarContext.changeDeptVar := "fs2"
 
@@ -1081,7 +1081,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.7"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
 
   /*VarContext.changeDeptVar                 := "coursier"
 
@@ -1093,7 +1093,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
   VarContext.changeDeptVar := "commons-compress"
 

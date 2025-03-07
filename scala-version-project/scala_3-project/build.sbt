@@ -91,14 +91,14 @@ VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.36"
+libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
 
 VarContext.changeDeptVar                := "shapeless"
-libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.4.3"
-libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.4.3"
+libraryDependencies += "org.typelevel" %%% "shapeless3-deriving" % "3.5.0"
+libraryDependencies += "org.typelevel" %%% "shapeless3-typeable" % "3.5.0"
 
 VarContext.changeDeptVar                := "shapeless3-test"
-libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.4.3"
+libraryDependencies += "org.typelevel" %%% "shapeless3-test" % "3.5.0"
 
 VarContext.changeDeptVar         := "fs2"
 libraryDependencies += "co.fs2" %%% "fs2-core"             % "3.11.0"
@@ -237,7 +237,7 @@ VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.7"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
 
 /*VarContext.changeDeptVar                 := "coursier"
 libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.24"
@@ -245,7 +245,7 @@ libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.24"
 libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.24"*/
 
 VarContext.changeDeptVar          := "jsoup"
-libraryDependencies += "org.jsoup" % "jsoup" % "1.18.3"
+libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
 
 VarContext.changeDeptVar                   := "commons-compress"
 libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
