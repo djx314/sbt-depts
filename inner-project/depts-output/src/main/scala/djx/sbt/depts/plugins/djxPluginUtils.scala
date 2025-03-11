@@ -5,7 +5,16 @@ import cats.implicits._
 import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
-import djx.sbt.depts.abs.{CompilerPlugin, DeptsModule, JavaDept, Library => DeptsScalaLibrary, ScalaDept, ScalaJSDept}
+import djx.sbt.depts.abs.models.{
+  `CrossVersion.full`,
+  CompilerPlugin,
+  DeptsModule,
+  JavaDept,
+  Library => DeptsScalaLibrary,
+  NoCrossVersion,
+  ScalaDept,
+  ScalaJSDept
+}
 
 object pUtils extends pUtils
 
@@ -21,13 +30,16 @@ trait pUtils {
 
     libDepts := {
       val toLib: List[sbt.ModuleID] = for (dept <- depts) yield {
-        val libItem: sbt.ModuleID = dept.platform.fold
+        val libItem1: sbt.ModuleID = dept.platform.fold
           .apply { (_: JavaDept) => dept.org % dept.name % dept.version }
           .apply { (_: ScalaDept) => dept.org %% dept.name % dept.version }
           .apply { (_: ScalaJSDept) => dept.org %%% dept.name % dept.version }
 
+        val libItem2: sbt.ModuleID =
+          dept.crossInfo.fold((_: NoCrossVersion) => libItem1)((_: `CrossVersion.full`) => libItem1 cross CrossVersion.full)
+
         val libIfCompilePlugin: sbt.ModuleID =
-          dept.info.fold((_: CompilerPlugin) => compilerPlugin(libItem))((_: DeptsScalaLibrary) => libItem)
+          dept.info.fold((_: CompilerPlugin) => compilerPlugin(libItem2))((_: DeptsScalaLibrary) => libItem2)
 
         libIfCompilePlugin
       }
