@@ -66,16 +66,3 @@ object CrossInfo {
     //
   })
 }
-
-// ===
-case class DeptsModule(
-  org: String,
-  name: String,
-  platform: DeptType.Type,
-  version: String,
-  info: DeptInfo.Type,
-  crossInfo: CrossInfo.Type
-) {
-  DeptsModuleSelf =>
-  def cross(otherCrossInfo: CrossInfo.Type): DeptsModule = DeptsModuleSelf.copy(crossInfo = otherCrossInfo)
-}

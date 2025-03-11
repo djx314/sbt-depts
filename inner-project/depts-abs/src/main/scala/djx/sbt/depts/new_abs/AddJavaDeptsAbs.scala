@@ -1,29 +1,101 @@
 package djx.sbt.depts.abs
 
 import scala.collection.compat._
-import models.{CrossInfo, DeptInfo, DeptType, DeptsModule}
+import models.{CrossInfo, DeptInfo, DeptType, ScalaJavaVersion}
+import net.scalax.simple.adt.{TypeAdt => Adt}
 
 class DeptsModuleHelper1(org: String, name: String, platform: DeptType.Type) {
+  DeptMHelperSelf =>
+
   def %(version: String): DeptsModule = DeptsModule(
-    org = org,
-    name = name,
-    platform = platform,
+    org = DeptMHelperSelf.org,
+    name = DeptMHelperSelf.name,
+    platform = DeptMHelperSelf.platform,
     version = version,
     info = DeptInfo.Library,
     crossInfo = CrossInfo.NoCrossVersion
   )
 }
 
+// ===
+case class DeptsModule(
+  org: String,
+  name: String,
+  platform: DeptType.Type,
+  version: String,
+  info: DeptInfo.Type,
+  crossInfo: CrossInfo.Type
+) {
+  DeptsModuleSelf =>
+
+  def cross(otherCrossInfo: CrossInfo.Type): DeptsModule = DeptsModuleSelf.copy(crossInfo = otherCrossInfo)
+  def toScalaJavaVersion(sjVersion: ScalaJavaVersion.Type): DeptsWithVersionModel =
+    DeptsWithVersionModel(
+      org = DeptsModuleSelf.org,
+      name = DeptsModuleSelf.name,
+      platform = DeptsModuleSelf.platform,
+      version = DeptsModuleSelf.version,
+      info = DeptsModuleSelf.info,
+      crossInfo = DeptsModuleSelf.crossInfo,
+      scalaJavaVersion = sjVersion
+    )
+}
+
+// ===
+case class DeptsWithVersionModel(
+  org: String,
+  name: String,
+  platform: DeptType.Type,
+  version: String,
+  info: DeptInfo.Type,
+  crossInfo: CrossInfo.Type,
+  scalaJavaVersion: ScalaJavaVersion.Type
+)
+
+// ===
 trait AddJavaDeptsAbs {
+
+  type SettingType = Adt.CoProduct2[ScalaJavaVersion.Type, DeptsModule]
+  case class AddedToSetting(v: SettingType)
+
+  trait SettingInstance {
+    protected var settings: List[SettingType]
+    private val setter = Adt.CoProduct2[ScalaJavaVersion.Type, DeptsModule]
+
+    def addLib(t: DeptsModule): AddedToSetting = {
+      val sMolde: SettingType = setter(t)
+      settings = sMolde :: settings
+      AddedToSetting(sMolde)
+    }
+    def addScalaVersion(t: ScalaJavaVersion.Type): AddedToSetting = {
+      val sMolde: SettingType = setter(t)
+      settings = sMolde :: settings
+      AddedToSetting(sMolde)
+    }
+  }
+
+  val settingInstance: SettingInstance = new SettingInstance {
+    override protected var settings: List[SettingType] = List.empty
+  }
 
   object CrossVersion {
     val full: CrossInfo.Type = CrossInfo.`CrossVersion.full`
   }
 
-  implicit class `%no_name_implicit_string`(val org: String) {
-    def %(name: String): DeptsModuleHelper1   = new DeptsModuleHelper1(org = org, name = name, platform = DeptType.JavaDept)
-    def %%(name: String): DeptsModuleHelper1  = new DeptsModuleHelper1(org = org, name = name, platform = DeptType.ScalaDept)
-    def %%%(name: String): DeptsModuleHelper1 = new DeptsModuleHelper1(org = org, name = name, platform = DeptType.ScalaJSDept)
+  object scalaVersion {
+    def :=(str: String): AddedToSetting = sbt.librarymanagement.CrossVersion.partialVersion(str) match {
+      case Some((2L, 12L)) => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion212(str))
+      case Some((2L, 13L)) => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion213(str))
+      case Some((3L, _))   => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion3(str))
+    }
+  }
+
+  implicit class `string_to_dept_extra`(val org: String) {
+    extraSelf =>
+
+    def %(name: String): DeptsModuleHelper1   = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.JavaDept)
+    def %%(name: String): DeptsModuleHelper1  = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.ScalaDept)
+    def %%%(name: String): DeptsModuleHelper1 = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.ScalaJSDept)
   }
 
 }
