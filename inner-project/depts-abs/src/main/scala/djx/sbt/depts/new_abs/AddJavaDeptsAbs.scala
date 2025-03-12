@@ -30,27 +30,14 @@ case class DeptsModule(
 
   def cross(otherCrossInfo: CrossInfo.Type): DeptsModule = DeptsModuleSelf.copy(crossInfo = otherCrossInfo)
   def toScalaJavaVersion(sjVersion: ScalaJavaVersion.Type): DeptsWithVersionModel =
-    DeptsWithVersionModel(
-      org = DeptsModuleSelf.org,
-      name = DeptsModuleSelf.name,
-      platform = DeptsModuleSelf.platform,
-      version = DeptsModuleSelf.version,
-      info = DeptsModuleSelf.info,
-      crossInfo = DeptsModuleSelf.crossInfo,
-      scalaJavaVersion = sjVersion
-    )
+    DeptsWithVersionModel(dept = DeptsModuleSelf, scalaJavaVersion = sjVersion)
 }
 
 // ===
-case class DeptsWithVersionModel(
-  org: String,
-  name: String,
-  platform: DeptType.Type,
-  version: String,
-  info: DeptInfo.Type,
-  crossInfo: CrossInfo.Type,
-  scalaJavaVersion: ScalaJavaVersion.Type
-)
+case class DeptsWithVersionModel(dept: DeptsModule, scalaJavaVersion: ScalaJavaVersion.Type)
+
+// ==
+case class DeptWithKey(dept: DeptsWithVersionModel, key: ChangeModuleIdName)
 
 // ===
 case class ChangeModuleIdName(name: String)

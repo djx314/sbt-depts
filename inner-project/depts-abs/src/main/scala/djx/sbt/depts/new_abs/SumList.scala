@@ -12,7 +12,7 @@ object SumList {
   case class SumModule(
     scalaVersions: List[SumType],
     deptNames: List[ChangeModuleIdName],
-    depts: Map[ChangeModuleIdName, List[DeptsWithVersionModel]]
+    depts: List[DeptWithKey]
   )
 
   type FoldType = (ScalaJavaVersion.Type, ChangeModuleIdName, SumModule)
@@ -40,11 +40,10 @@ object SumList {
   }
 
   private def foldActionImpl2(m: FoldType, deptModule: DeptsModule): FoldType = {
-    val map1: Map[ChangeModuleIdName, List[DeptsWithVersionModel]]   = m._3.depts
-    val value1: List[DeptsWithVersionModel]                          = map1.getOrElse(m._2, List.empty)
-    val deptToAdd: DeptsWithVersionModel                             = deptModule.toScalaJavaVersion(m._1)
-    val newMap: Map[ChangeModuleIdName, List[DeptsWithVersionModel]] = map1 + ((m._2, deptToAdd :: value1))
-    (m._1, m._2, m._3.copy(depts = newMap))
+    val map1: List[DeptWithKey]          = m._3.depts
+    val deptToAdd: DeptsWithVersionModel = deptModule.toScalaJavaVersion(m._1)
+    val deptKey: DeptWithKey             = DeptWithKey(deptToAdd, m._2)
+    (m._1, m._2, m._3.copy(depts = deptKey :: map1))
   }
 
   private def foldActionImpl3(m: FoldType, cName: ChangeModuleIdName): FoldType =
@@ -54,7 +53,7 @@ object SumList {
     listItem.fold(sv => foldActionImpl1(m, sv))(deptModule => foldActionImpl2(m, deptModule))(cName => foldActionImpl3(m, cName))
 
   def sumList(l: List[SettingInstance.Type]): SumModule = {
-    val initModel: SumModule = SumModule(List.empty, List.empty, Map.empty)
+    val initModel: SumModule = SumModule(List.empty, List.empty, List.empty)
     val initZero: FoldType   = (null, null, initModel)
 
     val (_, _, foldValue) = l.foldLeft(initZero)(foldAction)
