@@ -101,6 +101,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.6")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.7")
 
 }
