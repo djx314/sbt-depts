@@ -5,6 +5,7 @@ libraryDependencies ++= libScalax.`typesafe-config`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`simple-adt`.value
 libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
+libraryDependencies += "org.scala-sbt" %% "main" % "1.8.2"
 
 val buildSbtFile2: File   = (`root/file` / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
 val buildSbtFile3: File   = (`root/file` / ".." / "scala-version-project" / "scala_213-project" / "build.sbt").getCanonicalFile
