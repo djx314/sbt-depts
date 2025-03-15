@@ -52,6 +52,6 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.3.0"""
 
-  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.6"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.7"""
 
 }

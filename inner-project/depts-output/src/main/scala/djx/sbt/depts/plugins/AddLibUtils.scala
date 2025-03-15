@@ -24,65 +24,83 @@ import djx.sbt.depts.abs.DeptsWithVersionModel
 object AddLibUtils extends AddLibUtils
 
 trait AddLibUtils {
+  AddLibUtilsSelf =>
 
-  def takeScalaVersion(sv: Option[(Long, Long)], module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] = sv match {
-    case Some((2L, 12L)) =>
-      dept.scalaJavaVersion.fold
-        .apply { (_: ScalaVersion212) =>
-          Some(module)
-        }
-        .apply { (_: ScalaVersion213) =>
-          None
-        }
-        .apply { (_: ScalaVersion3) =>
-          None
-        }
-        .apply { (_: JavaVersionForAllScala) =>
-          Some(module)
-        }
-    case Some((2L, 13L)) =>
-      dept.scalaJavaVersion.fold
-        .apply { (_: ScalaVersion212) =>
-          None
-        }
-        .apply { (_: ScalaVersion213) =>
-          Some(module)
-        }
-        .apply { (_: ScalaVersion3) =>
-          None
-        }
-        .apply { (_: JavaVersionForAllScala) =>
-          Some(module)
-        }
-    case Some((3L, _)) =>
-      dept.scalaJavaVersion.fold
-        .apply { (_: ScalaVersion212) =>
-          None
-        }
-        .apply { (_: ScalaVersion213) =>
-          None
-        }
-        .apply { (_: ScalaVersion3) =>
-          Some(module)
-        }
-        .apply { (_: JavaVersionForAllScala) =>
-          Some(module)
-        }
-    case None =>
-      dept.scalaJavaVersion.fold
-        .apply { (_: ScalaVersion212) =>
-          None
-        }
-        .apply { (_: ScalaVersion213) =>
-          None
-        }
-        .apply { (_: ScalaVersion3) =>
-          None
-        }
-        .apply { (_: JavaVersionForAllScala) =>
-          Some(module)
-        }
+  private object s212VImpl
+  private object s213VImpl
+  private object s3VImpl
+  private object otherVImpl
+  private type SType = Adt.CoProduct4[s212VImpl.type, s213VImpl.type, s3VImpl.type, otherVImpl.type]
+  private val Setter = Adt.CoProduct4[s212VImpl.type, s213VImpl.type, s3VImpl.type, otherVImpl.type]
+
+  private def toSType(sv: Option[(Long, Long)]): SType = sv match {
+    case Some((2L, 12L)) => Setter(s212VImpl)
+    case Some((2L, 13L)) => Setter(s213VImpl)
+    case Some((3L, _))   => Setter(s3VImpl)
+    case _               => Setter(otherVImpl)
   }
+
+  private def takeScalaVersion(sv: SType, module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] = sv.fold
+    .apply { (_: s212VImpl.type) =>
+      dept.scalaJavaVersion.fold
+        .apply { (_: ScalaVersion212) =>
+          Some(module)
+        }
+        .apply { (_: ScalaVersion213) =>
+          None
+        }
+        .apply { (_: ScalaVersion3) =>
+          None
+        }
+        .apply { (_: JavaVersionForAllScala) =>
+          Some(module)
+        }
+    }
+    .apply { (_: s213VImpl.type) =>
+      dept.scalaJavaVersion.fold
+        .apply { (_: ScalaVersion212) =>
+          None
+        }
+        .apply { (_: ScalaVersion213) =>
+          Some(module)
+        }
+        .apply { (_: ScalaVersion3) =>
+          None
+        }
+        .apply { (_: JavaVersionForAllScala) =>
+          Some(module)
+        }
+    }
+    .apply { (_: s3VImpl.type) =>
+      dept.scalaJavaVersion.fold
+        .apply { (_: ScalaVersion212) =>
+          None
+        }
+        .apply { (_: ScalaVersion213) =>
+          None
+        }
+        .apply { (_: ScalaVersion3) =>
+          Some(module)
+        }
+        .apply { (_: JavaVersionForAllScala) =>
+          Some(module)
+        }
+    }
+    .apply { (_: otherVImpl.type) =>
+      dept.scalaJavaVersion.fold
+        .apply { (_: ScalaVersion212) =>
+          None
+        }
+        .apply { (_: ScalaVersion213) =>
+          None
+        }
+        .apply { (_: ScalaVersion3) =>
+          None
+        }
+        .apply { (_: JavaVersionForAllScala) =>
+          Some(module)
+        }
+    }
 
   /*def addDepts(
     libDepts: sbt.SettingKey[Seq[sbt.ModuleID]],
@@ -140,7 +158,8 @@ trait AddLibUtils {
     val libIfCompilePlugin: sbt.ModuleID =
       dept1.info.fold((_: CompilerPlugin) => compilerPlugin(libItem2))((_: DeptsScalaLibrary) => libItem2)
 
-    val toLib1Opt: Option[sbt.ModuleID] = takeScalaVersion(CrossVersion.partialVersion(sVersion), libIfCompilePlugin, oneDept)
+    val scalaType: SType                = toSType(CrossVersion.partialVersion(sVersion))
+    val toLib1Opt: Option[sbt.ModuleID] = takeScalaVersion(scalaType, libIfCompilePlugin, oneDept)
 
     val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
     val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)

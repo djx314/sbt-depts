@@ -28,9 +28,7 @@ object DeptType {
 }
 
 // ===
-trait CompilerPlugin {
-  def toCompilerPlugin(m: sbt.librarymanagement.ModuleID): sbt.librarymanagement.ModuleID = sbt.D
-}
+trait CompilerPlugin
 trait Library
 
 object DeptInfo {

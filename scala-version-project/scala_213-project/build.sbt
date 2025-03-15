@@ -236,5 +236,4 @@ libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
 
-VarContext.changeDeptVar                    := "vavi-util-archive"
-libraryDependencies += "com.github.umjammer" % "vavi-util-archive" % "1.1.7"
+

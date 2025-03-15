@@ -76,12 +76,12 @@ trait BuildKeys extends impl.BuildKeysAbs {
     val `javet-v8-linux-x86_64`        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-x86_64""")
     val `circe`                        = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for circe""")
     val `cats-effect-cps`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for cats-effect-cps""")
+    val `sbt-main`                     = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for sbt-main""")
     val `slickless`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for slickless""")
     val `doobie-h2`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for doobie-h2""")
     val `javet-v8-macos-x86_64-i18n`   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-macos-x86_64-i18n""")
     val `javacv-platform`              = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javacv-platform""")
     val `javet-v8-linux-arm64`         = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-v8-linux-arm64""")
-    val `vavi-util-archive`            = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for vavi-util-archive""")
     val `commons-io`                   = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for commons-io""")
     val `shapeless`                    = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for shapeless""")
     val `macwire`                      = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for macwire""")
@@ -173,12 +173,12 @@ trait Djx314DeptsImpl {
     innerSetting.setKey(libScalax.`javet-v8-linux-x86_64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`circe`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`cats-effect-cps`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
+    innerSetting.setKey(libScalax.`sbt-main`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`slickless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`doobie-h2`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-macos-x86_64-i18n`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javacv-platform`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`javet-v8-linux-arm64`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
-    innerSetting.setKey(libScalax.`vavi-util-archive`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`commons-io`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`shapeless`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
     innerSetting.setKey(libScalax.`macwire`)(sourcePosition.fromEnclosing()).setIfNone(Seq.empty),
@@ -283,6 +283,9 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`http4s-Release`)(djxIsScala212)(contextLibraryCollection.apply(("http4s-Release", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-main`)(djxIsScala3)(contextLibraryCollection.apply(("sbt-main", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-x86_64`)(djxIsScala3)(
       contextLibraryCollection.apply(("javet-node-macos-x86_64", "3"))
     )(sourcePosition.fromEnclosing()),
@@ -296,9 +299,6 @@ trait Djx314DeptsImpl {
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`simple-adt`)(djxIsScala212)(contextLibraryCollection.apply(("simple-adt", "2.12")))(
-      sourcePosition.fromEnclosing()
-    ),
-    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala3)(contextLibraryCollection.apply(("vavi-util-archive", "3")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`sbt-launch`)(djxIsScala212)(contextLibraryCollection.apply(("sbt-launch", "2.12")))(
@@ -419,6 +419,9 @@ trait Djx314DeptsImpl {
       contextLibraryCollection.apply(("better-monadic-for", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`cats-effect-cps`)(djxIsScala3)(contextLibraryCollection.apply(("cats-effect-cps", "3")))(
+      sourcePosition.fromEnclosing()
+    ),
+    innerSetting.addLibrarySetting(libScalax.`sbt-main`)(djxIsScala212)(contextLibraryCollection.apply(("sbt-main", "2.12")))(
       sourcePosition.fromEnclosing()
     ),
     innerSetting.addLibrarySetting(libScalax.`mysql-connector-java`)(djxIsScala3)(
@@ -718,9 +721,6 @@ trait Djx314DeptsImpl {
     innerSetting.addLibrarySetting(libScalax.`h2`)(djxIsScala213)(contextLibraryCollection.apply(("h2", "2.13")))(
       sourcePosition.fromEnclosing()
     ),
-    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala213)(
-      contextLibraryCollection.apply(("vavi-util-archive", "2.13"))
-    )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-x86_64`)(djxIsScala213)(
       contextLibraryCollection.apply(("javet-node-macos-x86_64", "2.13"))
     )(sourcePosition.fromEnclosing()),
@@ -750,9 +750,6 @@ trait Djx314DeptsImpl {
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`javet-node-macos-arm64`)(djxIsScala212)(
       contextLibraryCollection.apply(("javet-node-macos-arm64", "2.12"))
-    )(sourcePosition.fromEnclosing()),
-    innerSetting.addLibrarySetting(libScalax.`vavi-util-archive`)(djxIsScala212)(
-      contextLibraryCollection.apply(("vavi-util-archive", "2.12"))
     )(sourcePosition.fromEnclosing()),
     innerSetting.addLibrarySetting(libScalax.`scala-collection-compat`)(djxIsScala213)(
       contextLibraryCollection.apply(("scala-collection-compat", "2.13"))
