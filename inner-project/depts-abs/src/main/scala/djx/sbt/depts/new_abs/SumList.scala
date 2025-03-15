@@ -1,4 +1,5 @@
-package djx.sbt.depts.abs
+package djx.sbt.depts
+package abs
 package models
 
 import scala.collection.compat._
@@ -18,6 +19,8 @@ object SumList {
   object SumModule {
     val init: SumModule = SumModule(tempScalaVersions = TempScalaVersion.init, deptNames = List.empty, depts = List.empty)
   }
+
+  case class ResultModel(scalaV: output.ScalaV, deptNames: List[ChangeModuleIdName], depts: List[DeptWithKey])
 
   case class FoldType(scalaVersionAdt: ScalaJavaVersion.Type, moduleName: ChangeModuleIdName, foldModule: SumModule)
 
@@ -54,13 +57,16 @@ object SumList {
   private def foldAction(m: FoldType, listItem: SettingInstance.Type): FoldType =
     listItem.fold(sv => foldActionImpl1(m, sv))(deptModule => foldActionImpl2(m, deptModule))(cName => foldActionImpl3(m, cName))
 
-  def sumList(l: List[SettingInstance.Type]): SumModule = {
+  def sumList(l: List[SettingInstance.Type]): ResultModel = {
     val initModel: SumModule = SumModule.init
     val initZero: FoldType   = FoldType(null, null, initModel)
 
     val FoldType(_, _, foldValue) = l.foldLeft(initZero)(foldAction)
 
-    foldValue
+    val svTemp: TempScalaVersion   = foldValue.tempScalaVersions
+    val scalaVModel: output.ScalaV = output.ScalaV(v212 = svTemp.s212.get, v213 = svTemp.s213.get, v3 = svTemp.s3.get)
+
+    ResultModel(scalaV = scalaVModel, deptNames = foldValue.deptNames, depts = foldValue.depts)
   }
 
 }

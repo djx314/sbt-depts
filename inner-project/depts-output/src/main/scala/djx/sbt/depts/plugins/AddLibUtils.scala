@@ -145,6 +145,10 @@ trait AddLibUtils {
     import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
     val sVersion: String = scalaVersion.value
+    val scalaType: SType = toSType(CrossVersion.partialVersion(sVersion))
+
+    val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
+    val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)
 
     val dept1 = oneDept.dept
     val libItem1: sbt.ModuleID = dept1.platform.fold
@@ -158,11 +162,7 @@ trait AddLibUtils {
     val libIfCompilePlugin: sbt.ModuleID =
       dept1.info.fold((_: CompilerPlugin) => compilerPlugin(libItem2))((_: DeptsScalaLibrary) => libItem2)
 
-    val scalaType: SType                = toSType(CrossVersion.partialVersion(sVersion))
     val toLib1Opt: Option[sbt.ModuleID] = takeScalaVersion(scalaType, libIfCompilePlugin, oneDept)
-
-    val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
-    val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)
 
     val libSeq1 = for (lib <- toLib1Opt) yield lib +: confirmSeq
     libSeq1.getOrElse(confirmSeq)
