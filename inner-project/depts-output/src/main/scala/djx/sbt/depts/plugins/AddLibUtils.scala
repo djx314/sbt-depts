@@ -20,28 +20,15 @@ import djx.sbt.depts.abs.models.{
 }
 
 import djx.sbt.depts.abs.DeptsWithVersionModel
+import djx.sbt.depts.abs.models.ScalaJavaVersion
 
 object AddLibUtils extends AddLibUtils
 
 trait AddLibUtils {
   AddLibUtilsSelf =>
 
-  private object s212VImpl
-  private object s213VImpl
-  private object s3VImpl
-  private object otherVImpl
-  private type SType = Adt.CoProduct4[s212VImpl.type, s213VImpl.type, s3VImpl.type, otherVImpl.type]
-  private val Setter = Adt.CoProduct4[s212VImpl.type, s213VImpl.type, s3VImpl.type, otherVImpl.type]
-
-  private def toSType(sv: Option[(Long, Long)]): SType = sv match {
-    case Some((2L, 12L)) => Setter(s212VImpl)
-    case Some((2L, 13L)) => Setter(s213VImpl)
-    case Some((3L, _))   => Setter(s3VImpl)
-    case _               => Setter(otherVImpl)
-  }
-
-  private def takeScalaVersion(sv: SType, module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] = sv.fold
-    .apply { (_: s212VImpl.type) =>
+  private def takeScalaVersion(sv: ScalaJavaVersion.Type, module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] = sv.fold
+    .apply { (_: ScalaVersion212) =>
       dept.scalaJavaVersion.fold
         .apply { (_: ScalaVersion212) =>
           Some(module)
@@ -56,7 +43,7 @@ trait AddLibUtils {
           Some(module)
         }
     }
-    .apply { (_: s213VImpl.type) =>
+    .apply { (_: ScalaVersion213) =>
       dept.scalaJavaVersion.fold
         .apply { (_: ScalaVersion212) =>
           None
@@ -71,7 +58,7 @@ trait AddLibUtils {
           Some(module)
         }
     }
-    .apply { (_: s3VImpl.type) =>
+    .apply { (_: ScalaVersion3) =>
       dept.scalaJavaVersion.fold
         .apply { (_: ScalaVersion212) =>
           None
@@ -86,7 +73,7 @@ trait AddLibUtils {
           Some(module)
         }
     }
-    .apply { (_: otherVImpl.type) =>
+    .apply { (_: JavaVersionForAllScala) =>
       dept.scalaJavaVersion.fold
         .apply { (_: ScalaVersion212) =>
           None
@@ -144,8 +131,8 @@ trait AddLibUtils {
     import sbt.Keys._
     import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
-    val sVersion: String = scalaVersion.value
-    val scalaType: SType = toSType(CrossVersion.partialVersion(sVersion))
+    val sVersion: String                 = scalaVersion.value
+    val scalaType: ScalaJavaVersion.Type = ScalaJavaVersion.fromString(sVersion)
 
     val confirmOpt: Option[Seq[sbt.ModuleID]] = libDepts.?.value
     val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)

@@ -89,21 +89,10 @@ trait AddJavaDeptsAbs {
   }
 
   object scalaVersion {
-    def :=(str: String): SettingInstance.AddedToSetting = sbt.librarymanagement.CrossVersion.partialVersion(str) match {
-      case Some((2L, 12L)) => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion212(str))
-      case Some((2L, 13L)) => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion213(str))
-      case Some((3L, _))   => settingInstance.addScalaVersion(ScalaJavaVersion.ScalaVersion3(str))
-    }
+    def :=(str: String): SettingInstance.AddedToSetting = settingInstance.addScalaVersion(ScalaJavaVersion.fromString(str))
   }
 
-  object JavaVersionToSetting {
-    object value
-  }
-  object customJV {
-    def :=(str: JavaVersionToSetting.value.type): SettingInstance.AddedToSetting = {
-      settingInstance.addScalaVersion(ScalaJavaVersion.JavaVersion)
-    }
-  }
+
 
   implicit class `string_to_dept_extra`(val org: String) {
     extraSelf =>
@@ -117,9 +106,21 @@ trait AddJavaDeptsAbs {
     def +=(dept: DeptsModule): SettingInstance.AddedToSetting = settingInstance.addLib(dept)
   }
 
+
+
+
   object VarContext {
     object changeDeptVar {
       def :=(str: String): SettingInstance.AddedToSetting = settingInstance.changeModuleName(str)
+    }
+
+    object JavaVersionToSetting {
+      object value
+    }
+    object customJV {
+      def :=(str: JavaVersionToSetting.value.type): SettingInstance.AddedToSetting = {
+        settingInstance.addScalaVersion(ScalaJavaVersion.JavaVersion)
+      }
     }
   }
 

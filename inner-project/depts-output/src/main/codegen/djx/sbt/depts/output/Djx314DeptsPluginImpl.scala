@@ -7,7 +7,7 @@ import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 trait BuildKeys extends impl.BuildKeysAbs {
 
-  val scalaV: ScalaV = ScalaV(`v212` = """2.12.20""", `v213` = """2.13.16""", `v3` = """3.5.0""")
+  val scalaV: ScalaV = ScalaV(`v212` = """2.12.20""", `v213` = """2.13.16""", `v3` = """2.13.16""")
 
   object libScalax {
     val `javet-node-android`          = settingKey[Seq[_root_.sbt.librarymanagement.ModuleID]]("""lib for javet-node-android""")

@@ -9,6 +9,7 @@ libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
 val buildSbtFile2: File   = (`root/file` / ".." / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
 val buildSbtFile3: File   = (`root/file` / ".." / "scala-version-project" / "scala_213-project" / "build.sbt").getCanonicalFile
 val buildSbtFile4: File   = (`root/file` / ".." / "scala-version-project" / "scala_3-project" / "build.sbt").getCanonicalFile
+val buildSbtFile5: File   = (`root/file` / ".." / "scala-version-project" / "java_version-project" / "build.sbt").getCanonicalFile
 val pluginsSbtFile1: File = (`root/file` / ".." / "project" / "plugin.sbt").getCanonicalFile
 
 val buildPropertyFile: File = (`root/file` / ".." / "project" / "build.properties").getCanonicalFile
@@ -26,6 +27,7 @@ genActionImpl := {
     .partialInput(s""" ${buildSbtFile2.toString}""")
     .partialInput(s""" ${buildSbtFile3.toString}""")
     .partialInput(s""" ${buildSbtFile4.toString}""")
+    .partialInput(s""" ${buildSbtFile5.toString}""")
     .partialInput(s""" ${writFile1.toString}""")
     .evaluated
 

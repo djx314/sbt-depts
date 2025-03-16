@@ -23,19 +23,27 @@ object ScalaJavaVersion {
 
   import ScalaJavaVersionSelf.{Type => ScalaJavaVersionType}
 
-  def ScalaVersion212(version: String): ScalaJavaVersionType = Setter(new ScalaVersion212 {
+  private def ScalaVersion212(version: String): ScalaJavaVersionType = Setter(new ScalaVersion212 {
     override def version212: String = version
   })
 
-  def ScalaVersion213(version: String): ScalaJavaVersionType = Setter(new ScalaVersion213 {
+  private def ScalaVersion213(version: String): ScalaJavaVersionType = Setter(new ScalaVersion213 {
     override def version213: String = version
   })
 
-  def ScalaVersion3(version: String): ScalaJavaVersionType = Setter(new ScalaVersion3 {
+  private def ScalaVersion3(version: String): ScalaJavaVersionType = Setter(new ScalaVersion3 {
     override def version3: String = version
   })
 
   val JavaVersion: ScalaJavaVersionType = Setter(new JavaVersionForAllScala {
     //
   })
+
+  def fromString(v: String): ScalaJavaVersionType = sbt.librarymanagement.CrossVersion.partialVersion(v) match {
+    case Some((2L, 12L)) => ScalaJavaVersion.ScalaVersion212(v)
+    case Some((2L, 13L)) => ScalaJavaVersion.ScalaVersion213(v)
+    case Some((3L, _))   => ScalaJavaVersion.ScalaVersion3(v)
+    case _               => JavaVersion
+  }
+
 }

@@ -253,5 +253,5 @@ libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
 VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 
-VarContext.changeDeptVar                    := "sbt-main"
+VarContext.changeDeptVar               := "sbt-main"
 libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M3"

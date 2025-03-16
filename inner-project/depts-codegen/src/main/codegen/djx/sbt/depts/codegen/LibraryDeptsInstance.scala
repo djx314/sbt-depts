@@ -1103,4 +1103,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M3"
 
+  scalaVersion := "2.13.16"
+
 }

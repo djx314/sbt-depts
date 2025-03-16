@@ -12,12 +12,15 @@ object CodegenAction {
   def main(arr: Array[String]): Unit = {
     def genString(pathStr: String): String =
       Using.resource(Source.fromFile(Paths.get(pathStr).toFile, StandardCharsets.UTF_8.name()))(u => u.getLines().mkString("\n"))
-    val strCol = arr.take(3).map(genString)
 
-    val writePath = Paths.get(arr(3))
+    val Array(str1: String, str2: String, str3: String, str4: String, writeFile: String) = arr
+
+    val writePath = Paths.get(writeFile)
     locally {
       Files.createDirectories(writePath.getParent)
     }
+
+    val strCol = for (s <- List(str1, str2, str3, str4)) yield genString(s)
 
     val strLines = Using.resource(Source.fromString(strCol.mkString("\n")))(l => l.getLines().to(List)).map(t => " " * 10 + t)
 

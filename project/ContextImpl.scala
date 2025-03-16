@@ -6,4 +6,12 @@ object VarContext {
   val changePluginVar: TaskKey[String]        = taskKey[String]("taskKey for plugin var.")
   val endPluginVar: Def.Setting[Task[String]] = changeDeptVar := "end plugin var"
   val setScalaVersion: TaskKey[String]        = taskKey[String]("taskKey for scala version.")
+
+  trait JavaVersionToSetting
+  object JavaVersionToSetting {
+    val value: JavaVersionToSetting = new JavaVersionToSetting {
+      //
+    }
+  }
+  val customJV: SettingKey[JavaVersionToSetting] = settingKey[JavaVersionToSetting]("JavaVersionToSetting")
 }
