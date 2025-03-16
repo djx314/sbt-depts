@@ -237,4 +237,4 @@ VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "1.10.8"
+libraryDependencies += "org.scala-sbt" %% "main" % "1.10.10"
