@@ -1101,7 +1101,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M3"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M4"
 
   scalaVersion := "2.13.16"
 
