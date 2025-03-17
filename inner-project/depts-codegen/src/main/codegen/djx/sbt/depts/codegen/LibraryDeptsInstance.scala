@@ -15,11 +15,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -99,17 +99,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.4"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -349,7 +349,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.8"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.10"
 
   scalaVersion := "2.13.16"
 
@@ -363,11 +363,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -447,17 +447,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.4"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -699,11 +699,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.10"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -779,17 +779,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.4"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.3"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.4"
 
   VarContext.changeDeptVar := "slf4j-simple"
 
@@ -1083,7 +1083,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M3"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M4"
 
   VarContext.customJV := VarContext.JavaVersionToSetting.value
 
