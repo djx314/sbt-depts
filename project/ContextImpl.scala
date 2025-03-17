@@ -5,7 +5,6 @@ object VarContext {
   val endDeptVar: Def.Setting[Task[String]]   = changeDeptVar := "end dept var"
   val changePluginVar: TaskKey[String]        = taskKey[String]("taskKey for plugin var.")
   val endPluginVar: Def.Setting[Task[String]] = changeDeptVar := "end plugin var"
-  val setScalaVersion: TaskKey[String]        = taskKey[String]("taskKey for scala version.")
 
   trait JavaVersionToSetting
   object JavaVersionToSetting {

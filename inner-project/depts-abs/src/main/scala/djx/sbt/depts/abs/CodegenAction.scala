@@ -29,7 +29,7 @@ object CodegenAction {
          |package djx.sbt.depts
          |package codegen
          |
-         |object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
+         |object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
          |
          |  ${strLines.mkString("\n\n")}
          |

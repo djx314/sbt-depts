@@ -88,11 +88,12 @@ trait AddJavaDeptsAbs {
     val full: CrossInfo.Type = CrossInfo.`CrossVersion.full`
   }
 
+  def addCompilerPlugin(dept: DeptsModule): SettingInstance.AddedToSetting =
+    settingInstance.addLib(dept.copy(info = DeptInfo.CompilerPlugin))
+
   object scalaVersion {
     def :=(str: String): SettingInstance.AddedToSetting = settingInstance.addScalaVersion(ScalaJavaVersion.fromString(str))
   }
-
-
 
   implicit class `string_to_dept_extra`(val org: String) {
     extraSelf =>
@@ -105,9 +106,6 @@ trait AddJavaDeptsAbs {
   object libraryDependencies {
     def +=(dept: DeptsModule): SettingInstance.AddedToSetting = settingInstance.addLib(dept)
   }
-
-
-
 
   object VarContext {
     object changeDeptVar {

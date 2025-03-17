@@ -1,5 +1,4 @@
-VarContext.setScalaVersion := "2.12"
-scalaVersion               := "2.12.20"
+scalaVersion := "2.12.20"
 
 VarContext.changeDeptVar := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.3" cross CrossVersion.full)
@@ -81,8 +80,6 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
 
-VarContext.changeDeptVar                   := "commons-lang3"
-libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
 
 VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"

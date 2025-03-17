@@ -1,9 +1,7 @@
 package djx.sbt.depts
 package codegen
 
-object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
-
-  VarContext.setScalaVersion := "2.12"
+object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   scalaVersion := "2.12.20"
 
@@ -124,10 +122,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "macwire"
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
-
-  VarContext.changeDeptVar := "commons-lang3"
-
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -357,8 +351,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-sbt" %% "main" % "1.10.8"
 
-  VarContext.setScalaVersion := "2.13"
-
   scalaVersion := "2.13.16"
 
   VarContext.changeDeptVar := "kind-projector"
@@ -478,10 +470,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "macwire"
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
-
-  VarContext.changeDeptVar := "commons-lang3"
-
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -707,8 +695,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
 
-  VarContext.setScalaVersion := "3"
-
   scalaVersion := "3.5.0"
 
   VarContext.changeDeptVar := "circe"
@@ -816,10 +802,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
   VarContext.changeDeptVar := "macwire"
 
   libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
-
-  VarContext.changeDeptVar := "commons-lang3"
-
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
 
   VarContext.changeDeptVar := "commons-lang3-bridge"
 
@@ -1103,6 +1085,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.LibraryDepts {
 
   libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M3"
 
-  scalaVersion := "2.13.16"
+  VarContext.customJV := VarContext.JavaVersionToSetting.value
+
+  VarContext.changeDeptVar := "commons-lang3"
+
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
 
 }

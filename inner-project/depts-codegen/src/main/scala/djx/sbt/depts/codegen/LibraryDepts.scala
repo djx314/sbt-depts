@@ -10,7 +10,7 @@ import scala.collection.compat._
 
 trait AppHaveATest {
 
-  case class ScalaV(v212: Option[String], v213: Option[String], v3: Option[String]) {
+  /*case class ScalaV(v212: Option[String], v213: Option[String], v3: Option[String]) {
     private def namesMap: List[(String, String)] =
       List("v212", "v213", "v3").zip(productIterator.to(List)).to(List).map(s => (s._1, s._2.asInstanceOf[Option[String]].get))
 
@@ -46,17 +46,17 @@ trait AppHaveATest {
   var contextVarNames: List[String]                                             = List.empty
   var libSettings: Set[String]                                                  = Set.empty
   var PluginScalaVersionBoolean: String                                         = null
-  var libSettingsMap: Map[(String, String), List[LibraryDepts.LibraryInstance]] = Map.empty
+  var libSettingsMap: Map[(String, String), List[LibraryDepts.LibraryInstance]] = Map.empty*/
 
-  def genString(key: String, currentVar: String, currentScalaVersion: String): String = {
-    val keyStr     = "\"" + key + "\""
-    val keyStr1    = "`" + key + "`"
-    val sv: String = "\"" + currentScalaVersion + "\""
-    s"innerSetting.addLibrarySetting(libScalax.$keyStr1)(${currentVar})(contextLibraryCollection.apply((${keyStr}, ${sv})))(sourcePosition.fromEnclosing())"
-  }
+  def genStringVar: List[String] = for (d <- extractGen.deptNames.to(List))
+    yield s"""val `${d.name}`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]](\"\"\"sbt library: ${d.name}\"\"\")"""
 
-  def extractGen(): Unit = {
-    for (current <- LibraryDeptsInstance.context.value) {
+  def genStringSeq: List[String] = for (d <- extractGen.deptNames.to(List)) yield s"""(\"\"\"${d.name}\"\"\", libScalax.`${d.name}`)"""
+
+  def extractGen: djx.sbt.depts.abs.models.SumList.ResultModel =
+    djx.sbt.depts.abs.models.SumList.sumList(LibraryDeptsInstance.settingInstance.outputSettings)
+
+  /*for (current <- LibraryDeptsInstance.context.value) {
       current match {
         case LibraryDepts.ChangeDeptVarSettings(name) =>
           contextVarName = name
@@ -86,17 +86,16 @@ trait AppHaveATest {
         case null =>
       }
 
-    }
-  }
+    }*/
 
-  extractGen()
+  // extractGen()
 
   def codegenAction(file: Path): Unit = {
     locally {
       Files.createDirectories(file.getParent)
     }
 
-    val scalaV: ScalaV = scalaVersionCollect(ScalaV.init)
+    /*val scalaV: ScalaV = scalaVersionCollect(ScalaV.init)
 
     var libString: List[String] = List.empty
 
@@ -105,35 +104,34 @@ trait AppHaveATest {
     libString = libString ::: (for (name <- deptNames) yield LibSettings.genInitVar(name))
     libString = libString ::: (for (libSetting <- libSettings) yield libSetting).to(List)
 
-    val varDeineds = for (name <- deptNames) yield LibSettings.genDefinedVar(name)
+    val varDeineds = for (name <- deptNames) yield LibSettings.genDefinedVar(name)*/
 
     Using.resource(new PrintWriter(file.toFile)) { printer =>
       printer.println(s"""
-          |package djx.sbt.depts.output
-          |
-          |import _root_.sbt._
-          |import _root_.sbt.Keys._
-          |import _root_.scala.collection.compat._
-          |import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
-          |
-          |trait BuildKeys extends impl.BuildKeysAbs {
-          |  ${scalaV.genString}
-          |  object libScalax {
-          |    ${varDeineds.mkString("\n")}
-          |  }
-          |}
-          |
-          |trait Djx314DeptsImpl {
-          |
-          |  val buildKeys: BuildKeys
-          |  import buildKeys._
-          |
-          |  def settingsForDept: Seq[Setting[_]] = Seq(
-          |    ${libString.mkString(",\n")}
-          |  )
-          |
-          |}
-          |""".stripMargin)
+          package djx.sbt.depts.output
+
+          import _root_.sbt._
+          import _root_.sbt.Keys._
+          import _root_.scala.collection.compat._
+          import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
+
+          trait BuildKeys {
+            object libScalax {
+              ${genStringVar.mkString("\n")}
+            }
+          }
+
+          trait Djx314DeptsImpl {
+
+            val buildKeys: BuildKeys
+            import buildKeys._
+
+            def libraryMap: Map[String, SettingKey[Seq[sbt.ModuleID]]] = Map(
+              ${genStringSeq.mkString(",\n")}
+            )
+
+          }
+          """)
     }
 
   }

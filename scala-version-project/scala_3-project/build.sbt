@@ -1,5 +1,4 @@
-VarContext.setScalaVersion := "3"
-scalaVersion               := "3.5.0"
+scalaVersion := "3.5.0"
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.10"
@@ -72,8 +71,7 @@ libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
 
-VarContext.changeDeptVar                   := "commons-lang3"
-libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.17.0"
+
 
 VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
