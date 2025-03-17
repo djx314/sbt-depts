@@ -213,7 +213,7 @@ VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
 VarContext.changeDeptVar                 := "coursier"
 libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.24"
@@ -233,4 +233,4 @@ VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "1.10.10"
+libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
