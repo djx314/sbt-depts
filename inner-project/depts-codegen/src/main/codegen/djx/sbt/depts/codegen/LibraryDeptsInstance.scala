@@ -321,7 +321,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -349,7 +349,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
 
   scalaVersion := "2.13.16"
 
@@ -669,7 +669,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -1059,7 +1059,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   /*VarContext.changeDeptVar                 := "coursier"
 
