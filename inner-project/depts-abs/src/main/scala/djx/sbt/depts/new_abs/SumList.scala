@@ -7,20 +7,17 @@ import net.scalax.simple.adt.{TypeAdt => Adt}
 
 object SumList {
 
-  type SumType = Adt.CoProduct3[ScalaVersion212, ScalaVersion213, ScalaVersion3]
-  private val sumSetter = Adt.CoProduct3[ScalaVersion212, ScalaVersion213, ScalaVersion3]
-
   case class TempScalaVersion(s212: Option[String], s213: Option[String], s3: Option[String])
   object TempScalaVersion {
     val init: TempScalaVersion = TempScalaVersion(s212 = None, s213 = None, s3 = None)
   }
 
-  case class SumModule(tempScalaVersions: TempScalaVersion, deptNames: Set[ChangeModuleIdName], depts: List[DeptWithKey])
+  case class SumModule(tempScalaVersions: TempScalaVersion, deptNames: List[ChangeModuleIdName], depts: List[DeptWithKey])
   object SumModule {
-    val init: SumModule = SumModule(tempScalaVersions = TempScalaVersion.init, deptNames = Set.empty, depts = List.empty)
+    val init: SumModule = SumModule(tempScalaVersions = TempScalaVersion.init, deptNames = List.empty, depts = List.empty)
   }
 
-  case class ResultModel(scalaV: output.ScalaV, deptNames: Set[ChangeModuleIdName], depts: List[DeptWithKey])
+  case class ResultModel(scalaV: output.ScalaV, deptNames: List[ChangeModuleIdName], depts: List[DeptWithKey])
 
   case class FoldType(scalaVersionAdt: ScalaJavaVersion.Type, moduleName: ChangeModuleIdName, foldModule: SumModule)
 
@@ -51,8 +48,13 @@ object SumList {
     m.copy(foldModule = m.foldModule.copy(depts = deptKey :: map1))
   }
 
-  private def foldActionImpl3(m: FoldType, cName: ChangeModuleIdName): FoldType =
-    m.copy(moduleName = cName, foldModule = m.foldModule.copy(deptNames = m.foldModule.deptNames + cName))
+  private def foldActionImpl3(m: FoldType, cName: ChangeModuleIdName): FoldType = {
+    val oldList: List[ChangeModuleIdName] = m.foldModule.deptNames
+    val containsItem: Boolean             = oldList.contains(cName)
+    val newList: List[ChangeModuleIdName] = if (containsItem) oldList else cName :: oldList
+
+    m.copy(moduleName = cName, foldModule = m.foldModule.copy(deptNames = newList))
+  }
 
   private def foldAction(m: FoldType, listItem: SettingInstance.Type): FoldType =
     listItem.fold(sv => foldActionImpl1(m, sv))(deptModule => foldActionImpl2(m, deptModule))(cName => foldActionImpl3(m, cName))

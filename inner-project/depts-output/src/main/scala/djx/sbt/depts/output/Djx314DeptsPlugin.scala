@@ -16,17 +16,6 @@ package impl {
   import djx.sbt.depts.abs.LibraryDepts
   import djx.sbt.depts.codegen.AppHaveATest
 
-  /*class BuildKeysAbs {
-    val djxIsScalaJs: sbt.SettingKey[Option[Boolean]]                                       = settingKey[Option[Boolean]]("Is scala.js")
-    val djxIsScala2: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 2")
-    val djxIsScala212: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.12")
-    val djxIsScala213: sbt.SettingKey[Boolean]                                              = settingKey[Boolean]("Is scala 2.13")
-    val djxIsScala3: sbt.SettingKey[Boolean]                                                = settingKey[Boolean]("Is scala 3")
-    val contextLibraryCollection: Map[(String, String), List[LibraryDepts.LibraryInstance]] = AppHaveATest.libSettingsMap
-    val sourcePosition                                                                      = djx.sbt.depts.plugins.pUtils.sourcePosition
-    val innerSetting: djx.sbt.depts.plugins.pUtils.setting                                  = djx.sbt.depts.plugins.pUtils.setting
-  }*/
-
   class BuildKeysImpl extends BuildKeys {
     val sbtDJXDeptsSbtLaunchJar = taskKey[File]("The released version of the sbt-launcher we use to bundle this application.")
 
@@ -79,8 +68,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
 
         Try {
           bundleDirectory.deleteRecursively()
-          val bundleZipDirectory = Files.createDirectory(finalBundlePath)
-          DjxZipUtil.zipDirectory(fileDir, bundleZipDirectory)
+          DjxZipUtil.zipDirectory(fileDir, finalBundlePath)
           finalBundlePath.toFile
         }.get
       })
@@ -124,34 +112,12 @@ object Djx314DeptsPlugin extends AutoPlugin {
       val collect = settingsCol.to(List)
     }
 
-    /*object scalaVersionSettings {
-      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
-
-      settingsCol.+=(djxIsScala2 := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(2L) })
-
-      settingsCol.+=(djxIsScala212 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(12L) && djxIsScala2.value })
-
-      settingsCol.+=(djxIsScala213 := { CrossVersion.partialVersion(scalaVersion.value).map(_._2) == Some(13L) && djxIsScala2.value })
-
-      settingsCol.+=(djxIsScala3 := { CrossVersion.partialVersion(scalaVersion.value).map(_._1) == Some(3L) })
-
-      settingsCol.+=({
-        import scalajscrossproject.ScalaJSCrossPlugin.autoImport.JSPlatform
-        import sbtcrossproject.CrossPlugin.autoImport._
-        djxIsScalaJs := { crossProjectPlatform.?.value.map(s => s == JSPlatform) }
-      })
-
-      val collect = settingsCol.to(List)
+    protected def settingProvide: Seq[Setting[Seq[sbt.ModuleID]]] = for {
+      d <- djx.sbt.depts.codegen.AppHaveATest.extractGen.depts
+    } yield {
+      val indexU = djx.sbt.depts.codegen.AppHaveATest.extractGen.deptNames.indexOf(d.key)
+      djx.sbt.depts.plugins.AddLibUtils.addOneDept(SettingsSelf.libraryList(indexU), d.dept)
     }
-
-    object fix {
-      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
-
-      val collect = settingsCol.to(List)
-    }*/
-
-    protected def settingProvide: Seq[Setting[Seq[sbt.ModuleID]]] = for (d <- djx.sbt.depts.codegen.AppHaveATest.extractGen.depts)
-      yield djx.sbt.depts.plugins.AddLibUtils.addOneDept(SettingsSelf.libraryMap(d.key.name), d.dept)
 
     def settingsForDept: Seq[Setting[_]] = SettingsSelf.settingProvide ++: SettingsSelf.UpdateAction.collect
 
