@@ -1,9 +1,9 @@
 scalaVersion := "3.5.0"
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.11"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.11"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.12"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.12"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.12"
 
 VarContext.changeDeptVar                := "scalatest"
 libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.19"
@@ -111,7 +111,7 @@ libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.6.0"
 
 VarContext.changeDeptVar               := "logback-classic"
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
+libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
 
 VarContext.changeDeptVar                  := "javet"
 libraryDependencies += "com.caoccao.javet" % "javet"                          % "4.1.1"
@@ -233,7 +233,7 @@ VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
 /*VarContext.changeDeptVar                 := "coursier"
 libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.24"

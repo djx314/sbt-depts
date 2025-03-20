@@ -15,11 +15,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.12"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -179,7 +179,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
 
   VarContext.changeDeptVar := "javet"
 
@@ -321,7 +321,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -349,7 +349,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
 
   scalaVersion := "2.13.16"
 
@@ -363,11 +363,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.12"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -527,7 +527,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
 
   VarContext.changeDeptVar := "javet"
 
@@ -669,7 +669,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   VarContext.changeDeptVar := "coursier"
 
@@ -699,11 +699,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.12"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.11"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.12"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -861,7 +861,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.17"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
 
   VarContext.changeDeptVar := "javet"
 
@@ -1059,7 +1059,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.10"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
   /*VarContext.changeDeptVar                 := "coursier"
 
