@@ -695,7 +695,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
 
-  scalaVersion := "3.5.0"
+  scalaVersion := "3.6.4"
 
   VarContext.changeDeptVar := "circe"
 
