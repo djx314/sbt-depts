@@ -1,5 +1,5 @@
 VarContext.changePluginVar                         := "sbt-depts-djx314"
-addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M1487")
+addSbtPlugin("net.scalax.djx314"                 % "sbt-depts-djx314"         % "0.0.1-M1496")
 VarContext.changePluginVar                         := "sbt-scalafmt"
 addSbtPlugin("org.scalameta"                     % "sbt-scalafmt"             % "2.5.4")
 VarContext.changePluginVar                         := "sbt-revolver"
