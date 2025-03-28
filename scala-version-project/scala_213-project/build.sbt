@@ -26,9 +26,6 @@ libraryDependencies += "org.typelevel" %%% "cats-effect" % "3.6.0"
 VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %%% "cats-core" % "2.13.0"
 
-VarContext.changeDeptVar               := "h2"
-libraryDependencies += "com.h2database" % "h2" % "2.3.232"
-
 VarContext.changeDeptVar              := "doobie"
 libraryDependencies += "org.tpolecat" %% "doobie-core"      % "1.0.0-RC8"
 libraryDependencies += "org.tpolecat" %% "doobie-hikari"    % "1.0.0-RC8"
@@ -43,9 +40,6 @@ libraryDependencies += "dev.zio" %%% "zio"          % "2.1.16"
 libraryDependencies += "dev.zio" %%% "zio-streams"  % "2.1.16"
 libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.16"
 libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.16"
-
-VarContext.changeDeptVar             := "typesafe-config"
-libraryDependencies += "com.typesafe" % "config" % "1.4.3"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
@@ -71,12 +65,6 @@ libraryDependencies += "dev.zio" %%% "zio-config-typesafe"   % "4.0.4"
 libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "4.0.4"
 libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.4"
 
-VarContext.changeDeptVar          := "slf4j-simple"
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.17"
-
-VarContext.changeDeptVar                   := "commons-io"
-libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
-
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
 
@@ -88,9 +76,6 @@ libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.4"
-
-VarContext.changeDeptVar             := "javacv-platform"
-libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.11"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
@@ -118,38 +103,6 @@ libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.6.0"
 libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.6.0"
 
-VarContext.changeDeptVar               := "logback-classic"
-libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
-
-VarContext.changeDeptVar                  := "javet"
-libraryDependencies += "com.caoccao.javet" % "javet"                     % "4.1.1"
-VarContext.changeDeptVar                  := "javet-node-linux-arm64"
-libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64"    % "4.1.1"
-VarContext.changeDeptVar                  := "javet-node-linux-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64"   % "4.1.1"
-VarContext.changeDeptVar                  := "javet-node-macos-arm64"
-libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64"    % "4.1.1"
-VarContext.changeDeptVar                  := "javet-node-macos-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64"   % "4.1.1"
-VarContext.changeDeptVar                  := "javet-node-windows-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.1"
-VarContext.changeDeptVar                  := "javet-v8-linux-arm64"
-libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64"      % "4.1.1"
-VarContext.changeDeptVar                  := "javet-v8-linux-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64"     % "4.1.1"
-VarContext.changeDeptVar                  := "javet-v8-macos-arm64"
-libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64"      % "4.1.1"
-VarContext.changeDeptVar                  := "javet-v8-macos-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64"     % "4.1.1"
-VarContext.changeDeptVar                  := "javet-v8-windows-x86_64"
-libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64"   % "4.1.1"
-
-VarContext.changeDeptVar              := "jintellitype"
-libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
-
-VarContext.changeDeptVar                 := "jnativehook"
-libraryDependencies += "com.github.kwhat" % "jnativehook" % "2.2.2"
-
 VarContext.changeDeptVar                  := "pekko-all"
 libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.1.3"
 libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"          % "1.1.3"
@@ -170,26 +123,14 @@ libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.0"
 VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
 
-VarContext.changeDeptVar          := "mysql-connector-java"
-libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.2.0"
-
-VarContext.changeDeptVar               := "postgresql-jdbc"
-libraryDependencies += "org.postgresql" % "postgresql" % "42.7.5"
-
 VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
-VarContext.changeDeptVar          := "slf4j-nop"
-libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.17"
-
 VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
-
-VarContext.changeDeptVar                := "jmh-generator-annprocess"
-libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
 VarContext.changeDeptVar         := "zio-nio"
 libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.2"
@@ -199,9 +140,6 @@ libraryDependencies += "org.rogach" %%% "scallop" % "5.2.0"
 
 VarContext.changeDeptVar                := "spire"
 libraryDependencies += "org.typelevel" %%% "spire" % "0.18.0"
-
-VarContext.changeDeptVar                   := "commons-math3"
-libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
 
 VarContext.changeDeptVar               := "breeze"
 libraryDependencies += "org.scalanlp" %%% "breeze" % "2.1.0"
@@ -215,19 +153,16 @@ libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.
 VarContext.changeDeptVar              := "sbt-launch"
 libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
 
-VarContext.changeDeptVar                 := "coursier"
-libraryDependencies += "io.get-coursier" %% "coursier-core"  % "2.1.24"
-libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.24"
-libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.24"
-
-VarContext.changeDeptVar          := "jsoup"
-libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
-
-VarContext.changeDeptVar                   := "commons-compress"
-libraryDependencies += "org.apache.commons" % "commons-compress" % "1.27.1"
+VarContext.changeDeptVar                  := "coursier"
+libraryDependencies += "io.get-coursier" %%% "coursier-core"  % "2.1.24"
+libraryDependencies += "io.get-coursier" %%% "coursier-cache" % "2.1.24"
+libraryDependencies += "io.get-coursier" %%% "coursier"       % "2.1.24"
 
 VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 
 VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
+
+VarContext.changeDeptVar              := "os-lib"
+libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
