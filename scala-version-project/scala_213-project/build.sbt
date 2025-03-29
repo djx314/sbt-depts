@@ -150,9 +150,6 @@ libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M2"
 VarContext.changeDeptVar                    := "simple-adt-bridge-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt-bridge-support" % "0.0.2-temp-v12"
 
-VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
-
 VarContext.changeDeptVar                  := "coursier"
 libraryDependencies += "io.get-coursier" %%% "coursier-core"  % "2.1.24"
 libraryDependencies += "io.get-coursier" %%% "coursier-cache" % "2.1.24"
