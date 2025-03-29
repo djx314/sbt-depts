@@ -313,7 +313,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slickless"
 
-  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M2"
 
   VarContext.changeDeptVar := "simple-adt-bridge-support"
 
@@ -661,7 +661,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slickless"
 
-  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M2"
 
   VarContext.changeDeptVar := "simple-adt-bridge-support"
 
@@ -1051,7 +1051,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slickless"
 
-  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M1"
+  libraryDependencies += "net.scalax.slickless" %% "slickless" % "0.3.8-M2"
 
   VarContext.changeDeptVar := "simple-adt-bridge-support"
 
