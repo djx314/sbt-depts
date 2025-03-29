@@ -9,7 +9,7 @@ libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
 libraryDependencies ++= libScalax.`coursier`.value
-libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.11.4"
+libraryDependencies ++=libScalax.`os-lib`.value
 
 enablePlugins(SbtPlugin)
 sbtPluginPublishLegacyMavenStyle := false
