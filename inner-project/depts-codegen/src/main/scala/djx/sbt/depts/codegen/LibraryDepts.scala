@@ -1,8 +1,6 @@
 package djx.sbt.depts
 package codegen
 
-import abs.LibraryDepts
-
 import java.io.PrintWriter
 import java.nio.file.{Files, Path}
 import scala.util.Using

@@ -7,6 +7,7 @@ import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 trait BuildKeys {
   object libScalax {
+    val `sbt-launch`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-launch""")
     val `jmh-generator-annprocess`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jmh-generator-annprocess""")
     val `postgresql-jdbc`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: postgresql-jdbc""")
@@ -72,7 +73,6 @@ trait BuildKeys {
     val `scala-reflect`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-reflect""")
     val `play-json`: SettingKey[Seq[sbt.ModuleID]]        = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: play-json""")
     val `coursier`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: coursier""")
-    val `sbt-launch`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-launch""")
     val `simple-adt-bridge-support`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt-bridge-support""")
     val `slickless`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: slickless""")
@@ -130,6 +130,7 @@ trait Djx314DeptsImpl {
   import buildKeys._
 
   def libraryList: List[SettingKey[Seq[sbt.ModuleID]]] = List(
+    libScalax.`sbt-launch`,
     libScalax.`jmh-generator-annprocess`,
     libScalax.`postgresql-jdbc`,
     libScalax.`mysql-connector-java`,
@@ -177,7 +178,6 @@ trait Djx314DeptsImpl {
     libScalax.`scala-reflect`,
     libScalax.`play-json`,
     libScalax.`coursier`,
-    libScalax.`sbt-launch`,
     libScalax.`simple-adt-bridge-support`,
     libScalax.`slickless`,
     libScalax.`breeze`,

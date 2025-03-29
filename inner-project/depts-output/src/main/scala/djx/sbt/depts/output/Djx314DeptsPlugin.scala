@@ -13,13 +13,15 @@ import collection.mutable.ListBuffer
 
 package impl {
 
-  import djx.sbt.depts.abs.LibraryDepts
   import djx.sbt.depts.codegen.AppHaveATest
 
   class BuildKeysImpl extends BuildKeys {
-    val sbtDJXDeptsSbtLaunchJar = taskKey[File]("The released version of the sbt-launcher we use to bundle this application.")
-
     val djxProjectRootPath = settingKey[File]("Key of project root.")
+
+    import djx.sbt.depts.abs.TakeSbtProperties
+    val sbtDJXDeptsSbtLaunchJar =
+      taskKey[(TakeSbtProperties.Extra3, File)]("The released version of the sbt-launcher we use to bundle this application.")
+    val djxSbtLaunchJarDirctory = settingKey[File]("Key of djxSbtLaunchJar dirctory.")
 
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
     val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
@@ -81,6 +83,9 @@ object Djx314DeptsPlugin extends AutoPlugin {
         djxProjectRootPath.?.value.getOrElse(new File("."))
       })
 
+      settingsCol.+=(djxScalafmtFile := {
+        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
+      })
       settingsCol.+=(djxScalafmtFile := {
         new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
       })

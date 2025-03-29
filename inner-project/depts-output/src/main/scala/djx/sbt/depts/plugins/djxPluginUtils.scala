@@ -2,7 +2,7 @@ package djx.sbt.depts.plugins
 
 import cats._
 import cats.implicits._
-import djx.sbt.depts.abs.LibraryDepts
+// import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
 import djx.sbt.depts.abs.models.{
@@ -21,20 +21,22 @@ import djx.sbt.depts.abs.models.{
 
 import djx.sbt.depts.abs.DeptsWithVersionModel
 
-object pUtils extends pUtils
+object pUtils {
 
-trait pUtils {
+  import djx.sbt.depts.abs.TakeSbtProperties
 
-  def sbtLaunchJarFile: File = {
+  def sbtLaunchJarFile: (TakeSbtProperties.Extra3, File) = {
     import coursier._
 
-    val name1 = "org.scala-sbt"
-    val name2 = "sbt-launch"
-    val name3 = "1.10.2"
+    val vModel: TakeSbtProperties.Extra3 = djx.sbt.depts.codegen.SbtVersionInfo
+    val libOrg                           = Organization(vModel.org)
+    val libName                          = ModuleName(vModel.libName)
+    val libVersion                       = vModel.version
 
-    val dept: Dependency         = Dependency(Module(organization = Organization(name1), name = ModuleName(name2)), version = name3)
+    val dept: Dependency = Dependency(Module(organization = libOrg, name = libName), version = libVersion)
+
     val Seq(headFile): Seq[File] = Fetch().addDependencies(dept).run()
-    headFile
+    (vModel, headFile)
   }
 
   val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
@@ -102,7 +104,7 @@ trait pUtils {
     def setKey[T](sKey: sbt.SettingKey[T])(lp: sbt.SourcePosition): SetKeyContext[T]            = new SetKeyContext(sKey, lp)
     def setKeySeq[T](sKey: sbt.SettingKey[Seq[T]])(lp: sbt.SourcePosition): SetKeySeqContext[T] = new SetKeySeqContext(sKey, lp)
 
-    def addScalaJsLibraryImpl(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
+    /*def addScalaJsLibraryImpl(sKey: sbt.SettingKey[Seq[sbt.ModuleID]])(
       bindKey: sbt.Def.Initialize[sbt.CrossVersion]
     )(moduleOrg: String, moduleName: String, version: String)(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
       import org.portablescala.sbtplatformdeps.{PlatformDepsPlugin, PlatformDepsGroupID}
@@ -224,9 +226,9 @@ trait pUtils {
       }
 
       temp3
-    }
+    }*/
 
-    def fromLibInstance(confirm: sbt.Def.Initialize[Boolean])(lib: LibraryDepts.LibraryInstance): sbt.Def.Initialize[Seq[sbt.ModuleID]] =
+    /*def fromLibInstance(confirm: sbt.Def.Initialize[Boolean])(lib: LibraryDepts.LibraryInstance): sbt.Def.Initialize[Seq[sbt.ModuleID]] =
       for {
         c        <- confirm
         libModel <- fromLibInstanceImpl(lib)
@@ -255,7 +257,7 @@ trait pUtils {
     )(lib: List[LibraryDepts.LibraryInstance])(lp: sbt.SourcePosition): sbt.Def.Setting[Seq[sbt.ModuleID]] = {
       val aa: sbt.Def.Initialize[Seq[sbt.ModuleID]] = fromLibInstanceSeq(confirm)(lib)
       sKey.appendN(aa, lp)
-    }
+    }*/
 
   }
 

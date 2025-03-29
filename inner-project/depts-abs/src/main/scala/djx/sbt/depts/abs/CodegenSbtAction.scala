@@ -23,11 +23,9 @@ object CodegenSbtAction {
          |package djx.sbt.depts
          |package codegen
          |
-         |object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties {
+         |import _root_.djx.sbt.depts.abs.TakeSbtProperties._
          |
-         |  override val sbtPropertiesString: String = \"\"\"${strCol.mkString("\n\n")}\"\"\"
-         |
-         |}
+         |object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties(${strCol.mkString("\n\n")})
          |""".stripMargin
 
       printer.println(writeStr)

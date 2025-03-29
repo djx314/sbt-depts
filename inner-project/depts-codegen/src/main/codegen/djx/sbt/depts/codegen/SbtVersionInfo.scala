@@ -1,8 +1,6 @@
 package djx.sbt.depts
 package codegen
 
-object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties {
+import _root_.djx.sbt.depts.abs.TakeSbtProperties._
 
-  override val sbtPropertiesString: String = """sbt.version=1.10.11"""
-
-}
+object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties(libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11")
