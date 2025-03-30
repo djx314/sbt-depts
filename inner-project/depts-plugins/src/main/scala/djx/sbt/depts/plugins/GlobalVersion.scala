@@ -16,14 +16,15 @@ case class VersionWrap(main: String, MIndex: Int) {
   private def path1(root: Path): Path = VarSettings.versionFilePath.foldLeft(root)((p, str) => p.resolve(str))
   private def path2(root: Path): Path = VarSettings.preVersionFilePath.foldLeft(root)((p, str) => p.resolve(str))
 
-  def updateFromRoot(path: Path): VersionWrap =
-    VersionWrap(
-      main = VarSettings.read(Source.fromFile(path2(path).toFile)),
-      MIndex = VarSettings.read(Source.fromFile(path1(path).toFile)).toInt
-    )
-  def writeWithRoot(path: Path): Unit = Using.resource(new PrintWriter(path1(path).toFile))(
-    _.println(MIndex.toString)
+  def updateFromRoot(path: Path): VersionWrap = VersionWrap(
+    main = VarSettings.read(Source.fromFile(path2(path).toFile)),
+    MIndex = VarSettings.read(Source.fromFile(path1(path).toFile)).toInt
   )
 
-  val versionStr: String = s"$main-M$MIndex"
+  def writeWithRoot(path: Path): Unit = {
+    os.remove(os.Path(path1(path)))
+    os.write(os.Path(path1(path)), MIndex.toString)
+  }
+
+  val versionStr: String = s"$main.$MIndex"
 }

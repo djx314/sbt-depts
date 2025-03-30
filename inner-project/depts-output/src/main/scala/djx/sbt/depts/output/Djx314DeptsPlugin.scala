@@ -38,6 +38,8 @@ package impl {
 }
 
 object Djx314DeptsPlugin extends AutoPlugin {
+  Djx314DeptsPluginSelf =>
+
   import xerial.sbt.Sonatype.autoImport.sonatypeBundleDirectory
   import scala.reflect.io.Directory
   import scala.util.Try
@@ -111,9 +113,9 @@ object Djx314DeptsPlugin extends AutoPlugin {
 
         val sourceFile         = os.Path(jarFile)
         val copyTarget         = sbtJarDir / sourceFile.last
-        val batStrInfo: String = s"java -jar ./${sbtJarDir.last}/${sourceFile.last} %*"
+        val batStrInfo: String = s"""java -jar "./${sbtJarDir.last}/${sourceFile.last}" %*"""
 
-        locally {
+        Djx314DeptsPluginSelf.synchronized {
           os.makeDir.all(sbtJarDir)
 
           if (os.exists(copyTarget)) {
