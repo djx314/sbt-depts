@@ -1,6 +1,5 @@
 /.idea/
 /inner-project/.idea/
-/sbt.bat
 /.metals/
 /.vscode/
 /.bsp/
@@ -16,3 +15,6 @@
 /inner-project/sbtw-sbt-launch-bundle/
 /inner-project/sbtw.bat
 /inner-project/sbt.bat
+/sbt.bat
+/sbtw.bat
+/sbtw-sbt-launch-bundle/
