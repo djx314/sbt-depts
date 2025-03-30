@@ -6,14 +6,10 @@ import sbt.Keys.*
 
 import scala.collection.compat.*
 import impl.{ScalafmtRewrite, UpdatePluginLibVersion, UpdateSbtVersion}
-import org.apache.commons.compress.archivers.zip.ZipIoUtil
-import org.apache.commons.io.FileUtils
 
 import collection.mutable.ListBuffer
 
 package impl {
-
-  import djx.sbt.depts.codegen.AppHaveATest
 
   class BuildKeysImpl extends BuildKeys {
     val djxProjectRootPath = settingKey[File]("Key of project root.")
@@ -63,26 +59,13 @@ object Djx314DeptsPlugin extends AutoPlugin {
     object UpdateAction {
       private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
 
-      settingsCol.+=(snoatypeZipPackage := {
-        val fileDir: File   = sonatypeBundleDirectory.value
-        val finalBundlePath = Paths.get(fileDir.toPath.toUri).resolve(s"${fileDir.getPath}-bundle")
-        val bundleDirectory = Directory(finalBundlePath.toFile)
-
-        Try {
-          bundleDirectory.deleteRecursively()
-          DjxZipUtil.zipDirectory(fileDir, finalBundlePath)
-          finalBundlePath.toFile
-        }.get
-      })
-
-      settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
-        djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
-      })
-
       settingsCol.+=(djxProjectRootPath := {
         djxProjectRootPath.?.value.getOrElse(new File("."))
       })
 
+      settingsCol.+=(djxSbtLaunchJarDirctory := {
+        new File(djxProjectRootPath.value, "sbtw-sbt-launch-bundle")
+      })
       settingsCol.+=(djxScalafmtFile := {
         new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
       })
@@ -108,10 +91,54 @@ object Djx314DeptsPlugin extends AutoPlugin {
         val fileOpt: Option[File] = djxPluginsLigFile.?.value
         for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
       })
+
+      settingsCol.+=(snoatypeZipPackage := {
+        val fileDir: File   = sonatypeBundleDirectory.value
+        val finalBundlePath = Paths.get(fileDir.toPath.toUri).resolve(s"${fileDir.getPath}-bundle")
+        val bundleDirectory = Directory(finalBundlePath.toFile)
+
+        Try {
+          bundleDirectory.deleteRecursively()
+          DjxZipUtil.zipDirectory(fileDir, finalBundlePath)
+          finalBundlePath.toFile
+        }.get
+      })
+
+      settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
+        val (deptInfo, jarFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
+        val sbtJarDir           = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
+        val sbtwBat             = os.Path(djxProjectRootPath.value.getAbsoluteFile) / "sbtw.bat"
+
+        val sourceFile         = os.Path(jarFile)
+        val copyTarget         = sbtJarDir / sourceFile.last
+        val batStrInfo: String = s"java -jar ./${sbtJarDir.last}/${sourceFile.last} %*"
+
+        locally {
+          os.makeDir.all(sbtJarDir)
+
+          if (os.exists(copyTarget)) {
+            println("Not Copy. File exists.")
+          } else {
+            os.copy(sourceFile, copyTarget)
+          }
+
+          def str: String = os.read(sbtwBat)
+          if (os.exists(sbtwBat) && (str == batStrInfo)) {
+            println("Not write sbtw.bat. Already written.")
+          } else {
+            os.remove(sbtwBat)
+            os.write(sbtwBat, batStrInfo)
+          }
+        }
+
+        (deptInfo, copyTarget.toIO)
+      })
+
       settingsCol.+=(djxUpdate := {
         djxUpdateScalafmtConfig.value
         djxUpdateSbtVersion.value
         djxUpdatePluginsVersion.value
+        sbtDJXDeptsSbtLaunchJar.value
       })
 
       val collect = settingsCol.to(List)
