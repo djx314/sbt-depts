@@ -11,7 +11,7 @@
 /inner-project/.metals/
 /inner-project/.vscode/
 /project/sdap.sbt
-/inner-project/java.bat
+/inner-project/java_with_opts.bat
 /inner-project/sbtw-sbt-launch-bundle/
 /inner-project/sbtw.bat
 /inner-project/sbt.bat

@@ -107,33 +107,44 @@ object Djx314DeptsPlugin extends AutoPlugin {
       })
 
       settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {
-        val (deptInfo, jarFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
-        val sbtJarDir           = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
-        val sbtwBat             = os.Path(djxProjectRootPath.value.getAbsoluteFile) / "sbtw.bat"
+        val (deptInfo, sbtJarMavenFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
+        val sbtJarDir                   = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
+        val sbtJarSource                = os.Path(sbtJarMavenFile)
+        val sbtJarCopyTo                = sbtJarDir / sbtJarSource.last
 
-        val sourceFile         = os.Path(jarFile)
-        val copyTarget         = sbtJarDir / sourceFile.last
-        val batStrInfo: String = s"""java -jar "./${sbtJarDir.last}/${sourceFile.last}" %*"""
+        val batRootDir = os.Path(djxProjectRootPath.value.getAbsoluteFile)
+
+        val sbtwBat               = batRootDir / "sbtw.bat"
+        val sbtwBatString: String = s"""java_with_opts -jar "./${sbtJarDir.last}/${sbtJarCopyTo.last}" %*"""
+
+        val javaWithOptsBat               = batRootDir / "java_with_opts.bat"
+        val javaWithOptsBatString: String = "java %*"
 
         Djx314DeptsPluginSelf.synchronized {
           os.makeDir.all(sbtJarDir)
 
-          if (os.exists(copyTarget)) {
+          if (os.exists(sbtJarCopyTo)) {
             println("Not Copy. File exists.")
           } else {
-            os.copy(sourceFile, copyTarget)
+            os.copy(sbtJarSource, sbtJarCopyTo)
+          }
+
+          if (os.exists(javaWithOptsBat)) {
+            println("No Copy. java_with_opts.bat file exists.")
+          } else {
+            os.write(javaWithOptsBat, javaWithOptsBatString)
           }
 
           def str: String = os.read(sbtwBat)
-          if (os.exists(sbtwBat) && (str == batStrInfo)) {
+          if (os.exists(sbtwBat) && (str == sbtwBatString)) {
             println("Not write sbtw.bat. Already written.")
           } else {
             os.remove(sbtwBat)
-            os.write(sbtwBat, batStrInfo)
+            os.write(sbtwBat, sbtwBatString)
           }
         }
 
-        (deptInfo, copyTarget.toIO)
+        (deptInfo, sbtJarCopyTo.toIO)
       })
 
       settingsCol.+=(djxUpdate := {
