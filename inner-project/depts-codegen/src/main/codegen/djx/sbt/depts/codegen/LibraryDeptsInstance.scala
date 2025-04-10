@@ -125,7 +125,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.41"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -369,7 +369,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.41"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -597,7 +597,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.39"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.41"
 
   VarContext.changeDeptVar := "shapeless"
 
