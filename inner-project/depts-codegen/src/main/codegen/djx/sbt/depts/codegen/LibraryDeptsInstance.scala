@@ -733,7 +733,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "jintellitype"
 
-  libraryDependencies += "com.melloware" % "jintellitype" % "1.4.1"
+  libraryDependencies += "com.melloware" % "jintellitype" % "1.5.0"
 
   VarContext.changeDeptVar := "logback-classic"
 
