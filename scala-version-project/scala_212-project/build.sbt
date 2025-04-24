@@ -161,6 +161,9 @@ libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
 VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
 
+VarContext.changeDeptVar               := "scala-compiler"
+libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.12.20"
+
 VarContext.changeDeptVar               := "sbt-main"
 libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
 
