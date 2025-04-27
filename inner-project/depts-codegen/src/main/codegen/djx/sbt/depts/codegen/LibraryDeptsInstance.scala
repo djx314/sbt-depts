@@ -745,11 +745,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.1"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.3"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "4.1.1"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "4.1.3"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
@@ -785,7 +785,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "javet-node-android"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "4.1.1"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "4.1.3"
 
   VarContext.changeDeptVar := "javet-node-android-i18n"
 
@@ -793,11 +793,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.1"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.3"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "4.1.1"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "4.1.3"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
