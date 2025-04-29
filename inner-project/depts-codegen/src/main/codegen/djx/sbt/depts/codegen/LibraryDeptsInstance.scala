@@ -873,7 +873,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.2.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.3.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
