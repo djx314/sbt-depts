@@ -729,7 +729,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "jsoup"
 
-  libraryDependencies += "org.jsoup" % "jsoup" % "1.19.1"
+  libraryDependencies += "org.jsoup" % "jsoup" % "1.20.1"
 
   VarContext.changeDeptVar := "jintellitype"
 
