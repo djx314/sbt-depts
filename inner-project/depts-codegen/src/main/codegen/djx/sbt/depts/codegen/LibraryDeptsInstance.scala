@@ -487,7 +487,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
 
-  scalaVersion := "3.6.4"
+  scalaVersion := "3.7.0"
 
   VarContext.changeDeptVar := "circe"
 
