@@ -35,8 +35,7 @@ ThisBuild / homepage := Some(url("https://github.com/djx314/sbt-depts"))
 
 ThisBuild / pomIncludeRepository := { _ => false }
 
-import xerial.sbt.Sonatype.sonatypeCentralHost
-ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
+ThisBuild / sonatypeCredentialHost := xerial.sbt.Sonatype.sonatypeCentralHost
 
 ThisBuild / publishMavenStyle := true
 
