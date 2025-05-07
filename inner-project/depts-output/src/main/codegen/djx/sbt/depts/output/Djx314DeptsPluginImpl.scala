@@ -70,6 +70,7 @@ trait BuildKeys {
     val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]  = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
     val `os-lib`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: os-lib""")
     val `sbt-main`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-main""")
+    val `scala-compiler`: SettingKey[Seq[sbt.ModuleID]]   = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-compiler""")
     val `scala-reflect`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-reflect""")
     val `play-json`: SettingKey[Seq[sbt.ModuleID]]        = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: play-json""")
     val `coursier`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: coursier""")
@@ -175,6 +176,7 @@ trait Djx314DeptsImpl {
     libScalax.`shapeless3-test`,
     libScalax.`os-lib`,
     libScalax.`sbt-main`,
+    libScalax.`scala-compiler`,
     libScalax.`scala-reflect`,
     libScalax.`play-json`,
     libScalax.`coursier`,

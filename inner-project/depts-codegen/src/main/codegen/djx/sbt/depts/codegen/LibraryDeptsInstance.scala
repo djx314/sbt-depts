@@ -239,6 +239,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
 
+  VarContext.changeDeptVar := "scala-compiler"
+
+  libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.12.20"
+
   VarContext.changeDeptVar := "sbt-main"
 
   libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
@@ -482,6 +486,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
   VarContext.changeDeptVar := "scala-reflect"
 
   libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
+
+  VarContext.changeDeptVar := "scala-compiler"
+
+  libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.16"
 
   VarContext.changeDeptVar := "os-lib"
 

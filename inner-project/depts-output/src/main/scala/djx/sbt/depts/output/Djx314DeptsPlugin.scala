@@ -52,6 +52,17 @@ object Djx314DeptsPlugin extends AutoPlugin {
 
   object autoImport extends impl.BuildKeysImpl {
     val scalaV: djx.sbt.depts.output.ScalaV = djx.sbt.depts.codegen.AppHaveATest.extractGen.scalaV
+
+    private val scalaVersionSetting1: Setting[sbt.Task[Seq[String]]] = scalacOptions ++= {
+      CrossVersion.partialVersion(scalaVersion.value) match {
+        case Some((2, scalaMajor)) => if (scalaMajor < 13L) Seq("-language:higherKinds") else Seq.empty
+        case Some((3, scalaMajor)) => Seq("-Xkind-projector")
+        case _                     => Seq.empty
+      }
+    }
+    private val scalaVersionSetting2: Setting[Seq[sbt.ModuleID]] = libraryDependencies ++= libScalax.`kind-projector`.value
+
+    val useKindProjector: Seq[Setting[_]] = List(scalaVersionSetting1, scalaVersionSetting2)
   }
 
   private class Settings(override val buildKeys: impl.BuildKeysImpl) extends Djx314DeptsImpl {

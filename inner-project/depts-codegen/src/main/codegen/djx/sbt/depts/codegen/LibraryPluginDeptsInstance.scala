@@ -103,4 +103,8 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.7")
 
+  VarContext.changePluginVar := "sbt-java-formatter"
+
+  addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
+
 }
