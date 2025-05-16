@@ -59,13 +59,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -307,13 +307,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -539,13 +539,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.17"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
