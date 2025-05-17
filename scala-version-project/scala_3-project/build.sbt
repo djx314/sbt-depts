@@ -91,9 +91,9 @@ VarContext.changeDeptVar                := "distage"
 libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.17"
 
 VarContext.changeDeptVar                    := "slick"
-libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.6.0"
-libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
-libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.6.0"
+libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.6.1"
+libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.1"
+libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.6.1"
 
 VarContext.changeDeptVar                  := "pekko-all"
 libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.1.3"

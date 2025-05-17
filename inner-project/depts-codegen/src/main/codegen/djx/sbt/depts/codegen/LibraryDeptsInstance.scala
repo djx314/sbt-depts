@@ -151,11 +151,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.1"
 
   VarContext.changeDeptVar := "pekko-all"
 
@@ -399,11 +399,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.1"
 
   VarContext.changeDeptVar := "pekko-all"
 
@@ -633,11 +633,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slick"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.1"
 
-  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.0"
+  libraryDependencies += "com.typesafe.slick" %% "slick-codegen" % "3.6.1"
 
   VarContext.changeDeptVar := "pekko-all"
 
