@@ -10,7 +10,7 @@ VarContext.changeDeptVar          := "jsoup"
 libraryDependencies += "org.jsoup" % "jsoup" % "1.20.1"
 
 VarContext.changeDeptVar              := "jintellitype"
-libraryDependencies += "com.melloware" % "jintellitype" % "1.5.0"
+libraryDependencies += "com.melloware" % "jintellitype" % "1.5.6"
 
 VarContext.changeDeptVar               := "logback-classic"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
