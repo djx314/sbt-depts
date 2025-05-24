@@ -51,4 +51,4 @@ addSbtPlugin("org.playframework"                 % "sbt-plugin"               % 
 VarContext.changePluginVar                         := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt"                    % "sbt-java-formatter"       % "0.10.0")
 VarContext.changePluginVar                         := "sbt-dependency-tree"
-addSbtPlugin("org.scala-sbt"                     % "sbt-dependency-tree"      % "1.10.11")
+addSbtPlugin("org.scala-sbt"                     % "sbt-dependency-tree"      % "1.11.0")
