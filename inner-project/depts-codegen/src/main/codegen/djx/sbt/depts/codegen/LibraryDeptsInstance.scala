@@ -245,7 +245,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.10.11"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.0"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -893,6 +893,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.10.11"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.0"
 
 }
