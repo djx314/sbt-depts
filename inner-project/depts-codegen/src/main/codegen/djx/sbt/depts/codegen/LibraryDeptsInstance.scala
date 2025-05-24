@@ -117,7 +117,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.4"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.0"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -365,7 +365,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.10.4"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.0"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
