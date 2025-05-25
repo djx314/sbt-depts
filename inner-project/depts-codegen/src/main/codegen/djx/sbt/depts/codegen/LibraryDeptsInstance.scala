@@ -251,6 +251,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
 
+  VarContext.changeDeptVar := "sbt-scripted-plugin"
+
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.0"
+
   scalaVersion := "2.13.16"
 
   VarContext.changeDeptVar := "kind-projector"
@@ -724,6 +728,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
   VarContext.changeDeptVar := "os-lib"
 
   libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
+
+  VarContext.changeDeptVar := "sbt-scripted-plugin"
+
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "2.0.0-alpha10"
 
   VarContext.customJV := VarContext.JavaVersionToSetting.value
 

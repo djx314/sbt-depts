@@ -56,4 +56,6 @@ trait PluginsColImpl {
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.10.0"""
 
+  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.11.0"""
+
 }

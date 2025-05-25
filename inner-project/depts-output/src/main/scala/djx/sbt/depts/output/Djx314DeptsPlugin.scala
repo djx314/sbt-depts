@@ -15,7 +15,7 @@ package impl {
     val djxProjectRootPath = settingKey[File]("Key of project root.")
 
     import djx.sbt.depts.abs.TakeSbtProperties
-    val sbtDJXDeptsSbtLaunchJar =
+    val djxUpdatesSbtLaunchJar =
       taskKey[(TakeSbtProperties.Extra3, File)]("The released version of the sbt-launcher we use to bundle this application.")
     val djxSbtLaunchJarDirctory = settingKey[File]("Key of djxSbtLaunchJar dirctory.")
 
@@ -29,8 +29,6 @@ package impl {
     val djxUpdatePluginsVersion = taskKey[Unit]("update plugins's build.sbt file.")
 
     val djxUpdate = taskKey[Unit]("All update action for this plugin.")
-
-    val snoatypeZipPackage = taskKey[File]("Zip sonatype files.")
 
     import djx.sbt.depts.plugins.{PluginsCollection => DjxPluginCol}
     val djx314Plugins: DjxPluginCol = DjxPluginCol
@@ -103,18 +101,6 @@ object Djx314DeptsPlugin extends AutoPlugin {
       settingsCol.+=(djxUpdatePluginsVersion := {
         val fileOpt: Option[File] = djxPluginsLigFile.?.value
         for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
-      })
-
-      settingsCol.+=(snoatypeZipPackage := {
-        val fileDir: File   = sonatypeBundleDirectory.value
-        val finalBundlePath = Paths.get(fileDir.toPath.toUri).resolve(s"${fileDir.getPath}-bundle")
-        val bundleDirectory = Directory(finalBundlePath.toFile)
-
-        Try {
-          bundleDirectory.deleteRecursively()
-          DjxZipUtil.zipDirectory(fileDir, finalBundlePath)
-          finalBundlePath.toFile
-        }.get
       })
 
       settingsCol.+=(sbtDJXDeptsSbtLaunchJar := {

@@ -61,19 +61,20 @@ trait BuildKeys {
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: javet-node-linux-arm64-i18n""")
     val `javet-node-linux-arm64`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: javet-node-linux-arm64""")
-    val `javet`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: javet""")
-    val `logback-classic`: SettingKey[Seq[sbt.ModuleID]]  = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: logback-classic""")
-    val `jintellitype`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jintellitype""")
-    val `jsoup`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jsoup""")
-    val `commons-compress`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-compress""")
-    val `commons-lang3`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3""")
-    val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]  = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
-    val `os-lib`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: os-lib""")
-    val `sbt-main`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-main""")
-    val `scala-compiler`: SettingKey[Seq[sbt.ModuleID]]   = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-compiler""")
-    val `scala-reflect`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-reflect""")
-    val `play-json`: SettingKey[Seq[sbt.ModuleID]]        = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: play-json""")
-    val `coursier`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: coursier""")
+    val `javet`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: javet""")
+    val `logback-classic`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: logback-classic""")
+    val `jintellitype`: SettingKey[Seq[sbt.ModuleID]]        = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jintellitype""")
+    val `jsoup`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jsoup""")
+    val `commons-compress`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-compress""")
+    val `commons-lang3`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3""")
+    val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
+    val `sbt-scripted-plugin`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-scripted-plugin""")
+    val `os-lib`: SettingKey[Seq[sbt.ModuleID]]              = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: os-lib""")
+    val `sbt-main`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-main""")
+    val `scala-compiler`: SettingKey[Seq[sbt.ModuleID]]      = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-compiler""")
+    val `scala-reflect`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-reflect""")
+    val `play-json`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: play-json""")
+    val `coursier`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: coursier""")
     val `simple-adt-bridge-support`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt-bridge-support""")
     val `slickless`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: slickless""")
@@ -174,6 +175,7 @@ trait Djx314DeptsImpl {
     libScalax.`commons-compress`,
     libScalax.`commons-lang3`,
     libScalax.`shapeless3-test`,
+    libScalax.`sbt-scripted-plugin`,
     libScalax.`os-lib`,
     libScalax.`sbt-main`,
     libScalax.`scala-compiler`,

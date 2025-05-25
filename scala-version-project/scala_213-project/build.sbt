@@ -166,5 +166,3 @@ libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.16"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
-
-
