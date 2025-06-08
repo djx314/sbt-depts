@@ -100,4 +100,4 @@ VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
 
 VarContext.changeDeptVar              := "sbt-launch"
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.1"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.2"
