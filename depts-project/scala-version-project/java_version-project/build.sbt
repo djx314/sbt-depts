@@ -94,7 +94,7 @@ VarContext.changeDeptVar          := "mysql-connector-java"
 libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.3.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
-libraryDependencies += "org.postgresql" % "postgresql" % "42.7.6"
+libraryDependencies += "org.postgresql" % "postgresql" % "42.7.7"
 
 VarContext.changeDeptVar                := "jmh-generator-annprocess"
 libraryDependencies += "org.openjdk.jmh" % "jmh-generator-annprocess" % "1.37"
