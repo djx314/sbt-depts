@@ -3,7 +3,7 @@ import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 val libVersionFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "Djx314DeptsPluginImpl.scala"
 
-val `scalfmt/file`      = `root/file` / ".." / ".scalafmt.conf"
+val `scalfmt/file`      = `root/file` / ".." / "depts-project" / ".scalafmt.conf"
 val scalafmtCodegenFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "impl" / "ScalafmtRewrite.scala"
 val pluginsFile         = `plugin/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "PluginsColImpl.scala"
 

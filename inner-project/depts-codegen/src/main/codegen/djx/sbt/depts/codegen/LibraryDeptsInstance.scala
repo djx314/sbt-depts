@@ -59,13 +59,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.19"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -117,7 +117,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.2"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -143,7 +143,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.17"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.18"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -245,7 +245,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.0"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.2"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -253,7 +253,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
-  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.0"
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.2"
 
   scalaVersion := "2.13.16"
 
@@ -311,13 +311,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.19"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -369,7 +369,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.0"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.2"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -395,7 +395,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.17"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.18"
 
   VarContext.changeDeptVar := "play-circe"
 
@@ -499,7 +499,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
 
-  scalaVersion := "3.7.0"
+  scalaVersion := "3.7.1"
 
   VarContext.changeDeptVar := "circe"
 
@@ -543,13 +543,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.19"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.18"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.19"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -633,7 +633,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "distage"
 
-  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.17"
+  libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.18"
 
   VarContext.changeDeptVar := "slick"
 
@@ -893,7 +893,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.5"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.7"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
@@ -901,6 +901,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.0"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.2"
 
 }
