@@ -55,7 +55,7 @@ VarContext.changeDeptVar             := "http4s-Release-ember-client"
 libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.30"
 
 VarContext.changeDeptVar            := "http4s-twirl"
-libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
+libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.18"
 
 VarContext.changeDeptVar          := "zio-config"
 libraryDependencies += "dev.zio" %%% "zio-config"            % "4.0.4"
