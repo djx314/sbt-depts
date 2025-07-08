@@ -69,7 +69,7 @@ VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-alpha16"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
-libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.5.0"
 
 VarContext.changeDeptVar          := "zio-json"
 libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.44"
