@@ -2,13 +2,13 @@ VarContext.changePluginVar := "sbt-depts-djx314"
 addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100054")
 
 VarContext.changePluginVar := "sbt-scalafmt"
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.4")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.5")
 
 VarContext.changePluginVar := "sbt-revolver"
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
 
 VarContext.changePluginVar := "sbt-twirl"
-addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.8")
+addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.9")
 
 VarContext.changePluginVar := "sbt-sonatype"
 addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.12.2")
@@ -71,10 +71,10 @@ VarContext.changePluginVar := "sbt-web-scalajs"
 addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.3.0")
 
 VarContext.changePluginVar := "sbt-playframework"
-addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.7")
+addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.8")
 
 VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
 
 VarContext.changePluginVar := "sbt-dependency-tree"
-addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.2")
+addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.3")

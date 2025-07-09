@@ -7,9 +7,9 @@ VarContext.changeDeptVar := "better-monadic-for"
 addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.13"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.13"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.13"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.14"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.14"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.14"
 
 VarContext.changeDeptVar           := "circe-extras"
 libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.4"
@@ -55,7 +55,7 @@ VarContext.changeDeptVar             := "http4s-Release-ember-client"
 libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.30"
 
 VarContext.changeDeptVar            := "http4s-twirl"
-libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.17"
+libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.18"
 
 VarContext.changeDeptVar          := "zio-config"
 libraryDependencies += "dev.zio" %%% "zio-config"            % "4.0.4"
@@ -78,10 +78,10 @@ VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.2"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
-libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.4.0"
+libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.5.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.43"
+libraryDependencies += "dev.zio" %%% "zio-json" % "0.7.44"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %%% "shapeless" % "2.3.13"
@@ -93,7 +93,7 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.12.0"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.12.0"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.18"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.19"
 
 VarContext.changeDeptVar              := "play-circe"
 libraryDependencies += "com.dripower" %% "play-circe" % "2814.4"
@@ -104,15 +104,15 @@ libraryDependencies += "com.typesafe.slick" %% "slick-hikaricp" % "3.6.1"
 libraryDependencies += "com.typesafe.slick" %% "slick-codegen"  % "3.6.1"
 
 VarContext.changeDeptVar                  := "pekko-all"
-libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.1.3"
-libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"          % "1.1.3"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor-typed"           % "1.1.4"
+libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed"          % "1.1.4"
 libraryDependencies += "org.apache.pekko" %% "pekko-http"                  % "1.2.0"
 libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json"       % "1.2.0"
-libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.3"
-libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.1.3"
+libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.1.4"
+libraryDependencies += "org.apache.pekko" %% "pekko-slf4j"                 % "1.1.4"
 
 VarContext.changeDeptVar                  := "pekko-actor"
-libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.3"
+libraryDependencies += "org.apache.pekko" %% "pekko-actor" % "1.1.4"
 
 VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
@@ -165,10 +165,10 @@ VarContext.changeDeptVar               := "scala-compiler"
 libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.12.20"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "1.11.2"
+libraryDependencies += "org.scala-sbt" %% "main" % "1.11.3"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.4"
 
 VarContext.changeDeptVar               := "sbt-scripted-plugin"
-libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.2"
+libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.3"
