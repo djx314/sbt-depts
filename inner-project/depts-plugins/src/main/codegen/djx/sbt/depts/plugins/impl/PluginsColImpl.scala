@@ -6,11 +6,11 @@ trait PluginsColImpl {
 
   val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.2.100054"""
 
-  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.4"""
+  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.5.5"""
 
   val `sbt-revolver`: sbt.librarymanagement.ModuleID = """io.spray""" % """sbt-revolver""" % """0.10.0"""
 
-  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.0.8"""
+  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.0.9"""
 
   val `sbt-sonatype`: sbt.librarymanagement.ModuleID = """org.xerial.sbt""" % """sbt-sonatype""" % """3.12.2"""
 
@@ -52,10 +52,10 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.3.0"""
 
-  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.7"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.8"""
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.10.0"""
 
-  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.11.2"""
+  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.11.3"""
 
 }

@@ -9,7 +9,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
-  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.4")
+  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.5")
 
   VarContext.changePluginVar := "sbt-revolver"
 
@@ -17,7 +17,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.8")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.9")
 
   VarContext.changePluginVar := "sbt-sonatype"
 
@@ -101,7 +101,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.7")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.8")
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
@@ -109,6 +109,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.2")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.3")
 
 }
