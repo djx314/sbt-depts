@@ -2,24 +2,8 @@ package djx.sbt.depts.plugins
 
 import cats._
 import cats.implicits._
-// import djx.sbt.depts.abs.LibraryDepts
 import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
-import djx.sbt.depts.abs.models.{
-  `CrossVersion.full`,
-  CompilerPlugin,
-  JavaDept,
-  JavaVersionForAllScala,
-  Library => DeptsScalaLibrary,
-  NoCrossVersion,
-  ScalaDept,
-  ScalaJSDept,
-  ScalaVersion212,
-  ScalaVersion213,
-  ScalaVersion3
-}
-
-import djx.sbt.depts.abs.DeptsWithVersionModel
 
 object pUtils {
 
