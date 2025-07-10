@@ -148,7 +148,7 @@ libraryDependencies += "io.get-coursier" %% "coursier-cache" % "2.1.24"
 libraryDependencies += "io.get-coursier" %% "coursier"       % "2.1.24"*/
 
 VarContext.changeDeptVar                   := "play-json"
-libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M1"
+libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
 
 VarContext.changeDeptVar               := "sbt-main"
 libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M4"
