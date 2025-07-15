@@ -23,7 +23,7 @@ VarContext.changePluginVar := "sbt-git"
 addSbtPlugin("com.github.sbt" % "sbt-git" % "2.1.0")
 
 VarContext.changePluginVar := "sbt-ide-settings"
-addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.2")
+addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.3")
 
 VarContext.changePluginVar := "sbt-scalajs"
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.19.0")
