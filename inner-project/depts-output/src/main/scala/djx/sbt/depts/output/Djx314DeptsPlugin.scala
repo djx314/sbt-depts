@@ -78,10 +78,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
         new File(djxProjectRootPath.value, "sbtw-sbt-launch-bundle")
       })
       settingsCol.+=(djxScalafmtFile := {
-        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
-      })
-      settingsCol.+=(djxScalafmtFile := {
-        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt.conf")
+        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt-version.conf")
       })
       settingsCol.+=(djxBuildSbtFile := {
         new File(new File(djxProjectRootPath.value, "project"), "build.properties")
