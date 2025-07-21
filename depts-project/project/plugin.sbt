@@ -19,6 +19,9 @@ addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
 VarContext.changePluginVar := "sbt-scalajs-crossproject"
 addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.2")
 
+VarContext.changePluginVar := "sbt-scala-native-crossproject"
+addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.3.2")
+
 VarContext.changePluginVar := "sbt-git"
 addSbtPlugin("com.github.sbt" % "sbt-git" % "2.1.0")
 
