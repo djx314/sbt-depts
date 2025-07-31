@@ -91,7 +91,7 @@ VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.12"
 
 VarContext.changeDeptVar          := "mysql-connector-java"
-libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.3.0"
+libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.4.0"
 
 VarContext.changeDeptVar               := "postgresql-jdbc"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.7.7"
