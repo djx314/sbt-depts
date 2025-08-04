@@ -1,1 +1,1 @@
-libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.3"
+libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.4"
