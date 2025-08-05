@@ -151,7 +151,7 @@ VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M4"
+libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-M5"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.5"
