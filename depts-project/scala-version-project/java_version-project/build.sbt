@@ -7,7 +7,7 @@ VarContext.changeDeptVar                   := "commons-compress"
 libraryDependencies += "org.apache.commons" % "commons-compress" % "1.28.0"
 
 VarContext.changeDeptVar          := "jsoup"
-libraryDependencies += "org.jsoup" % "jsoup" % "1.21.1"
+libraryDependencies += "org.jsoup" % "jsoup" % "1.21.2"
 
 VarContext.changeDeptVar              := "jintellitype"
 libraryDependencies += "com.melloware" % "jintellitype" % "1.5.6"
