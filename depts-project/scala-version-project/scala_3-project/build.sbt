@@ -57,7 +57,7 @@ libraryDependencies += "dev.zio" %%% "zio-config-yaml"       % "4.0.4"
 libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.4"
 
 VarContext.changeDeptVar                           := "macwire"
-libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.6"
+libraryDependencies += "com.softwaremill.macwire" %%% "macros" % "2.6.7"
 
 VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
