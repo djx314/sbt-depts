@@ -85,7 +85,7 @@ VarContext.changeDeptVar                   := "commons-math3"
 libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
 
 VarContext.changeDeptVar             := "typesafe-config"
-libraryDependencies += "com.typesafe" % "config" % "1.4.4"
+libraryDependencies += "com.typesafe" % "config" % "1.4.5"
 
 VarContext.changeDeptVar             := "javacv-platform"
 libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.12"
