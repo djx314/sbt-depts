@@ -130,7 +130,7 @@ VarContext.changeDeptVar                        := "scala-parser-combinators"
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
 
 VarContext.changeDeptVar                            := "scala-logging"
-libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.5"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.6"
 
 VarContext.changeDeptVar         := "zio-nio"
 libraryDependencies += "dev.zio" %% "zio-nio" % "2.0.2"
