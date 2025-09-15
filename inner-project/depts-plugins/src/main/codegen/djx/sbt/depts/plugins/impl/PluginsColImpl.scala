@@ -25,7 +25,7 @@ trait PluginsColImpl {
 
   val `sbt-ide-settings`: sbt.librarymanagement.ModuleID = """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.3"""
 
-  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.19.0"""
+  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.20.1"""
 
   val `sbt-platform-deps`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-platform-deps""" % """1.0.2"""
 
@@ -39,13 +39,13 @@ trait PluginsColImpl {
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.3.1"""
 
-  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.25.0"""
+  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.28.0"""
 
   val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.5.0"""
 
   val `sbt-jmh`: sbt.librarymanagement.ModuleID = """pl.project13.scala""" % """sbt-jmh""" % """0.4.7"""
 
-  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-native-packager""" % """1.11.1"""
+  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-native-packager""" % """1.11.3"""
 
   val `sbt-dependency-updates`: sbt.librarymanagement.ModuleID = """org.jmotor.sbt""" % """sbt-dependency-updates""" % """1.2.9"""
 
@@ -55,10 +55,10 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.3.0"""
 
-  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.8"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.0.9"""
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.10.0"""
 
-  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.11.3"""
+  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.11.6"""
 
 }

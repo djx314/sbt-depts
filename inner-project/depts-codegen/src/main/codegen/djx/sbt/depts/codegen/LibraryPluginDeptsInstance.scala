@@ -45,7 +45,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.19.0")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.1")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
@@ -73,7 +73,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.25.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.28.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
@@ -85,7 +85,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.1")
+  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.3")
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
@@ -105,7 +105,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.8")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.9")
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
@@ -113,6 +113,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.3")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.6")
 
 }
