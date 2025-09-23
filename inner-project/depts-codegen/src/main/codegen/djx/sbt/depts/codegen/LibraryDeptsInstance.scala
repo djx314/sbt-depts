@@ -73,17 +73,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -113,7 +113,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M22"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -325,17 +325,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -365,7 +365,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M22"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -557,17 +557,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "http4s-Release"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.30"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -597,11 +597,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M21"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M22"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC4"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC5"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -723,7 +723,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC4"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC5"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -893,7 +893,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.7"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.8"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
