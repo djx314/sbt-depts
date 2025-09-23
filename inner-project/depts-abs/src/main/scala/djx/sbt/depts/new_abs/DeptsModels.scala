@@ -16,13 +16,13 @@ object DeptType {
 
   import DeptTypeSelf.{Type => AdtDeptsType}
 
-  val JavaDept: AdtDeptsType = Setter(new JavaDept {
+  val JavaDept: AdtDeptsType = Setter.instance(new JavaDept {
     //
   })
-  val ScalaDept: AdtDeptsType = Setter(new ScalaDept {
+  val ScalaDept: AdtDeptsType = Setter.instance(new ScalaDept {
     //
   })
-  val ScalaJSDept: AdtDeptsType = Setter(new ScalaJSDept {
+  val ScalaJSDept: AdtDeptsType = Setter.instance(new ScalaJSDept {
     //
   })
 }
@@ -39,10 +39,10 @@ object DeptInfo {
 
   import DeptInfoSelf.{Type => AdtLibraryType}
 
-  val CompilerPlugin: AdtLibraryType = Setter(new CompilerPlugin {
+  val CompilerPlugin: AdtLibraryType = Setter.instance(new CompilerPlugin {
     //
   })
-  val Library: AdtLibraryType = Setter(new Library {
+  val Library: AdtLibraryType = Setter.instance(new Library {
     //
   })
 }
@@ -59,10 +59,10 @@ object CrossInfo {
 
   import CrossInfoSelf.{Type => AdtCrossType}
 
-  val NoCrossVersion: AdtCrossType = Setter(new NoCrossVersion {
+  val NoCrossVersion: AdtCrossType = Setter.instance(new NoCrossVersion {
     //
   })
-  val `CrossVersion.full`: AdtCrossType = Setter(new `CrossVersion.full` {
+  val `CrossVersion.full`: AdtCrossType = Setter.instance(new `CrossVersion.full` {
     //
   })
 }

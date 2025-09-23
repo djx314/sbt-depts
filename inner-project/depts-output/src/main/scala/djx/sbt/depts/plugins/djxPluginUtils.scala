@@ -45,15 +45,15 @@ object pUtils {
   class setting(implicit m: Monad[sbt.Def.Initialize]) {
     class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
       def value[U: Adt.CoProducts2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.CoProduct2[T, sbt.Def.Initialize[T]](u)
-        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize])(identity)
+        val applyM = Adt.CoProduct2[T, sbt.Def.Initialize[T]].instance(u)
+        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize])(identity).value
         sKey.set(initT, lp)
       }
 
       def setIfNone[U: Adt.CoProducts3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
-        val applyM = Adt.CoProduct3[() => T, T, sbt.Def.Initialize[T]](default)
+        val applyM = Adt.CoProduct3[() => T, T, sbt.Def.Initialize[T]].instance(default)
         val defaultValue: sbt.Def.Initialize[() => T] =
-          applyM.fold(t => t.pure[sbt.Def.Initialize])(t => (() => t).pure[sbt.Def.Initialize])(t => for (d <- t) yield () => d)
+          applyM.fold(t => t.pure[sbt.Def.Initialize])(t => (() => t).pure[sbt.Def.Initialize])(t => for (d <- t) yield () => d).value
 
         val aa: sbt.Def.Initialize[Option[T]] = sKey.?
 
@@ -69,19 +69,20 @@ object pUtils {
       def appendOneOrMore[U: Adt.CoProducts4[*, T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]]](
         u: U
       ): sbt.Def.Setting[Seq[T]] = {
-        val applyM = Adt.CoProduct4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]](u)
+        val applyM = Adt.CoProduct4[T, sbt.Def.Initialize[T], Seq[T], sbt.Def.Initialize[Seq[T]]].instance(u)
 
         type Opt2 = Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
         val Opt2Apply: Adt.CoProduct2Apply[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]] =
           Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
-        val applyM1: Opt2 = applyM.fold
-          .apply(t => Opt2Apply.option1(t.pure[sbt.Def.Initialize]))
-          .apply(t => Opt2Apply.option1(t))
-          .apply(t => Opt2Apply.option2(t.pure[sbt.Def.Initialize]))
-          .apply(t => Opt2Apply.option2(t))
+        val applyM1: Opt2 = applyM
+          .fold(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
+          .apply(t => Opt2Apply.instance(t))
+          .apply(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
+          .apply(t => Opt2Apply.instance(t))
+          .value
 
-        applyM1.fold(x1 => sKey.append1(x1, lp))(x2 => sKey.appendN(x2, lp))
+        applyM1.fold(x1 => sKey.append1(x1, lp))(x2 => sKey.appendN(x2, lp)).value
       }
     }
 

@@ -24,8 +24,8 @@ object SumList {
   private def foldActionImpl1(m: FoldType, sv: ScalaJavaVersion.Type): FoldType = {
     val provideList: TempScalaVersion = m.foldModule.tempScalaVersions
 
-    val addToSVOpt: TempScalaVersion = sv.fold
-      .apply { (s212: ScalaVersion212) =>
+    val addToSVOpt: TempScalaVersion = sv
+      .fold { (s212: ScalaVersion212) =>
         provideList.copy(s212 = Some(s212.version212))
       }
       .apply { (s213: ScalaVersion213) =>
@@ -37,6 +37,7 @@ object SumList {
       .apply { (_: JavaVersionForAllScala) =>
         provideList
       }
+      .value
 
     m.copy(scalaVersionAdt = sv, foldModule = m.foldModule.copy(tempScalaVersions = addToSVOpt))
   }
@@ -57,7 +58,7 @@ object SumList {
   }
 
   private def foldAction(m: FoldType, listItem: SettingInstance.Type): FoldType =
-    listItem.fold(sv => foldActionImpl1(m, sv))(deptModule => foldActionImpl2(m, deptModule))(cName => foldActionImpl3(m, cName))
+    listItem.fold(sv => foldActionImpl1(m, sv))(deptModule => foldActionImpl2(m, deptModule))(cName => foldActionImpl3(m, cName)).value
 
   def sumList(l: List[SettingInstance.Type]): ResultModel = {
     val initModel: SumModule = SumModule.init

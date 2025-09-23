@@ -23,19 +23,19 @@ object ScalaJavaVersion {
 
   import ScalaJavaVersionSelf.{Type => ScalaJavaVersionType}
 
-  private def ScalaVersion212(version: String): ScalaJavaVersionType = Setter(new ScalaVersion212 {
+  private def ScalaVersion212(version: String): ScalaJavaVersionType = Setter.instance(new ScalaVersion212 {
     override def version212: String = version
   })
 
-  private def ScalaVersion213(version: String): ScalaJavaVersionType = Setter(new ScalaVersion213 {
+  private def ScalaVersion213(version: String): ScalaJavaVersionType = Setter.instance(new ScalaVersion213 {
     override def version213: String = version
   })
 
-  private def ScalaVersion3(version: String): ScalaJavaVersionType = Setter(new ScalaVersion3 {
+  private def ScalaVersion3(version: String): ScalaJavaVersionType = Setter.instance(new ScalaVersion3 {
     override def version3: String = version
   })
 
-  val JavaVersion: ScalaJavaVersionType = Setter(new JavaVersionForAllScala {
+  val JavaVersion: ScalaJavaVersionType = Setter.instance(new JavaVersionForAllScala {
     //
   })
 

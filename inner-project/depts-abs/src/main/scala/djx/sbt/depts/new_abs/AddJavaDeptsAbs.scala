@@ -53,17 +53,17 @@ trait SettingInstance {
   def outputSettings: List[SettingInstance.Type] = protectedSettings.reverse
 
   def addLib(t: DeptsModule): SettingInstance.AddedToSetting = {
-    val sModel: SettingInstance.Type = setter(t)
+    val sModel: SettingInstance.Type = setter.instance(t)
     addToSettingImpl(sModel)
   }
 
   def addScalaVersion(t: ScalaJavaVersion.Type): SettingInstance.AddedToSetting = {
-    val sModel: SettingInstance.Type = setter(t)
+    val sModel: SettingInstance.Type = setter.instance(t)
     addToSettingImpl(sModel)
   }
 
   def changeModuleName(name: String): SettingInstance.AddedToSetting = {
-    val sModel: SettingInstance.Type = setter(ChangeModuleIdName(name))
+    val sModel: SettingInstance.Type = setter.instance(ChangeModuleIdName(name))
     addToSettingImpl(sModel)
   }
 }
