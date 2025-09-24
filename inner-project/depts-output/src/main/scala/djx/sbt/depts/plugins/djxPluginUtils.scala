@@ -46,14 +46,18 @@ object pUtils {
     class SetKeyContext[T](sKey: sbt.SettingKey[T], lp: sbt.SourcePosition) {
       def value[U: Adt.CoProducts2[*, T, sbt.Def.Initialize[T]]](u: U): sbt.Def.Setting[T] = {
         val applyM = Adt.CoProduct2[T, sbt.Def.Initialize[T]].instance(u)
-        val initT  = applyM.fold(t => t.pure[sbt.Def.Initialize])(identity).value
+        val initT  = applyM.fold2(t => t.pure[sbt.Def.Initialize]).fold1(identity)
         sKey.set(initT, lp)
       }
 
       def setIfNone[U: Adt.CoProducts3[*, () => T, T, sbt.Def.Initialize[T]]](default: U): sbt.Def.Setting[T] = {
         val applyM = Adt.CoProduct3[() => T, T, sbt.Def.Initialize[T]].instance(default)
+
         val defaultValue: sbt.Def.Initialize[() => T] =
-          applyM.fold(t => t.pure[sbt.Def.Initialize])(t => (() => t).pure[sbt.Def.Initialize])(t => for (d <- t) yield () => d).value
+          applyM
+            .fold3(t => t.pure[sbt.Def.Initialize])
+            .fold2(t => (() => t).pure[sbt.Def.Initialize])
+            .fold1(t => for (d <- t) yield () => d)
 
         val aa: sbt.Def.Initialize[Option[T]] = sKey.?
 
@@ -76,13 +80,12 @@ object pUtils {
           Adt.CoProduct2[sbt.Def.Initialize[T], sbt.Def.Initialize[Seq[T]]]
 
         val applyM1: Opt2 = applyM
-          .fold(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
-          .apply(t => Opt2Apply.instance(t))
-          .apply(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
-          .apply(t => Opt2Apply.instance(t))
-          .value
+          .fold4(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
+          .fold3(t => Opt2Apply.instance(t))
+          .fold2(t => Opt2Apply.instance(t.pure[sbt.Def.Initialize]))
+          .fold1(t => Opt2Apply.instance(t))
 
-        applyM1.fold(x1 => sKey.append1(x1, lp))(x2 => sKey.appendN(x2, lp)).value
+        applyM1.fold2(x1 => sKey.append1(x1, lp)).fold1(x2 => sKey.appendN(x2, lp))
       }
     }
 

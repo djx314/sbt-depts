@@ -24,72 +24,64 @@ import djx.sbt.depts.abs.models.ScalaJavaVersion
 object AddLibUtils {
   AddLibUtilsSelf =>
 
-  private def takeScalaVersion(sv: ScalaJavaVersion.Type, module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] = sv
-    .fold { (_: ScalaVersion212) =>
+  private def takeScalaVersion(sv: ScalaJavaVersion.Type, module: sbt.ModuleID, dept: DeptsWithVersionModel): Option[sbt.ModuleID] =
+    sv.fold4 { (_: ScalaVersion212) =>
       dept.scalaJavaVersion
-        .fold { (_: ScalaVersion212) =>
+        .fold4 { (_: ScalaVersion212) =>
           Some(module)
         }
-        .apply { (_: ScalaVersion213) =>
+        .fold3 { (_: ScalaVersion213) =>
           None
         }
-        .apply { (_: ScalaVersion3) =>
+        .fold2 { (_: ScalaVersion3) =>
           None
         }
-        .apply { (_: JavaVersionForAllScala) =>
+        .fold1 { (_: JavaVersionForAllScala) =>
           Some(module)
         }
-        .value
-    }
-    .apply { (_: ScalaVersion213) =>
+    }.fold3 { (_: ScalaVersion213) =>
       dept.scalaJavaVersion
-        .fold { (_: ScalaVersion212) =>
+        .fold4 { (_: ScalaVersion212) =>
           None
         }
-        .apply { (_: ScalaVersion213) =>
+        .fold3 { (_: ScalaVersion213) =>
           Some(module)
         }
-        .apply { (_: ScalaVersion3) =>
+        .fold2 { (_: ScalaVersion3) =>
           None
         }
-        .apply { (_: JavaVersionForAllScala) =>
+        .fold1 { (_: JavaVersionForAllScala) =>
           Some(module)
         }
-        .value
-    }
-    .apply { (_: ScalaVersion3) =>
+    }.fold2 { (_: ScalaVersion3) =>
       dept.scalaJavaVersion
-        .fold { (_: ScalaVersion212) =>
+        .fold4 { (_: ScalaVersion212) =>
           None
         }
-        .apply { (_: ScalaVersion213) =>
+        .fold3 { (_: ScalaVersion213) =>
           None
         }
-        .apply { (_: ScalaVersion3) =>
+        .fold2 { (_: ScalaVersion3) =>
           Some(module)
         }
-        .apply { (_: JavaVersionForAllScala) =>
+        .fold1 { (_: JavaVersionForAllScala) =>
           Some(module)
         }
-        .value
-    }
-    .apply { (_: JavaVersionForAllScala) =>
+    }.fold1 { (_: JavaVersionForAllScala) =>
       dept.scalaJavaVersion
-        .fold { (_: ScalaVersion212) =>
+        .fold4 { (_: ScalaVersion212) =>
           None
         }
-        .apply { (_: ScalaVersion213) =>
+        .fold3 { (_: ScalaVersion213) =>
           None
         }
-        .apply { (_: ScalaVersion3) =>
+        .fold2 { (_: ScalaVersion3) =>
           None
         }
-        .apply { (_: JavaVersionForAllScala) =>
+        .fold1 { (_: JavaVersionForAllScala) =>
           Some(module)
         }
-        .value
     }
-    .value
 
   def addOneDept(
     libDepts: sbt.SettingKey[Seq[sbt.ModuleID]],
@@ -107,16 +99,15 @@ object AddLibUtils {
 
     val dept1 = oneDept.dept
     val libItem1: sbt.ModuleID = dept1.platform
-      .fold { (_: JavaDept) => dept1.org % dept1.name % dept1.version }
-      .apply { (_: ScalaDept) => dept1.org %% dept1.name % dept1.version }
-      .apply { (_: ScalaJSDept) => dept1.org %%% dept1.name % dept1.version }
-      .value
+      .fold3 { (_: JavaDept) => dept1.org % dept1.name % dept1.version }
+      .fold2 { (_: ScalaDept) => dept1.org %% dept1.name % dept1.version }
+      .fold1 { (_: ScalaJSDept) => dept1.org %%% dept1.name % dept1.version }
 
     val libItem2: sbt.ModuleID =
-      dept1.crossInfo.fold((_: NoCrossVersion) => libItem1)((_: `CrossVersion.full`) => libItem1 cross CrossVersion.full).value
+      dept1.crossInfo.fold2((_: NoCrossVersion) => libItem1).fold1((_: `CrossVersion.full`) => libItem1 cross CrossVersion.full)
 
     val libIfCompilePlugin: sbt.ModuleID =
-      dept1.info.fold((_: CompilerPlugin) => compilerPlugin(libItem2))((_: DeptsScalaLibrary) => libItem2).value
+      dept1.info.fold2((_: CompilerPlugin) => compilerPlugin(libItem2)).fold1((_: DeptsScalaLibrary) => libItem2)
 
     val toLib1Opt: Option[sbt.ModuleID] = takeScalaVersion(scalaType, libIfCompilePlugin, oneDept)
 
