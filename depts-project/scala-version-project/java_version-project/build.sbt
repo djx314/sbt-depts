@@ -1,7 +1,7 @@
 VarContext.customJV := VarContext.JavaVersionToSetting.value
 
 VarContext.changeDeptVar                   := "commons-lang3"
-libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.18.0"
+libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.19.0"
 
 VarContext.changeDeptVar                   := "commons-compress"
 libraryDependencies += "org.apache.commons" % "commons-compress" % "1.28.0"
