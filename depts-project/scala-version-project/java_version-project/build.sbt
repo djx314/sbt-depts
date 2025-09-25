@@ -79,7 +79,7 @@ VarContext.changeDeptVar          := "slf4j-nop"
 libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.17"
 
 VarContext.changeDeptVar               := "h2"
-libraryDependencies += "com.h2database" % "h2" % "2.3.232"
+libraryDependencies += "com.h2database" % "h2" % "2.4.240"
 
 VarContext.changeDeptVar                   := "commons-math3"
 libraryDependencies += "org.apache.commons" % "commons-math3" % "3.6.1"
