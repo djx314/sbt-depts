@@ -7,7 +7,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "kind-projector"
 
-  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.3" cross CrossVersion.full)
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.4" cross CrossVersion.full)
 
   VarContext.changeDeptVar := "better-monadic-for"
 
@@ -15,11 +15,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.15"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -69,21 +69,23 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.14.0"
 
-  VarContext.changeDeptVar := "http4s-Release"
+  VarContext.changeDeptVar := "http4s-Release-dsl"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.32"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
+  VarContext.changeDeptVar := "http4s-Release-circe"
+
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -117,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.5"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -233,7 +235,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "play-json"
 
-  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
+  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M4"
 
   VarContext.changeDeptVar := "scala-reflect"
 
@@ -245,7 +247,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.6"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.7"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -253,13 +255,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
-  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.6"
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.7"
 
-  scalaVersion := "2.13.16"
+  scalaVersion := "2.13.17"
 
   VarContext.changeDeptVar := "kind-projector"
 
-  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.3" cross CrossVersion.full)
+  addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.4" cross CrossVersion.full)
 
   VarContext.changeDeptVar := "better-monadic-for"
 
@@ -267,11 +269,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.15"
 
   VarContext.changeDeptVar := "circe-extras"
 
@@ -321,21 +323,23 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.14.0"
 
-  VarContext.changeDeptVar := "http4s-Release"
+  VarContext.changeDeptVar := "http4s-Release-dsl"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.32"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
+  VarContext.changeDeptVar := "http4s-Release-circe"
+
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -369,7 +373,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.5"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -485,15 +489,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "play-json"
 
-  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
+  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M4"
 
   VarContext.changeDeptVar := "scala-reflect"
 
-  libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.16"
+  libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.17"
 
   VarContext.changeDeptVar := "scala-compiler"
 
-  libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.16"
+  libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.17"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -503,11 +507,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe"
 
-  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-core" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
 
-  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.14"
+  libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.15"
 
   VarContext.changeDeptVar := "scalatest"
 
@@ -553,21 +557,23 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
-  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
+  libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.14.0"
 
-  VarContext.changeDeptVar := "http4s-Release"
+  VarContext.changeDeptVar := "http4s-Release-dsl"
 
-  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-dsl" % "0.23.32"
 
-  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
+  VarContext.changeDeptVar := "http4s-Release-circe"
+
+  libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-server"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-Release-ember-client"
 
-  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
+  libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.32"
 
   VarContext.changeDeptVar := "http4s-twirl"
 
@@ -601,7 +607,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC5"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC6"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -719,11 +725,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "play-json"
 
-  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
+  libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M4"
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC5"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC6"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -737,7 +743,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "commons-lang3"
 
-  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.18.0"
+  libraryDependencies += "org.apache.commons" % "commons-lang3" % "3.19.0"
 
   VarContext.changeDeptVar := "commons-compress"
 
@@ -753,107 +759,107 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.18"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.19"
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-android"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-node-android-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-android-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-android-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-android"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-android" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-android" % "5.0.0"
 
   VarContext.changeDeptVar := "javet-v8-android-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-android-i18n" % "4.1.7"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-android-i18n" % "5.0.0"
 
   VarContext.changeDeptVar := "jnativehook"
 
@@ -873,7 +879,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.3.232"
+  libraryDependencies += "com.h2database" % "h2" % "2.4.240"
 
   VarContext.changeDeptVar := "commons-math3"
 
@@ -901,6 +907,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.6"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.7"
 
 }

@@ -110,7 +110,8 @@ trait BuildKeys {
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-ember-client""")
     val `http4s-Release-ember-server`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-ember-server""")
-    val `http4s-Release`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release""")
+    val `http4s-Release-circe`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-circe""")
+    val `http4s-Release-dsl`: SettingKey[Seq[sbt.ModuleID]]   = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-dsl""")
     val `scala-collection-compat`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: scala-collection-compat""")
     val `zio2`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: zio2""")
@@ -211,7 +212,8 @@ trait Djx314DeptsImpl {
     libScalax.`http4s-twirl`,
     libScalax.`http4s-Release-ember-client`,
     libScalax.`http4s-Release-ember-server`,
-    libScalax.`http4s-Release`,
+    libScalax.`http4s-Release-circe`,
+    libScalax.`http4s-Release-dsl`,
     libScalax.`scala-collection-compat`,
     libScalax.`zio2`,
     libScalax.`doobie-h2`,

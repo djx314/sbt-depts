@@ -3,4 +3,4 @@ package codegen
 
 import _root_.djx.sbt.depts.abs.TakeSbtProperties._
 
-object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties(libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.6")
+object SbtVersionInfo extends _root_.djx.sbt.depts.abs.TakeSbtProperties(libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.7")

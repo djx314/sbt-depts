@@ -81,11 +81,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-jmh"
 
-  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.7")
+  addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.8")
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.3")
+  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.4")
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
@@ -113,6 +113,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.6")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.7")
 
 }
