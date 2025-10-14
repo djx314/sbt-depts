@@ -1,15 +1,15 @@
 scalaVersion := "2.12.20"
 
 VarContext.changeDeptVar := "kind-projector"
-addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.3" cross CrossVersion.full)
+addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.4" cross CrossVersion.full)
 
 VarContext.changeDeptVar := "better-monadic-for"
 addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.14"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.14"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.14"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.15"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.15"
 
 VarContext.changeDeptVar           := "circe-extras"
 libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.4"
@@ -42,17 +42,17 @@ libraryDependencies += "dev.zio" %%% "zio-test"     % "2.1.21"
 libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.21"
 
 VarContext.changeDeptVar                         := "scala-collection-compat"
-libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.13.0"
+libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.14.0"
 
 VarContext.changeDeptVar             := "http4s-Release"
-libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.31"
-libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.31"
+libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.32"
+libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.32"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-server"
-libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.31"
+libraryDependencies += "org.http4s" %%% "http4s-ember-server" % "0.23.32"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-client"
-libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.31"
+libraryDependencies += "org.http4s" %%% "http4s-ember-client" % "0.23.32"
 
 VarContext.changeDeptVar            := "http4s-twirl"
 libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.18"
@@ -75,7 +75,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M23"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.5"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.5.0"
@@ -156,7 +156,7 @@ libraryDependencies += "io.get-coursier" %%% "coursier-cache" % "2.1.24"
 libraryDependencies += "io.get-coursier" %%% "coursier"       % "2.1.24"
 
 VarContext.changeDeptVar                   := "play-json"
-libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M3"
+libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M4"
 
 VarContext.changeDeptVar               := "scala-reflect"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.12.20"
@@ -165,10 +165,10 @@ VarContext.changeDeptVar               := "scala-compiler"
 libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.12.20"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "1.11.6"
+libraryDependencies += "org.scala-sbt" %% "main" % "1.11.7"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.5"
 
 VarContext.changeDeptVar               := "sbt-scripted-plugin"
-libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.6"
+libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.7"

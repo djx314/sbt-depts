@@ -56,10 +56,10 @@ VarContext.changePluginVar := "sbt-jacoco"
 addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.5.0")
 
 VarContext.changePluginVar := "sbt-jmh"
-addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.7")
+addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.8")
 
 VarContext.changePluginVar := "sbt-native-packager"
-addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.3")
+addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.4")
 
 VarContext.changePluginVar := "sbt-dependency-updates"
 addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.9")
@@ -80,4 +80,4 @@ VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
 
 VarContext.changePluginVar := "sbt-dependency-tree"
-addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.6")
+addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.7")
