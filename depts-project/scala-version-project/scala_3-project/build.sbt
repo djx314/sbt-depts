@@ -35,8 +35,10 @@ libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.21"
 VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %%% "scala-collection-compat" % "2.14.0"
 
-VarContext.changeDeptVar             := "http4s-Release"
+VarContext.changeDeptVar             := "http4s-Release-dsl"
 libraryDependencies += "org.http4s" %%% "http4s-dsl"   % "0.23.32"
+
+VarContext.changeDeptVar             := "http4s-Release-circe"
 libraryDependencies += "org.http4s" %%% "http4s-circe" % "0.23.32"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-server"
