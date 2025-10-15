@@ -160,3 +160,6 @@ libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.5"
 
 VarContext.changeDeptVar               := "sbt-scripted-plugin"
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "2.0.0-alpha10"
+
+VarContext.changeDeptVar               := "com.yang-bo-html"
+libraryDependencies += "com.yang-bo" %%% "html" % "3.0.3"

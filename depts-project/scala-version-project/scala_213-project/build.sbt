@@ -168,3 +168,6 @@ libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.17"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.5"
+
+VarContext.changeDeptVar               := "com.yang-bo-html"
+libraryDependencies += "com.yang-bo" %%% "html" % "2.0.1"
