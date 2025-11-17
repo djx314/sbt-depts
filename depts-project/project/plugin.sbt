@@ -47,7 +47,7 @@ VarContext.changePluginVar := "sbt-assembly"
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.3.1")
 
 VarContext.changePluginVar := "sbt-scoverage"
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.1")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.2")
 
 VarContext.changePluginVar := "sbt-github-actions"
 addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.28.0")
