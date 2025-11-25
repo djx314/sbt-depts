@@ -161,10 +161,10 @@ VarContext.changeDeptVar                   := "play-json"
 libraryDependencies += "org.playframework" %% "play-json" % "3.1.0-M9"
 
 VarContext.changeDeptVar               := "scala-reflect"
-libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.17"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % "2.13.18"
 
 VarContext.changeDeptVar               := "scala-compiler"
-libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.17"
+libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.13.18"
 
 VarContext.changeDeptVar              := "os-lib"
 libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.6"
