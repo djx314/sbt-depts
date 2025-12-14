@@ -1,4 +1,4 @@
-scalaVersion := "2.12.20"
+scalaVersion := "2.12.21"
 
 VarContext.changeDeptVar := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.4" cross CrossVersion.full)
