@@ -9,7 +9,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
-  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.5")
+  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.6")
 
   VarContext.changePluginVar := "sbt-revolver"
 
@@ -69,15 +69,15 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scoverage"
 
-  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.3.1")
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.3")
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.28.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.29.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
-  addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.5.0")
+  addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.6.0")
 
   VarContext.changePluginVar := "sbt-jmh"
 

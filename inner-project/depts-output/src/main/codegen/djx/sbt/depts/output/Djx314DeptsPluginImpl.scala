@@ -68,6 +68,7 @@ trait BuildKeys {
     val `commons-compress`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-compress""")
     val `commons-lang3`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3""")
     val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
+    val `com.yang-bo-html`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: com.yang-bo-html""")
     val `sbt-scripted-plugin`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-scripted-plugin""")
     val `os-lib`: SettingKey[Seq[sbt.ModuleID]]              = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: os-lib""")
     val `sbt-main`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-main""")
@@ -101,11 +102,12 @@ trait BuildKeys {
     val `cats-effect-cps`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: cats-effect-cps""")
     val `sbt-librarymanagement-core`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-librarymanagement-core""")
-    val `simple-adt`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt""")
-    val `commons-lang3-bridge`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3-bridge""")
-    val `macwire`: SettingKey[Seq[sbt.ModuleID]]              = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: macwire""")
-    val `zio-config`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: zio-config""")
-    val `http4s-twirl`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-twirl""")
+    val `simple-append-support`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-append-support""")
+    val `simple-adt`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt""")
+    val `commons-lang3-bridge`: SettingKey[Seq[sbt.ModuleID]]  = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3-bridge""")
+    val `macwire`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: macwire""")
+    val `zio-config`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: zio-config""")
+    val `http4s-twirl`: SettingKey[Seq[sbt.ModuleID]]          = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-twirl""")
     val `http4s-Release-ember-client`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-ember-client""")
     val `http4s-Release-ember-server`: SettingKey[Seq[sbt.ModuleID]] =
@@ -176,6 +178,7 @@ trait Djx314DeptsImpl {
     libScalax.`commons-compress`,
     libScalax.`commons-lang3`,
     libScalax.`shapeless3-test`,
+    libScalax.`com.yang-bo-html`,
     libScalax.`sbt-scripted-plugin`,
     libScalax.`os-lib`,
     libScalax.`sbt-main`,
@@ -205,6 +208,7 @@ trait Djx314DeptsImpl {
     libScalax.`zio-json`,
     libScalax.`cats-effect-cps`,
     libScalax.`sbt-librarymanagement-core`,
+    libScalax.`simple-append-support`,
     libScalax.`simple-adt`,
     libScalax.`commons-lang3-bridge`,
     libScalax.`macwire`,
