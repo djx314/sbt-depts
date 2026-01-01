@@ -59,13 +59,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.24"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-append-support"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M1"
+  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M2"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -317,13 +317,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.24"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -377,7 +377,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-append-support"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M1"
+  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M2"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -559,13 +559,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio2"
 
-  libraryDependencies += "dev.zio" %%% "zio" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-streams" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test" % "2.1.24"
 
-  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.23"
+  libraryDependencies += "dev.zio" %%% "zio-test-sbt" % "2.1.24"
 
   VarContext.changeDeptVar := "scala-collection-compat"
 
@@ -619,7 +619,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-append-support"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M1"
+  libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M2"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -779,7 +779,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.22"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.23"
 
   VarContext.changeDeptVar := "javet"
 
