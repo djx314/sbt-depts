@@ -115,7 +115,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M24"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M25"
 
   VarContext.changeDeptVar := "simple-append-support"
 
@@ -373,7 +373,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M24"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M25"
 
   VarContext.changeDeptVar := "simple-append-support"
 
@@ -615,7 +615,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M24"
+  libraryDependencies += "net.scalax.simple" %%% "simple-adt" % "0.0.2-M25"
 
   VarContext.changeDeptVar := "simple-append-support"
 
