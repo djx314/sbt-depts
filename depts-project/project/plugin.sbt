@@ -80,4 +80,4 @@ VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
 
 VarContext.changePluginVar := "sbt-dependency-tree"
-addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.7")
+addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.0")
