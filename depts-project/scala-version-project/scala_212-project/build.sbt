@@ -80,7 +80,7 @@ VarContext.changeDeptVar                    := "simple-append-support"
 libraryDependencies += "net.scalax.simple" %%% "simple-append-support" % "0.0.1-M3"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
-libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
+libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.12.0"
 
 VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %%% "cats-effect-cps" % "0.5.0"
@@ -123,7 +123,7 @@ VarContext.changeDeptVar         := "zio-interop-reactivestreams"
 libraryDependencies += "dev.zio" %% "zio-interop-reactivestreams" % "2.0.2"
 
 VarContext.changeDeptVar         := "zio-logging"
-libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.2"
+libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.3"
 
 VarContext.changeDeptVar        := "zhttp"
 libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC11"
@@ -170,10 +170,10 @@ VarContext.changeDeptVar               := "scala-compiler"
 libraryDependencies += "org.scala-lang" % "scala-compiler" % "2.12.21"
 
 VarContext.changeDeptVar               := "sbt-main"
-libraryDependencies += "org.scala-sbt" %% "main" % "1.11.7"
+libraryDependencies += "org.scala-sbt" %% "main" % "1.12.1"
 
 VarContext.changeDeptVar              := "os-lib"
-libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.6"
+libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.7"
 
 VarContext.changeDeptVar               := "sbt-scripted-plugin"
-libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.7"
+libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.1"

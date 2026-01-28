@@ -29,7 +29,7 @@ VarContext.changePluginVar := "sbt-ide-settings"
 addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.3")
 
 VarContext.changePluginVar := "sbt-scalajs"
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.1")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.2")
 
 VarContext.changePluginVar := "sbt-platform-deps"
 addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")
@@ -47,7 +47,7 @@ VarContext.changePluginVar := "sbt-assembly"
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.3.1")
 
 VarContext.changePluginVar := "sbt-scoverage"
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.3")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.4")
 
 VarContext.changePluginVar := "sbt-github-actions"
 addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.29.0")
@@ -59,7 +59,7 @@ VarContext.changePluginVar := "sbt-jmh"
 addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.8")
 
 VarContext.changePluginVar := "sbt-native-packager"
-addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.4")
+addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.7")
 
 VarContext.changePluginVar := "sbt-dependency-updates"
 addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.9")
@@ -80,4 +80,4 @@ VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
 
 VarContext.changePluginVar := "sbt-dependency-tree"
-addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.7")
+addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.1")
