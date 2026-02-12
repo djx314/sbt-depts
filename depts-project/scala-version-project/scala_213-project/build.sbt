@@ -1,4 +1,4 @@
-scalaVersion := "3.8.1"
+scalaVersion := "2.13.18"
 
 VarContext.changeDeptVar := "kind-projector"
 addCompilerPlugin("org.typelevel" % "kind-projector" % "0.13.4" cross CrossVersion.full)
@@ -174,3 +174,6 @@ libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.8"
 
 VarContext.changeDeptVar               := "com.yang-bo-html"
 libraryDependencies += "com.yang-bo" %%% "html" % "2.0.1"
+
+VarContext.changeDeptVar               := "pureconfig"
+libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.17.10"

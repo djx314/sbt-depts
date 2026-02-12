@@ -166,3 +166,6 @@ libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "2.0.0-alpha10"
 
 VarContext.changeDeptVar               := "com.yang-bo-html"
 libraryDependencies += "com.yang-bo" %%% "html" % "3.0.3"
+
+VarContext.changeDeptVar               := "pureconfig"
+libraryDependencies += "com.github.pureconfig" %% "pureconfig-core" % "0.17.10"

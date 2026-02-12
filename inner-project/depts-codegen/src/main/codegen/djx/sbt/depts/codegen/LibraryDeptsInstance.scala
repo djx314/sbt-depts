@@ -123,7 +123,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.12.0"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -131,7 +131,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.8.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.9.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -187,7 +187,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.2"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.3"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -251,15 +251,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.11.7"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.12.2"
 
   VarContext.changeDeptVar := "os-lib"
 
-  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.6"
+  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.8"
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
-  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.11.7"
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.2"
 
   scalaVersion := "2.13.18"
 
@@ -381,7 +381,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.11.6"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.12.0"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -389,7 +389,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.8.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.9.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -445,7 +445,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.2"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.3"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -509,13 +509,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "os-lib"
 
-  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.6"
+  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.8"
 
   VarContext.changeDeptVar := "com.yang-bo-html"
 
   libraryDependencies += "com.yang-bo" %%% "html" % "2.0.1"
 
-  scalaVersion := "3.7.4"
+  VarContext.changeDeptVar := "pureconfig"
+
+  libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.17.10"
+
+  scalaVersion := "3.8.1"
 
   VarContext.changeDeptVar := "circe"
 
@@ -623,7 +627,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC7"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.0-RC8"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -631,7 +635,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %%% "zio-json" % "0.8.0"
+  libraryDependencies += "dev.zio" %%% "zio-json" % "0.9.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -689,7 +693,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-logging"
 
-  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.2"
+  libraryDependencies += "dev.zio" %% "zio-logging" % "2.5.3"
 
   VarContext.changeDeptVar := "zhttp"
 
@@ -745,11 +749,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC7"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.0-RC8"
 
   VarContext.changeDeptVar := "os-lib"
 
-  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.6"
+  libraryDependencies += "com.lihaoyi" %%% "os-lib" % "0.11.8"
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
@@ -758,6 +762,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
   VarContext.changeDeptVar := "com.yang-bo-html"
 
   libraryDependencies += "com.yang-bo" %%% "html" % "3.0.3"
+
+  VarContext.changeDeptVar := "pureconfig"
+
+  libraryDependencies += "com.github.pureconfig" %% "pureconfig-core" % "0.17.10"
 
   VarContext.customJV := VarContext.JavaVersionToSetting.value
 
@@ -779,107 +787,107 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.23"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.29"
 
   VarContext.changeDeptVar := "javet"
 
-  libraryDependencies += "com.caoccao.javet" % "javet" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-arm64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-linux-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-linux-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-macos-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-arm64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-macos-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-macos-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-windows-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-windows-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-android"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-android" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-node-android-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-node-android-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-node-android-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-linux-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-arm64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-linux-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-linux-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-macos-arm64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-arm64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-macos-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-macos-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-windows-x86_64-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-windows-x86_64-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-android"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-android" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-android" % "5.0.4"
 
   VarContext.changeDeptVar := "javet-v8-android-i18n"
 
-  libraryDependencies += "com.caoccao.javet" % "javet-v8-android-i18n" % "5.0.3"
+  libraryDependencies += "com.caoccao.javet" % "javet-v8-android-i18n" % "5.0.4"
 
   VarContext.changeDeptVar := "jnativehook"
 
@@ -915,11 +923,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
-  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.5.0"
+  libraryDependencies += "com.mysql" % "mysql-connector-j" % "9.6.0"
 
   VarContext.changeDeptVar := "postgresql-jdbc"
 
-  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.8"
+  libraryDependencies += "org.postgresql" % "postgresql" % "42.7.10"
 
   VarContext.changeDeptVar := "jmh-generator-annprocess"
 
@@ -927,6 +935,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.11.7"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.12.2"
 
 }

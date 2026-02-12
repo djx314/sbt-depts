@@ -45,7 +45,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.1")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.2")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
@@ -69,7 +69,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scoverage"
 
-  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.3")
+  addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.4")
 
   VarContext.changePluginVar := "sbt-github-actions"
 
@@ -85,7 +85,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-native-packager"
 
-  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.4")
+  addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.7")
 
   VarContext.changePluginVar := "sbt-dependency-updates"
 
@@ -113,6 +113,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.11.7")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.2")
 
 }
