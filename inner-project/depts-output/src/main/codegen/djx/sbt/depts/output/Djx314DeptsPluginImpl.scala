@@ -67,6 +67,7 @@ trait BuildKeys {
     val `jsoup`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: jsoup""")
     val `commons-compress`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-compress""")
     val `commons-lang3`: SettingKey[Seq[sbt.ModuleID]]       = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3""")
+    val `magnolia1.scala3`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: magnolia1.scala3""")
     val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
     val `pureconfig`: SettingKey[Seq[sbt.ModuleID]]          = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: pureconfig""")
     val `com.yang-bo-html`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: com.yang-bo-html""")
@@ -178,6 +179,7 @@ trait Djx314DeptsImpl {
     libScalax.`jsoup`,
     libScalax.`commons-compress`,
     libScalax.`commons-lang3`,
+    libScalax.`magnolia1.scala3`,
     libScalax.`shapeless3-test`,
     libScalax.`pureconfig`,
     libScalax.`com.yang-bo-html`,

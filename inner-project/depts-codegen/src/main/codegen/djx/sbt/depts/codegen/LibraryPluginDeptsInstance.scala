@@ -113,6 +113,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.2")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.3")
 
 }
