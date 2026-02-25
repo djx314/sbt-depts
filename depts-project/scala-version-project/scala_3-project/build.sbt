@@ -5,6 +5,9 @@ libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.15"
 libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
 libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.15"
 
+VarContext.changeDeptVar           := "circe-extras"
+libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.0"
+
 VarContext.changeDeptVar                := "scalatest"
 libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.19"
 libraryDependencies += "org.scalatest" %%% "scalatest"          % "3.2.19"
