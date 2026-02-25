@@ -45,17 +45,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -251,7 +251,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.12.3"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.12.4"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -259,7 +259,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
-  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.3"
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.4"
 
   scalaVersion := "2.13.18"
 
@@ -303,17 +303,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -529,6 +529,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "io.circe" %%% "circe-parser" % "0.14.15"
 
+  VarContext.changeDeptVar := "circe-extras"
+
+  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.0"
+
   VarContext.changeDeptVar := "scalatest"
 
   libraryDependencies += "org.scalactic" %%% "scalactic" % "3.2.19"
@@ -549,17 +553,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "doobie"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-core" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-hikari" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-postgres" % "1.0.0-RC12"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-scalatest" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "doobie-h2"
 
-  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC11"
+  libraryDependencies += "org.tpolecat" %% "doobie-h2" % "1.0.0-RC12"
 
   VarContext.changeDeptVar := "zio2"
 
@@ -919,11 +923,11 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "typesafe-config"
 
-  libraryDependencies += "com.typesafe" % "config" % "1.4.5"
+  libraryDependencies += "com.typesafe" % "config" % "1.4.6"
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.12"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.13"
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
@@ -939,6 +943,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.12.3"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "1.12.4"
 
 }
