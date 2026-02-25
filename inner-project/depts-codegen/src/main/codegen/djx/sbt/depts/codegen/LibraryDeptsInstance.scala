@@ -531,7 +531,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "circe-extras"
 
-  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.0"
+  libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.5-RC1"
 
   VarContext.changeDeptVar := "scalatest"
 
