@@ -1,4 +1,4 @@
-scalaVersion := "3.8.1"
+scalaVersion := "3.8.2"
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.15"
