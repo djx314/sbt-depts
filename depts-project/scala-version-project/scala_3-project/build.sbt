@@ -1,4 +1,4 @@
-scalaVersion := "3.8.1"
+scalaVersion := "3.8.2"
 
 VarContext.changeDeptVar           := "circe"
 libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.15"
@@ -96,7 +96,7 @@ libraryDependencies += "co.fs2"  %% "fs2-reactive-streams" % "3.12.2"
 libraryDependencies += "co.fs2" %%% "fs2-scodec"           % "3.12.2"
 
 VarContext.changeDeptVar                := "distage"
-libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.22"
+libraryDependencies += "io.7mind.izumi" %% "distage-core" % "1.2.24"
 
 VarContext.changeDeptVar                    := "slick"
 libraryDependencies += "com.typesafe.slick" %% "slick"          % "3.6.1"
