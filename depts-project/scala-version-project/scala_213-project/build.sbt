@@ -177,3 +177,6 @@ libraryDependencies += "com.yang-bo" %%% "html" % "2.0.1"
 
 VarContext.changeDeptVar               := "pureconfig"
 libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.17.10"
+
+VarContext.changeDeptVar               := "magnolia1.scala2"
+libraryDependencies += "com.softwaremill.magnolia1_2" %%% "magnolia" % "1.1.12"
