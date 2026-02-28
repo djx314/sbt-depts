@@ -261,6 +261,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.4"
 
+  VarContext.changeDeptVar := "magnolia1.scala2"
+
+  libraryDependencies += "com.softwaremill.magnolia1_2" %%% "magnolia" % "1.1.12"
+
   scalaVersion := "2.13.18"
 
   VarContext.changeDeptVar := "kind-projector"
@@ -518,6 +522,10 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
   VarContext.changeDeptVar := "pureconfig"
 
   libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.17.10"
+
+  VarContext.changeDeptVar := "magnolia1.scala2"
+
+  libraryDependencies += "com.softwaremill.magnolia1_2" %%% "magnolia" % "1.1.12"
 
   scalaVersion := "3.8.1"
 

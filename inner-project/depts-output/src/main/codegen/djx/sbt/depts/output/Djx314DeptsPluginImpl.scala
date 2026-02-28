@@ -71,6 +71,7 @@ trait BuildKeys {
     val `shapeless3-test`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: shapeless3-test""")
     val `pureconfig`: SettingKey[Seq[sbt.ModuleID]]          = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: pureconfig""")
     val `com.yang-bo-html`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: com.yang-bo-html""")
+    val `magnolia1.scala2`: SettingKey[Seq[sbt.ModuleID]]    = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: magnolia1.scala2""")
     val `sbt-scripted-plugin`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-scripted-plugin""")
     val `os-lib`: SettingKey[Seq[sbt.ModuleID]]              = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: os-lib""")
     val `sbt-main`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-main""")
@@ -183,6 +184,7 @@ trait Djx314DeptsImpl {
     libScalax.`shapeless3-test`,
     libScalax.`pureconfig`,
     libScalax.`com.yang-bo-html`,
+    libScalax.`magnolia1.scala2`,
     libScalax.`sbt-scripted-plugin`,
     libScalax.`os-lib`,
     libScalax.`sbt-main`,
