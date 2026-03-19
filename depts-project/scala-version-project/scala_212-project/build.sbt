@@ -179,4 +179,4 @@ VarContext.changeDeptVar               := "sbt-scripted-plugin"
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.6"
 
 VarContext.changeDeptVar               := "magnolia1.scala2"
-libraryDependencies += "com.softwaremill.magnolia1_2" %%% "magnolia" % "1.1.12"
+libraryDependencies += "com.softwaremill.magnolia1_2" %%% "magnolia" % "1.1.13"
