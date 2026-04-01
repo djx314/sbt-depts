@@ -15,7 +15,7 @@ VarContext.changeDeptVar           := "circe-extras"
 libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.4"
 
 VarContext.changeDeptVar                := "scalatest"
-libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.19"
+libraryDependencies += "org.scalactic" %%% "scalactic"          % "3.2.20"
 libraryDependencies += "org.scalatest" %%% "scalatest"          % "3.2.20"
 libraryDependencies += "org.scalatest" %%% "scalatest-core"     % "3.2.20"
 libraryDependencies += "org.scalatest" %%% "scalatest-funsuite" % "3.2.20"
