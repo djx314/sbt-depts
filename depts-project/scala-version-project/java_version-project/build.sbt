@@ -73,10 +73,10 @@ VarContext.changeDeptVar                   := "commons-io"
 libraryDependencies += "org.apache.commons" % "commons-io" % "1.3.2"
 
 VarContext.changeDeptVar          := "slf4j-simple"
-libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.17"
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.18"
 
 VarContext.changeDeptVar          := "slf4j-nop"
-libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.17"
+libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.18"
 
 VarContext.changeDeptVar               := "h2"
 libraryDependencies += "com.h2database" % "h2" % "2.4.240"
