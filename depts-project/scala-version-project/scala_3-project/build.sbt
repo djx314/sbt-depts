@@ -1,9 +1,9 @@
 scalaVersion := "3.8.3"
 
 VarContext.changeDeptVar           := "circe"
-libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.15"
-libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.15"
-libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.15"
+libraryDependencies += "io.circe" %%% "circe-core"    % "0.14.16"
+libraryDependencies += "io.circe" %%% "circe-generic" % "0.14.16"
+libraryDependencies += "io.circe" %%% "circe-parser"  % "0.14.16"
 
 VarContext.changeDeptVar           := "circe-extras"
 libraryDependencies += "io.circe" %%% "circe-generic-extras" % "0.14.5-RC1"
