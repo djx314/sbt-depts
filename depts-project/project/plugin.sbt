@@ -74,7 +74,7 @@ VarContext.changePluginVar := "sbt-web-scalajs"
 addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.4.0")
 
 VarContext.changePluginVar := "sbt-playframework"
-addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.10")
+addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.11")
 
 VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
