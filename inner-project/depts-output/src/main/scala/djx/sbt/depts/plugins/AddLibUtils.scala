@@ -100,7 +100,7 @@ object AddLibUtils {
     val libItem1: sbt.ModuleID = dept1.platform
       .fold3 { (_: JavaDept) => dept1.org % dept1.name % dept1.version }
       .fold2 { (_: ScalaDept) => dept1.org %% dept1.name % dept1.version }
-      .fold1 { (_: ScalaJSDept) => dept1.org %%% dept1.name % dept1.version }
+      .fold1 { (_: ScalaJSDept) => dept1.org %% dept1.name % dept1.version }
 
     val libItem2: sbt.ModuleID =
       dept1.crossInfo.fold2((_: NoCrossVersion) => libItem1).fold1((_: `CrossVersion.full`) => libItem1 cross CrossVersion.full)

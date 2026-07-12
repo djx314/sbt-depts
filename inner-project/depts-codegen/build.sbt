@@ -6,7 +6,7 @@ val `scalfmt/file`      = `root/file` / ".." / "depts-project" / ".scalafmt.conf
 val scalafmtCodegenFile = `output/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "output" / "impl" / "ScalafmtRewrite.scala"
 val pluginsFile         = `plugin/file` / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "plugins" / "impl" / "PluginsColImpl.scala"
 
-/*genActionImpl := (Compile / runMain).inputTaskValue
+/*genActionImpl := (Compile / runMain).value
   .partialInput(" djx.sbt.depts.codegen.CodegenRunner")
   .partialInput(s" ${libVersionFile.getCanonicalFile.toString}")
   .partialInput(s" ${`scalfmt/file`.getCanonicalFile.toString}")

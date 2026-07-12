@@ -59,8 +59,8 @@ updateMVersion := {
 }
 
 /*genAction := {
-  (`depts-abs` / genActionImpl).inputTaskValue.evaluated
-  (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
+  (`depts-abs` / genActionImpl).evaluated
+  (`depts-codegen` / genActionImpl).evaluated
 }*/
 
 addCommandAlias("preparePackaging", "; updateMVersion; genAction;")
