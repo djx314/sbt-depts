@@ -89,7 +89,6 @@ object AddLibUtils {
   ): sbt.Def.Setting[Seq[sbt.ModuleID]] = libDepts := {
     import sbt._
     import sbt.Keys._
-    import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
     val sVersion: String                 = scalaVersion.value
     val scalaType: ScalaJavaVersion.Type = ScalaJavaVersion.fromString(sVersion)

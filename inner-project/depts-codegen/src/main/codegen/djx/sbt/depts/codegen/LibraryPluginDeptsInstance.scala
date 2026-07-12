@@ -9,7 +9,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
-  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.5.6")
+  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.1")
 
   VarContext.changePluginVar := "sbt-revolver"
 
@@ -41,11 +41,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-ide-settings"
 
-  addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.3")
+  addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.4")
 
   VarContext.changePluginVar := "sbt-scalajs"
 
-  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.20.2")
+  addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.22.0")
 
   VarContext.changePluginVar := "sbt-platform-deps"
 
@@ -73,7 +73,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.29.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.31.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
@@ -101,18 +101,18 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-web-scalajs"
 
-  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.3.0")
+  addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.4.0")
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.10")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.11")
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
-  addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.10.0")
+  addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
 
   VarContext.changePluginVar := "sbt-dependency-tree"
 
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.4")
+  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.13")
 
 }

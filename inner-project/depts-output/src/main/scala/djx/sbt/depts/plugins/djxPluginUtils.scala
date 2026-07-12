@@ -23,7 +23,7 @@ object pUtils {
     (vModel, headFile)
   }
 
-  val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
+  /*val initializeInstanceMonad: Monad[sbt.Def.Initialize] = new StackSafeMonad[sbt.Def.Initialize] {
     override def flatMap[A, B](fa: sbt.Def.Initialize[A])(f: A => sbt.Def.Initialize[B]): sbt.Def.Initialize[B] =
       sbt.std.InitializeInstance.flatten(sbt.std.InitializeInstance.map(fa, f))
     override def pure[A](x: A): sbt.Def.Initialize[A] = sbt.std.InitializeInstance.pure(() => x)
@@ -99,11 +99,11 @@ object pUtils {
 
   object SeeTree {
     def see[U](p: U): U = macro impl.SeeTreeImpl.see[U]
-  }
+  }*/
 
 }
 
-package impl {
+/*package impl {
   import scala.reflect.macros.blackbox.Context
 
   object SeeTreeImpl {
@@ -112,4 +112,4 @@ package impl {
       p
     }
   }
-}
+}*/

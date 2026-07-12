@@ -1,8 +1,12 @@
-import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
-
-libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
-libraryDependencies ++= libScalax.`scala-collection-compat`.value
-libraryDependencies ++= libScalax.`os-lib`.value
+libraryDependencies ++= {
+  libScalax.`sbt-librarymanagement-core`.value.map(_.exclude("org.scala-sbt","util-interface"))
+}
+libraryDependencies ++= {
+  libScalax.`scala-collection-compat`.value.map(_.exclude("org.scala-sbt","util-interface"))
+}
+libraryDependencies ++= {
+  libScalax.`os-lib`.value.map(_.exclude("org.scala-sbt","util-interface"))
+}
 
 Compile / unmanagedSourceDirectories := {
   val v1          = (Compile / unmanagedSourceDirectories).value

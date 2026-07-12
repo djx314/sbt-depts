@@ -38,13 +38,11 @@ package impl {
 object Djx314DeptsPlugin extends AutoPlugin {
   Djx314DeptsPluginSelf =>
 
-  import xerial.sbt.Sonatype.autoImport.sonatypeBundleDirectory
-  import scala.reflect.io.Directory
   import scala.util.Try
   import java.nio.file.{Files, Paths}
 
   override def requires =
-    org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin && sbtcrossproject.CrossPlugin && sbt.plugins.IvyPlugin
+    /*org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin &&*/ sbt.plugins.IvyPlugin
   override def trigger: PluginTrigger                    = allRequirements
   override def projectConfigurations: Seq[Configuration] = super.projectConfigurations
 
@@ -100,7 +98,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
         for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
       })
 
-      settingsCol.+=(djxUpdateSbtLaunchJar := {
+      /*settingsCol.+=(djxUpdateSbtLaunchJar := {
         val (deptInfo, sbtJarMavenFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
         val sbtJarDir                   = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
         val sbtJarSource                = os.Path(sbtJarMavenFile)
@@ -139,14 +137,14 @@ object Djx314DeptsPlugin extends AutoPlugin {
         }
 
         (deptInfo, sbtJarCopyTo.toIO)
-      })
+      })*/
 
-      settingsCol.+=(djxUpdate := {
+      /*settingsCol.+=(djxUpdate := {
         djxUpdateScalafmtConfig.value
         djxUpdateSbtVersion.value
         djxUpdatePluginsVersion.value
         djxUpdateSbtLaunchJar.value
-      })
+      })*/
 
       val collect = settingsCol.to(List)
     }

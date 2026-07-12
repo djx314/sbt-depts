@@ -1,10 +1,13 @@
 import Settings._
-import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
 
 libraryDependencies ++= libScalax.`typesafe-config`.value
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
-libraryDependencies ++= libScalax.`simple-adt`.value
-libraryDependencies ++= libScalax.`sbt-librarymanagement-core`.value
+libraryDependencies ++= {
+  libScalax.`simple-adt`.value.map(_.exclude("org.scala-sbt","util-interface"))
+}
+libraryDependencies ++= {
+  libScalax.`sbt-librarymanagement-core`.value.map(_.exclude("org.scala-sbt","util-interface"))
+}
 
 val buildSbtFile2: File =
   (`root/file` / ".." / "depts-project" / "scala-version-project" / "scala_212-project" / "build.sbt").getCanonicalFile
@@ -26,7 +29,7 @@ val writFile2: File =
 val writFile3: File =
   (`root/file` / "depts-codegen" / "src" / "main" / "codegen" / "djx" / "sbt" / "depts" / "codegen" / "SbtVersionInfo.scala").getCanonicalFile
 
-genActionImpl := {
+/*genActionImpl := {
   (Compile / runMain).inputTaskValue
     .partialInput(" djx.sbt.depts.abs.CodegenAction")
     .partialInput(s""" ${buildSbtFile2.toString}""")
@@ -47,4 +50,4 @@ genActionImpl := {
     .partialInput(s""" ${buildPropertyFile.toString}""")
     .partialInput(s""" ${writFile3.toString}""")
     .evaluated
-}
+}*/

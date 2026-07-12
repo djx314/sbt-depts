@@ -3,7 +3,7 @@ package djx.sbt.depts.output
 import _root_.sbt._
 import _root_.sbt.Keys._
 import _root_.scala.collection.compat._
-import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
+// import _root_.org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 trait BuildKeys {
   object libScalax {

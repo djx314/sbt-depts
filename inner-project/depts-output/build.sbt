@@ -1,21 +1,23 @@
-import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition, SeeTree}
-
-addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
-addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
-addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
-addSbtPlugin(djx314Plugins.`sbt-sonatype`)
+// addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
+// addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
+// addSbtPlugin(djx314Plugins.`sbt-sonatype`)
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
 libraryDependencies ++= libScalax.`cats-core`.value
 libraryDependencies ++= libScalax.`kind-projector`.value
-libraryDependencies ++= libScalax.`coursier`.value
+libraryDependencies ++= {
+  List( "io.get-coursier" %% "coursier-core"  % "2.1.24",
+     "io.get-coursier" %% "coursier-cache" % "2.1.24",
+   "io.get-coursier" %% "coursier"       % "2.1.24").map(_.cross(CrossVersion.for3Use2_13).exclude("org.scala-lang.modules","scala-collection-compat_2.13").exclude("org.scala-lang.modules","scala-xml_2.13"))
+}
 
 enablePlugins(SbtPlugin)
 sbtPluginPublishLegacyMavenStyle := false
 
+
 pluginCrossBuild / sbtVersion := {
   scalaBinaryVersion.value match {
-    case "2.12" => "1.8.2" // set minimum sbt version
+    case "3" => "2.0.0" // set minimum sbt version
   }
 }
 

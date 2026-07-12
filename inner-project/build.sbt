@@ -1,18 +1,17 @@
-import Settings._
 import djx.sbt.depts.plugins.GlobalVersion
-import djx.sbt.depts.plugins.pUtils.{setting, sourcePosition}
+import Settings._
 
 val deptOrganization = "net.scalax.djx314"
 
 organization      := deptOrganization
-scalaVersion      := scalaV.v212
+scalaVersion      := scalaV.v3
 moduleName        := name.value
 scalafmtOnCompile := true
 name              := "sbt-depts-root"
 
 val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
 `depts-action` / organization      := deptOrganization
-`depts-action` / scalaVersion      := scalaV.v212
+`depts-action` / scalaVersion      := scalaV.v3
 `depts-action` / moduleName        := (`depts-action` / name).value
 `depts-action` / scalafmtOnCompile := true
 `depts-action` / publishTo         := localStaging.value
@@ -20,7 +19,7 @@ val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
 
 val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / organization      := deptOrganization
-`depts-abs` / scalaVersion      := scalaV.v212
+`depts-abs` / scalaVersion      := scalaV.v3
 `depts-abs` / moduleName        := (`depts-abs` / name).value
 `depts-abs` / scalafmtOnCompile := true
 `depts-abs` / publishTo         := localStaging.value
@@ -28,7 +27,7 @@ val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 
 val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
 `depts-codegen` / organization      := deptOrganization
-`depts-codegen` / scalaVersion      := scalaV.v212
+`depts-codegen` / scalaVersion      := scalaV.v3
 `depts-codegen` / moduleName        := (`depts-codegen` / name).value
 `depts-codegen` / scalafmtOnCompile := true
 `depts-codegen` / publishTo         := localStaging.value
@@ -36,7 +35,7 @@ val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") de
 
 val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
 `depts-output-plugins` / organization      := deptOrganization
-`depts-output-plugins` / scalaVersion      := scalaV.v212
+`depts-output-plugins` / scalaVersion      := scalaV.v3
 `depts-output-plugins` / moduleName        := (`depts-output-plugins` / name).value
 `depts-output-plugins` / scalafmtOnCompile := true
 `depts-output-plugins` / publishTo         := localStaging.value
@@ -45,7 +44,7 @@ val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `de
 val `depts-output`: sbt.Project =
   project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins` aggregate `depts-codegen` aggregate `depts-abs`
 `depts-output` / organization      := deptOrganization
-`depts-output` / scalaVersion      := scalaV.v212
+`depts-output` / scalaVersion      := scalaV.v3
 `depts-output` / moduleName        := (`depts-output` / name).value
 `depts-output` / scalafmtOnCompile := true
 `depts-output` / publishTo         := localStaging.value
@@ -59,10 +58,10 @@ updateMVersion := {
   newV1.writeWithRoot(sPath)
 }
 
-genAction := {
+/*genAction := {
   (`depts-abs` / genActionImpl).inputTaskValue.evaluated
   (`depts-codegen` / genActionImpl).inputTaskValue.evaluated
-}
+}*/
 
 addCommandAlias("preparePackaging", "; updateMVersion; genAction;")
 

@@ -44,8 +44,8 @@ case class ChangeModuleIdName(name: String)
 
 // ===
 trait SettingInstance {
-  protected var protectedSettings: List[SettingInstance.Type]
-  private val setter = Adt.CoProduct3[ScalaJavaVersion.Type, DeptsModule, ChangeModuleIdName]
+  protected var protectedSettings: List[SettingInstance.Type] = List.empty
+  private val setter                                          = Adt.CoProduct3[ScalaJavaVersion.Type, DeptsModule, ChangeModuleIdName]
   private def addToSettingImpl(s: SettingInstance.Type): SettingInstance.AddedToSetting = {
     protectedSettings = s :: protectedSettings
     SettingInstance.AddedToSetting(s)
@@ -74,15 +74,13 @@ object SettingInstance {
   case class AddedToSetting(v: SettingInstanceSelf.Type)
 
   type Type = Adt.CoProduct3[ScalaJavaVersion.Type, DeptsModule, ChangeModuleIdName]
-  def instance(initSettings: List[SettingInstance.Type]): SettingInstance = new SettingInstance {
-    override protected var protectedSettings: List[SettingInstance.Type] = initSettings
-  }
+  def instance: SettingInstance = new SettingInstance {}
 }
 
 // ===
 trait AddJavaDeptsAbs {
 
-  val settingInstance: SettingInstance = SettingInstance.instance(List.empty)
+  val settingInstance: SettingInstance = SettingInstance.instance
 
   object CrossVersion {
     val full: CrossInfo.Type = CrossInfo.`CrossVersion.full`
