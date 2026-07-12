@@ -42,7 +42,11 @@ val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `de
 `depts-output-plugins` / name              := "sbt-depts-djx314-plugins"
 
 val `depts-output`: sbt.Project =
-  project in `output/file` dependsOn `depts-output-plugins` aggregate `depts-output-plugins` aggregate `depts-codegen` aggregate `depts-abs`
+  (project in `output/file`)
+    .dependsOn(`depts-output-plugins`)
+    .aggregate(`depts-output-plugins`)
+    .aggregate(`depts-codegen`)
+    .aggregate(`depts-abs`)
 `depts-output` / organization      := deptOrganization
 `depts-output` / scalaVersion      := scalaV.v3
 `depts-output` / moduleName        := (`depts-output` / name).value
@@ -58,17 +62,12 @@ updateMVersion := {
   newV1.writeWithRoot(sPath)
 }
 
-/*genAction := {
-  (`depts-abs` / genActionImpl).evaluated
-  (`depts-codegen` / genActionImpl).evaluated
-}*/
-
-addCommandAlias("preparePackaging", "; updateMVersion; genAction;")
+addCommandAlias("aa", "; updateMVersion; CodegenAction;")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 
-addCommandAlias("bb", "; preparePackaging; reload; clean; depts-output/publishSigned; sonaBundle;")
-addCommandAlias("bbLocal", "; preparePackaging; reload; depts-output/publishLocal;")
+addCommandAlias("bb", "; clean; depts-output/publishSigned; sonaBundle;")
+addCommandAlias("bbLocal", "; depts-output/publishLocal;")
 
 ThisBuild / version := {
   val srcRoot = (`depts-output-plugins` / Compile / resourceDirectory).value
@@ -76,5 +75,3 @@ ThisBuild / version := {
   val vModel  = GlobalVersion.versionWrap.updateFromRoot(sPath)
   vModel.versionStr
 }
-
-Global / onChangedBuildSource := ReloadOnSourceChanges

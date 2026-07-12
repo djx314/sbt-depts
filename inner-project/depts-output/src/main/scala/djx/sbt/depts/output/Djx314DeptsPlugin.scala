@@ -11,12 +11,13 @@ import collection.mutable.ListBuffer
 
 package impl {
 
+  import djx.sbt.depts.abs.TakeSbtProperties
+
   class BuildKeysImpl extends BuildKeys {
     val djxProjectRootPath = settingKey[File]("Key of project root.")
 
-    import djx.sbt.depts.abs.TakeSbtProperties
     val djxUpdateSbtLaunchJar =
-      taskKey[(TakeSbtProperties.Extra3, File)]("The released version of the sbt-launcher we use to bundle this application.")
+      taskKey[Unit]("The released version of the sbt-launcher we use to bundle this application.")
     val djxSbtLaunchJarDirctory = settingKey[File]("Key of djxSbtLaunchJar dirctory.")
 
     val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
@@ -98,7 +99,7 @@ object Djx314DeptsPlugin extends AutoPlugin {
         for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
       })
 
-      /*settingsCol.+=(djxUpdateSbtLaunchJar := {
+      settingsCol.+=(djxUpdateSbtLaunchJar := {
         val (deptInfo, sbtJarMavenFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
         val sbtJarDir                   = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
         val sbtJarSource                = os.Path(sbtJarMavenFile)
@@ -136,15 +137,14 @@ object Djx314DeptsPlugin extends AutoPlugin {
           }
         }
 
-        (deptInfo, sbtJarCopyTo.toIO)
-      })*/
+      })
 
-      /*settingsCol.+=(djxUpdate := {
+      settingsCol.+=(djxUpdate := {
         djxUpdateScalafmtConfig.value
         djxUpdateSbtVersion.value
         djxUpdatePluginsVersion.value
         djxUpdateSbtLaunchJar.value
-      })*/
+      })
 
       val collect = settingsCol.to(List)
     }
