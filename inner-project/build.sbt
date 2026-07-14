@@ -25,7 +25,7 @@ val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / publishTo         := localStaging.value
 `depts-abs` / name              := "sbt-depts-abs"
 
-val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") dependsOn `depts-abs`
+val `depts-codegen`: sbt.Project = (project in (`root/file` / "depts-codegen")) .dependsOn (`depts-abs`)
 `depts-codegen` / organization      := deptOrganization
 `depts-codegen` / scalaVersion      := scalaV.v3
 `depts-codegen` / moduleName        := (`depts-codegen` / name).value
@@ -33,7 +33,7 @@ val `depts-codegen`: sbt.Project = project in (`root/file` / "depts-codegen") de
 `depts-codegen` / publishTo         := localStaging.value
 `depts-codegen` / name              := "sbt-depts-codegen"
 
-val `depts-output-plugins`: sbt.Project = project in `plugin/file` dependsOn `depts-codegen`
+val `depts-output-plugins`: sbt.Project = (project in `plugin/file`). dependsOn (`depts-codegen`)
 `depts-output-plugins` / organization      := deptOrganization
 `depts-output-plugins` / scalaVersion      := scalaV.v3
 `depts-output-plugins` / moduleName        := (`depts-output-plugins` / name).value
