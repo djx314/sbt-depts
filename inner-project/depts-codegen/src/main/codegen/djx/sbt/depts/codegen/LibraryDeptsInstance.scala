@@ -639,7 +639,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.1"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.2"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -761,7 +761,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.1"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.2"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -781,7 +781,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "magnolia1.scala3"
 
-  libraryDependencies += "com.softwaremill.magnolia1_3" %%% "magnolia" % "1.3.22"
+  libraryDependencies += "com.softwaremill.magnolia1_3" %%% "magnolia" % "1.3.23"
 
   VarContext.customJV := VarContext.JavaVersionToSetting.value
 
@@ -951,6 +951,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "2.0.1"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "2.0.2"
 
 }

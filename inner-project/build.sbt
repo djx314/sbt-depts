@@ -3,11 +3,11 @@ import Settings._
 
 val deptOrganization = "net.scalax.djx314"
 
-organization      := deptOrganization
+/*organization      := deptOrganization
 scalaVersion      := scalaV.v3
 moduleName        := name.value
 scalafmtOnCompile := true
-name              := "sbt-depts-root"
+name              := "sbt-depts-root"*/
 
 val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
 `depts-action` / organization      := deptOrganization
@@ -62,7 +62,7 @@ updateMVersion := {
   newV1.writeWithRoot(sPath)
 }
 
-addCommandAlias("aa", "; updateMVersion; CodegenAction;")
+addCommandAlias("aa", "; updateMVersion ; CodegenAction;")
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 

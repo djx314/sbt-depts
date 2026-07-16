@@ -1,5 +1,5 @@
 // addSbtPlugin(djx314Plugins.`sbt-platform-deps`)
-// addSbtPlugin(djx314Plugins.`sbt-scalajs-crossproject`)
+addSbtPlugin(djx314Plugins.`sbt-scalajs`)
 // addSbtPlugin(djx314Plugins.`sbt-sonatype`)
 
 libraryDependencies ++= libScalax.`scala-collection-compat`.value
