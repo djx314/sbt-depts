@@ -1,5 +1,4 @@
 /.idea/
-/inner-project/.idea/
 /.metals/
 /.vscode/
 /.bsp/
@@ -7,6 +6,7 @@
 **/target/
 **/metals.sbt
 /inner-project/.bsp/
+/inner-project/.idea/
 /inner-project/sonatype.sbt
 /inner-project/.metals/
 /inner-project/.vscode/
@@ -19,3 +19,7 @@
 /sbtw.bat
 /sbtw-sbt-launch-bundle/
 /java_with_opts.bat
+/codegen-project/.bsp/
+/codegen-project/.idea/
+/codegen-project/sbt-launch-2.0.2.jar
+/codegen-project/sbt.bat
