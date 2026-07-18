@@ -1,5 +1,3 @@
-import Settings._
-
 ThisBuild / organizationName := "Scala Workers"
 
 ThisBuild / organizationHomepage := Some(uri("https://github.com/scala-workers"))
@@ -29,7 +27,7 @@ ThisBuild / developers := List(dev1, dev2)
 
 ThisBuild / description := "Scala depts for djx314's repo."
 
-// ThisBuild / licenses := List("MIT License" -> new URL("https://github.com/djx314/sbt-depts/blob/main/LICENSE"))
+ThisBuild / licenses := List("MIT License" -> uri("https://github.com/djx314/sbt-depts/blob/main/LICENSE"))
 
 ThisBuild / homepage := Some(uri("https://github.com/djx314/sbt-depts"))
 

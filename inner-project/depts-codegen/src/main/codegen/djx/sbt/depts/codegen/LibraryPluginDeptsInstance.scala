@@ -115,4 +115,8 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.13")
 
+  VarContext.changePluginVar := "sbt-uni-crossproject"
+
+  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.20")
+
 }
