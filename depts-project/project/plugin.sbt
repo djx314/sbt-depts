@@ -81,3 +81,6 @@ addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
 
 VarContext.changePluginVar := "sbt-dependency-tree"
 addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.14")
+
+VarContext.changePluginVar := "sbt-uni-crossproject"
+addSbtPlugin("org.wvlet.uni"    % "sbt-uni-crossproject" % "2026.1.20")

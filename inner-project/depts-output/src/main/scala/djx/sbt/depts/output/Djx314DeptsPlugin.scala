@@ -11,8 +11,6 @@ import collection.mutable.ListBuffer
 
 package impl {
 
-  import djx.sbt.depts.abs.TakeSbtProperties
-
   class BuildKeysImpl extends BuildKeys {
     val djxProjectRootPath = settingKey[File]("Key of project root.")
 
@@ -39,11 +37,7 @@ package impl {
 object Djx314DeptsPlugin extends AutoPlugin {
   Djx314DeptsPluginSelf =>
 
-  import scala.util.Try
-  import java.nio.file.{Files, Paths}
-
-  override def requires =
-    /*org.portablescala.sbtplatformdeps.PlatformDepsPlugin && sbtcrossproject.CrossPlugin &&*/ sbt.plugins.IvyPlugin
+  override def requires                                  = sbt.plugins.IvyPlugin
   override def trigger: PluginTrigger                    = allRequirements
   override def projectConfigurations: Seq[Configuration] = super.projectConfigurations
 
