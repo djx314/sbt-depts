@@ -59,7 +59,7 @@ trait PluginsColImpl {
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.12.0"""
 
-  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.12.13"""
+  val `sbt-dependency-tree`: sbt.librarymanagement.ModuleID = """org.scala-sbt""" % """sbt-dependency-tree""" % """1.12.14"""
 
   val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.20"""
 

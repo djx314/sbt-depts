@@ -93,17 +93,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.8"
 
   VarContext.changeDeptVar := "macwire"
 
@@ -251,7 +251,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "1.12.13"
+  libraryDependencies += "org.scala-sbt" %% "main" % "1.12.14"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -259,7 +259,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-scripted-plugin"
 
-  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.13"
+  libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.14"
 
   VarContext.changeDeptVar := "magnolia1.scala2"
 
@@ -355,17 +355,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.8"
 
   VarContext.changeDeptVar := "macwire"
 
@@ -609,17 +609,17 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-config"
 
-  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-magnolia" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-refined" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-typesafe" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-yaml" % "4.0.8"
 
-  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.7"
+  libraryDependencies += "dev.zio" %%% "zio-config-derivation" % "4.0.8"
 
   VarContext.changeDeptVar := "macwire"
 
@@ -639,7 +639,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.2"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.3"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -761,7 +761,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.2"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.3"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -951,6 +951,6 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-launch"
 
-  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "2.0.2"
+  libraryDependencies += "org.scala-sbt" % "sbt-launch" % "2.0.3"
 
 }
