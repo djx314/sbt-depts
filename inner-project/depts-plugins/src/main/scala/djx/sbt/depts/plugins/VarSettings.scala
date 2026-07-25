@@ -1,3 +1,4 @@
+/*
 package djx.sbt.depts.plugins
 
 import scala.collection.compat._
@@ -5,10 +6,10 @@ import scala.io.Source
 import scala.util.Using
 
 object VarSettings {
-  val versionFileName: String    = "olweolmngopjewepoewrtojoljoiejiriotuyh"
-  val preVersionFileName: String = "oweksdolnweolsxdfjweoerhaetglhrl"
+  import java.nio.file.{Files,Paths,Path}
+  import java.nio.charset.StandardCharsets
 
-  val preList: List[String] = List("djx", "sbt", "depts", "plugins")
+  val preList: Path = Paths.get("djx", "sbt", "depts", "plugins","sbt-depts-version")
 
   val versionFilePath: List[String]    = preList ::: versionFileName :: List.empty
   val preVersionFilePath: List[String] = preList ::: preVersionFileName :: List.empty
@@ -25,3 +26,4 @@ object VarSettings {
   val MVersionInt: Int          = arr1.toInt
   val MainVersionString: String = arr2
 }
+ */
