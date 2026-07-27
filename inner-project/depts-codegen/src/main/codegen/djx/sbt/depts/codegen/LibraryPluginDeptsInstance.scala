@@ -3,37 +3,33 @@ package codegen
 
 object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
-  VarContext.changePluginVar := "sbt-depts-djx314"
+  /*VarContext.changePluginVar := "sbt-depts-djx314"
 
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100054")
+          addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100054")*/
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
   addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.1")
 
-  VarContext.changePluginVar := "sbt-revolver"
+  /*VarContext.changePluginVar := "sbt-revolver"
 
-  addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")
+          addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")*/
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.0.9")
-
-  VarContext.changePluginVar := "sbt-sonatype"
-
-  addSbtPlugin("org.xerial.sbt" % "sbt-sonatype" % "3.12.2")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M8")
 
   VarContext.changePluginVar := "sbt-pgp"
 
   addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
 
-  VarContext.changePluginVar := "sbt-scalajs-crossproject"
+  /*VarContext.changePluginVar := "sbt-scalajs-crossproject"
 
-  addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.2")
+          addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.2")*/
 
-  VarContext.changePluginVar := "sbt-scala-native-crossproject"
+  /*VarContext.changePluginVar := "sbt-scala-native-crossproject"
 
-  addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.3.2")
+          addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.3.2")*/
 
   VarContext.changePluginVar := "sbt-git"
 
@@ -47,21 +43,21 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.22.0")
 
-  VarContext.changePluginVar := "sbt-platform-deps"
+  /*VarContext.changePluginVar := "sbt-platform-deps"
 
-  addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")
+          addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")*/
 
-  VarContext.changePluginVar := "flyway-sbt"
+  /*VarContext.changePluginVar := "flyway-sbt"
 
-  addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")
+          addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")*/
 
   VarContext.changePluginVar := "sbt-js-engine"
 
-  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.3.9")
+  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M3")
 
-  VarContext.changePluginVar := "sbt-scala-js-map"
+  /*VarContext.changePluginVar := "sbt-scala-js-map"
 
-  addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")
+          addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")*/
 
   VarContext.changePluginVar := "sbt-assembly"
 
@@ -87,17 +83,13 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.7")
 
-  VarContext.changePluginVar := "sbt-dependency-updates"
-
-  addSbtPlugin("org.jmotor.sbt" % "sbt-dependency-updates" % "1.2.9")
-
   VarContext.changePluginVar := "sbt-less"
 
-  addSbtPlugin("com.github.sbt" % "sbt-less" % "2.0.1")
+  addSbtPlugin("com.github.sbt" % "sbt-less" % "2.1.0-M2")
 
   VarContext.changePluginVar := "sbt-web"
 
-  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.5.8")
+  addSbtPlugin("com.github.sbt" % "sbt-web" % "1.6.0-M4")
 
   VarContext.changePluginVar := "sbt-web-scalajs"
 
@@ -105,15 +97,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.11")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.1.0-M8")
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
   addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
-
-  VarContext.changePluginVar := "sbt-dependency-tree"
-
-  addSbtPlugin("org.scala-sbt" % "sbt-dependency-tree" % "1.12.14")
 
   VarContext.changePluginVar := "sbt-uni-crossproject"
 
