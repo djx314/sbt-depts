@@ -35,7 +35,7 @@ addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")*/
 addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")*/
 
 VarContext.changePluginVar := "sbt-js-engine"
-addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M3")
+addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M4")
 
 /*VarContext.changePluginVar := "sbt-scala-js-map"
 addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")*/
