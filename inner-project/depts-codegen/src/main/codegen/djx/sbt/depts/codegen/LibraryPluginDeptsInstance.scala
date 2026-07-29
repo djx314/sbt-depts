@@ -9,7 +9,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
-  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.1")
+  addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.2")
 
   /*VarContext.changePluginVar := "sbt-revolver"
 
@@ -17,7 +17,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-twirl"
 
-  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M8")
+  addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M9")
 
   VarContext.changePluginVar := "sbt-pgp"
 
@@ -53,7 +53,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-js-engine"
 
-  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M3")
+  addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M4")
 
   /*VarContext.changePluginVar := "sbt-scala-js-map"
 
@@ -61,7 +61,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-assembly"
 
-  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.3.1")
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.4.1")
 
   VarContext.changePluginVar := "sbt-scoverage"
 
@@ -97,7 +97,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-playframework"
 
-  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.1.0-M8")
+  addSbtPlugin("org.playframework" % "sbt-plugin" % "3.1.0-M9")
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
@@ -105,6 +105,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-uni-crossproject"
 
-  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.20")
+  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.21")
 
 }

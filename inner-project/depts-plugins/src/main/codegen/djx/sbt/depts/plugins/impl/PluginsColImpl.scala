@@ -4,9 +4,9 @@ import sbt.librarymanagement.syntax._
 
 trait PluginsColImpl {
 
-  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.6.1"""
+  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.6.2"""
 
-  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M8"""
+  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M9"""
 
   val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.1"""
 
@@ -16,9 +16,9 @@ trait PluginsColImpl {
 
   val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.22.0"""
 
-  val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.4.0-M3"""
+  val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.4.0-M4"""
 
-  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.3.1"""
+  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.4.1"""
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.4.4"""
 
@@ -36,10 +36,10 @@ trait PluginsColImpl {
 
   val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.4.0"""
 
-  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.1.0-M8"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.1.0-M9"""
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.12.0"""
 
-  val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.20"""
+  val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.21"""
 
 }

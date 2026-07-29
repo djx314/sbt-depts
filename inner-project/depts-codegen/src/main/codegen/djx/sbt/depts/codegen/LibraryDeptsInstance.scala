@@ -131,7 +131,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.9.2"
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -169,9 +169,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.6.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.4.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.4.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.6.0"
 
@@ -393,7 +393,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.9.2"
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -431,9 +431,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.6.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.4.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.4.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.6.0"
 
@@ -639,7 +639,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.3"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.4"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -647,7 +647,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.9.2"
+  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -687,9 +687,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "org.apache.pekko" %% "pekko-stream-typed" % "1.6.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http" % "1.4.0"
 
-  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.3.0"
+  libraryDependencies += "org.apache.pekko" %% "pekko-http-spray-json" % "1.4.0"
 
   libraryDependencies += "org.apache.pekko" %% "pekko-serialization-jackson" % "1.6.0"
 
@@ -761,7 +761,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.3"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.4"
 
   VarContext.changeDeptVar := "os-lib"
 
@@ -803,7 +803,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.5.38"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.6.1"
 
   VarContext.changeDeptVar := "javet"
 
