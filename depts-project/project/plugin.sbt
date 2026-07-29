@@ -2,7 +2,7 @@
 addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100054")*/
 
 VarContext.changePluginVar := "sbt-scalafmt"
-addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.1")
+addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.2")
 
 /*VarContext.changePluginVar := "sbt-revolver"
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")*/
