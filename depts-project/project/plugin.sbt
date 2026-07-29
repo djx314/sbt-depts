@@ -8,7 +8,7 @@ addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.1")
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.10.0")*/
 
 VarContext.changePluginVar := "sbt-twirl"
-addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M8")
+addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M9")
 
 VarContext.changePluginVar := "sbt-pgp"
 addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
