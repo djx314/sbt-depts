@@ -41,7 +41,7 @@ addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M3")
 addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")*/
 
 VarContext.changePluginVar := "sbt-assembly"
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.3.1")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.4.1")
 
 VarContext.changePluginVar := "sbt-scoverage"
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "2.4.4")
