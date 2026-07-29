@@ -74,4 +74,4 @@ VarContext.changePluginVar := "sbt-java-formatter"
 addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
 
 VarContext.changePluginVar := "sbt-uni-crossproject"
-addSbtPlugin("org.wvlet.uni"    % "sbt-uni-crossproject" % "2026.1.20")
+addSbtPlugin("org.wvlet.uni"    % "sbt-uni-crossproject" % "2026.1.21")
