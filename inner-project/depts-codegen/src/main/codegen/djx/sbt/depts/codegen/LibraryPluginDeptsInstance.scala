@@ -3,9 +3,9 @@ package codegen
 
 object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
-  /*VarContext.changePluginVar := "sbt-depts-djx314"
+  VarContext.changePluginVar := "sbt-depts-djx314"
 
-          addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100054")*/
+  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100176")
 
   VarContext.changePluginVar := "sbt-scalafmt"
 
@@ -43,9 +43,9 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.22.0")
 
-  /*VarContext.changePluginVar := "sbt-platform-deps"
+  VarContext.changePluginVar := "sbt-crossproject"
 
-          addSbtPlugin("org.portable-scala" % "sbt-platform-deps" % "1.0.2")*/
+  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.20")
 
   /*VarContext.changePluginVar := "flyway-sbt"
 
@@ -54,10 +54,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
   VarContext.changePluginVar := "sbt-js-engine"
 
   addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M4")
-
-  /*VarContext.changePluginVar := "sbt-scala-js-map"
-
-          addSbtPlugin("com.thoughtworks.sbt-scala-js-map" % "sbt-scala-js-map" % "4.1.1")*/
 
   VarContext.changePluginVar := "sbt-assembly"
 

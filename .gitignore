@@ -19,8 +19,4 @@
 /sbtw.bat
 /sbtw-sbt-launch-bundle/
 /java_with_opts.bat
-/codegen-project/.bsp/
-/codegen-project/.idea/
-/codegen-project/sbt-launch-2.0.2.jar
-/codegen-project/sbt.bat
 /depts-project/.idea/
