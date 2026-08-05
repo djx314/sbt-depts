@@ -13,5 +13,5 @@ object GlobalVersion {
     Using.resource(getClass.getClassLoader.getResourceAsStream(sourcePath1))(i1 =>
       Using.resource(Source.fromInputStream(i1, StandardCharsets.UTF_8.name()))(i2 => i2.getLines().to(List).mkString(""))
     )
-    
+
 }

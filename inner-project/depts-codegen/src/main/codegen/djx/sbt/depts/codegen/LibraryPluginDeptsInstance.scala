@@ -3,10 +3,6 @@ package codegen
 
 object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
-  VarContext.changePluginVar := "sbt-depts-djx314"
-
-  addSbtPlugin("net.scalax.djx314" % "sbt-depts-djx314" % "0.0.2.100176")
-
   VarContext.changePluginVar := "sbt-scalafmt"
 
   addSbtPlugin("org.scalameta" % "sbt-scalafmt" % "2.6.2")
@@ -97,7 +93,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-java-formatter"
 
-  addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.12.0")
+  addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.13.1")
 
   VarContext.changePluginVar := "sbt-uni-crossproject"
 

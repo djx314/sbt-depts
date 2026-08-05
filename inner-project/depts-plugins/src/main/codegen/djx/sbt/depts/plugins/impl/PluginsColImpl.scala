@@ -4,8 +4,6 @@ import sbt.librarymanagement.syntax._
 
 trait PluginsColImpl {
 
-  val `sbt-depts-djx314`: sbt.librarymanagement.ModuleID = """net.scalax.djx314""" % """sbt-depts-djx314""" % """0.0.2.100176"""
-
   val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.6.2"""
 
   val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M9"""
@@ -42,7 +40,7 @@ trait PluginsColImpl {
 
   val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.1.0-M9"""
 
-  val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.12.0"""
+  val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.13.1"""
 
   val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.21"""
 
