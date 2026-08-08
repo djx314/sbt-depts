@@ -12,7 +12,6 @@ import djx.sbt.depts.abs.models.{
   Library => DeptsScalaLibrary,
   NoCrossVersion,
   ScalaDept,
-  ScalaJSDept,
   ScalaVersion212,
   ScalaVersion213,
   ScalaVersion3
@@ -97,13 +96,12 @@ object AddLibUtils {
     val confirmSeq: Seq[sbt.ModuleID]         = confirmOpt.getOrElse(Seq.empty)
 
     val dept1 = oneDept.dept
-    val libItem1: sbt.ModuleID = dept1.platform
-      .fold3 { (_: JavaDept) => dept1.org % dept1.name % dept1.version }
-      .fold2 { (_: ScalaDept) => dept1.org %% dept1.name % dept1.version }
-      .fold1 { (_: ScalaJSDept) => dept1.org %% dept1.name % dept1.version }
+    val libItem1: sbt.ModuleID = dept1.platform.fold2 { (_: JavaDept) => dept1.org % dept1.name % dept1.version }.fold1 { (_: ScalaDept) =>
+      dept1.org %% dept1.name % dept1.version
+    }
 
     val libItem2: sbt.ModuleID =
-      dept1.crossInfo.fold2((_: NoCrossVersion) => libItem1).fold1((_: `CrossVersion.full`) => libItem1 cross CrossVersion.full)
+      dept1.crossInfo.fold2((_: NoCrossVersion) => libItem1).fold1((_: `CrossVersion.full`) => libItem1.cross(CrossVersion.full))
 
     val libIfCompilePlugin: sbt.ModuleID =
       dept1.info.fold2((_: CompilerPlugin) => compilerPlugin(libItem2)).fold1((_: DeptsScalaLibrary) => libItem2)

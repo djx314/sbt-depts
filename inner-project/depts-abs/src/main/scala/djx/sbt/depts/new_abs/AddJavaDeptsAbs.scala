@@ -96,9 +96,8 @@ trait AddJavaDeptsAbs {
   implicit class `string_to_dept_extra`(val org: String) {
     extraSelf =>
 
-    def %(name: String): DeptsModuleHelper1   = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.JavaDept)
-    def %%(name: String): DeptsModuleHelper1  = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.ScalaDept)
-    def %%%(name: String): DeptsModuleHelper1 = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.ScalaJSDept)
+    def %(name: String): DeptsModuleHelper1  = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.JavaDept)
+    def %%(name: String): DeptsModuleHelper1 = new DeptsModuleHelper1(org = extraSelf.org, name = name, platform = DeptType.ScalaDept)
   }
 
   object libraryDependencies {

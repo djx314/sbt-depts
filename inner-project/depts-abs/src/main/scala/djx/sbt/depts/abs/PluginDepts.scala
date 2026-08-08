@@ -11,14 +11,6 @@ package pluginImpl {
   }
 
   class StringLibAppend(prefix: PluginDepts.LibraryInstance) {
-    def %%%(s: String): PluginDepts.LinkAppend = PluginDepts.LinkAppend(
-      prefix = PluginDepts.LinkAppend(prefix = prefix, current = PluginDepts.TextType.LitText("%%%")),
-      current = PluginDepts.TextType.StringText(s)
-    )
-    def %%(s: String): PluginDepts.LinkAppend = PluginDepts.LinkAppend(
-      prefix = PluginDepts.LinkAppend(prefix = prefix, current = PluginDepts.TextType.LitText("%%")),
-      current = PluginDepts.TextType.StringText(s)
-    )
     def %(s: String): PluginDepts.LinkAppend = PluginDepts.LinkAppend(
       prefix = PluginDepts.LinkAppend(prefix = prefix, current = PluginDepts.TextType.LitText("%")),
       current = PluginDepts.TextType.StringText(s)

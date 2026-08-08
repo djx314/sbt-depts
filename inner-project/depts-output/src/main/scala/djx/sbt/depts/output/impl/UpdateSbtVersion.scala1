@@ -2,13 +2,14 @@ package djx.sbt.depts
 package output
 package impl
 
-import java.io.{FileOutputStream, PrintWriter}
-import java.nio.file.{Files, Path}
+import java.io.PrintWriter
+import java.nio.file.Path
 import scala.util.Using
+import codegen.SbtVersionInfo
 
 object UpdateSbtVersion {
   def update(file: Path): Unit = {
-    val writeString = s"sbt.version=${SbtVersionSetting.sbtVersion}"
+    val writeString = s"sbt.version=${SbtVersionInfo.version}"
     Using.resource(new PrintWriter(file.toFile)) { writer =>
       writer.println(writeString)
     }

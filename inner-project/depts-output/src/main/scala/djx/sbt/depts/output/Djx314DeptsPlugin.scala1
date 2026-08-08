@@ -1,0 +1,156 @@
+package djx.sbt.depts
+package output
+
+import sbt.*
+import sbt.Keys.*
+
+import djx.sbt.depts.plugins.PluginsCollection
+
+/*package impl {
+
+  class BuildKeysImpl extends BuildKeys {
+    val djxProjectRootPath = settingKey[File]("Key of project root.")
+
+    val djxUpdateSbtLaunchJar =
+      taskKey[Unit]("The released version of the sbt-launcher we use to bundle this application.")
+    val djxSbtLaunchJarDirctory = settingKey[File]("Key of djxSbtLaunchJar dirctory.")
+
+    val djxScalafmtFile         = settingKey[File]("Key of scalafmt file.")
+    val djxUpdateScalafmtConfig = taskKey[Unit]("update scalafmt configuration file.")
+
+    val djxBuildSbtFile     = settingKey[File]("Key of build.properties file.")
+    val djxUpdateSbtVersion = taskKey[Unit]("update sbt version configuration file.")
+
+    val djxPluginsLigFile       = settingKey[File]("Key of plugins's build.sbt file.")
+    val djxUpdatePluginsVersion = taskKey[Unit]("update plugins's build.sbt file.")
+
+    val djxUpdate = taskKey[Unit]("All update action for this plugin.")
+
+  }
+}*/
+
+object Djx314DeptsPlugin extends AutoPlugin {
+  Djx314DeptsPluginSelf =>
+
+  override def requires                                  = sbt.plugins.IvyPlugin
+  override def trigger: PluginTrigger                    = allRequirements
+  override def projectConfigurations: Seq[Configuration] = super.projectConfigurations
+
+  object autoImport extends BuildKeys {
+    val scalaV: djx.sbt.depts.output.ScalaV = djx.sbt.depts.codegen.AppHaveATest.extractGen.scalaV
+
+    val djx314Plugins: PluginsCollection = PluginsCollection
+
+    private val scalaVersionSetting1: Setting[sbt.Task[Seq[String]]] = scalacOptions ++= {
+      CrossVersion.partialVersion(scalaVersion.value) match {
+        case Some((2, scalaMajor)) => if (scalaMajor < 13L) Seq("-language:higherKinds") else Seq.empty
+        case Some((3, scalaMajor)) => Seq("-Xkind-projector")
+        case _                     => Seq.empty
+      }
+    }
+    private val scalaVersionSetting2: Setting[Seq[sbt.ModuleID]] = libraryDependencies ++= libScalax.`kind-projector`.value
+
+    val useKindProjector: Seq[Setting[?]] = List(scalaVersionSetting1, scalaVersionSetting2)
+  }
+
+  private class Settings(override val buildKeys: BuildKeys) extends Djx314DeptsImpl {
+    SettingsSelf =>
+
+    import buildKeys._
+    /*object UpdateAction {
+      private val settingsCol: ListBuffer[Setting[_]] = ListBuffer.empty
+
+      settingsCol.+=(djxProjectRootPath := {
+        djxProjectRootPath.?.value.getOrElse(new File("."))
+      })
+
+      settingsCol.+=(djxSbtLaunchJarDirctory := {
+        new File(djxProjectRootPath.value, "sbtw-sbt-launch-bundle")
+      })
+      settingsCol.+=(djxScalafmtFile := {
+        new File(djxProjectRootPath.value, ".sbt-depts-scalafmt-version.conf")
+      })
+      settingsCol.+=(djxBuildSbtFile := {
+        new File(new File(djxProjectRootPath.value, "project"), "build.properties")
+      })
+      settingsCol.+=(djxPluginsLigFile := {
+        new File(new File(new File(djxProjectRootPath.value, "project"), "project"), "sbt-depts-djx314-lib.sbt")
+      })
+
+      settingsCol.+=(djxUpdateScalafmtConfig := {
+        val fileOpt: Option[File] = djxScalafmtFile.?.value
+        for (file <- fileOpt) yield ScalafmtRewrite.writeToFile(file.toPath)
+      })
+      settingsCol.+=(djxUpdateSbtVersion := {
+        val fileOpt: Option[File] = djxBuildSbtFile.?.value
+        for (file <- fileOpt) yield UpdateSbtVersion.update(file.toPath)
+      })
+      settingsCol.+=(djxUpdatePluginsVersion := {
+        val fileOpt: Option[File] = djxPluginsLigFile.?.value
+        for (file <- fileOpt) yield UpdatePluginLibVersion.update(file.toPath)
+      })
+
+      settingsCol.+=(djxUpdateSbtLaunchJar := {
+        val (deptInfo, sbtJarMavenFile) = djx.sbt.depts.plugins.pUtils.sbtLaunchJarFile
+        val sbtJarDir                   = os.Path(djxSbtLaunchJarDirctory.value.getAbsoluteFile)
+        val sbtJarSource                = os.Path(sbtJarMavenFile)
+        val sbtJarCopyTo                = sbtJarDir / sbtJarSource.last
+
+        val batRootDir = os.Path(djxProjectRootPath.value.getAbsoluteFile)
+
+        val sbtwBat               = batRootDir / "sbtw.bat"
+        val sbtwBatString: String = s"""java_with_opts -jar "./${sbtJarDir.last}/${sbtJarCopyTo.last}" %*"""
+
+        val javaWithOptsBat               = batRootDir / "java_with_opts.bat"
+        val javaWithOptsBatString: String = "java %*"
+
+        Djx314DeptsPluginSelf.synchronized {
+          os.makeDir.all(sbtJarDir)
+
+          if (os.exists(sbtJarCopyTo)) {
+            println("Not Copy. File exists.")
+          } else {
+            os.copy(sbtJarSource, sbtJarCopyTo)
+          }
+
+          if (os.exists(javaWithOptsBat)) {
+            println("No Copy. java_with_opts.bat file exists.")
+          } else {
+            os.write(javaWithOptsBat, javaWithOptsBatString)
+          }
+
+          def str: String = os.read(sbtwBat)
+          if (os.exists(sbtwBat) && (str == sbtwBatString)) {
+            println("Not write sbtw.bat. Already written.")
+          } else {
+            os.remove(sbtwBat)
+            os.write(sbtwBat, sbtwBatString)
+          }
+        }
+
+      })
+
+      settingsCol.+=(djxUpdate := {
+        djxUpdateScalafmtConfig.value
+        djxUpdateSbtVersion.value
+        djxUpdatePluginsVersion.value
+        djxUpdateSbtLaunchJar.value
+      })
+
+      val collect = settingsCol.to(List)
+    }*/
+
+    protected def settingProvide: Seq[Setting[Seq[sbt.ModuleID]]] = for {
+      d <- djx.sbt.depts.codegen.AppHaveATest.extractGen.depts
+    } yield {
+      val indexU = djx.sbt.depts.codegen.AppHaveATest.extractGen.deptNames.indexOf(d.key)
+      djx.sbt.depts.plugins.AddLibUtils.addOneDept(SettingsSelf.libraryList(indexU), d.dept)
+    }
+
+    def settingsForDept: Seq[Setting[?]] = SettingsSelf.settingProvide
+
+  }
+
+  private val settingsValue                                    = new Settings(autoImport)
+  override def projectSettings: Seq[_root_.sbt.Def.Setting[?]] = settingsValue.settingsForDept
+}

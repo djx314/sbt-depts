@@ -117,9 +117,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
 
-  VarContext.changeDeptVar := "simple-append-support"
+  VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-append-support" % "0.0.1-M3"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -379,9 +379,9 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
 
-  VarContext.changeDeptVar := "simple-append-support"
+  VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-append-support" % "0.0.1-M3"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -633,13 +633,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
 
-  VarContext.changeDeptVar := "simple-append-support"
+  VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-append-support" % "0.0.1-M3"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
-  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.5"
+  libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "2.0.6"
 
   VarContext.changeDeptVar := "cats-effect-cps"
 
@@ -761,7 +761,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "sbt-main"
 
-  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.5"
+  libraryDependencies += "org.scala-sbt" %% "main" % "2.0.6"
 
   VarContext.changeDeptVar := "os-lib"
 

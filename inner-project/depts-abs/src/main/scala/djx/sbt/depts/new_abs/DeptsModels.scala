@@ -6,13 +6,13 @@ import net.scalax.simple.adt.{TypeAdt => Adt}
 // ===
 trait JavaDept
 trait ScalaDept
-trait ScalaJSDept
+// trait ScalaJSDept
 
 object DeptType {
   DeptTypeSelf =>
 
-  type Type = Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept]
-  private val Setter = Adt.CoProduct3[JavaDept, ScalaDept, ScalaJSDept]
+  type Type = Adt.CoProduct2[JavaDept, ScalaDept]
+  private val Setter = Adt.CoProduct2[JavaDept, ScalaDept]
 
   import DeptTypeSelf.{Type => AdtDeptsType}
 
@@ -20,9 +20,6 @@ object DeptType {
     //
   })
   val ScalaDept: AdtDeptsType = Setter.instance(new ScalaDept {
-    //
-  })
-  val ScalaJSDept: AdtDeptsType = Setter.instance(new ScalaJSDept {
     //
   })
 }

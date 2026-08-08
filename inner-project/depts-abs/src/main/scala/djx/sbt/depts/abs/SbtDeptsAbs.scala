@@ -1,7 +1,5 @@
 package djx.sbt.depts.abs
 
-import com.typesafe.config.{Config, ConfigFactory}
-
 class TakeSbtProperties(sbtLibrary: TakeSbtProperties.Extra3)
     extends TakeSbtProperties.Extra3(org = sbtLibrary.org, libName = sbtLibrary.libName, version = sbtLibrary.version)
 

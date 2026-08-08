@@ -104,12 +104,12 @@ trait BuildKeys {
     val `cats-effect-cps`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: cats-effect-cps""")
     val `sbt-librarymanagement-core`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: sbt-librarymanagement-core""")
-    val `simple-append-support`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-append-support""")
-    val `simple-adt`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt""")
-    val `commons-lang3-bridge`: SettingKey[Seq[sbt.ModuleID]]  = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3-bridge""")
-    val `macwire`: SettingKey[Seq[sbt.ModuleID]]               = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: macwire""")
-    val `zio-config`: SettingKey[Seq[sbt.ModuleID]]            = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: zio-config""")
-    val `http4s-twirl`: SettingKey[Seq[sbt.ModuleID]]          = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-twirl""")
+    val `simple-induction`: SettingKey[Seq[sbt.ModuleID]]     = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-induction""")
+    val `simple-adt`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: simple-adt""")
+    val `commons-lang3-bridge`: SettingKey[Seq[sbt.ModuleID]] = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: commons-lang3-bridge""")
+    val `macwire`: SettingKey[Seq[sbt.ModuleID]]              = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: macwire""")
+    val `zio-config`: SettingKey[Seq[sbt.ModuleID]]           = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: zio-config""")
+    val `http4s-twirl`: SettingKey[Seq[sbt.ModuleID]]         = sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-twirl""")
     val `http4s-Release-ember-client`: SettingKey[Seq[sbt.ModuleID]] =
       sbt.settingKey[Seq[sbt.ModuleID]]("""sbt library: http4s-Release-ember-client""")
     val `http4s-Release-ember-server`: SettingKey[Seq[sbt.ModuleID]] =
@@ -213,7 +213,7 @@ trait Djx314DeptsImpl {
     libScalax.`zio-json`,
     libScalax.`cats-effect-cps`,
     libScalax.`sbt-librarymanagement-core`,
-    libScalax.`simple-append-support`,
+    libScalax.`simple-induction`,
     libScalax.`simple-adt`,
     libScalax.`commons-lang3-bridge`,
     libScalax.`macwire`,
