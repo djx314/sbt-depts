@@ -9,15 +9,7 @@ moduleName        := name.value
 scalafmtOnCompile := true
 name              := "sbt-depts-root"
 
-lazy val `depts-action`: sbt.Project = project in (`root/file` / "depts-action")
-`depts-action` / organization      := deptOrganization
-`depts-action` / scalaVersion      := scalaV.v3
-`depts-action` / moduleName        := (`depts-action` / name).value
-`depts-action` / scalafmtOnCompile := true
-`depts-action` / publishTo         := localStaging.value
-`depts-action` / name              := "sbt-depts-action"
-
-lazy val  `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
+lazy val `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / organization      := deptOrganization
 `depts-abs` / scalaVersion      := scalaV.v3
 `depts-abs` / moduleName        := (`depts-abs` / name).value
@@ -25,7 +17,7 @@ lazy val  `depts-abs`: sbt.Project = project in (`root/file` / "depts-abs")
 `depts-abs` / publishTo         := localStaging.value
 `depts-abs` / name              := "sbt-depts-abs"
 
-lazy val  `depts-codegen`: sbt.Project = (project in (`root/file` / "depts-codegen")).dependsOn(`depts-abs`)
+lazy val `depts-codegen`: sbt.Project = (project in (`root/file` / "depts-codegen")).dependsOn(`depts-abs`)
 `depts-codegen` / organization      := deptOrganization
 `depts-codegen` / scalaVersion      := scalaV.v3
 `depts-codegen` / moduleName        := (`depts-codegen` / name).value
@@ -33,7 +25,7 @@ lazy val  `depts-codegen`: sbt.Project = (project in (`root/file` / "depts-codeg
 `depts-codegen` / publishTo         := localStaging.value
 `depts-codegen` / name              := "sbt-depts-codegen"
 
-lazy val  `depts-output-plugins`: sbt.Project = (project in `plugin/file`).dependsOn(`depts-codegen`)
+lazy val `depts-output-plugins`: sbt.Project = (project in `plugin/file`).dependsOn(`depts-codegen`)
 `depts-output-plugins` / organization      := deptOrganization
 `depts-output-plugins` / scalaVersion      := scalaV.v3
 `depts-output-plugins` / moduleName        := (`depts-output-plugins` / name).value
@@ -41,7 +33,7 @@ lazy val  `depts-output-plugins`: sbt.Project = (project in `plugin/file`).depen
 `depts-output-plugins` / publishTo         := localStaging.value
 `depts-output-plugins` / name              := "sbt-depts-djx314-plugins"
 
-lazy val  `depts-output`: sbt.Project =
+lazy val `depts-output`: sbt.Project =
   (project in `output/file`)
     .enablePlugins(SbtPlugin)
     .dependsOn(`depts-output-plugins`)

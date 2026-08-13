@@ -10,20 +10,13 @@ ThisBuild / scmInfo := Some(
 )
 
 val dev1 = Developer(
-  id = "Mars Liu",
-  name = "Liu Xin",
-  email = "mars.liu@outlook.com",
-  url = uri("https://marchliu.github.io/")
-)
-
-val dev2 = Developer(
   id = "djx314",
   name = "djx314",
   email = "djx314@sina.cn",
   url = uri("https://github.com/djx314")
 )
 
-ThisBuild / developers := List(dev1, dev2)
+ThisBuild / developers := List(dev1)
 
 ThisBuild / description := "Scala depts for djx314's repo."
 
