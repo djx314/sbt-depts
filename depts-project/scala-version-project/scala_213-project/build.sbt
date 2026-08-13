@@ -77,7 +77,7 @@ VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
 
 VarContext.changeDeptVar                    := "simple-induction"
-libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
+libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
 
 VarContext.changeDeptVar               := "sbt-librarymanagement-core"
 libraryDependencies += "org.scala-sbt" %% "librarymanagement-core" % "1.12.0"
