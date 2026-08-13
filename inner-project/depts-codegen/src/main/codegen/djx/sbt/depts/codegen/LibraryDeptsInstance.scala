@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -381,7 +381,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -635,7 +635,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M4"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -803,7 +803,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "logback-classic"
 
-  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.6.1"
+  libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.6.2"
 
   VarContext.changeDeptVar := "javet"
 
@@ -935,7 +935,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "javacv-platform"
 
-  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.13"
+  libraryDependencies += "org.bytedeco" % "javacv-platform" % "1.5.14"
 
   VarContext.changeDeptVar := "mysql-connector-java"
 
