@@ -29,7 +29,7 @@ VarContext.changePluginVar := "sbt-crossproject"
 addSbtPlugin("org.portable-scala" % "sbt-crossproject" % "1.4.0")
 
 VarContext.changePluginVar := "flyway-sbt"
-addSbtPlugin("com.github.sbt" % "flyway-sbt" % "11.11.0")
+addSbtPlugin("com.github.sbt" % "flyway-sbt" % "12.0.0")
 
 VarContext.changePluginVar := "sbt-js-engine"
 addSbtPlugin("com.github.sbt" % "sbt-js-engine" % "1.4.0-M4")
