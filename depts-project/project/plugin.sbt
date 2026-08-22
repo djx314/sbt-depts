@@ -10,11 +10,11 @@ addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M9")
 VarContext.changePluginVar := "sbt-pgp"
 addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
 
-/*VarContext.changePluginVar := "sbt-scalajs-crossproject"
-addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.2")*/
+VarContext.changePluginVar := "sbt-scalajs-crossproject"
+addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.4.0")
 
-/*VarContext.changePluginVar := "sbt-scala-native-crossproject"
-addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.3.2")*/
+VarContext.changePluginVar := "sbt-scala-native-crossproject"
+addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.4.0")
 
 VarContext.changePluginVar := "sbt-git"
 addSbtPlugin("com.github.sbt" % "sbt-git" % "2.1.0")
@@ -26,7 +26,7 @@ VarContext.changePluginVar := "sbt-scalajs"
 addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.22.0")
 
 VarContext.changePluginVar := "sbt-crossproject"
-addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.20")
+addSbtPlugin("org.portable-scala" % "sbt-crossproject" % "1.4.0")
 
 /*VarContext.changePluginVar := "flyway-sbt"
 addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")*/
