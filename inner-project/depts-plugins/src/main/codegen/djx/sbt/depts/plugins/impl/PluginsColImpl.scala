@@ -4,45 +4,44 @@ import sbt.librarymanagement.syntax._
 
 trait PluginsColImpl {
 
-val `sbt-scalafmt`: sbt.librarymanagement.ModuleID =  """org.scalameta""" % """sbt-scalafmt""" % """2.6.2"""
+  val `sbt-scalafmt`: sbt.librarymanagement.ModuleID = """org.scalameta""" % """sbt-scalafmt""" % """2.6.2"""
 
-val `sbt-twirl`: sbt.librarymanagement.ModuleID =  """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M9"""
+  val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M9"""
 
-val `sbt-pgp`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-pgp""" % """2.3.1"""
+  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.1"""
 
-val `sbt-git`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-git""" % """2.1.0"""
+  val `sbt-git`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-git""" % """2.1.0"""
 
-val `sbt-ide-settings`: sbt.librarymanagement.ModuleID =  """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.4"""
+  val `sbt-ide-settings`: sbt.librarymanagement.ModuleID = """org.jetbrains.scala""" % """sbt-ide-settings""" % """1.1.4"""
 
-val `sbt-scalajs`: sbt.librarymanagement.ModuleID =  """org.scala-js""" % """sbt-scalajs""" % """1.22.0"""
+  val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.22.0"""
 
-val `sbt-crossproject`: sbt.librarymanagement.ModuleID =  """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.20"""
+  val `sbt-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.20"""
 
-val `sbt-js-engine`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-js-engine""" % """1.4.0-M4"""
+  val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.4.0-M4"""
 
-val `sbt-assembly`: sbt.librarymanagement.ModuleID =  """com.eed3si9n""" % """sbt-assembly""" % """2.4.1"""
+  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.4.1"""
 
-val `sbt-scoverage`: sbt.librarymanagement.ModuleID =  """org.scoverage""" % """sbt-scoverage""" % """2.4.4"""
+  val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.4.4"""
 
-val `sbt-github-actions`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-github-actions""" % """0.31.0"""
+  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.31.0"""
 
-val `sbt-jacoco`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-jacoco""" % """3.6.0"""
+  val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.6.0"""
 
-val `sbt-jmh`: sbt.librarymanagement.ModuleID =  """pl.project13.scala""" % """sbt-jmh""" % """0.4.8"""
+  val `sbt-jmh`: sbt.librarymanagement.ModuleID = """pl.project13.scala""" % """sbt-jmh""" % """0.4.8"""
 
-val `sbt-native-packager`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-native-packager""" % """1.11.7"""
+  val `sbt-native-packager`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-native-packager""" % """1.11.7"""
 
-val `sbt-less`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-less""" % """2.1.0-M2"""
+  val `sbt-less`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-less""" % """2.1.0-M2"""
 
-val `sbt-web`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-web""" % """1.6.0-M4"""
+  val `sbt-web`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-web""" % """1.6.0-M4"""
 
-val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID =  """com.vmunier""" % """sbt-web-scalajs""" % """1.4.0"""
+  val `sbt-web-scalajs`: sbt.librarymanagement.ModuleID = """com.vmunier""" % """sbt-web-scalajs""" % """1.4.0"""
 
-val `sbt-playframework`: sbt.librarymanagement.ModuleID =  """org.playframework""" % """sbt-plugin""" % """3.1.0-M9"""
+  val `sbt-playframework`: sbt.librarymanagement.ModuleID = """org.playframework""" % """sbt-plugin""" % """3.1.0-M9"""
 
-val `sbt-java-formatter`: sbt.librarymanagement.ModuleID =  """com.github.sbt""" % """sbt-java-formatter""" % """0.13.1"""
+  val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.13.1"""
 
-val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID =  """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.21"""
+  val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.21"""
 
 }
-
