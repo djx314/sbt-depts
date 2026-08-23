@@ -8,7 +8,7 @@ VarContext.changePluginVar := "sbt-twirl"
 addSbtPlugin("org.playframework.twirl" % "sbt-twirl" % "2.1.0-M9")
 
 VarContext.changePluginVar := "sbt-pgp"
-addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
+addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.2")
 
 VarContext.changePluginVar := "sbt-scalajs-crossproject"
 addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.4.0")
