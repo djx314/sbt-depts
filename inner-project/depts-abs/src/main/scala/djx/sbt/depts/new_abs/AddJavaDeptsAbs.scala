@@ -2,7 +2,7 @@ package djx.sbt.depts.abs
 
 import scala.collection.compat._
 import models.{CrossInfo, DeptInfo, DeptType, ScalaJavaVersion}
-import net.scalax.simple.adt.{TypeAdt => Adt}
+import net.scalax.simple.adt.{typedadt => Adt}
 
 class DeptsModuleHelper1(org: String, name: String, platform: DeptType.Type) {
   DeptMHelperSelf =>

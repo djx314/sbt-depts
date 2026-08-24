@@ -3,7 +3,7 @@ package abs
 package models
 
 import scala.collection.compat._
-import net.scalax.simple.adt.{TypeAdt => Adt}
+import net.scalax.simple.adt.{typedadt => Adt}
 
 object SumList {
 

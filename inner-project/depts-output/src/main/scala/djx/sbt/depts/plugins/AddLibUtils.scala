@@ -2,7 +2,7 @@ package djx.sbt.depts.plugins
 
 import cats._
 import cats.implicits._
-import net.scalax.simple.adt.{TypeAdt => Adt}
+import net.scalax.simple.adt.{typedadt => Adt}
 import java.io.File
 import djx.sbt.depts.abs.models.{
   `CrossVersion.full`,

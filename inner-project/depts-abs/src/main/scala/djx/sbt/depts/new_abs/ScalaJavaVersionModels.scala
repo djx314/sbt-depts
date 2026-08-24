@@ -1,7 +1,7 @@
 package djx.sbt.depts.abs
 package models
 
-import net.scalax.simple.adt.{TypeAdt => Adt}
+import net.scalax.simple.adt.{typedadt => Adt}
 
 // ===
 trait ScalaVersion212 {

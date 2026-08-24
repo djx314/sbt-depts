@@ -2,7 +2,6 @@ package djx.sbt.depts.plugins
 
 import cats._
 import cats.implicits._
-import net.scalax.simple.adt.{TypeAdt => Adt}
 import java.io.File
 
 object pUtils {

@@ -37,7 +37,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.0"
+  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.1"
 
   VarContext.changeDeptVar := "cats-core"
 
@@ -115,7 +115,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
+  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M29"
 
   VarContext.changeDeptVar := "simple-induction"
 
@@ -299,7 +299,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.0"
+  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.1"
 
   VarContext.changeDeptVar := "cats-core"
 
@@ -377,7 +377,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
+  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M29"
 
   VarContext.changeDeptVar := "simple-induction"
 
@@ -553,7 +553,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "cats-effect"
 
-  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.0"
+  libraryDependencies += "org.typelevel" %% "cats-effect" % "3.7.1"
 
   VarContext.changeDeptVar := "cats-core"
 
@@ -631,7 +631,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-adt"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
+  libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M29"
 
   VarContext.changeDeptVar := "simple-induction"
 
