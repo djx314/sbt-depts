@@ -65,7 +65,7 @@ VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.6.7"
 
 VarContext.changeDeptVar            := "commons-lang3-bridge"
-libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
+libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.1"
 
 VarContext.changeDeptVar                    := "simple-adt"
 libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M29"
