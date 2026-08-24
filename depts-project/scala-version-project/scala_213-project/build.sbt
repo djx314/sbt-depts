@@ -74,7 +74,7 @@ VarContext.changeDeptVar            := "commons-lang3-bridge"
 libraryDependencies += "net.scalax" %% "commons-lang3-bridge" % "0.1.0"
 
 VarContext.changeDeptVar                    := "simple-adt"
-libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M27"
+libraryDependencies += "net.scalax.simple" %% "simple-adt" % "0.0.2-M29"
 
 VarContext.changeDeptVar                    := "simple-induction"
 libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
