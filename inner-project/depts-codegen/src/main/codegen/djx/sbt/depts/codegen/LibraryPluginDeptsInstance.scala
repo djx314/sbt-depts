@@ -17,15 +17,15 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-pgp"
 
-  addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.1")
+  addSbtPlugin("com.github.sbt" % "sbt-pgp" % "2.3.2")
 
-  /*VarContext.changePluginVar := "sbt-scalajs-crossproject"
+  VarContext.changePluginVar := "sbt-scalajs-crossproject"
 
-          addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.2")*/
+  addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.4.0")
 
-  /*VarContext.changePluginVar := "sbt-scala-native-crossproject"
+  VarContext.changePluginVar := "sbt-scala-native-crossproject"
 
-          addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.3.2")*/
+  addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.4.0")
 
   VarContext.changePluginVar := "sbt-git"
 
@@ -41,11 +41,11 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-crossproject"
 
-  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.20")
+  addSbtPlugin("org.portable-scala" % "sbt-crossproject" % "1.4.0")
 
-  /*VarContext.changePluginVar := "flyway-sbt"
+  VarContext.changePluginVar := "flyway-sbt"
 
-          addSbtPlugin("io.github.davidmweber" % "flyway-sbt" % "7.4.0")*/
+  addSbtPlugin("com.github.sbt" % "flyway-sbt" % "12.0.0")
 
   VarContext.changePluginVar := "sbt-js-engine"
 
@@ -53,7 +53,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-assembly"
 
-  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.4.1")
+  addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.4.2")
 
   VarContext.changePluginVar := "sbt-scoverage"
 

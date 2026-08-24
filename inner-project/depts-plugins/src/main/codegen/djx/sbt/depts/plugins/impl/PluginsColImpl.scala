@@ -8,7 +8,12 @@ trait PluginsColImpl {
 
   val `sbt-twirl`: sbt.librarymanagement.ModuleID = """org.playframework.twirl""" % """sbt-twirl""" % """2.1.0-M9"""
 
-  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.1"""
+  val `sbt-pgp`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-pgp""" % """2.3.2"""
+
+  val `sbt-scalajs-crossproject`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-scalajs-crossproject""" % """1.4.0"""
+
+  val `sbt-scala-native-crossproject`: sbt.librarymanagement.ModuleID =
+    """org.portable-scala""" % """sbt-scala-native-crossproject""" % """1.4.0"""
 
   val `sbt-git`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-git""" % """2.1.0"""
 
@@ -16,11 +21,13 @@ trait PluginsColImpl {
 
   val `sbt-scalajs`: sbt.librarymanagement.ModuleID = """org.scala-js""" % """sbt-scalajs""" % """1.22.0"""
 
-  val `sbt-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.20"""
+  val `sbt-crossproject`: sbt.librarymanagement.ModuleID = """org.portable-scala""" % """sbt-crossproject""" % """1.4.0"""
+
+  val `flyway-sbt`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """flyway-sbt""" % """12.0.0"""
 
   val `sbt-js-engine`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-js-engine""" % """1.4.0-M4"""
 
-  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.4.1"""
+  val `sbt-assembly`: sbt.librarymanagement.ModuleID = """com.eed3si9n""" % """sbt-assembly""" % """2.4.2"""
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.4.4"""
 
