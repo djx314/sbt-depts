@@ -61,7 +61,7 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-github-actions"
 
-  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.31.0")
+  addSbtPlugin("com.github.sbt" % "sbt-github-actions" % "0.32.0")
 
   VarContext.changePluginVar := "sbt-jacoco"
 
@@ -97,6 +97,6 @@ object LibraryPluginDeptsInstance extends _root_.djx.sbt.depts.abs.PluginDepts {
 
   VarContext.changePluginVar := "sbt-uni-crossproject"
 
-  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.21")
+  addSbtPlugin("org.wvlet.uni" % "sbt-uni-crossproject" % "2026.1.23")
 
 }

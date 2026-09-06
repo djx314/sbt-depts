@@ -31,7 +31,7 @@ trait PluginsColImpl {
 
   val `sbt-scoverage`: sbt.librarymanagement.ModuleID = """org.scoverage""" % """sbt-scoverage""" % """2.4.4"""
 
-  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.31.0"""
+  val `sbt-github-actions`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-github-actions""" % """0.32.0"""
 
   val `sbt-jacoco`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-jacoco""" % """3.6.0"""
 
@@ -49,6 +49,6 @@ trait PluginsColImpl {
 
   val `sbt-java-formatter`: sbt.librarymanagement.ModuleID = """com.github.sbt""" % """sbt-java-formatter""" % """0.13.1"""
 
-  val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.21"""
+  val `sbt-uni-crossproject`: sbt.librarymanagement.ModuleID = """org.wvlet.uni""" % """sbt-uni-crossproject""" % """2026.1.23"""
 
 }

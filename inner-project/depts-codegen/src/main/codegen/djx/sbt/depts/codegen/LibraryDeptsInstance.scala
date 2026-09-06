@@ -119,7 +119,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M6"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -131,7 +131,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
+  libraryDependencies += "dev.zio" %% "zio-json" % "1.0.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -139,13 +139,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %% "fs2-core" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-core" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-io" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-io" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.14.0"
 
   VarContext.changeDeptVar := "distage"
 
@@ -381,7 +381,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M6"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -393,7 +393,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
+  libraryDependencies += "dev.zio" %% "zio-json" % "1.0.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -401,13 +401,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %% "fs2-core" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-core" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-io" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-io" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.14.0"
 
   VarContext.changeDeptVar := "distage"
 
@@ -527,7 +527,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   libraryDependencies += "com.softwaremill.magnolia1_2" %% "magnolia" % "1.1.14"
 
-  scalaVersion := "3.8.4"
+  scalaVersion := "3.9.0"
 
   VarContext.changeDeptVar := "circe"
 
@@ -635,7 +635,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "simple-induction"
 
-  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M5"
+  libraryDependencies += "net.scalax.simple" %% "simple-induction" % "0.0.1-M6"
 
   VarContext.changeDeptVar := "sbt-librarymanagement-core"
 
@@ -647,7 +647,7 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "zio-json"
 
-  libraryDependencies += "dev.zio" %% "zio-json" % "0.10.0"
+  libraryDependencies += "dev.zio" %% "zio-json" % "1.0.0"
 
   VarContext.changeDeptVar := "shapeless"
 
@@ -661,13 +661,13 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "fs2"
 
-  libraryDependencies += "co.fs2" %% "fs2-core" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-core" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-io" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-io" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-reactive-streams" % "3.14.0"
 
-  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.13.0"
+  libraryDependencies += "co.fs2" %% "fs2-scodec" % "3.14.0"
 
   VarContext.changeDeptVar := "distage"
 
@@ -915,15 +915,15 @@ object LibraryDeptsInstance extends _root_.djx.sbt.depts.abs.AddJavaDeptsAbs {
 
   VarContext.changeDeptVar := "slf4j-simple"
 
-  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.18"
+  libraryDependencies += "org.slf4j" % "slf4j-simple" % "2.0.19"
 
   VarContext.changeDeptVar := "slf4j-nop"
 
-  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.18"
+  libraryDependencies += "org.slf4j" % "slf4j-nop" % "2.0.19"
 
   VarContext.changeDeptVar := "h2"
 
-  libraryDependencies += "com.h2database" % "h2" % "2.4.240"
+  libraryDependencies += "com.h2database" % "h2" % "2.5.250"
 
   VarContext.changeDeptVar := "commons-math3"
 
