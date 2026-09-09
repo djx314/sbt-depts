@@ -17,7 +17,7 @@ VarContext.changePluginVar := "sbt-scala-native-crossproject"
 addSbtPlugin("org.portable-scala" % "sbt-scala-native-crossproject" % "1.4.0")
 
 VarContext.changePluginVar := "sbt-git"
-addSbtPlugin("com.github.sbt" % "sbt-git" % "2.1.0")
+addSbtPlugin("com.github.sbt" % "sbt-git" % "2.2.0")
 
 VarContext.changePluginVar := "sbt-ide-settings"
 addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.4")
