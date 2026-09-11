@@ -132,7 +132,7 @@ VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.5.0"
 
 VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.6"
