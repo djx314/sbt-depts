@@ -45,27 +45,27 @@ VarContext.changeDeptVar                         := "scala-collection-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-collection-compat" % "2.14.0"
 
 VarContext.changeDeptVar             := "http4s-Release-dsl"
-libraryDependencies += "org.http4s" %% "http4s-dsl"   % "0.23.36"
+libraryDependencies += "org.http4s" %% "http4s-dsl"   % "0.23.37"
 
 VarContext.changeDeptVar             := "http4s-Release-circe"
-libraryDependencies += "org.http4s" %% "http4s-circe" % "0.23.36"
+libraryDependencies += "org.http4s" %% "http4s-circe" % "0.23.37"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-server"
-libraryDependencies += "org.http4s" %% "http4s-ember-server" % "0.23.36"
+libraryDependencies += "org.http4s" %% "http4s-ember-server" % "0.23.37"
 
 VarContext.changeDeptVar             := "http4s-Release-ember-client"
-libraryDependencies += "org.http4s" %% "http4s-ember-client" % "0.23.36"
+libraryDependencies += "org.http4s" %% "http4s-ember-client" % "0.23.37"
 
 VarContext.changeDeptVar            := "http4s-twirl"
 libraryDependencies += "org.http4s" %% "http4s-twirl" % "0.23.18"
 
 VarContext.changeDeptVar          := "zio-config"
-libraryDependencies += "dev.zio" %% "zio-config"            % "4.0.8"
-libraryDependencies += "dev.zio" %% "zio-config-magnolia"   % "4.0.8"
-libraryDependencies += "dev.zio" %% "zio-config-refined"    % "4.0.8"
-libraryDependencies += "dev.zio" %% "zio-config-typesafe"   % "4.0.8"
-libraryDependencies += "dev.zio" %% "zio-config-yaml"       % "4.0.8"
-libraryDependencies += "dev.zio" %% "zio-config-derivation" % "4.0.8"
+libraryDependencies += "dev.zio" %% "zio-config"            % "4.1.0"
+libraryDependencies += "dev.zio" %% "zio-config-magnolia"   % "4.1.0"
+libraryDependencies += "dev.zio" %% "zio-config-refined"    % "4.1.0"
+libraryDependencies += "dev.zio" %% "zio-config-typesafe"   % "4.1.0"
+libraryDependencies += "dev.zio" %% "zio-config-yaml"       % "4.1.0"
+libraryDependencies += "dev.zio" %% "zio-config-derivation" % "4.1.0"
 
 VarContext.changeDeptVar                           := "macwire"
 libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.6.7"
@@ -86,7 +86,7 @@ VarContext.changeDeptVar                := "cats-effect-cps"
 libraryDependencies += "org.typelevel" %% "cats-effect-cps" % "0.5.0"
 
 VarContext.changeDeptVar          := "zio-json"
-libraryDependencies += "dev.zio" %% "zio-json" % "1.0.0"
+libraryDependencies += "dev.zio" %% "zio-json" % "1.1.0"
 
 VarContext.changeDeptVar              := "shapeless"
 libraryDependencies += "com.chuusai" %% "shapeless" % "2.3.13"
@@ -132,7 +132,7 @@ VarContext.changeDeptVar                        := "scala-java8-compat"
 libraryDependencies += "org.scala-lang.modules" %% "scala-java8-compat" % "1.0.2"
 
 VarContext.changeDeptVar                        := "scala-parser-combinators"
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.4.0"
+libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.5.0"
 
 VarContext.changeDeptVar                            := "scala-logging"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.6"
