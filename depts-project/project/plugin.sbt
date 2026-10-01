@@ -65,7 +65,7 @@ VarContext.changePluginVar := "sbt-playframework"
 addSbtPlugin("org.playframework" % "sbt-plugin" % "3.1.0-M9")
 
 VarContext.changePluginVar := "sbt-java-formatter"
-addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.13.1")
+addSbtPlugin("com.github.sbt" % "sbt-java-formatter" % "0.14.0")
 
 VarContext.changePluginVar := "sbt-uni-crossproject"
 addSbtPlugin("org.wvlet.uni"    % "sbt-uni-crossproject" % "2026.1.23")
