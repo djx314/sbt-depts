@@ -173,7 +173,7 @@ VarContext.changeDeptVar               := "sbt-main"
 libraryDependencies += "org.scala-sbt" %% "main" % "1.12.14"
 
 VarContext.changeDeptVar              := "os-lib"
-libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.11.8"
+libraryDependencies += "com.lihaoyi" %% "os-lib" % "0.11.10"
 
 VarContext.changeDeptVar               := "sbt-scripted-plugin"
 libraryDependencies += "org.scala-sbt" %% "scripted-plugin" % "1.12.14"
