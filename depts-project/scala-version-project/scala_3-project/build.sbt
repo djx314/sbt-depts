@@ -21,13 +21,13 @@ VarContext.changeDeptVar                := "cats-core"
 libraryDependencies += "org.typelevel" %% "cats-core" % "2.13.0"
 
 VarContext.changeDeptVar              := "doobie"
-libraryDependencies += "org.typelevel" %% "doobie-core"      % "1.0.0-RC13"
-libraryDependencies += "org.typelevel" %% "doobie-hikari"    % "1.0.0-RC13"
-libraryDependencies += "org.typelevel" %% "doobie-postgres"  % "1.0.0-RC13"
-libraryDependencies += "org.typelevel" %% "doobie-scalatest" % "1.0.0-RC13"
+libraryDependencies += "org.typelevel" %% "doobie-core"      % "1.0.0-RC14"
+libraryDependencies += "org.typelevel" %% "doobie-hikari"    % "1.0.0-RC14"
+libraryDependencies += "org.typelevel" %% "doobie-postgres"  % "1.0.0-RC14"
+libraryDependencies += "org.typelevel" %% "doobie-scalatest" % "1.0.0-RC14"
 
 VarContext.changeDeptVar              := "doobie-h2"
-libraryDependencies += "org.typelevel" %% "doobie-h2" % "1.0.0-RC13"
+libraryDependencies += "org.typelevel" %% "doobie-h2" % "1.0.0-RC14"
 
 VarContext.changeDeptVar          := "zio2"
 libraryDependencies += "dev.zio" %% "zio"          % "2.1.26"
