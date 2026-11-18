@@ -47,7 +47,7 @@ VarContext.changePluginVar := "sbt-jacoco"
 addSbtPlugin("com.github.sbt" % "sbt-jacoco" % "3.6.0")
 
 VarContext.changePluginVar := "sbt-jmh"
-addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.4.8")
+addSbtPlugin("com.github.sbt" % "sbt-jmh" % "0.4.9")
 
 VarContext.changePluginVar := "sbt-native-packager"
 addSbtPlugin("com.github.sbt" % "sbt-native-packager" % "1.11.7")
