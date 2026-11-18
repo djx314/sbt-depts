@@ -23,7 +23,7 @@ VarContext.changePluginVar := "sbt-ide-settings"
 addSbtPlugin("org.jetbrains.scala" % "sbt-ide-settings" % "1.1.4")
 
 VarContext.changePluginVar := "sbt-scalajs"
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.22.0")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.23.0")
 
 VarContext.changePluginVar := "sbt-crossproject"
 addSbtPlugin("org.portable-scala" % "sbt-crossproject" % "1.4.0")
